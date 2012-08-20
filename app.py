@@ -13,7 +13,7 @@ from dependencies import css_deps, js_deps
 from mongoengine import connect #@UnresolvedImport
 from optparse import OptionParser #@UnresolvedImport
 
-class NotesLib(tornado.web.Application):
+class Intheory(tornado.web.Application):
     def __init__(self, env, port, config_file):
 	self.APP_NAME = "intheory-" + str(port)
 	
@@ -22,7 +22,9 @@ class NotesLib(tornado.web.Application):
                     'template_path' : "templates",
                     'cookie_secret' : "aKlRsPkySWyOqByxAQfLsKMbEAKj3ErRtg1RgkBUQ6E=noteslib",
                     'xsrf_cookies'  : True,
-                    'autoescape'    : "xhtml_escape"
+                    'autoescape'    : "xhtml_escape",
+                    'facebook_api_key': "486623404681319",
+                    'facebook_secret': "4049a6a2d8dd781bbfb4a1b849869113"
                     }
 
 	config = ConfigParser.RawConfigParser()
@@ -33,7 +35,7 @@ class NotesLib(tornado.web.Application):
         ############################
         
         db_host = config.get(env, "db_host") or "localhost"
-        db_name = config.get(env, "db_name") or "hackldn_db" + "_" + env
+        db_name = config.get(env, "db_name") or "intheory_db" + "_" + env
         db_user = config.get(env, "db_user")
         db_pass = config.get(env, "db_pass")
 
@@ -82,5 +84,5 @@ if __name__ == "__main__":
     config = ConfigParser.RawConfigParser()
     config.read(config_file)
     port = int(options.port or config.get(env, "port") or 8888)
-    NotesLib(env, port, config_file).listen(port)
+    Intheory(env, port, config_file).listen(port)
     tornado.ioloop.IOLoop.instance().start()

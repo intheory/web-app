@@ -3,9 +3,9 @@
 # Author: Giorgos Eracleous #
 #############################
 
-from app.handlers import base,home, order
+from app.handlers import base, user, home
 
 url_patterns = [
     ("/", home.HomePageHandler),
-    ("/order", order.SelectItemsHandler),
+    ("/login", user.UserLoginHandler),
 ]
