@@ -3,9 +3,12 @@
 # Author: Giorgos Eracleous #
 #############################
 
-from app.handlers import base, user, home
+from app.handlers import base, user, home, admin
 
 url_patterns = [
     ("/", home.HomePageHandler),
     ("/login", user.UserLoginHandler),
+    ###########Backend hanlders##############
+    ("/admin/questions/add", admin.AddQuestionHandler),
+    ("/admin/questions", admin.ViewQuestionsHandler),
 ]
