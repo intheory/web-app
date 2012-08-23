@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+		<ul class="nav nav-tabs">
+		  <li class="active">
+		    <a href="/admin/questions">Questions</a>
+		  </li>
+		  <li><a href="/admin/users">Users</a></li>
+		</ul>
+		{% block admin-content %}
+		{% end%}		
+    </div> <!-- /container -->
+{% end%}
+
