@@ -1,5 +1,5 @@
 from app.handlers import base
-from app.model.content import Question
+from app.model.content import Question#!@UnresolvedImport
 
 class ViewAdminPanelHandler(base.BaseHandler):
     '''
