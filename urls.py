@@ -11,4 +11,5 @@ url_patterns = [
     ###########Backend hanlders##############
     ("/admin/questions/add", admin.AddQuestionHandler),
     ("/admin/questions", admin.ViewQuestionsHandler),
+    ("/admin", admin.ViewAdminPanelHandler),
 ]
