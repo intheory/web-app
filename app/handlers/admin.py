@@ -1,4 +1,5 @@
 from app.handlers import base
+from app.model.content import Question
 
 class ViewAdminPanelHandler(base.BaseHandler):
     '''
@@ -19,13 +20,17 @@ class AddQuestionHandler(base.BaseHandler):
     Adds a new question
     '''
     def on_post(self):
-        question = self.get_argument("question-inp", None)
-        option1 = self.get_argument("option1-inp", None)
-        option2 = self.get_argument("option2-inp", None)
-        option3 = self.get_argument("option3-inp", None)
-        option4 = self.get_argument("option4-inp", None)
-        print question
-        print option1
-        print option2
-        print option3
-        print option4
+        try:
+            question = self.get_argument("question-inp", None)
+            option1 = self.get_argument("option1-inp", None)
+            option2 = self.get_argument("option2-inp", None)
+            option3 = self.get_argument("option3-inp", None)
+            option4 = self.get_argument("option4-inp", None)
+            q = Question()
+            q.question = question
+            q.options = [option1, option2, option3, option4]
+            q.answer = 0
+            q.save()
+        except Exception, e:
+            print e
+        
