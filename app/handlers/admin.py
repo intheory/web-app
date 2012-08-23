@@ -19,4 +19,13 @@ class AddQuestionHandler(base.BaseHandler):
     Adds a new question
     '''
     def on_post(self):
-        rid = self.get_argument("rid", None)
+        question = self.get_argument("question-inp", None)
+        option1 = self.get_argument("option1-inp", None)
+        option2 = self.get_argument("option2-inp", None)
+        option3 = self.get_argument("option3-inp", None)
+        option4 = self.get_argument("option4-inp", None)
+        print question
+        print option1
+        print option2
+        print option3
+        print option4
