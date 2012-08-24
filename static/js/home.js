@@ -6,18 +6,24 @@
 
 
     // =============================== Listeners =============================== //
-    
-    
-    
+        
     $("a.choice").live("click", function() {
-	var data = $('#questions').data('questions');
-	console.log(data)
-	var nq = data[1];		
+
+	//Change question	
+	var qdata = $('#questions').data('questions');
+	qdata.shift(); 
+	var nq = qdata[0];
+	$('#questions').data('questions', qdata);
 	$("div.hero-unit2").html(
-	"<h4>"+ nq.question + "</h4><ul class='nav nav-pills nav-stacked'><li><a class='choice'><span class='badge badge-info'>A</span> {{nq.options[0]}}</a></li><li><a class='choice'><span class='badge badge-info'>B</span> {{nq.options[1]}}</a></li><li><a class='choice'><span class='badge badge-info'>C</span> {{nq.options[2]}}</a></li><li><a class='choice'><span class='badge badge-info'>D</span> {{nq.options[3]}}</a></li></ul>"	
+	"<h4>"+ nq.question + "</h4><ul class='nav nav-pills nav-stacked' style='cursor:pointer'><li><a class='choice' ind='0'><span class='badge badge-info'>A</span>"+ nq.options[0]+"</a></li><li><a class='choice' ind='1'><span class='badge badge-info'>B</span>"+ nq.options[1]+"</a></li><li><a class='choice' ind='2'><span class='badge badge-info'>C</span>"+ nq.options[2]+"</a></li><li><a class='choice' ind='3'><span class='badge badge-info'>D</span> "+ nq.options[3]+"</a></li></ul>"	
 	);
+	
+	//Record answer
+        var adata = $('#answers').data('answers');
+        adata.push($(this).attr("ind"));
+	$('#answers').data('answers', adata);
+	
     });
-    
     
 
 
