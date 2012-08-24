@@ -26,6 +26,8 @@ class AddQuestionHandler(base.BaseHandler):
             option2 = self.get_argument("option2-inp", None)
             option3 = self.get_argument("option3-inp", None)
             option4 = self.get_argument("option4-inp", None)
+            correct = [self.get_argument("0", None), self.get_argument("1", None),self.get_argument("2", None),self.get_argument("3", None)]
+            
             q = Question()
             q.question = question
             q.options = [option1, option2, option3, option4]
