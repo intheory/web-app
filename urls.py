@@ -7,6 +7,7 @@ from app.handlers import base, user, home, admin
 
 url_patterns = [
     ("/", home.HomePageHandler),
+    ("/quiz/evaluate", home.EvaluateHomeQuizHandler),
     ("/login", user.UserLoginHandler),
     ###########Backend hanlders##############
     ("/admin/questions/add", admin.AddQuestionHandler),
