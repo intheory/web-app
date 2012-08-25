@@ -1,4 +1,4 @@
-hackldn2012
+InTheory
 ===========
 
-The Pythia team strikes again. This time with an amazing, super, uber-cool fashion app. Updates coming soon. 
+ 
