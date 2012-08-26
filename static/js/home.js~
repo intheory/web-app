@@ -8,17 +8,24 @@
     // =============================== Listeners =============================== //
         
     $("a.choice").live("click", function() {
+	if ($(this).parent().hasClass("active")) return //if this choice was clicked before DO NOTHING
+	
 	var remainingAnswers = $(this).parent().parent().attr("remaining-answers")
+	console.log(remainingAnswers);
+
 	//Record answer
         var adata = $('#answers').data('answers');
         adata.push($(this).attr("ind"));
 	$('#answers').data('answers', adata);
 	remainingAnswers = remainingAnswers-1;
+	$(this).parent().parent().attr("remaining-answers", remainingAnswers)
+	
 	//Change question	
 
 	//if this is a multi-answer question do not change	
 	if (remainingAnswers != 0){
-	    $(this).addClass("selected")		
+		console.log(remainingAnswers)
+	    $(this).parent().addClass("active")		
 	}
 	else{	
   	    var qdata = $('#questions').data('questions');
