@@ -36,7 +36,7 @@
                     answers : String(adata)
 		}, true, function(response) 
 		{
-			$("div.hero-unit2").html("Hey, loser! Your score is "+response.score)
+			$("div.hero-unit2").html("Hey, loser! Your score is "+response.score + "</br><a href='/login'>Login</a>")
 	        });
 	    }else{	
 		$('#questions').data('questions', qdata);
