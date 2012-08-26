@@ -5,5 +5,11 @@ class Question(Document):
     meta = {"collection":"Questions"}
     question = StringField(required=True)
     options = ListField(StringField(), default=list, required=True)
-    answer = IntField(required=True)
+    answer = ListField(StringField(), required=True)
+    
+class MiniQuizQuestion(Document):
+    meta = {"collection":"MiniQuizQuestions"}
+    question = StringField(required=True)
+    options = ListField(StringField(), default=list, required=True)
+    answer = ListField(IntField(), required=True)
     

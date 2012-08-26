@@ -1,5 +1,5 @@
 from app.handlers import base
-from app.model.content import Question#!@UnresolvedImport
+from app.model.content import Question, MiniQuizQuestion#!@UnresolvedImport
 
 class ViewAdminPanelHandler(base.BaseHandler):
     '''
@@ -27,11 +27,16 @@ class AddQuestionHandler(base.BaseHandler):
             option3 = self.get_argument("option3-inp", None)
             option4 = self.get_argument("option4-inp", None)
             correct = [self.get_argument("0", None), self.get_argument("1", None),self.get_argument("2", None),self.get_argument("3", None)]
+            type = self.get_argument("type", None)
             
-            q = Question()
+            if type == "main":
+                q = Question()
+            elif type == "mini":
+                q = MiniQuizQuestion()
+            
             q.question = question
             q.options = [option1, option2, option3, option4]
-            q.answer = 0
+            q.answer = [answer for answer in correct if answer != None]
             q.save()
         except Exception, e:
             print e
