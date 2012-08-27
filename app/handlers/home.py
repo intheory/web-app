@@ -1,7 +1,5 @@
 from app.handlers import base
 from app.model.content import MiniQuizQuestion#!@UnresolvedImport
-import twitter#!@UnresolvedImport
-api = twitter.Api()
 
 class HomePageHandler(base.BaseHandler):
     '''
@@ -10,7 +8,7 @@ class HomePageHandler(base.BaseHandler):
     def on_get(self):
         questions = MiniQuizQuestion.objects                
         tweet = api.GetSearch("driving theory")[0]
-        self.base_render("home.html", questions=questions, tweet=tweet.text)
+        self.base_render("home.html", questions=questions, tweet="Woo hoo I passed my test. Thank you George!")
         
 class EvaluateHomeQuizHandler(base.BaseHandler):
     '''
