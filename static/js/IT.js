@@ -81,16 +81,6 @@ IT.popup = new Blurb({
      wrap: true
 });
 
-/**
- * A popup Blurb notifier for other countries.
- */
-IT.popupCountries = new Blurb({
-     cssClass: "other-countries-blurb",	
-     position: "center-center",          
-     displayDuration: -1,
-     wrap: true
-});
-
     
 /**
  * Shortcut AJAX POST method. Only the url parameter is required for the method to

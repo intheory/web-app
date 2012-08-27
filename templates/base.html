@@ -69,10 +69,14 @@
 {% for js in kwargs['js_deps'] %}
 	<script src="{{static_url(js)}}"></script>
 {% end %}
+
+{% block jquery_templates %}
+
+{% end %}
 <div class="container">
  <hr>
  <footer>
-   <p>&copy; Company 2012</p>
+   <p>&copy; InTheory 2012</p>
  </footer>
 </div>
 </body> 

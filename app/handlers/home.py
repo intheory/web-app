@@ -7,7 +7,7 @@ class HomePageHandler(base.BaseHandler):
     '''
     def on_get(self):
         questions = MiniQuizQuestion.objects                
-        self.base_render("home.html", questions=questions, tweet="Woo hoo I passed my test. Thank you George!")
+        self.base_render("home.html", questions=questions, tweet="Woo hoo I passed my test. Thank you #intheory!")
         
 class EvaluateHomeQuizHandler(base.BaseHandler):
     '''
@@ -29,7 +29,7 @@ class EvaluateHomeQuizHandler(base.BaseHandler):
                 for i in  range(len(answer_list)):
                     l.append(int(answers.pop(0)))
                 user_answers.append(l)
-            print correct_answers
+
             for i in xrange(len(questions)):
                 if set(user_answers[i]) == set(correct_answers[i]):
                     count += 1

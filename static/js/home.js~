@@ -3,15 +3,25 @@
  * 
  * @author l </a>
  */
-
-
+    $(document).ready(function() {
+        $('#windowTitleDialog').bind('show', function () {
+            document.getElementById ("xlInput").value = document.title;
+        });
+    });
+    function closeDialog () {
+        $('#windowTitleDialog').modal('hide'); 
+    };
+    function okClicked () {
+        document.title = document.getElementById ("xlInput").value;
+        closeDialog ();
+    };
+    
     // =============================== Listeners =============================== //
-        
+         
     $("a.choice").live("click", function() {
 	if ($(this).parent().hasClass("active")) return; //if this choice was clicked before DO NOTHING
 	
 	var remainingAnswers = $(this).parent().parent().attr("remaining-answers")
-	console.log(remainingAnswers);
 
 	//Record answer
         var adata = $('#answers').data('answers');
@@ -24,7 +34,6 @@
 
 	//if this is a multi-answer question do not change	
 	if (remainingAnswers != 0){
-		console.log(remainingAnswers)
 	    $(this).parent().addClass("active")		
 	}
 	else{	
@@ -35,8 +44,9 @@
 	        IT.post("/quiz/evaluate", {
                     answers : String(adata)
 		}, true, function(response) 
-		{
-			$("div.hero-unit2").html("Hey, loser! Your score is "+response.score + "</br><a href='/login'>")
+		{       
+			var tmpl = $("#signup-template").tmpl();
+			IT.popup.show(tmpl)
 	        });
 	    }else{	
 		$('#questions').data('questions', qdata);

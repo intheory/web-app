@@ -9,26 +9,26 @@
  * avoid collisions with other libraries and to have all the code under one object.
  */
 
-var CYP = CYP || {};
+var IT = IT || {};
 
 /**
  * The XSRF token.
  */
-CYP.xsrf = null;
+IT.xsrf = null;
 
 /**
  * Callback to be called when the page has finished loading.
  */
-CYP.onPageLoadCallback = null;
+IT.onPageLoadCallback = null;
 
 /**
  * Registers a callback to be called when the page
  * has finished loading. Calling this function or setting
- * CYP.onPageLoadCallback directly will have the same effect.
+ * IT.onPageLoadCallback directly will have the same effect.
  */
-CYP.onPageLoad = function(fn)
+IT.onPageLoad = function(fn)
 {
-    CYP.onPageLoadCallback = fn;
+    IT.onPageLoadCallback = fn;
 };
 
 /**
@@ -36,16 +36,16 @@ CYP.onPageLoad = function(fn)
  * This is called after all the JS scripts have been loaded and
  * any necessary initialization code has been executed.
  */
-CYP.pageLoad = function()
+IT.pageLoad = function()
 {
-    var fn = CYP.onPageLoadCallback;
+    var fn = IT.onPageLoadCallback;
     if (fn) { fn(); }
 };
 
 /**
  * A Blurb notifier for errors.
  */
-CYP.errorNotifier = new Blurb({
+IT.errorNotifier = new Blurb({
     cssClass: "error-notify",
     position: "center-center",
     displayDuration: -1,
@@ -55,7 +55,7 @@ CYP.errorNotifier = new Blurb({
 /**
  * A general Blurb notifier.
  */
-CYP.notifier = new Blurb({
+IT.notifier = new Blurb({
     cssClass: "notify",
     position: "center-center",
     displayDuration: 1400
@@ -64,7 +64,7 @@ CYP.notifier = new Blurb({
 /**
  * A success Blurb notifier.
  */
-CYP.successNotifier = new Blurb({
+IT.successNotifier = new Blurb({
     cssClass: "success-notify",
     position: "center-center",
     displayDuration: 1400,
@@ -74,7 +74,7 @@ CYP.successNotifier = new Blurb({
 /**
  * A popup Blurb notifier.
  */
-CYP.popup = new Blurb({
+IT.popup = new Blurb({
      cssClass: "notify",
      position: "center-center",          
      displayDuration: -1,
@@ -84,7 +84,7 @@ CYP.popup = new Blurb({
 /**
  * A popup Blurb notifier for other countries.
  */
-CYP.popupCountries = new Blurb({
+IT.popupCountries = new Blurb({
      cssClass: "other-countries-blurb",	
      position: "center-center",          
      displayDuration: -1,
@@ -103,15 +103,15 @@ CYP.popupCountries = new Blurb({
  * @param {Boolean} showErrNotifier A flag indicating whether to show an error popup or not.
  * @param {Function} error A function to be called if the request results to an error.
  */
-CYP.post = function(url, data, showLoader, success, showErrNotifier, error)
+IT.post = function(url, data, showLoader, success, showErrNotifier, error)
 {
     if (!url) {
-        throw "No URL defined in CYP.post().";
+        throw "No URL defined in IT.post().";
     }
     if (showErrNotifier === null || showErrNotifier === undefined) {
         showErrNotifier = true;
     }
-    CYP.ajax(url, 
+    IT.ajax(url, 
              data || {}, 
              success || function(){;}, 
              error || function(){;}, 
@@ -131,15 +131,15 @@ CYP.post = function(url, data, showLoader, success, showErrNotifier, error)
  * @param {Boolean} showErrNotifier A flag indicating whether to show an error popup or not.
  * @param {Function} error A function to be called if the request results to an error.
  */
-CYP.get = function(url, data, showLoader, success, showErrNotifier, error)
+IT.get = function(url, data, showLoader, success, showErrNotifier, error)
 {
     if (!url) {
-        throw "No URL defined in CYP.get().";
+        throw "No URL defined in IT.get().";
     }
     if (showErrNotifier === null || showErrNotifier === undefined) {
         showErrNotifier = true;
     }
-    CYP.ajax(url, 
+    IT.ajax(url, 
             data || {}, 
             success || function(){;}, 
             error || function(){;}, 
@@ -160,7 +160,7 @@ CYP.get = function(url, data, showLoader, success, showErrNotifier, error)
  * @param {Boolean} showLoader A flag indicating whether to show the loader or not.
  * @param {Boolean} showErrNotifier A flag indicating whether to show an error popup or not.
  */
-CYP.ajax = function(url, data, success, error, method, showLoader, showErrNotifier)
+IT.ajax = function(url, data, success, error, method, showLoader, showErrNotifier)
 {
     var requestCompleted = false;
     var loader = null;
@@ -174,7 +174,7 @@ CYP.ajax = function(url, data, success, error, method, showLoader, showErrNotifi
             }, 200);
         }
     }
-    data["_xsrf"] = CYP.xsrf;
+    data["_xsrf"] = IT.xsrf;
     $.ajax({
         url: url,
         data: data,
@@ -188,7 +188,7 @@ CYP.ajax = function(url, data, success, error, method, showLoader, showErrNotifi
                 success(response);
             } else {
                 if (showErrNotifier) { 
-                    CYP.errorNotifier.show(response.err);
+                    IT.errorNotifier.show(response.err);
                 }
                 error(response);
             }
@@ -197,50 +197,50 @@ CYP.ajax = function(url, data, success, error, method, showLoader, showErrNotifi
             500: function() {
                 requestCompleted = true;
                 loader.hide();
-                CYP.errorNotifier.show("<b>An unexpected error occured.</b><br><br> " +
+                IT.errorNotifier.show("<b>An unexpected error occured.</b><br><br> " +
                 		"We are working on fixing that now. Please try again.");
                 error();
             },
             403: function() {
                 requestCompleted = true;
                 loader.hide();
-                CYP.errorNotifier.show("<b>Unauthorized.</b><br><br>" + CYP.fn.translateText("You are not authorized to perform this operation. Please login.", CYP.user.locale))
+                IT.errorNotifier.show("<b>Unauthorized.</b><br><br>" + IT.fn.translateText("You are not authorized to perform this operation. Please login.", IT.user.locale))
             }
         }
     });
 };
 
 /**
- * Adds a custom module under the CYP namespace.
+ * Adds a custom module under the IT namespace.
  * 
  * Usage:
  * <pre>
  * function MyModule() {;}
  * 
- * CYP.addModule("myModule", MyModule);
+ * IT.addModule("myModule", MyModule);
  * </pre>
  * 
  * @param {String} name The (unique) name of the module.
  * @param {Function} module A reference to the module to add.
  */
-CYP.addModule = function(name, module)
+IT.addModule = function(name, module)
 {
-    if (!CYP[name]) {
-        CYP[name] = new module();
+    if (!IT[name]) {
+        IT[name] = new module();
     } else {
-        throw "Module " + name + " already exists under the CYP namespace.";
+        throw "Module " + name + " already exists under the IT namespace.";
     }
 }
 
 
-//============================ CYP User Module ================================ //
+//============================ IT User Module ================================ //
 
 
 /**
  * Global user module. Used to store properties about the
  * current user and provides utility functions.
  */
-CYP.user = {
+IT.user = {
     
     // Properties.
     authenticated: false,
@@ -283,13 +283,13 @@ CYP.user = {
 };
 
 
-//============================ CYP Global Function ================================ //
+//============================ IT Global Function ================================ //
 
 
 /**
  * Global functions module.
  */
-CYP.fn = {
+IT.fn = {
         
     /**
      * Checks if the HTML fragment contains content by stripping away all HTML tags.
@@ -378,7 +378,7 @@ CYP.fn = {
                     elem.effect("highlight", {}, 2500);
                 } else {
                     if (locTokens[0].indexOf("/p/") > -1) {
-                        //CYP.errorNotifier.show("<b>We can't find this answer.</b><br><br> " +
+                        //IT.errorNotifier.show("<b>We can't find this answer.</b><br><br> " +
                         //"It's possible that the author has deleted it.");  
                     }
                 }
@@ -458,7 +458,7 @@ var Notiffic = function(nid)
       
       // Make sure to close this on click anywhere else.
       $(document).click(function() {
-          CYP.notiffic.close();
+          IT.notiffic.close();
       });
     
     };
@@ -467,7 +467,7 @@ var Notiffic = function(nid)
     {
         var that = this;
         xhrTarget.addClass("loading");
-        CYP.post("/u/notifications", {min: 5}, false, function(response) {
+        IT.post("/u/notifications", {min: 5}, false, function(response) {
             if (response.s) {
                 xhrTarget.html(response.html).removeClass("loading");
                 var unread = xhrTarget.find(".unread").length;
@@ -480,12 +480,12 @@ var Notiffic = function(nid)
     
     this.clearNotifications = function()
     {
-        CYP.post("/u/notifications/clear", {}, true, function(response) {
+        IT.post("/u/notifications/clear", {}, true, function(response) {
            if (response.s) {
                container.find(".unread").removeClass("unread");
                target.find("span").hide();
                target.removeClass("has-n");
-               $("#n-clear-btn").html(CYP.fn.translateText("Clear unread"), CYP.user.locale);
+               $("#n-clear-btn").html(IT.fn.translateText("Clear unread"), IT.user.locale);
            } 
         });
     };
@@ -505,8 +505,8 @@ var Notiffic = function(nid)
     };
 };
 
-CYP.notiffic = new Notiffic("#n-btn");
-CYP.notiffic.hook();
+IT.notiffic = new Notiffic("#n-btn");
+IT.notiffic.hook();
 
 
 //============================ Navigator ================================ //
@@ -650,7 +650,7 @@ var Navigator = function()
     
 };
 
-CYP.navigator = new Navigator();
+IT.navigator = new Navigator();
 
 
 // ============================ CYAPI ================================ //
@@ -660,7 +660,7 @@ CYP.navigator = new Navigator();
  * @class
  * A wrapper around the exposed API.
  */
-var CYPAPI = function() 
+var ITAPI = function() 
 {
     /**
      * Gets the activity feed.
@@ -671,7 +671,7 @@ var CYPAPI = function()
      */
     this.getActivity = function(params, cback)
     {
-        CYP.get("/getter/activity", params, true, cback);
+        IT.get("/getter/activity", params, true, cback);
     };
 
     /**
@@ -683,7 +683,7 @@ var CYPAPI = function()
      */
     this.getParagraphs = function(params, success)
     {
-        CYP.get("/getter/p", params, true, success);
+        IT.get("/getter/p", params, true, success);
     };
 
     /**
@@ -695,7 +695,7 @@ var CYPAPI = function()
      */
     this.getTopics = function(params, success)
     {
-        CYP.get("/getter/topics", params, true, success);
+        IT.get("/getter/topics", params, true, success);
     };
 
     /**
@@ -704,17 +704,17 @@ var CYPAPI = function()
      */
     this.getNewsWire = function(params, success)
     {
-        CYP.get("/getter/newswire", params, true, success);
+        IT.get("/getter/newswire", params, true, success);
     };
     
     this.getArticles = function(params, success)
     {
-        CYP.get("/getter/articles", params, true, success);
+        IT.get("/getter/articles", params, true, success);
     };
     
     this.getNotifications = function(params, success)
     {
-        CYP.get("/getter/notifications", params, true, success);
+        IT.get("/getter/notifications", params, true, success);
     };
 
     /**
@@ -723,7 +723,7 @@ var CYPAPI = function()
      */
     this.getReadings = function(params, success)
     {
-        CYP.get("/getter/readings", params, true, success);
+        IT.get("/getter/readings", params, true, success);
     };
 
     /**
@@ -732,7 +732,7 @@ var CYPAPI = function()
      */
     this.getCountries = function(params, success)
     {
-        CYP.get("/getter/countries", params, true, success);
+        IT.get("/getter/countries", params, true, success);
     };
 
     /**
@@ -741,7 +741,7 @@ var CYPAPI = function()
      */
     this.getExplanation = function(params, success)
     {
-        CYP.get("/getter/explanation", params, true, success);
+        IT.get("/getter/explanation", params, true, success);
     };
 
     /**
@@ -750,7 +750,7 @@ var CYPAPI = function()
      */
     this.getProposals = function(params, success)
     {
-        CYP.get("/getter/proposals", params, true, success);
+        IT.get("/getter/proposals", params, true, success);
     };
     
     /**
@@ -759,7 +759,7 @@ var CYPAPI = function()
      */
     this.getTimeline = function(params, success)
     {
-        CYP.get("/getter/timeline", params, true, success);
+        IT.get("/getter/timeline", params, true, success);
     };
     
      /**
@@ -768,30 +768,30 @@ var CYPAPI = function()
      */
     this.getDictionary = function(params, success)
     {
-        CYP.get("/getter/dictionary", params, true, success);
+        IT.get("/getter/dictionary", params, true, success);
     };
 
 }
 
-CYP.api = new CYPAPI();
+IT.api = new ITAPI();
 
 // ================================================== //
 
 // Save a reference to the xsrf token.
-CYP.xsrf = $("input[name='_xsrf']").val();
+IT.xsrf = $("input[name='_xsrf']").val();
 
 // Check if a fragment exists in the URL and highlight anything
 // with that fragment as id.
-CYP.fn.highlightURLFragment();
+IT.fn.highlightURLFragment();
 
 // Check if a 'view-story' element exists.
 $("a.view-story").live("click", function() {
    var c =$(this).parent().siblings(".related");
    if (c.is(":visible")) {
-       $(this).html(CYP.fn.translateText("View more", CYP.user.locale));
+       $(this).html(IT.fn.translateText("View more", IT.user.locale));
        c.hide();
    } else {
-       $(this).html(CYP.fn.translateText("Hide", CYP.user.locale));
+       $(this).html(IT.fn.translateText("Hide", IT.user.locale));
        c.show();
    }
 });
@@ -799,27 +799,27 @@ $("a.view-story").live("click", function() {
 //Open feedback popup.
 $("#feedback").click(function() {
     var tmpl = $("#feedback-template").tmpl();
-    if (!CYP.popup.elem().is(":visible")) {
-        CYP.popup.show(tmpl);
+    if (!IT.popup.elem().is(":visible")) {
+        IT.popup.show(tmpl);
     }
 });
 
 $("a.feedback-btn").live("click", function() {
     var type = $("#type").val();
     var description = $("#description").val();	
-    CYP.post("/admin/beta/feedback", 
+    IT.post("/admin/beta/feedback", 
 	    {type: type, description:description}, 
 	    true, function(response) {
 		    if (response.s) {
-		        CYP.successNotifier.show(CYP.fn.translateText("Thank you for helping us make our website better.", CYP.user.locale));
-		        CYP.popup.close();
-		        window.setTimeout(function() { CYP.fn.reloadPage(); }, 900);		
+		        IT.successNotifier.show(IT.fn.translateText("Thank you for helping us make our website better.", IT.user.locale));
+		        IT.popup.close();
+		        window.setTimeout(function() { IT.fn.reloadPage(); }, 900);		
 		    } 
     });
 });
 
 $("a.no-feedback-btn").live("click", function() {
-    CYP.popup.close();
+    IT.popup.close();
 });
 
 //Position the loader on the page.

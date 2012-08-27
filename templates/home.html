@@ -16,6 +16,7 @@
 					</ul></br>
  					<p><a class="btn btn-block btn-success btn-large">Get Started Today</a></p>
         		</div>
+        		
 		        <div class="columnB pull-right">
 					</br>
 					<div style="display: none;" id="questions" data-questions=
@@ -42,10 +43,34 @@
 		</div>       
         <div class="span5 offset7">
          </br></br></br></br><blockquote>
-  <p><h2><div class="funkytext"><font color="#ffffff">"{{kwargs['tweet']}}"</h2><div class="funkytext1">- Alex Loizou, Disneyland</font></div></p>
+  <p><h2><div class="funkytext"><font color="#ffffff">"{{kwargs['tweet']}}"</h2><div class="funkytext1">- Dave Mason, London</font></div></p>
 </blockquote>
         </div>
       </div>
     </div> <!-- /container -->
 {% end%}
+
+{% block jquery_templates %}
+<script id="signup-template" type="text/x-jquery-tmpl">
+<div id="windowTitleDialog" class="modal hide fade">
+    <div class="modal-header">
+        <a href="#" class="close">&times;</a>
+        <h3>You scored 4 out of 10...</h3>
+    </div>
+    <div class="modal-body">
+        <p>You still need a little practice, but we estimate you will be ready to successfully take your theory test on the 4th September. Sign-up today to get started...</p>
+        <center><img src="{{static_url('imgs/facebook.png')}}" alt="some_text"/>
+        <img src="{{static_url('imgs/twitter.png')}}" alt="some_text"/>
+        <img src="{{static_url('imgs/google.png')}}" alt="some_text"/></center>
+        <center><a href="h">Or click here to sign-up directly</a></center>
+    </div>
+    <div class="modal-footer">
+        <ul class="pager">
+            <li class="previous"><a href="#">Sign in to InTheory</a></li>
+            <li class="next"><a href="#">Forgot username or password?</a></li>
+        </ul>
+    </div>
+</div>
+</script>
+{% end %}
 
