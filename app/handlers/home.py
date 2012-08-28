@@ -8,7 +8,7 @@ class HomePageHandler(base.BaseHandler):
     def on_get(self):
         questions = MiniQuizQuestion.objects                
         self.base_render("home.html", questions=questions, tweet="Woo hoo I passed my test. Thank you #intheory!")
-        
+
 class EvaluateHomeQuizHandler(base.BaseHandler):
     '''
     Evaluates homepage quiz

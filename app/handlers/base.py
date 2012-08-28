@@ -159,18 +159,19 @@ class BaseHandler(tornado.web.RequestHandler):
         you call Tornado's render() it will crash giving you an error that 
         some variables do not exist.
         '''
-        kwargs = kwargs or {}
-        kwargs['css_deps'] = self.deps.get("css", self.request.uri)
-        kwargs['js_deps']  = self.deps.get("js", self.request.uri)
-        kwargs['jqts'] = "{{"
-        kwargs['jqte'] = "}}"
-        kwargs['env'] = self.env
-        kwargs['self'] = self
-        
-        if self.current_user:
-            kwargs['n_count'] = self.services["notification"].get_unread_count(owner=self.current_user.id)
+        try:
+            kwargs = kwargs or {}
+            kwargs['css_deps'] = self.deps.get("css", self.request.uri)
+            kwargs['js_deps']  = self.deps.get("js", self.request.uri)
+            kwargs['jqts'] = "{{"
+            kwargs['jqte'] = "}}"
+            kwargs['env'] = self.env
+            kwargs['self'] = self
             
-        self.render(template, kwargs=kwargs)
+                
+            self.render(template, kwargs=kwargs)
+        except Exception, e:
+            print e
     
     def on_success(self, *result):
         raise NotImplementedError()

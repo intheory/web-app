@@ -385,19 +385,7 @@ IT.fn = {
         }
     },
 
-    /**
-     * Translates text to Greek. It loads the dictionary from
-     * translation.js.	
-    */
-    translateText: function(text, locale)
-    {
-	//If user locale is Greek or a non user translate
-	if (locale == "el_GR" || locale == null){ 
-		$.i18n.setDictionary(dictionary);
-		return $.i18n._(text);
-	}
-	return text;	
-    }
+
 };
 
 //============================ Notiffic ================================ //
@@ -652,114 +640,6 @@ IT.navigator = new Navigator();
  */
 var ITAPI = function() 
 {
-    /**
-     * Gets the activity feed.
-     * 
-     * @param {Object} params The parameters which control the activity feed format. 
-     *                        Valid parameters are 'page', 'limit', 'timeStep'.
-     * @param {Function} cback The callback to call on success.
-     */
-    this.getActivity = function(params, cback)
-    {
-        IT.get("/getter/activity", params, true, cback);
-    };
-
-    /**
-     * Gets the paragraphs.
-     * 
-     * @param {Object} params The parameters which control the activity feed format. 
-     *                        Valid parameters are 'topic''.
-     * @param {Function} cback The callback to call on success.
-     */
-    this.getParagraphs = function(params, success)
-    {
-        IT.get("/getter/p", params, true, success);
-    };
-
-    /**
-     * Gets the topics.
-     * 
-     * @param {Object} params The parameters which control the activity feed format. 
-     *                        Valid parameters are 'topic''.
-     * @param {Function} cback The callback to call on success.
-     */
-    this.getTopics = function(params, success)
-    {
-        IT.get("/getter/topics", params, true, success);
-    };
-
-    /**
-     * Gets the news wire.
-     * 
-     */
-    this.getNewsWire = function(params, success)
-    {
-        IT.get("/getter/newswire", params, true, success);
-    };
-    
-    this.getArticles = function(params, success)
-    {
-        IT.get("/getter/articles", params, true, success);
-    };
-    
-    this.getNotifications = function(params, success)
-    {
-        IT.get("/getter/notifications", params, true, success);
-    };
-
-    /**
-     * Gets the readings.
-     * 
-     */
-    this.getReadings = function(params, success)
-    {
-        IT.get("/getter/readings", params, true, success);
-    };
-
-    /**
-     * Gets the other countries.
-     * 
-     */
-    this.getCountries = function(params, success)
-    {
-        IT.get("/getter/countries", params, true, success);
-    };
-
-    /**
-     * Gets the explanation of a term.
-     * 
-     */
-    this.getExplanation = function(params, success)
-    {
-        IT.get("/getter/explanation", params, true, success);
-    };
-
-    /**
-     * Gets the user proposed paragraphs.
-     * 
-     */
-    this.getProposals = function(params, success)
-    {
-        IT.get("/getter/proposals", params, true, success);
-    };
-    
-    /**
-     * Gets the data for timeline.
-     * 
-     */
-    this.getTimeline = function(params, success)
-    {
-        IT.get("/getter/timeline", params, true, success);
-    };
-    
-     /**
-     * Gets the data for dictionary.
-     * 
-     */
-    this.getDictionary = function(params, success)
-    {
-        IT.get("/getter/dictionary", params, true, success);
-    };
 
 }
 
