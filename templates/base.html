@@ -21,6 +21,9 @@
 		{% end %}
 	</title>
 
+	{% for css in kwargs['css_deps'] %}
+		<link href="{{static_url(css)}}" rel="stylesheet">
+	{% end %}
     <link href="../static/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {

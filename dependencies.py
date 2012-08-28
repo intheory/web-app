@@ -5,7 +5,7 @@
 # CSS Dependencies.
 css_deps = ("css", "css",
             [
-             
+             ("/", ["home.css"]),
             ])
 
 # JS Dependencies.
