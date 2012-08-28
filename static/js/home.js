@@ -45,8 +45,13 @@
                     answers : String(adata)
 		}, true, function(response) 
 		{       
-			var tmpl = $("#signup-template").tmpl();
-			IT.popup.show(tmpl);
+			var tmpl = $("#signup-template").tmpl({score:response.score});
+
+			tmpl.modal().css({
+			    'margin-top': function () {
+			        return -($(this).height() / 2);
+			    }
+			})
 	        });
 	    }else{	
 		$('#questions').data('questions', qdata);
