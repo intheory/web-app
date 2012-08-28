@@ -8,6 +8,7 @@ import tornado.web, sys, datetime
 
 from mongoengine import ValidationError #@UnresolvedImport
 from mongoengine.queryset import OperationError, DoesNotExist #@UnresolvedImport
+from app.model.user import *
 
 class BaseHandler(tornado.web.RequestHandler):
     '''
@@ -124,15 +125,13 @@ class BaseHandler(tornado.web.RequestHandler):
         Also set's a reference to a CachedUser object.
         '''
         self.cached_user = None
-        cookie = self.get_secure_cookie("email")
+        cookie = self.get_secure_cookie("access_token")
         if cookie:
             try: 
-                user = User.objects(email=cookie).get()
+                user = User.objects(access_token=cookie).get()
                 cu = CachedUser()
                 cu.id = user.id
                 cu.name = user.first_name + " " + user.last_name
-                cu.url = user.url
-                cu.short_desc = user.short_desc
                 self.cached_user = cu
                 return user
             except DoesNotExist:
@@ -281,52 +280,3 @@ class BaseHandler(tornado.web.RequestHandler):
 class AjaxMessageException(Exception):
     pass
 
-
-# ============================ WelcomeHandler ================================ #
-
-
-class WelcomeHandler(BaseHandler):
-    '''
-    Check user status and either load the home screen or the
-    welcome page.
-    '''
-    def on_get(self):
-        #if not self.current_user:
-        #    self.base_render("welcome.html")
-        #else:
-        #    self.redirect("/home")
-	self.base_render("welcome.html")
-
-
- 
-# ============================ HomeHandler ================================ #
-
-
-class HomeHandler(BaseHandler):
-    '''
-    Load the home screen.
-    '''
-    def on_get(self):
-        #activity = self.services["activity"].get_homepage_items()
-        hasParagraph = False
-        announcements = []
-        # Consider "new" whatever was added within 3 days
-        new_fn = lambda p: ((datetime.datetime.utcnow() - p.created).days <= 3) and not p.deleted
-        if self.current_user:
-            announcements = self.services["announcement"].get_announcements_by_user()
-        topics = {}
-        for t in Topic.objects.all():
-            new = len(self.services['paragraph'].get_new(topic=t.value, new_fn=new_fn))
-            topics.setdefault(t.group, []).append((t, new))
-        widgets = self.widgets.pick(3, groups=['home'])
-        stories = self.services['activity'].get_stories({"published": True}, self.ui["modules"])
-	return stories, topics, widgets, announcements, hasParagraph
-    
-    
-    def on_success(self, s, t, w, an, hpa):
-        self.base_render("home/home.html", activity_items=s, 
-                                           clean=app.tools.sanitize, 
-                                           topics = t,
-                                           widgets=w,
-                                           announcements=an,
-                                           hasParagraph = hpa)

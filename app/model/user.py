@@ -19,7 +19,6 @@ class User(Document):
     fb_id = StringField(required=True)
     access_token = StringField(required=True)
     
-    
 class CachedUser(EmbeddedDocument):
     name = StringField(required=True)
     id = ObjectIdField(required=True)
