@@ -74,3 +74,9 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
             uf.fb_id = friend['id']
             c_user.friends.append(uf)
         c_user.save()
+        
+class UserLogoutHandler(base.BaseHandler):
+    @tornado.web.authenticated
+    def on_get(self):
+        self.clear_cookie("access_token")
+        self.redirect('/')

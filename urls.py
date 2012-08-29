@@ -9,6 +9,7 @@ url_patterns = [
     ("/", home.HomePageHandler),
     ("/quiz/evaluate", home.EvaluateHomeQuizHandler),
     ("/login", user.UserLoginHandler),
+    ("/logout", user.UserLogoutHandler),
     ###########Dashboard hanlders##############
     ("/dashboard", dashboard.ViewDashBoardHandler),
     ###########Backend hanlders##############
