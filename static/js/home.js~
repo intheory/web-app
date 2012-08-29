@@ -3,22 +3,11 @@
  * 
  * @author l </a>
  */
-    $(document).ready(function() {
-        $('#windowTitleDialog').bind('show', function () {
-            document.getElementById ("xlInput").value = document.title;
-        });
-    });
-    function closeDialog () {
-        $('#windowTitleDialog').modal('hide'); 
-    };
-    function okClicked () {
-        document.title = document.getElementById ("xlInput").value;
-        closeDialog ();
-    };
     
     // =============================== Listeners =============================== //
          
     $("a.choice").live("click", function() {
+	$("#dim").fadeIn();
 	if ($(this).parent().hasClass("active")) return; //if this choice was clicked before DO NOTHING
 	
 	var remainingAnswers = $(this).parent().parent().attr("remaining-answers")
@@ -62,7 +51,11 @@
 	
     });
 
-    $("#div").css("height", $(document).height()); 
+    $("#dim").css("height", $(document).height()); 
+
+    $(".close").live("click", function(){
+    	$('#windowTitleDialog').modal('hide');
+    }); 
     
     $("#get-started-btn").live("click", function() {
 	$("#dim").fadeIn();  
