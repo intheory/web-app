@@ -51,10 +51,16 @@
 	
     });
 
+    $("#mini-quiz-box").live("click", function() {return false;});
     $("#dim").css("height", $(document).height()); 
 
+    $(document).click(function() {
+        $("#dim").fadeOut(); 
+    }); 
+  
     $(".close").live("click", function(){
     	$('#windowTitleDialog').modal('hide');
+	$("#dim").fadeOut();  
     }); 
     
     $("#get-started-btn").live("click", function() {

@@ -48,13 +48,19 @@
 		);
 	    }
 	}
-	
+	return false;
     });
 
+    $("#mini-quiz-box").live("click", function() {});
     $("#dim").css("height", $(document).height()); 
 
+    $(document).click(function() {
+        $("#dim").fadeOut(); 
+    }); 
+  
     $(".close").live("click", function(){
     	$('#windowTitleDialog').modal('hide');
+	$("#dim").fadeOut();  
     }); 
     
     $("#get-started-btn").live("click", function() {
