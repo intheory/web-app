@@ -8,8 +8,11 @@
          
     $("a.choice").live("click", function() {
 	$("#dim").fadeIn();
-	if ($(this).parent().hasClass("active")) return; //if this choice was clicked before DO NOTHING
-	
+	if ($(this).parent().hasClass("active")){//if this choice was clicked before unselect it
+            $(this).parent().removeClass("active"); 
+            return; 
+	}
+
 	var remainingAnswers = $(this).parent().parent().attr("remaining-answers")
 
 	//Record answer

@@ -3,12 +3,14 @@
 # Author: Giorgos Eracleous #
 #############################
 
-from app.handlers import base, user, home, admin
+from app.handlers import base, user, home, admin,  dashboard
 
 url_patterns = [
     ("/", home.HomePageHandler),
     ("/quiz/evaluate", home.EvaluateHomeQuizHandler),
     ("/login", user.UserLoginHandler),
+    ###########Dashboard hanlders##############
+    ("/dashboard", dashboard.ViewDashBoardHandler),
     ###########Backend hanlders##############
     ("/admin/questions/add", admin.AddQuestionHandler),
     ("/admin/questions", admin.ViewQuestionsHandler),

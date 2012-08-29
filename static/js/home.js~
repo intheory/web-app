@@ -8,8 +8,11 @@
          
     $("a.choice").live("click", function() {
 	$("#dim").fadeIn();
-	if ($(this).parent().hasClass("active")) return; //if this choice was clicked before DO NOTHING
-	
+	if ($(this).parent().hasClass("active")){//if this choice was clicked before unselect it
+            $(this).parent().removeClass("active"); 
+            return; 
+	}
+
 	var remainingAnswers = $(this).parent().parent().attr("remaining-answers")
 
 	//Record answer
@@ -48,10 +51,10 @@
 		);
 	    }
 	}
-	return false;
+	
     });
 
-    $("#mini-quiz-box").live("click", function() {});
+    $("#mini-quiz-box").live("click", function() {return false;});
     $("#dim").css("height", $(document).height()); 
 
     $(document).click(function() {
