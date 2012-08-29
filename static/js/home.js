@@ -62,9 +62,10 @@
 	
     });
 
+    $("#dim").css("height", $(document).height()); 
+    
     $("#get-started-btn").live("click", function() {
-	$("mini-quiz-box").addClass("non-dimmer");
-	$("body").addClass("dimmer");
+	$("#dim").fadeIn();  
     });
 
 
