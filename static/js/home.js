@@ -50,7 +50,7 @@
 	        });
 	    }else{	
 		$('#questions').data('questions', qdata);
-		$("#mini-quiz-box").html("<h4>"+ nq.question + "</h4><ul remaining-answers="+nq.answer.length+" class='nav nav-pills nav-stacked' style='cursor:pointer'><li><a class='choice' ind='0'><span class='badge badge-info'>A</span> "+ nq.options[0]+"</a></li><li><a class='choice' ind='1'><span class='badge badge-info'>B</span> "+ nq.options[1]+"</a></li><li><a class='choice' ind='2'><span class='badge badge-info'>C</span> "+ nq.options[2]+"</a></li><li><a class='choice' ind='3'><span class='badge badge-info'>D</span> "+ nq.options[3]+"</a></li></ul>"	
+		$("#mini-quiz-box").html("<h4>"+ nq.question + "</h4><ul remaining-answers="+nq.answer.length+" class='nav nav-pills nav-stacked' style='cursor:pointer'><li><a class='choice' ind='0'><span class='badge badge-info'>A</span> "+ nq.options[0]+"</a></li></br><li><a class='choice' ind='1'><span class='badge badge-info'>B</span> "+ nq.options[1]+"</a></li></br><li><a class='choice' ind='2'><span class='badge badge-info'>C</span> "+ nq.options[2]+"</a></li></br><li><a class='choice' ind='3'><span class='badge badge-info'>D</span> "+ nq.options[3]+"</a></li></br></ul>"	
 		);
 	    }
 	}
