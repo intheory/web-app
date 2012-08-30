@@ -29,7 +29,7 @@
 							<h4> {{question.question}}</h4>
 						</div>
 						<div class="choices-container">
-	     					<ul remaining-answers={{len(question.answer)}} class="nav nav-pills nav-stacked">
+	     					<ul style='cursor:pointer' remaining-answers={{len(question.answer)}} class="nav nav-pills nav-stacked">
 								<li><a class="choice" ind="0"><span class="badge badge-info">A</span> {{question.options[0]}}</a></li>
 								<li><a class="choice" ind="1"><span class="badge badge-info">B</span> {{question.options[1]}}</a></li>
 								<li><a class="choice" ind="2"><span class="badge badge-info">C</span> {{question.options[2]}}</a></li>
@@ -43,14 +43,14 @@
       </div>
 
 		<div class="row">
-		<div class="span10">
-		</div>       
-        <div class="span5 offset7">
-         </br></br></br></br><blockquote>
-  <p><h2><div class="funkytext"><font color="#ffffff">"{{kwargs['tweet']}}"</h2><div class="funkytext1">- Dave Mason, London</font></div></p>
-</blockquote>
+			<div class="span10">
+			</div>       
+	        <div class="span5 offset7">
+	         	</br></br></br></br><blockquote>
+	  			<p><h2><div class="funkytext"><font color="#ffffff">"{{kwargs['tweet']}}"</h2><div class="funkytext1">- Dave Mason, London</font></div></p>
+				</blockquote>
+	        </div>
         </div>
-      </div>
     </div> <!-- /container -->
     <div id="dim">
     	  

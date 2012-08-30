@@ -20,18 +20,19 @@
 			InTheory | Pass Your Theory Test. Guaranteed.
 		{% end %}
 	</title>
-
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/bootstrap-responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="{{static_url('css/base.css')}}" />
 	{% for css in kwargs['css_deps'] %}
 		<link href="{{static_url(css)}}" rel="stylesheet">
 	{% end %}
-    <link href="../static/css/bootstrap.css" rel="stylesheet">
+
     <style type="text/css">
       body {
         padding-top: 60px;
         padding-bottom: 40px;
       }
     </style>
-    <link href="../static/css/bootstrap-responsive.css" rel="stylesheet">
 
 </head> 
 
@@ -46,24 +47,24 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="/"> <img src="{{static_url('imgs/logo.png')}}"></a>
-          <div class="nav-collapse collapse">
-           
-            <form class="navbar-form pull-right">
+              <div class="pull-right">           
               {% if not current_user%}
-              	<button type="submit" class="btn btn-success">Sign in</button>
+              	<button type="submit" class="btn btn-success" href="/login">Sign in</button>
               {% else %}
+
               	<ul class="nav nav-pills">
-              		<li><a href="#">Learn</a></li>
+              		<li class="active"><a href="#">Learn</a></li>
               		<li><a href="#">Mock Test</a></li>
                     <li><a href="#">Book Test</a></li>
                     <li><a href="/logout">Logout</a></li>
+                    <li>|</li>	
             	</ul>
-            {% end %}
-            </form>
-          </div><!--/.nav-collapse -->
+            	<a class="brand1" href="/dashboard"> <img src="{{static_url('imgs/user.png')}}"></a>
+              </div>
+              {% end %}
+			  </div>
         </div>
       </div>
-    </div>
 {% end %}
 {% block content %}
 
