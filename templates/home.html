@@ -27,10 +27,10 @@
 				        {% set question = kwargs['questions'][0] %}
 						<h4> {{question.question}}</h4>
      					<ul remaining-answers={{len(question.answer)}} class="nav nav-pills nav-stacked">
-							<li><a class="choice" ind="0"><span class="badge badge-info">A</span> {{question.options[0]}}</a></li>
-							<li><a class="choice" ind="1"><span class="badge badge-info">B</span> {{question.options[1]}}</a></li>
-							<li><a class="choice" ind="2"><span class="badge badge-info">C</span> {{question.options[2]}}</a></li>
-							<li><a class="choice" ind="3"><span class="badge badge-info">D</span> {{question.options[3]}}</a></li>
+							<li><a class="choice" ind="0"><span class="badge badge-info">A</span> {{question.options[0]}}</a></li></br>
+							<li><a class="choice" ind="1"><span class="badge badge-info">B</span> {{question.options[1]}}</a></li></br>
+							<li><a class="choice" ind="2"><span class="badge badge-info">C</span> {{question.options[2]}}</a></li></br>
+							<li><a class="choice" ind="3"><span class="badge badge-info">D</span> {{question.options[3]}}</a></li></br>
 						</ul>
 					</div>
 		       </div>
