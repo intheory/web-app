@@ -3,7 +3,7 @@
 # Author: Giorgos Eracleous #
 #############################
 
-from app.handlers import base, user, home, admin,  dashboard
+from app.handlers import base, user, home, admin,  dashboard, learn
 
 url_patterns = [
     ("/", home.HomePageHandler),
@@ -12,6 +12,8 @@ url_patterns = [
     ("/logout", user.UserLogoutHandler),
     ###########Dashboard hanlders##############
     ("/dashboard", dashboard.ViewDashBoardHandler),
+    ###########Learning pages hanlders##############
+    ("/learn/progress", learn.ViewProgressHandler),
     ###########Backend hanlders##############
     ("/admin/questions/add", admin.AddQuestionHandler),
     ("/admin/questions", admin.ViewQuestionsHandler),

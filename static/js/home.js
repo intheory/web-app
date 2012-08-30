@@ -67,7 +67,8 @@
     }); 
     
     $("#get-started-btn").live("click", function() {
-	if($("#dim").isHidden()) $("#dim").fadeIn();  
+	$("#dim").fadeIn();  
+	return false;
     });
 
 
