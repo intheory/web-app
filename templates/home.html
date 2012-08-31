@@ -27,10 +27,10 @@
 				        {% set question = kwargs['questions'][0] %}
 						<h4> {{question.question}}</h4>
      					<ul remaining-answers={{len(question.answer)}} class="nav nav-pills nav-stacked">
-							<li><a class="choice" ind="0"><span class="badge badge-info">A</span> {{question.options[0]}}</a></li></br>
-							<li><a class="choice" ind="1"><span class="badge badge-info">B</span> {{question.options[1]}}</a></li></br>
-							<li><a class="choice" ind="2"><span class="badge badge-info">C</span> {{question.options[2]}}</a></li></br>
-							<li><a class="choice" ind="3"><span class="badge badge-info">D</span> {{question.options[3]}}</a></li></br>
+							<li><a class="choice" ind="0"><span class="badge badge-info">A</span> {{question.options[0]}}</a></li>
+							<li><a class="choice" ind="1"><span class="badge badge-info">B</span> {{question.options[1]}}</a></li>
+							<li><a class="choice" ind="2"><span class="badge badge-info">C</span> {{question.options[2]}}</a></li>
+							<li><a class="choice" ind="3"><span class="badge badge-info">D</span> {{question.options[3]}}</a></li>
 						</ul>
 					</div>
 		       </div>
@@ -77,6 +77,12 @@
             <li class="next"><a href="#">Forgot username or password?</a></li>
         </ul>
     </div>
+</div>
+</script>
+
+<script id="show-arrow-template" type="text/x-jquery-tmpl">
+<div class="arrow-container">
+	<img src="{{static_url('imgs/arrow.png')}}"/>
 </div>
 </script>
 
