@@ -8,6 +8,8 @@
          
     $("a.choice").live("click", function() {
 	$("#dim").fadeIn();
+	var tmpl = $("#show-arrow-template").tmpl();
+	$("div.columnA").after(tmpl);
 	var remainingAnswers = $(this).parent().parent().attr("remaining-answers")	
 
 	if ($(this).parent().hasClass("active")){  //if this choice was clicked before unselect it
@@ -61,7 +63,8 @@
     $("#dim").css("height", $(document).height()); 
 
     $(document).click(function() {
-        $("#dim").fadeOut(); 
+        $("#dim").fadeOut();
+        $(".arrow-container").remove(); 
     }); 
   
     $(".close").live("click", function(){

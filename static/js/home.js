@@ -63,7 +63,8 @@
     $("#dim").css("height", $(document).height()); 
 
     $(document).click(function() {
-        $("#dim").fadeOut(); 
+        $("#dim").fadeOut();
+        $(".arrow-container").remove(); 
     }); 
   
     $(".close").live("click", function(){

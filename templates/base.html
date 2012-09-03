@@ -47,24 +47,25 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="/"> <img src="{{static_url('imgs/logo.png')}}"></a>
-              <div class="pull-right">           
-              {% if not current_user%}
-           		<button type="submit" class="btn btn-success" href="/login">Sign in</button>
-              {% else %}
-              	<ul class="nav nav-pills">
-              		<li class="active"><a href="#">Learn</a></li>
+            <div class="pull-right">           
+               {% if not current_user%}
+           		 <button type="submit" class="btn btn-success" href="/login">Sign in</button>
+               {% else %}
+              	 <ul class="nav nav-pills">
+              	 	<li class="active"><a href="#">Learn</a></li>
               		<li><a href="#">Mock Test</a></li>
                     <li><a href="#">Book Test</a></li>
                     <li><a href="/logout">Logout</a></li>
                     <li>|</li>	
-            	</ul>
-            	<a class="brand1" href="/dashboard"> <img src="{{static_url('imgs/user.png')}}"></a>
-              </div>
+            	 </ul>
+            	 <a class="brand1" href="/dashboard"> <img src="{{static_url('imgs/user.png')}}"></a>
               {% end %}
-			  </div>
+            </div>
+		</div>
         </div>
       </div>
 {% end %}
+
 {% block content %}
 
 {% end %}
