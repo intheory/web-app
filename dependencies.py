@@ -6,7 +6,7 @@
 css_deps = ("css", "css",
             [
              ("/", ["home.css"]),
-            ("/learn/progress", ["learn.css"]),
+            ("/learn/main", ["learn.css"]),
              
             ])
 

@@ -13,7 +13,7 @@ url_patterns = [
     ###########Dashboard hanlders##############
     ("/dashboard", dashboard.ViewDashBoardHandler),
     ###########Learning pages hanlders##############
-    ("/learn/progress", learn.ViewProgressHandler),
+    ("/learn/main", learn.ViewProgressHandler),
     ###########Backend hanlders##############
     ("/admin/questions/add", admin.AddQuestionHandler),
     ("/admin/questions", admin.ViewQuestionsHandler),
