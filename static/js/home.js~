@@ -7,11 +7,18 @@
     // =============================== Listeners =============================== //
          
     $("a.choice").live("click", function() {
-	$("#dim").fadeIn();
-	var tmpl = $("#show-arrow-template").tmpl();
-	$("div.columnA").after(tmpl);
-	var remainingAnswers = $(this).parent().parent().attr("remaining-answers")	
+	var quizBox = $("#mini-quiz-box");	
+	if (quizBox.hasClass("undimmed")){ 
+		$("#dim").fadeIn();
+		var tmpl = $("#show-arrow-template").tmpl();
+		$("div.columnA").after(tmpl);
+		$("#mini-quiz-box").animate({
+	  	   width: '+=250', left: '-150px'
+		}, 400, function() {});
+		quizBox.removeClass("undimmed").addClass("dimmed");
+	}
 
+	var remainingAnswers = $(this).parent().parent().attr("remaining-answers")	
 	if ($(this).parent().hasClass("active")){  //if this choice was clicked before unselect it
             $(this).parent().removeClass("active"); 
     	    remainingAnswers = parseInt(remainingAnswers) + 1;
@@ -63,8 +70,14 @@
     $("#dim").css("height", $(document).height()); 
 
     $(document).click(function() {
-        $("#dim").fadeOut();
-        $(".arrow-container").remove(); 
+	if ($("#mini-quiz-box").hasClass("dimmed")){
+            $("#dim").fadeOut();
+            $(".arrow-container").remove(); 
+	    $("#mini-quiz-box").animate({
+  	       width: '-=250', left: '0px'
+	    }, 400, function() {});
+	    $("#mini-quiz-box").removeClass("dimmed").addClass("undimmed");
+	}
     }); 
   
     $(".close").live("click", function(){
@@ -73,9 +86,16 @@
     }); 
     
     $("#get-started-btn").live("click", function() {
-	$("#dim").fadeIn();  
-	var tmpl = $("#show-arrow-template").tmpl();
-	$("div.columnA").after(tmpl);
+	var quizBox = $("#mini-quiz-box");	
+	if (quizBox.hasClass("undimmed")){ 
+		$("#dim").fadeIn();  
+		var tmpl = $("#show-arrow-template").tmpl();
+		$("div.columnA").after(tmpl);
+
+		$("#mini-quiz-box").animate({
+	  	   width: '+=250', left: '-150px'
+		}, 400, function() {});
+	}
 	return false;
     });
 
