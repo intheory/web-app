@@ -13,7 +13,7 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
     def get(self):
         if self.get_argument("code", False):
             self.get_authenticated_user(
-              redirect_uri='http://localhost:8888/login',
+              redirect_uri='http://intheory.co.uk/login',
               client_id=self.settings["facebook_api_key"],
               client_secret=self.settings["facebook_secret"],
               code=self.get_argument("code"),
@@ -24,7 +24,7 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
             self.redirect('/circles/create')
             return
         
-        self.authorize_redirect(redirect_uri='http://localhost:8888/login',
+        self.authorize_redirect(redirect_uri='http://intheory.co.uk/login',
                                 client_id=self.settings["facebook_api_key"],
                                 extra_params={"scope": "email"})
     

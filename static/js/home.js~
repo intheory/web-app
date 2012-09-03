@@ -95,6 +95,7 @@
 		$("#mini-quiz-box").animate({
 	  	   width: '+=250', left: '-150px'
 		}, 400, function() {});
+		quizBox.removeClass("undimmed").addClass("dimmed")
 	}
 	return false;
     });
