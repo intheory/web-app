@@ -5,6 +5,8 @@
  */
     
     // =============================== Listeners =============================== //
+
+
          
     $("a.choice").live("click", function() {
 	var quizBox = $("#mini-quiz-box");	
