@@ -14,7 +14,7 @@ url_patterns = [
     ("/dashboard", dashboard.ViewDashBoardHandler),
     ###########Learning pages hanlders##############
     ("/learn/main", learn.ViewProgressHandler),
-    ("/learn/question", learn.ViewQuestionHandler),
+    ("/learn/section", learn.ViewSectionHandler),     
     ###########Practise pages hanlders##############
     
     ###########Backend hanlders##############

@@ -2,6 +2,15 @@ import tornado
 from app.handlers import base
 from app.model.content import MiniQuizQuestion#!@UnresolvedImport
 
+class ViewSectionHandler(base.BaseHandler):
+    '''
+    Renders a section page.    
+    '''
+    @tornado.web.authenticated
+    def on_get(self):
+        sname = self.get_argument("name")
+        #TODO: Get thge section from db 
+
 class ViewProgressHandler(base.BaseHandler):
     '''
     Renders a page with the progress for each topic.    
