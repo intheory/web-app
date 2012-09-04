@@ -1,6 +1,6 @@
 import tornado
 from app.handlers import base, user
-from app.model.content import Section, Question, MiniQuizQuestion#!@UnresolvedImport
+from app.model.content import Nugget, Section, Question, MiniQuizQuestion#!@UnresolvedImport
 from app.model.user import *#!@UnresolvedImport
 
 class ViewAdminPanelHandler(base.BaseHandler):
@@ -104,7 +104,7 @@ class ViewNuggetsHandler(base.BaseHandler):
     @user.moderator     
     @tornado.web.authenticated
     def on_get(self):
-        self.base_render("admin/admin-nuggets.html")
+        self.base_render("admin/admin-nuggets.html", sections=Section.objects)
 
 class AddNuggetHandler(base.BaseHandler):
     '''
@@ -115,8 +115,14 @@ class AddNuggetHandler(base.BaseHandler):
     def on_post(self):
         try:
             title = self.get_argument("title-inp", None)
-            s = Section()
-            s.title = title
-            s.save()
+            content = self.get_argument("content-inp", None)
+            img_name = self.get_argument("img-name-inp", None)
+            section = self.get_argument("section", None)
+            n = Nugget()
+            n.title = title
+            n.content = content
+            n.img = img_name
+            n.section = section
+            n.save()
         except Exception, e:
             print e
