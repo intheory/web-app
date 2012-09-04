@@ -6,7 +6,7 @@
 
 import ConfigParser #@UnresolvedImport
 import environment #@UnusedImport
-import tornado.web, os, pymongo
+import tornado.web, os, pymongo, uimodules
 import app.deps
 from urls import url_patterns
 from dependencies import css_deps, js_deps
@@ -25,7 +25,9 @@ class Intheory(tornado.web.Application):
                     'xsrf_cookies'  : True,
                     'autoescape'    : "xhtml_escape",
                     'facebook_api_key': "486623404681319",
-                    'facebook_secret': "4049a6a2d8dd781bbfb4a1b849869113"
+                    'facebook_secret': "4049a6a2d8dd781bbfb4a1b849869113",
+                    'ui_modules'     : uimodules
+
                     }
 
 	config = ConfigParser.RawConfigParser()

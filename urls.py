@@ -14,6 +14,9 @@ url_patterns = [
     ("/dashboard", dashboard.ViewDashBoardHandler),
     ###########Learning pages hanlders##############
     ("/learn/main", learn.ViewProgressHandler),
+    ("/learn/question", learn.ViewQuestionHandler),
+    ###########Practise pages hanlders##############
+    
     ###########Backend hanlders##############
     ("/admin/users/moderator", admin.MakeModeratorHandler),
     ("/admin/users", admin.ViewUsersHandler),

@@ -5,9 +5,9 @@
 # CSS Dependencies.
 css_deps = ("css", "css",
             [
-             ("/", ["home.css"]),
-            ("/learn/main", ["learn.css"]),
-             
+             ("/learn/question", ["questions.css"]),			
+             ("/learn/main", ["learn.css"]),			
+             ("/", ["home.css"]),	
             ])
 
 # JS Dependencies.
