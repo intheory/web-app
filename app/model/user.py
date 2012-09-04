@@ -1,4 +1,4 @@
-from mongoengine import Document, ObjectIdField, StringField, EmbeddedDocument, EmbeddedDocumentField, ListField
+from mongoengine import Document, ObjectIdField, StringField, EmbeddedDocument, EmbeddedDocumentField, ListField, BooleanField
 # ============================ User ================================ #
 
 class UserFriend(EmbeddedDocument):
@@ -18,6 +18,11 @@ class User(Document):
     friends = ListField(EmbeddedDocumentField(UserFriend), default=list)
     fb_id = StringField(required=True)
     access_token = StringField(required=True)
+    moderator = BooleanField(required=True, default=False)
+
+    def toggle_moderator(self):
+            self.moderator = not self.moderator
+            self.save()
     
 class CachedUser(EmbeddedDocument):
     name = StringField(required=True)

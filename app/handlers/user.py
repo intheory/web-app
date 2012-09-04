@@ -3,7 +3,23 @@ from mongoengine.queryset import DoesNotExist
 from app.model.user import *
 import tornado.auth, tornado.web
 import functools
-        
+    
+def moderator(method):
+    ''' 
+    Decorator - Checks if the currently authenticated user is a moderator.
+    Intended to be used together with tornado.web.authenticated in places
+    where moderator access is required.
+    '''
+    def wrapper(self, *args, **kwargs):
+        try:
+            if self.current_user and self.current_user['moderator']:
+                return method(self, *args, **kwargs)
+            else:
+                raise tornado.web.HTTPError(403)
+        except:
+            raise tornado.web.HTTPError(403)
+    return wrapper
+
 class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
     '''
     Handles the login for the Facebook user, returning a user object.
@@ -13,7 +29,7 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
     def get(self):
         if self.get_argument("code", False):
             self.get_authenticated_user(
-              redirect_uri='http://intheory.co.uk/login',
+              redirect_uri='http://localhost:8888/login',
               client_id=self.settings["facebook_api_key"],
               client_secret=self.settings["facebook_secret"],
               code=self.get_argument("code"),
@@ -24,7 +40,7 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
             self.redirect('/circles/create')
             return
         
-        self.authorize_redirect(redirect_uri='http://intheory.co.uk/login',
+        self.authorize_redirect(redirect_uri='http://localhost:8888/login',
                                 client_id=self.settings["facebook_api_key"],
                                 extra_params={"scope": "email"})
     

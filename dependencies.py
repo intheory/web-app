@@ -13,6 +13,7 @@ css_deps = ("css", "css",
 # JS Dependencies.
 js_deps = ("js", "js",
             [
+             ("/admin/*", ["admin.js"]),    
              ("/", ["home.js", "libs/jquery.tmpl.min.js"]),
 	    ])
 

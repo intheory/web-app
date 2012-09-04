@@ -21,6 +21,7 @@ class Intheory(tornado.web.Application):
                     'static_path'   : "static",
                     'template_path' : "templates",
                     'cookie_secret' : "aKlRsPkySWyOqByxAQfLsKMbEAKj3ErRtg1RgkBUQ6E=noteslib",
+                    'login_url'     : "/login", #landing page if user is not authenticated
                     'xsrf_cookies'  : True,
                     'autoescape'    : "xhtml_escape",
                     'facebook_api_key': "486623404681319",
@@ -30,7 +31,7 @@ class Intheory(tornado.web.Application):
 	config = ConfigParser.RawConfigParser()
         config.read(config_file)
 
-	############################
+        ############################
         #  Databse configuration   #
         ############################
         
