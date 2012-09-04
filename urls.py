@@ -23,6 +23,8 @@ url_patterns = [
     ("/admin/questions/add", admin.AddQuestionHandler),
     ("/admin/questions", admin.ViewQuestionsHandler),
     ("/admin/sections/add", admin.AddSectionHandler),       
-    ("/admin/sections", admin.ViewSectionsHandler),       
+    ("/admin/sections", admin.ViewSectionsHandler),
+    ("/admin/nuggets/add", admin.AddNuggetHandler),        
+    ("/admin/nuggets", admin.ViewNuggetsHandler),        
     ("/admin", admin.ViewAdminPanelHandler),
 ]

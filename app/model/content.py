@@ -17,3 +17,10 @@ class MiniQuizQuestion(Document):
 class Section(Document):
     meta = {"collection":"Sections"}
     title = StringField(required=True)
+
+class Nugget(Document):
+	meta = {"collection":"Nuggets"}
+    title = StringField(required=True)
+    img = StringField(required=True)
+    content = StringField(required=True)
+    section = StringField(required=True)

@@ -100,3 +100,27 @@ class AddSectionHandler(base.BaseHandler):
             s.save()
         except Exception, e:
             print e
+
+class ViewNuggetsHandler(base.BaseHandler):
+    '''
+    Enables moderator to add a new nugget
+    '''
+    @user.moderator     
+    @tornado.web.authenticated
+    def on_get(self):
+        self.base_render("admin-nuggets.html")
+
+class AddNuggetHandler(base.BaseHandler):
+    '''
+    Adds a new nugget
+    '''
+    @user.moderator 
+    @tornado.web.authenticated
+    def on_post(self):
+        try:
+            title = self.get_argument("title-inp", None)
+            s = Section()
+            s.title = title
+            s.save()
+        except Exception, e:
+            print e
