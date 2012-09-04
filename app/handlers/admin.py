@@ -10,7 +10,7 @@ class ViewAdminPanelHandler(base.BaseHandler):
     @user.moderator
     @tornado.web.authenticated
     def on_get(self):
-        self.base_render("admin-main.html")
+        self.base_render("admin/admin-main.html")
 
 class ViewQuestionsHandler(base.BaseHandler):
     '''
@@ -19,7 +19,7 @@ class ViewQuestionsHandler(base.BaseHandler):
     
     @tornado.web.authenticated
     def on_get(self):
-        self.base_render("admin-questions.html")
+        self.base_render("admin/admin-questions.html")
 
 class AddQuestionHandler(base.BaseHandler):
     '''
@@ -57,19 +57,15 @@ class ViewUsersHandler(base.BaseHandler):
     @tornado.web.authenticated
     def on_get(self):
         users = User.objects
-        self.base_render("admin-users.html", users=users)
+        self.base_render("admin/admin-users.html", users=users)
 
 class MakeModeratorHandler(base.BaseHandler):
     @user.moderator 
     @tornado.web.authenticated    
     def on_post(self):
-        print '0'
         uid = self.get_argument("uid", None)
-        print '1'
         user = User.objects(id = uid).get()
-        print '2'
         user.toggle_moderator()
-        print '3'
         return (user,) 
 
     def on_success(self, user):
@@ -84,7 +80,7 @@ class ViewSectionsHandler(base.BaseHandler):
     @tornado.web.authenticated
     def on_get(self):
         sections = Section.objects
-        self.base_render("admin-sections.html", sections=sections)
+        self.base_render("admin/admin-sections.html", sections=sections)
 
 class AddSectionHandler(base.BaseHandler):
     '''
@@ -108,7 +104,7 @@ class ViewNuggetsHandler(base.BaseHandler):
     @user.moderator     
     @tornado.web.authenticated
     def on_get(self):
-        self.base_render("admin-nuggets.html")
+        self.base_render("admin/admin-nuggets.html")
 
 class AddNuggetHandler(base.BaseHandler):
     '''
