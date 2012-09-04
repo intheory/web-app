@@ -1,6 +1,6 @@
 import tornado
 from app.handlers import base, user
-from app.model.content import Question, MiniQuizQuestion#!@UnresolvedImport
+from app.model.content import Section, Question, MiniQuizQuestion#!@UnresolvedImport
 from app.model.user import *#!@UnresolvedImport
 
 class ViewAdminPanelHandler(base.BaseHandler):
@@ -25,6 +25,7 @@ class AddQuestionHandler(base.BaseHandler):
     '''
     Adds a new question
     '''
+    @user.moderator 
     @tornado.web.authenticated
     def on_post(self):
         try:
@@ -52,13 +53,14 @@ class ViewUsersHandler(base.BaseHandler):
     '''
     Displays a list of users
     '''
+    @user.moderator 
     @tornado.web.authenticated
     def on_get(self):
         users = User.objects
         self.base_render("admin-users.html", users=users)
 
 class MakeModeratorHandler(base.BaseHandler):
-
+    @user.moderator 
     @tornado.web.authenticated    
     def on_post(self):
         print '0'
@@ -73,3 +75,28 @@ class MakeModeratorHandler(base.BaseHandler):
     def on_success(self, user):
         self.xhr_response.update({"moderator": user.moderator})  
         self.write(self.xhr_response)  
+
+class ViewSectionsHandler(base.BaseHandler):
+    '''
+    Enables moderator to add a new section
+    '''
+    @user.moderator     
+    @tornado.web.authenticated
+    def on_get(self):
+        sections = Section.objects
+        self.base_render("admin-sections.html", sections=sections)
+
+class AddSectionHandler(base.BaseHandler):
+    '''
+    Adds a new section
+    '''
+    @user.moderator 
+    @tornado.web.authenticated
+    def on_post(self):
+        try:
+            title = self.get_argument("title-inp", None)
+            s = Section()
+            s.title = title
+            s.save()
+        except Exception, e:
+            print e

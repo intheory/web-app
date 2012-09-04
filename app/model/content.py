@@ -13,3 +13,7 @@ class MiniQuizQuestion(Document):
     options = ListField(StringField(), default=list, required=True)
     answer = ListField(IntField(), required=True)
     
+
+class Section(Document):
+    meta = {"collection":"Sections"}
+    title = StringField(required=True)

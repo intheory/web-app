@@ -22,5 +22,7 @@ url_patterns = [
     ("/admin/users", admin.ViewUsersHandler),
     ("/admin/questions/add", admin.AddQuestionHandler),
     ("/admin/questions", admin.ViewQuestionsHandler),
+    ("/admin/sections/add", admin.AddSectionHandler),       
+    ("/admin/sections", admin.ViewSectionsHandler),       
     ("/admin", admin.ViewAdminPanelHandler),
 ]
