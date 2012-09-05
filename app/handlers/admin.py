@@ -1,4 +1,4 @@
-import tornado
+import tornado, tornado.escape
 from app.handlers import base, user
 from app.model.content import Nugget, Section, Question, MiniQuizQuestion#!@UnresolvedImport
 from app.model.user import *#!@UnresolvedImport
@@ -152,5 +152,23 @@ class RearrangeNuggetsHandler(base.BaseHandler):
     @user.moderator 
     @tornado.web.authenticated
     def on_post(self):
-        ordering = self.get_argument("ordering", None)
-        
+        try:
+            ordering = self.get_argument("ordering", None)
+            data = tornado.escape.json_decode(ordering)
+            new_ordering = []
+            for item in data.items():
+                new_ordering.append(item)
+            sorted_order = sorted(new_ordering, key=lambda tup: tup[1])
+            l = len(sorted_order)
+
+            #We iterate through the preferences and we update the next
+            #and previous nugget for each nugget. The first one has the last
+            #one as its previous and the last one has next the first one.
+            for i, nugget_tuple in enumerate(sorted_order):
+                n = Nugget.objects(id=nugget_tuple[0]).get()
+                n.next_nugget = sorted_order[i+1][0] if i<l-1 else sorted_order[0][0]
+                n.previous_nugget = sorted_order[i-1][0]
+                n.save()
+
+        except Exception, e:
+            print e

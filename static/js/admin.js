@@ -40,6 +40,7 @@
             var value = list.eq(i).val();
             ordering[key] = value;            
         }
+        console.log($.parseJSON(JSON.stringify(ordering)))
         IT.post("/admin/nuggets/rearrange", {
            ordering : JSON.stringify(ordering)
         }, true, function(response) 
