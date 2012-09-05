@@ -13,8 +13,8 @@ class ViewSectionHandler(base.BaseHandler):
         section = Section.objects(id=sid).get()
 
         #Get all the nuggets associated with this section
-        nuggets = Nugget.objects(section=sid)
-        self.base_render("learn/learn-content.html", title=section.title, nuggets=nuggets)
+        nugget = Nugget.objects(section=sid)[0]#TODO: get the nuggets that are not yet studied
+        self.base_render("learn/learn-content.html", title=section.title, nugget=nugget)
 
 class ViewLearnMainHandler(base.BaseHandler):
     '''
@@ -35,4 +35,24 @@ class ViewQuestionHandler(base.BaseHandler):
         return (question,)
     
     def on_success(self, q):
-        self.base_render("learn/learn-question.html", question=q)  
+        self.base_render("learn/learn-question.html", question=q)
+
+class GetPreviousNuggetHandler(base.BaseHandler):
+    '''
+    Gets the previous nugget
+    '''
+    def on_get(self):
+        pnid = self.get_argument("pnid", None)
+        previous_nugget = Nugget.objects(id=pnid).get()
+        return (previous_nugget,)
+
+    def on_success(self, n):
+        if self.is_xhr:
+            nugget = {"nugget_title": n.title,
+                      "nugget_previous": n.previous_nugget,
+                      "nugget_next": n.next_nugget,    
+                      "nugget_img": n.img,
+                      "nugget_content": n.content
+                      }
+            self.xhr_response.update(nugget)
+            self.write(self.xhr_response)

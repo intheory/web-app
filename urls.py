@@ -14,7 +14,8 @@ url_patterns = [
     ("/dashboard", dashboard.ViewDashBoardHandler),
     ###########Learning pages hanlders##############
     ("/learn/main", learn.ViewLearnMainHandler),
-    ("/learn/section", learn.ViewSectionHandler),     
+    ("/learn/section", learn.ViewSectionHandler),  
+    ("/learn/get-previous-nugget", learn.GetPreviousNuggetHandler),
     ###########Practise pages hanlders##############
     
     ###########Backend hanlders##############
@@ -24,7 +25,7 @@ url_patterns = [
     ("/admin/questions", admin.ViewQuestionsHandler),
     ("/admin/sections/add", admin.AddSectionHandler),       
     ("/admin/sections", admin.ViewSectionsHandler),
-    ("/admin/nuggets/rearrange", admin.RearrangeNuggetsHandler),
+    ("/admin/nuggets/rearrange", admin.RearrangeNuggetsHandler), 
     ("/admin/nuggets/get", admin.GetNuggetsHandler),
     ("/admin/nuggets/add", admin.AddNuggetHandler),        
     ("/admin/nuggets", admin.ViewNuggetsHandler),        
