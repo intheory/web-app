@@ -1,13 +1,13 @@
 @charset "UTF-8";
 /* CSS Document */
 
-
 .columnA {
-width: 42%;
+  width: 45%;
 }
+
 .columnB {
-width: 55%;
-border-style: none;
+  width: 55%;
+  border-style: none;
 }
 
 .hero-unit1 {
@@ -19,7 +19,7 @@ border-style: none;
   border-radius: 6px;
   border-style:solid;
   border-width:1px;
-  border-color: #d6e3e8;
+  border-color: #d6e3e8;  
 }
 
 .learn {

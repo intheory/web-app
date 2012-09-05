@@ -52,8 +52,11 @@
            		 <button type="submit" class="btn btn-success" href="/login">Sign in</button>
                {% else %}
               	 <ul class="nav nav-pills">
-              	 	<li class="active"><a href="/learn/main">Learn</a></li>
-              		<li><a href="#">Mock Test</a></li>
+                    {% if current_user['moderator'] %}
+                      <li><a href="/admin">Admin</a></li>  
+                    {% end %}
+              	 	  <li class="active"><a href="/learn/main">Learn</a></li>
+              		  <li><a href="#">Mock Test</a></li>
                     <li><a href="#">Book Test</a></li>
                     <li><a href="/logout">Logout</a></li>
                     <li>|</li>	
