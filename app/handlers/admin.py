@@ -126,3 +126,31 @@ class AddNuggetHandler(base.BaseHandler):
             n.save()
         except Exception, e:
             print e
+
+class GetNuggetsHandler(base.BaseHandler):
+    '''
+    Returns all the nuggets associated with the specific section
+    '''
+    @user.moderator 
+    @tornado.web.authenticated
+    def on_get(self):
+        sid = self.get_argument("sid", None)
+        nuggets = Nugget.objects(section=sid)
+        nuggets = [(str(nugget.id), nugget.title) for nugget in nuggets]
+        return (nuggets,)
+    
+    def on_success(self, nuggets):
+        if self.is_xhr:
+            add = {"nuggets": nuggets}
+            self.xhr_response.update(add)
+            self.write(self.xhr_response)
+
+class RearrangeNuggetsHandler(base.BaseHandler):
+    '''
+    rearranges the ordering of the nuggets within a section.
+    '''
+    @user.moderator 
+    @tornado.web.authenticated
+    def on_post(self):
+        ordering = self.get_argument("ordering", None)
+        

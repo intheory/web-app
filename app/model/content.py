@@ -18,8 +18,10 @@ class Section(Document):
     title = StringField(required=True)
 
 class Nugget(Document):
-	meta = {"collection":"Nuggets"}
-	title = StringField(required=True)
-	img = StringField(required=True)
-	content = StringField(required=True)
-	section = StringField(required=True)
+    meta = {"collection":"Nuggets"}
+    title = StringField(required=True)
+    img = StringField(required=True)
+    content = StringField(required=True)
+    section = StringField(required=True)
+    next_nugget = StringField(required=True)
+    previous_nugget = StringField(required=True)    
