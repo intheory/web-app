@@ -9,45 +9,56 @@
   		  <li class="active"><a href="/admin/nuggets">Nuggets</a></li>
 		</ul>
 		{% block admin-content%}
-   		<form class="form-horizontal" action="/admin/nuggets/add" method="post" >
-   		{% raw xsrf_form_html() %} 
-		  <div class="control-group">
-		    <label class="control-label">Title</label>
-		    <div class="controls">
-		      <input type="text" name="title-inp" placeholder="Title">
-		    </div>
-		  </div>
-		  <div class="control-group">
-		    <label class="control-label">Content</label>
-		    <div class="controls">
-		      <input type="text" name="content-inp" placeholder="Content">
-		    </div>
-		  </div>
-		  <div class="control-group">
-		    <label class="control-label">Image name</label>
-		    <div class="controls">
-		      <input type="text" name="img-name-inp" placeholder="Image name">
-		    </div>
-		  </div>
-		  <div class="control-group">
-		    <label class="control-label">Section</label>
-		    <div class="controls">
-				<select id="section" name="section"> 
-					<option value="0">--Select Section--</option>
-					{% for section in kwargs['sections']%}
-						<option value="{{section.id}}">{{section.title}}</option>
-					{% end %}
-				</select>
-		    </div>
-		  </div>
-		  <div class="control-group">
-		    <div class="controls">
-		       <div class="btn-group">
-			       <button class="btn btn-primary" type="submit"><i class="icon-plus icon-white"></i> Add Nugget</button>
-			   </div>
-		    </div>
-		  </div>
-		</form>
+		<div class="columnA pull-left">
+	   		<form class="form-horizontal" action="/admin/nuggets/add" method="post" >
+	   		{% raw xsrf_form_html() %} 
+			  <div class="control-group">
+			    <label class="control-label">Title</label>
+			    <div class="controls">
+			      <input type="text" name="title-inp" placeholder="Title">
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <label class="control-label">Content</label>
+			    <div class="controls">
+			      <input type="text" name="content-inp" placeholder="Content">
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <label class="control-label">Image name</label>
+			    <div class="controls">
+			      <input type="text" name="img-name-inp" placeholder="Image name">
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <label class="control-label">Section</label>
+			    <div class="controls">
+					<select id="section" name="section"> 
+						<option value="0">--Select Section--</option>
+						{% for section in kwargs['sections']%}
+							<option value="{{section.id}}">{{section.title}}</option>
+						{% end %}
+					</select>
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <div class="controls">
+			       <div class="btn-group">
+				       <button class="btn btn-primary" type="submit"><i class="icon-plus icon-white"></i> Add Nugget</button>
+				   </div>
+			    </div>
+			  </div>
+			</form>
+		</div>
+		<div class="columnB pull-right" style="background-color:white;">
+			<p>Control the ordering of nuggets</p> 
+			<select id="section-colb-select" name="section"> 
+				<option value="0">--Select Section--</option>
+				{% for section in kwargs['sections']%}
+					<option value="{{section.id}}">{{section.title}}</option>
+				{% end %}
+			</select>
+		</div>			
     	{% end%}
     </div> <!-- /container -->
 {% end%}
