@@ -1,6 +1,6 @@
 import tornado
 from app.handlers import base
-from app.model.content import Section, MiniQuizQuestion#!@UnresolvedImport
+from app.model.content import Section, Nugget, MiniQuizQuestion#!@UnresolvedImport
 
 class ViewSectionHandler(base.BaseHandler):
     '''
@@ -8,8 +8,13 @@ class ViewSectionHandler(base.BaseHandler):
     '''
     @tornado.web.authenticated
     def on_get(self):
-        sname = self.get_argument("name")
-        #TODO: Get thge section from db 
+        sid = self.get_argument("sid")
+        #Get section object
+        section = Section.objects(id=sid).get()
+
+        #Get all the nuggets associated with this section
+        nuggets = Nugget.objects(section=sid)
+        self.base_render("learn/learn-content.html", title=section.title, nuggets=nuggets)
 
 class ViewLearnMainHandler(base.BaseHandler):
     '''
@@ -18,7 +23,6 @@ class ViewLearnMainHandler(base.BaseHandler):
     @tornado.web.authenticated
     def on_get(self):
         sections = Section.objects
-        print sections
         self.base_render("learn/learn-main.html", sections= sections)
 
 class ViewQuestionHandler(base.BaseHandler):
