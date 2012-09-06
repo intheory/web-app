@@ -9,8 +9,8 @@
 	</div>
 	</br></br></br></br></br>
 	<div class="progress progress-striped">
-	  <div class="bar bar-success progress-striped" style="width: 45%;"></div>
-	  <div class="bar bar-inactive progress-striped" style="width: 55%;"></div>
+	  <div class="bar bar-success progress-striped" style="width: {{kwargs['cursor']/kwargs['section_length']}}%;"></div>
+	  <div class="bar bar-inactive progress-striped" style="width: {{100-kwargs['cursor']/kwargs['section_length']}}%;"></div>
 	</div>
         
 	<div class="columnA pull-left">

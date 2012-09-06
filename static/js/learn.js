@@ -14,7 +14,7 @@
         {       
             $("#nugget-title-container").html("<p><font color='#FFFFFF'><b>"+  response.nugget_title +" </b></font></p>");
             $("#nugget-content-container").html(response.nugget_content);
-            $(this).attr("cursor", response.new_cursor);            
+            $("#previous-nugget-btn").attr("cursor", response.new_cursor);            
             $("#next-nugget-btn").attr("cursor", response.new_cursor)    
         });
     });
@@ -29,7 +29,10 @@
         {       
             $("#nugget-title-container").html("<p><font color='#FFFFFF'><b>"+  response.nugget_title +" </b></font></p>");
             $("#nugget-content-container").html(response.nugget_content);
-            $(this).attr("cursor", response.new_cursor);           
-            $("#previous-nugget-btn").attr("cursor", response.new_cursor)     
+            $("#next-nugget-btn").attr("cursor", response.new_cursor);           
+            $("#previous-nugget-btn").attr("cursor", response.new_cursor);    
+            $(".bar-success").css("width",(parseInt(response.new_cursor)/3)*100+"%")
+            $(".bar-inactive").css("width", 100-100*(parseInt(response.new_cursor)/3)+"%")
+            $()
         });
     });

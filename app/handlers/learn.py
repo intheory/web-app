@@ -24,7 +24,10 @@ class ViewSectionHandler(base.BaseHandler):
 
             #Get either the first nugget of the section or where the user left it off.
             nugget = section.nuggets[0]
-            self.base_render("learn/learn-content.html", section=section, nugget=nugget, cursor=0)
+            self.base_render("learn/learn-content.html", section=section, 
+                                                         nugget=nugget, 
+                                                         cursor=0, 
+                                                         section_length=len(section.nuggets))
         except Exception, e:
             print e    
 
