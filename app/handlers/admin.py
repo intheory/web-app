@@ -117,15 +117,15 @@ class AddNuggetHandler(base.BaseHandler):
             title = self.get_argument("title-inp", None)
             content = self.get_argument("content-inp", None)
             img_name = self.get_argument("img-name-inp", None)
-            section = self.get_argument("section", None)
+            sid = self.get_argument("section", None)
+            s = Section.objects(id=sid).get()
+
             n = Nugget()
             n.title = title
             n.content = content
             n.img = img_name
-            n.section = section
-            n.next_nugget = "None"
-            n.previous_nugget = "None"
-            n.save()
+            s.nuggets.append(n)
+            s.save()
         except Exception, e:
             print e
 

@@ -5,27 +5,31 @@
     // =============================== Listeners =============================== //
 
     $("#previous-nugget-btn").live("click", function() {
-        var pnid = $(this).attr('pnid');
+        var sid = $(this).attr('sid');
+        var cursor = $(this).attr('cursor');
         IT.get("/learn/get-previous-nugget", {
-               pnid : pnid
+               sid : sid,
+               cursor: cursor
         }, true, function(response) 
         {       
             $("#nugget-title-container").html("<p><font color='#FFFFFF'><b>"+  response.nugget_title +" </b></font></p>");
-            $("#nugget-content-container").html(response.nugget_title);
-            $("#previous-nugget-btn").attr("pnid", response.nugget_previous);
-            $("#next-nugget-btn").attr("nnid", response.nugget_next);
+            $("#nugget-content-container").html(response.nugget_content);
+            $(this).attr("cursor", response.new_cursor);            
+            $("#next-nugget-btn").attr("cursor", response.new_cursor)    
         });
     });
 
     $("#next-nugget-btn").live("click", function() {
-        var nnid = $(this).attr('nnid');
+        var sid = $(this).attr('sid');
+        var cursor = $(this).attr('cursor');    
         IT.get("/learn/get-next-nugget", {
-               nnid : nnid
+               sid : sid, 
+               cursor: cursor
         }, true, function(response) 
         {       
             $("#nugget-title-container").html("<p><font color='#FFFFFF'><b>"+  response.nugget_title +" </b></font></p>");
-            $("#nugget-content-container").html(response.nugget_title);
-            $("#previous-nugget-btn").attr("pnid", response.nugget_previous);
-            $("#next-nugget-btn").attr("nnid", response.nugget_next);
+            $("#nugget-content-container").html(response.nugget_content);
+            $(this).attr("cursor", response.new_cursor);           
+            $("#previous-nugget-btn").attr("cursor", response.new_cursor)     
         });
     });

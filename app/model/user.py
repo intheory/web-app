@@ -19,10 +19,15 @@ class User(Document):
     fb_id = StringField(required=True)
     access_token = StringField(required=True)
     moderator = BooleanField(required=True, default=False)
+    #progress_cursors = ListField(DictField(), default=list)
 
     def toggle_moderator(self):
             self.moderator = not self.moderator
             self.save()
+
+    def get_section_cursor(self, section_id):
+        pass
+        #TODO: find where the user left off
     
 class CachedUser(EmbeddedDocument):
     name = StringField(required=True)

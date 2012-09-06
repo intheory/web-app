@@ -2,22 +2,6 @@ import tornado
 from app.handlers import base
 from app.model.content import Section, Nugget, MiniQuizQuestion#!@UnresolvedImport
 
-class ViewSectionHandler(base.BaseHandler):
-    '''
-    Renders a section page.    
-    '''
-    @tornado.web.authenticated
-    def on_get(self):
-        sid = self.get_argument("sid")
-        #Get section object
-        section = Section.objects(id=sid).get()
-
-        #Get either the first nugget of the section or where the user left it off.
-        nugget = Nugget.objects(id=section.first_nugget).get()
-        if not nugget: #if we forgot to assign a first nugget we just pick the first one from db
-            nugget = Nugget.objects()[0]
-        self.base_render("learn/learn-content.html", title=section.title, nugget=nugget)
-
 class ViewLearnMainHandler(base.BaseHandler):
     '''
     Renders a page with the progress for each topic.    
@@ -26,6 +10,23 @@ class ViewLearnMainHandler(base.BaseHandler):
     def on_get(self):
         sections = Section.objects
         self.base_render("learn/learn-main.html", sections= sections)
+
+class ViewSectionHandler(base.BaseHandler):
+    '''
+    Renders a section page.    
+    '''
+    @tornado.web.authenticated
+    def on_get(self):
+        try:
+            sid = self.get_argument("sid")
+            #Get section object
+            section = Section.objects(id=sid).get()
+
+            #Get either the first nugget of the section or where the user left it off.
+            nugget = section.nuggets[0]
+            self.base_render("learn/learn-content.html", section=section, nugget=nugget, cursor=0)
+        except Exception, e:
+            print e    
 
 class ViewQuestionHandler(base.BaseHandler):
     '''
@@ -44,17 +45,19 @@ class GetPreviousNuggetHandler(base.BaseHandler):
     Gets the previous nugget
     '''
     def on_get(self):
-        pnid = self.get_argument("pnid", None)
-        previous_nugget = Nugget.objects(id=pnid).get()
-        return (previous_nugget,)
+        sid = self.get_argument("sid", None)
+        cursor = self.get_argument("cursor", None)
+        section = Section.objects(id=sid).get()
+        new_cursor = int(cursor)-1
+        previous_nugget = section.nuggets[new_cursor]
+        return (previous_nugget, new_cursor)
 
-    def on_success(self, n):
+    def on_success(self, n, new_cursor):
         if self.is_xhr:
             nugget = {"nugget_title": n.title,
-                      "nugget_previous": n.previous_nugget,
-                      "nugget_next": n.next_nugget,    
                       "nugget_img": n.img,
-                      "nugget_content": n.content
+                      "nugget_content": n.content,
+                      "new_cursor": new_cursor
                       }
             self.xhr_response.update(nugget)
             self.write(self.xhr_response)
@@ -64,17 +67,22 @@ class GetNextNuggetHandler(base.BaseHandler):
     Gets the next nugget
     '''
     def on_get(self):
-        nnid = self.get_argument("nnid", None)
-        next_nugget = Nugget.objects(id=nnid).get()
-        return (next_nugget,)
+        try:
+            sid = self.get_argument("sid", None)
+            cursor = self.get_argument("cursor", None)
+            section = Section.objects(id=sid).get()
+            new_cursor = int(cursor)+1
+            next_nugget = section.nuggets[new_cursor]
+        except Exception, e:
+            print e
+        return (next_nugget, new_cursor)
 
-    def on_success(self, n):
+    def on_success(self, n, new_cursor):
         if self.is_xhr:
             nugget = {"nugget_title": n.title,
-                      "nugget_previous": n.previous_nugget,
-                      "nugget_next": n.next_nugget,    
                       "nugget_img": n.img,
-                      "nugget_content": n.content
+                      "nugget_content": n.content,
+                      "new_cursor": new_cursor    
                       }
             self.xhr_response.update(nugget)
             self.write(self.xhr_response)

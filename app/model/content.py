@@ -1,4 +1,4 @@
-from mongoengine import Document, StringField, ListField, IntField
+from mongoengine import Document, EmbeddedDocument, EmbeddedDocumentField, StringField, ListField, IntField
 # ============================ User ================================ #
 
 class Question(Document):
@@ -13,16 +13,13 @@ class MiniQuizQuestion(Document):
     options = ListField(StringField(), default=list, required=True)
     answer = ListField(IntField(), required=True)
     
-class Section(Document):
-    meta = {"collection":"Sections"}
-    title = StringField(required=True)
-    first_nugget = StringField(required=True, default="")
-
-class Nugget(Document):
-    meta = {"collection":"Nuggets"}
+class Nugget(EmbeddedDocument):
     title = StringField(required=True)
     img = StringField(required=True)
     content = StringField(required=True)
-    section = StringField(required=True)
-    next_nugget = StringField(required=True)
-    previous_nugget = StringField(required=True)    
+
+class Section(Document):
+    meta = {"collection":"Sections"}
+    title = StringField(required=True)
+    nuggets = ListField(EmbeddedDocumentField(Nugget), default=list)
+    
