@@ -12,8 +12,10 @@ class ViewSectionHandler(base.BaseHandler):
         #Get section object
         section = Section.objects(id=sid).get()
 
-        #Get all the nuggets associated with this section
-        nugget = Nugget.objects(section=sid)[0]#TODO: get the nuggets that are not yet studied
+        #Get either the first nugget of the section or where the user left it off.
+        nugget = Nugget.objects(id=section.first_nugget).get()
+        if not nugget: #if we forgot to assign a first nugget we just pick the first one from db
+            nugget = Nugget.objects()[0]
         self.base_render("learn/learn-content.html", title=section.title, nugget=nugget)
 
 class ViewLearnMainHandler(base.BaseHandler):
