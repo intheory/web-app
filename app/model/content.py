@@ -16,6 +16,7 @@ class MiniQuizQuestion(Document):
 class Section(Document):
     meta = {"collection":"Sections"}
     title = StringField(required=True)
+    first_nugget = StringField(required=True, default=None)
 
 class Nugget(Document):
     meta = {"collection":"Nuggets"}

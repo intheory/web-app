@@ -123,6 +123,8 @@ class AddNuggetHandler(base.BaseHandler):
             n.content = content
             n.img = img_name
             n.section = section
+            n.next_nugget = "None"
+            n.previous_nugget = "None"
             n.save()
         except Exception, e:
             print e

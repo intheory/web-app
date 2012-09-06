@@ -10,7 +10,22 @@
                pnid : pnid
         }, true, function(response) 
         {       
-            console.log(response.nugget_title);
-            //TODO: Replace old nugget with new
+            $("#nugget-title-container").html("<p><font color='#FFFFFF'><b>"+  response.nugget_title +" </b></font></p>");
+            $("#nugget-content-container").html(response.nugget_title);
+            $("#previous-nugget-btn").attr("pnid", response.nugget_previous);
+            $("#next-nugget-btn").attr("nnid", response.nugget_next);
+        });
+    });
+
+    $("#next-nugget-btn").live("click", function() {
+        var nnid = $(this).attr('nnid');
+        IT.get("/learn/get-next-nugget", {
+               nnid : nnid
+        }, true, function(response) 
+        {       
+            $("#nugget-title-container").html("<p><font color='#FFFFFF'><b>"+  response.nugget_title +" </b></font></p>");
+            $("#nugget-content-container").html(response.nugget_title);
+            $("#previous-nugget-btn").attr("pnid", response.nugget_previous);
+            $("#next-nugget-btn").attr("nnid", response.nugget_next);
         });
     });

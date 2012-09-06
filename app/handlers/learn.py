@@ -56,3 +56,23 @@ class GetPreviousNuggetHandler(base.BaseHandler):
                       }
             self.xhr_response.update(nugget)
             self.write(self.xhr_response)
+
+class GetNextNuggetHandler(base.BaseHandler):
+    '''
+    Gets the next nugget
+    '''
+    def on_get(self):
+        nnid = self.get_argument("nnid", None)
+        next_nugget = Nugget.objects(id=nnid).get()
+        return (next_nugget,)
+
+    def on_success(self, n):
+        if self.is_xhr:
+            nugget = {"nugget_title": n.title,
+                      "nugget_previous": n.previous_nugget,
+                      "nugget_next": n.next_nugget,    
+                      "nugget_img": n.img,
+                      "nugget_content": n.content
+                      }
+            self.xhr_response.update(nugget)
+            self.write(self.xhr_response)
