@@ -75,17 +75,27 @@ class GetNextNuggetHandler(base.BaseHandler):
             cursor = self.get_argument("cursor", None)
             section = Section.objects(id=sid).get()
             new_cursor = int(cursor)+1
-            next_nugget = section.nuggets[new_cursor]
+            if new_cursor == len(section.nuggets): #if we reached the end of the section
+                new_cursor = int(cursor)
+                next_nugget = None
+                new_cursor += 1
+            else:
+                next_nugget = section.nuggets[new_cursor]
         except Exception, e:
             print e
         return (next_nugget, new_cursor)
 
     def on_success(self, n, new_cursor):
         if self.is_xhr:
-            nugget = {"nugget_title": n.title,
-                      "nugget_img": n.img,
-                      "nugget_content": n.content,
-                      "new_cursor": new_cursor    
-                      }
-            self.xhr_response.update(nugget)
+            if n: #if there exists a next nugget (not end of section)
+                nugget = {"nugget_title": n.title,
+                          "nugget_img": n.img,
+                          "nugget_content": n.content,
+                          "new_cursor": new_cursor    
+                          }
+                self.xhr_response.update(nugget)
+            else:
+                success_message = {"msg": "Congratulations",
+                                   "new_cursor": new_cursor}
+                self.xhr_response.update(success_message)
             self.write(self.xhr_response)
