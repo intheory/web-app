@@ -15,6 +15,7 @@ url_patterns = [
     ###########Learning pages hanlders##############
     ("/learn/main", learn.ViewLearnMainHandler),
     ("/learn/section", learn.ViewSectionHandler),  
+    ("/learn/get-question", learn.GetQuestionHandler),
     ("/learn/get-previous-nugget", learn.GetPreviousNuggetHandler),
     ("/learn/get-next-nugget", learn.GetNextNuggetHandler),
     ###########Practise pages hanlders##############
