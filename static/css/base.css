@@ -80,3 +80,26 @@ padding-top: 7px;
 .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
 	width: 960px;
 }
+
+.footer {
+  padding: 2px;
+  padding-left: 10px;
+    padding-right: 10px;
+  margin-top:140px;
+  background-color: #000000;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+   border-style:solid;
+border-width:0px;
+border-color: #000000;
+background-color:rgba(0,0,0,0.3);
+font-color: #FFFFFF;
+}
+
+.alignleft {
+  float: left;
+}
+.alignright {
+  float: right;
+}
