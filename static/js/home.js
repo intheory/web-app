@@ -47,7 +47,7 @@
 
     $("a.choice").live("click", function() {
 	
-	//Perform all animations	
+	//Perform all animations if first time
 	var quizBox = $("#mini-quiz-box");	
 	if (quizBox.hasClass("undimmed")){ 
 		$("#dim").fadeIn();
@@ -60,12 +60,20 @@
 	}
 
 	var remainingAnswers = $(this).parent().parent().attr("remaining-answers");
-	if (remainingAnswers == 0 && !$(this).parent().hasClass("active")) return false;	
+	if (remainingAnswers == 0 && !$(this).parent().hasClass("active")) {
+		$("a.choice").parent(".active:first").removeClass("active");
+		$(this).parent().addClass("active");
+	    var adata = $('#answers').data('answers');
+	    adata.shift(); 
+	    adata.push($(this).attr("ind"));
+	    $('#answers').data('answers', adata);
+	    return;
+	}
+
 	if ($(this).parent().hasClass("active")){  //if this choice was clicked before unselect it
-            $(this).parent().removeClass("active"); 
-    	    remainingAnswers = parseInt(remainingAnswers) + 1;
-	    $(this).parent().parent().attr("remaining-answers", remainingAnswers)
-            return; 
+        $(this).parent().removeClass("active"); 
+    	remainingAnswers = parseInt(remainingAnswers) + 1;
+	    $(this).parent().parent().attr("remaining-answers", remainingAnswers);
 	}	
 	else{
 	    $(this).parent().addClass("active");		
@@ -84,6 +92,7 @@
     $("#mini-quiz-box").live("click", function() {return false;});
     $("#dim").css("height", $(document).height()); 
 
+    //When click anywhere on page when dimmed it'll return to normal
     $(document).click(function() {
 	if ($("#mini-quiz-box").hasClass("dimmed")){
             $("#dim").fadeOut();
