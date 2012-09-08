@@ -9,4 +9,4 @@ class GetTestHandler(base.BaseHandler):
     @tornado.web.authenticated
     def on_get(self):
         sections = Section.objects
-        self.base_render("test/test.html", question= MiniQuizQuestion.objects[0])
+        self.base_render("test/test.html", question= MiniQuizQuestion.objects[0], q_cursor=0, test_length=len(MiniQuizQuestion.objects[0]))

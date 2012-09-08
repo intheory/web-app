@@ -12,7 +12,7 @@
 				</div>
 				</br></br></br></br></br>
 				<div class="progress progress-striped">
-					<div class="bar bar-success progress-striped" style="width: 45%;">
+					<div class="bar bar-success progress-striped" style="width: {{kwargs['q_cursor']}}/{{kwargs['test_length']}}">
 					</div>
 				</div>
 				<table class="table table-hover">
@@ -40,6 +40,7 @@
 					</tr>
 				</tbody>
 				</table>
+				<a class="next">Next Question</a>
         	</div>
     	</div>
     </div>
