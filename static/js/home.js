@@ -12,9 +12,9 @@
 	var quiz = $("#mini-quiz-box");	
 
 	//Change question & submit the answer to the previous one	
-        var qdata = $('#questions').data('questions');
-        var adata = $('#answers').data('answers');	
-        qdata.shift(); 
+    var qdata = $('#questions').data('questions');
+    var adata = $('#answers').data('answers');	
+    qdata.shift(); 
 	$('#questions').data('questions', qdata);        
 	var nq = qdata[0];
         if (qdata.length == 0 ){

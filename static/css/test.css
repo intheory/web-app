@@ -1,0 +1,8 @@
+td {
+	cursor: pointer;
+	padding-top: 14px;
+}
+
+.table tbody tr.success td {
+	background-color: #a9dba9;
+}
