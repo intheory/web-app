@@ -7,7 +7,6 @@ class ViewAdminPanelHandler(base.BaseHandler):
     '''
     Renders admin panel
     '''
-    @user.moderator
     @tornado.web.authenticated
     def on_get(self):
         self.base_render("admin/admin-main.html")
@@ -60,7 +59,6 @@ class ViewUsersHandler(base.BaseHandler):
         self.base_render("admin/admin-users.html", users=users)
 
 class MakeModeratorHandler(base.BaseHandler):
-    @user.moderator 
     @tornado.web.authenticated    
     def on_post(self):
         uid = self.get_argument("uid", None)
