@@ -52,7 +52,6 @@ class ViewUsersHandler(base.BaseHandler):
     '''
     Displays a list of users
     '''
-    @user.moderator 
     @tornado.web.authenticated
     def on_get(self):
         users = User.objects
