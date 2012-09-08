@@ -3,7 +3,7 @@
 # Author: Giorgos Eracleous #
 #############################
 
-from app.handlers import base, user, home, admin,  dashboard, learn
+from app.handlers import base, user, test, home, admin,  dashboard, learn
 
 url_patterns = [
     ("/", home.HomePageHandler),
@@ -19,7 +19,9 @@ url_patterns = [
     ("/learn/get-previous-nugget", learn.GetPreviousNuggetHandler),
     ("/learn/get-next-nugget", learn.GetNextNuggetHandler),
     ###########Practise pages hanlders##############
-    
+
+    ###########Mock test hanlders##############
+    ("/test", test.GetTestHandler),
     ###########Backend hanlders##############
     ("/admin/users/moderator", admin.MakeModeratorHandler),
     ("/admin/users", admin.ViewUsersHandler),

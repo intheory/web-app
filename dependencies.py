@@ -5,6 +5,7 @@
 # CSS Dependencies.
 css_deps = ("css", "css",
             [
+             ("/test", ["questions.css"]),
              ("/learn/*", ["learn.css", "questions.css", "nuggets.css"]),			
              ("/", ["home.css"]),	
             ])
