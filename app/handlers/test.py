@@ -37,21 +37,24 @@ class EvaluateTestQuestionHandler(base.BaseHandler):
             mt = MockTest.objects(id=tid).get()
             
             #Fetch the question in hand and the correct answers
-            new_cursor = int(cursor) + 1
-            q = mt.questions[new_cursor]
+            cursor = int(cursor)
+            q = mt.questions[cursor]
             correct_answers = q.answer
-            
+            print correct_answers
             #Check if user answered correctly.
             inter = set(answers).intersection(correct_answers)
             if len(inter) == len(correct_answers): 
                 mt.score += 1
 
             mt.cursor += 1
-            #mt.save()
+            mt.save()
             return (mt,)
         except Exception, e:
             print e
 
     def on_success(self, mt):
-        self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=mt)})  
+        if mt.cursor < len(mt.questions):
+            self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=mt)})  
+        else:
+            self.xhr_response.update({"html": "<p>Your score is "+str(mt.score)+"</p>"})
         self.write(self.xhr_response) 
