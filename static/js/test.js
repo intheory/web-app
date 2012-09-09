@@ -13,17 +13,21 @@
     $("a.next").live("click", function() {
     	var choices = $("tr"); //Find all the selected choices by the user
     	var answers = [];
+      var cursor = $(".container").attr("cursor");
+      var tid = $(".container").attr("tid");
     	choices.each(function(index) {
     		if ($(this).hasClass("success")){
     			answers.push(index-1);
     		}
-		});
-       IT.post("/test/evaluate", {
+		  });
+
+      IT.post("/test/evaluate", {
+               tid: tid,
                answers : answers,
-               q_cursor: q_cursor
-	   }, true, function(response) 
-	   {       
-	   
-       });    	
+               cursor: cursor
+	     }, true, function(response) 
+	     {       
+	       console.log("returned")
+        });    	
 
     });

@@ -1,4 +1,4 @@
-from mongoengine import Document, EmbeddedDocument, EmbeddedDocumentField, StringField, ListField, IntField, BooleanField
+from mongoengine import Document, EmbeddedDocument, EmbeddedDocumentField, StringField, ListField, IntField, BooleanField, ReferenceField
 # ============================ User ================================ #
 
 class Question(Document):
@@ -26,6 +26,6 @@ class Section(Document):
 class MockTest(Document):
     meta = {"collection":"MockTests"}
     user = StringField(required=True)
-    questions = ListField(Question(), required=True, default=list)
+    questions = ListField(ReferenceField(MiniQuizQuestion), required=True, default=list)
     score = IntField(required=True, default=0)
     cursor = IntField(required=True, default=0) #Indicates which question is currently viewed

@@ -21,7 +21,8 @@ url_patterns = [
     ###########Practise pages hanlders##############
 
     ###########Mock test hanlders##############
-    ("/test", test.GetTestHandler),
+    ("/test/new", test.GetNewTestHandler),
+    ("/test/evaluate", test.EvaluateTestQuestionHandler),
     ###########Backend hanlders##############
     ("/admin/users/moderator", admin.MakeModeratorHandler),
     ("/admin/users", admin.ViewUsersHandler),
