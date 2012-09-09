@@ -1,4 +1,4 @@
-import tornado
+import tornado, tornado.escape
 from app.handlers import base
 from app.model.content import Section, Nugget, MockTest, MiniQuizQuestion#!@UnresolvedImport
 
@@ -26,9 +26,32 @@ class EvaluateTestQuestionHandler(base.BaseHandler):
     '''
     @tornado.web.authenticated
     def on_post(self): 
-        tid = self.get_argument("tid", None)
-        answers = self.get_argument("answers", None)
-        cursor = self.get_argument("cursor", None)
-        print tid
-        print answers
-        print cursor          
+        try:
+            tid = self.get_argument("tid", None)
+            answers = self.get_argument("answers", None)
+            if answers:
+                answers = tornado.escape.json_decode(answers)
+            cursor = self.get_argument("cursor", None)
+            
+            #Fetch the test object
+            mt = MockTest.objects(id=tid).get()
+            
+            #Fetch the question in hand and the correct answers
+            new_cursor = int(cursor) + 1
+            q = mt.questions[new_cursor]
+            correct_answers = q.answer
+            
+            #Check if user answered correctly.
+            inter = set(answers).intersection(correct_answers)
+            if len(inter) == len(correct_answers): 
+                mt.score += 1
+
+            mt.cursor += 1
+            #mt.save()
+            return (mt,)
+        except Exception, e:
+            print e
+
+    def on_success(self, mt):
+        self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=mt)})  
+        self.write(self.xhr_response) 
