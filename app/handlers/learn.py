@@ -72,18 +72,16 @@ class GetNextNuggetHandler(base.BaseHandler):
                 next_nugget = section.nuggets[new_cursor]
         except Exception, e:
             print e
-        return (next_nugget, new_cursor, len(section.nuggets))
+        return (section, next_nugget, new_cursor, len(section.nuggets))
 
-    def on_success(self, n, new_cursor, section_length):
+    def on_success(self, section, n, new_cursor, section_length):
         if self.is_xhr:
             if n: #if there exists a next nugget (not end of section)
-                nugget = {"nugget_title": n.title,
-                          "nugget_img": n.img,
-                          "nugget_content": n.content,
-                          "new_cursor": new_cursor,
-                          "section_length": section_length    
-                          }
-                self.xhr_response.update(nugget)
+                html = self.render_string("ui-modules/nugget.html", section=section,
+                                                            nugget=n,
+                                                            cursor=new_cursor,
+                                                            section_length=section_length)
+                self.xhr_response.update({"html":html})
             else:
                 self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Section Completed!", no_questions=10, score=2, learn=True)})
             self.write(self.xhr_response)

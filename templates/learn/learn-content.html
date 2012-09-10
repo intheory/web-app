@@ -1,38 +1,10 @@
 {% extends "learn-base.html" %}
 
 {% block focus %}
-    <div class="image123">
-  		<img alt="" src="{{static_url('imgs/questionbg.png')}}" />
-  			<div id="nugget-title-container" class="text">
-    			<p><font color="#FFFFFF"><b>{{kwargs['section'].title}} > {{kwargs['nugget'].title}} </b></font></p>
-  			</div>
-	</div>
-	</br></br></br></br></br>
-	<div class="progress progress-striped">
-	  <div class="bar bar-success progress-striped" style="width: {{kwargs['cursor']/kwargs['section_length']}}%;"></div>
-	  <div class="bar bar-inactive progress-striped" style="width: {{100-kwargs['cursor']/kwargs['section_length']}}%;"></div>
-	</div>
-        
-	<div class="columnA pull-left">
-	  <img alt="" src="{{static_url('imgs/ImageC.png')}}" />
-	</div>
-
-	<div class="columnB pull-right">
-	        <div  class="learn">
-	       		<div id="nugget-content-container">{{kwargs['nugget'].content}}</div>
-	       		</br></br></br></></br></br></br></br></></br>
-			</div></br>
-			<center><a cursor="{{kwargs['cursor']}}" sid="{{kwargs['section'].id}}" id="previous-nugget-btn"><button class="btn btn-primary" type="button"><i class="icon-arrow-left icon-white"></i> Previous</button></a>&nbsp;&nbsp;&nbsp;
-			<a cursor="{{kwargs['cursor']}}" sid="{{kwargs['section'].id}}" id="next-nugget-btn"><button class="btn btn-primary" type="button">&nbsp;&nbsp;&nbsp;Next <i class="icon-arrow-right icon-white"></i>&nbsp;&nbsp;&nbsp;</button></a>&nbsp;&nbsp;&nbsp;&nbsp;</center>
-	</div>
-</br></br></br></></br>
-</br></br></br></></br>
-</br></br></br></></br>
-</br></br></br></></br>
-</br>
-
-</br>
-</br>           
-</br>
+	{% set section=kwargs['section'] %}
+	{% set nugget=kwargs['nugget'] %}
+	{% set cursor=kwargs['cursor'] %}
+	{% set section_length=kwargs['section_length'] %}
+    {% module Nugget(section, nugget, cursor, section_length) %}
 {% end%}
 
