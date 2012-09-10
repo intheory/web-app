@@ -103,3 +103,38 @@ font-color: #FFFFFF;
 .alignright {
   float: right;
 }
+
+
+.notify {
+  background-color: white;  
+  border: 1px solid black;
+  padding: 15px;
+  z-index: 1000;
+  font-size: 0.923em;
+}
+
+.blurb-wrap {
+  background-image: url(/static/imgs/blurb-back-black-transp.png);
+  padding: 15px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  z-index: 900;
+}
+
+.blurb-close-btn, .notify-blurb-close-btn{
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background-image: url("/static/imgs/x_btn.png");
+  opacity: 0.6;
+  height: 12px;
+  width: 12px;
+  z-index: 3px;
+}
+
+.notify-blurb-close-btn:hover{
+  cursor: pointer;
+  opacity: 1;
+  background-image: url("/static/imgs/x_btn_over.png")  
+}

@@ -50,7 +50,7 @@
           });    	
       }
       else{
-        IT.popup.show("asdsa")
+        IT.popup.show("Please mark "+remainingAnswers+" more answers.")
       }
 
     });

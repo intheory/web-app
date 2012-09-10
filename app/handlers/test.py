@@ -44,7 +44,6 @@ class EvaluateTestQuestionHandler(base.BaseHandler):
             inter = set(answers).intersection(correct_answers)
             if len(inter) == len(correct_answers): 
                 mt.score += 1
-
             mt.cursor += 1
             mt.save()
             return (mt,)
