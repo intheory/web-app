@@ -4,8 +4,17 @@
     <div class="container">
     	<div class="hero-unit">
         	<div class="hero-unit1">
-        		We're still working on the dashboard but it'll be 
-        		awesome!
+        		Hey {{kwargs['user'].first_name}}!
+        		We're still working on the dashboard but it'll be awesome!
+        		<br><br>
+        		Your test scores:
+        		<br>
+        		----------------
+        		<br>
+        		{% for test in kwargs['history'] %}
+        			{{test.score}}
+        			<br>
+        		{% end %}
         		<br><br><br><br>
         	</div>
     	</div>

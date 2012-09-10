@@ -1,5 +1,7 @@
 import tornado
 from app.handlers import base
+from app.model.user import User
+from app.model.content import MockTest
 
 class ViewDashBoardHandler(base.BaseHandler):
     '''
@@ -7,4 +9,7 @@ class ViewDashBoardHandler(base.BaseHandler):
     '''
     @tornado.web.authenticated
     def on_get(self):
-        self.base_render("dashboard.html")
+    	uid = self.current_user.id
+    	u = User.objects(id=uid).get()
+    	history = MockTest.objects(user=str(uid)) #TODO: create a model for user's history
+        self.base_render("dashboard.html", user=u, history=history)
