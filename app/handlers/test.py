@@ -40,7 +40,6 @@ class EvaluateTestQuestionHandler(base.BaseHandler):
             cursor = int(cursor)
             q = mt.questions[cursor]
             correct_answers = q.answer
-            print correct_answers
             #Check if user answered correctly.
             inter = set(answers).intersection(correct_answers)
             if len(inter) == len(correct_answers): 
@@ -56,5 +55,6 @@ class EvaluateTestQuestionHandler(base.BaseHandler):
         if mt.cursor < len(mt.questions):
             self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=mt)})  
         else:
-            self.xhr_response.update({"html": "<p>Your score is "+str(mt.score)+"</p>"})
+            #self.xhr_response.update({"html": "<p>Your score is "+str(mt.score)+"</p>"})
+            self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Congratulations!", no_questions=len(mt.questions), score=mt.score)})
         self.write(self.xhr_response) 

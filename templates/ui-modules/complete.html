@@ -1,0 +1,56 @@
+<center><div class="complete">
+  <div class="hero-unit1">
+      <div class="image123"><img alt="" src="{{static_url('imgs/questionbg.png')}}" />
+      <div class="text">
+          <p><font color="#FFFFFF"><b>{{message}}</b></font></p>
+      </div>
+      </div>
+      </br></br></br></br></br>
+      <div class="progress progress-striped">
+      <div class="bar bar-success progress-striped" style="width: 100%;">
+      </div>
+      </div>
+
+      <table class="table table-striped">
+      <thead>
+      <tr>
+
+      </tr>
+      </thead>
+      <tbody>
+       
+      <tr>
+      <td style="width: 80%; padding-top: 10px; text-align:left;"><h4> Questions Answered:</h4></td>
+      <td style="width: 40%; padding-top: 0px;"><h3><center>{{no_questions}}</center></h3></td>
+      </tr>
+      <tr>
+      <td style="padding-top: 10px;"><h4> Correct Answers:</h4></td>
+      <td style="padding-top: 0px;"><h3><center>{{score}}</center></h3></td>
+      </tr>
+      <tr>
+      <td style="padding-top: 10px;"><h4> Accuracy:</h4></td>
+      <td style="padding-top: 0px;"><h3><center>{{score/no_questions}}%</center></h3></td>
+      </tr>
+      <tr>
+      <td style="padding-top: 10px;"><h4> Points Earned:</h4></td>
+      <td style="padding-top: 0px;"><h3><center>{{100*score}}</center></h3></td>
+      </tbody>
+      </table>
+    
+           
+      <a href="/dashboard"><button class="btn btn-large btn-primary" type="button">Continue To Dashboard</button></a>
+
+      </br>
+      </br>
+    </div>        
+  </div>
+ </center>
+  
+  <div class="row">
+  <div class="span10">
+
+  </div>
+ 
+  <div class="span5 offset7">
+  </div>
+</div>
