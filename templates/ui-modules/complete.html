@@ -36,13 +36,13 @@
       <td style="padding-top: 0px;"><h3><center>{{100*score}}</center></h3></td>
       </tbody>
       </table>
-    
-           
-      <a href="/dashboard"><button class="btn btn-large btn-primary" type="button">Continue To Dashboard</button></a>
-
-      </br>
-      </br>
-    </div>        
+    </div>      
+    <br>  
+          {% if not learn %}       
+        <a href="/dashboard"><button class="btn btn-large btn-primary" type="button">Continue To Dashboard</button></a>
+      {% else %}
+        <a href="/learn/main"><button class="btn btn-large btn-primary" type="button">Continue To Next Section</button></a>
+      {% end %}
   </div>
  </center>
   

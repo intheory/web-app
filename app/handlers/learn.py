@@ -85,9 +85,7 @@ class GetNextNuggetHandler(base.BaseHandler):
                           }
                 self.xhr_response.update(nugget)
             else:
-                success_message = {"msg": "Congratulations",
-                                   "new_cursor": new_cursor}
-                self.xhr_response.update(success_message)
+                self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Section Completed!", no_questions=10, score=2, learn=True)})
             self.write(self.xhr_response)
 
 class GetQuestionHandler(base.BaseHandler):

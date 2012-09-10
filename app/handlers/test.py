@@ -56,5 +56,5 @@ class EvaluateTestQuestionHandler(base.BaseHandler):
             self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=mt)})  
         else:
             #self.xhr_response.update({"html": "<p>Your score is "+str(mt.score)+"</p>"})
-            self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Congratulations!", no_questions=len(mt.questions), score=mt.score)})
+            self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Congratulations!", no_questions=len(mt.questions), score=mt.score, learn=False)})
         self.write(self.xhr_response) 
