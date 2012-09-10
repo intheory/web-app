@@ -170,7 +170,7 @@ class RearrangeNuggetsHandler(base.BaseHandler):
                 n = Nugget.objects(id=nugget_tuple[0]).get()
                 if i==0: #Update the first nugget of this section
                     s = Section.objects(id=n.section).get()
-                    print str(n.id)
+                    
                     s.first_nugget = str(n.id)
                     s.save()
                 n.next_nugget = sorted_order[i+1][0] if i<l-1 else sorted_order[0][0]
