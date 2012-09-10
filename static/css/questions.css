@@ -352,16 +352,20 @@ margin-bottom: 5px;
     left:10px;
     width:800px; /* optional, though better have one */
 	  font-family: inherit;
-  font-weight: bold;
-  line-height: 1;
-  color: inherit;
-  text-rendering: optimizelegibility;
+    font-weight: bold;
+    line-height: 1;
+    color: inherit;
+    text-rendering: optimizelegibility;
     font-size: 12px;
 }
 
 .hero-unit p {
-font-size: 25px;
-font-weight: 200;
-line-height: 30px;
-color: inherit;
+  font-size: 25px;
+  font-weight: 200;
+  line-height: 30px;
+  color: inherit;
+}
+
+.choice{
+  width: 95%;
 }
