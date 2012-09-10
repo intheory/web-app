@@ -46,7 +46,7 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
     
     def _on_login(self, user):
         try:
-            c_user = User.objects(access_token=user['access_token']).get()
+            c_user = User.objects(fb_id=user['id']).get()
         except DoesNotExist, e:   
             c_user = User()
             c_user.access_token = user["access_token"]        
@@ -55,9 +55,9 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
             
             cb = functools.partial(self._save_user_friends, c_user)
             self.facebook_request("/me/friends", access_token=c_user.access_token, callback=cb, fields='first_name,last_name,id,picture')
-            
+        
         self.set_secure_cookie("access_token", c_user.access_token)
-        self.redirect("/learn/main")   
+        self.redirect("/main/learn")   
     
     def _save_user_profile(self, c_user, response):
         '''
