@@ -50,7 +50,9 @@
           });    	
       }
       else{
-        IT.popup.show("Please mark "+remainingAnswers+" more answers.")
+        var variableText = "answers."
+        if (remainingAnswers==1) variableText="answer."
+        IT.popup.show("Please mark "+remainingAnswers+" more "+ variableText)
       }
 
     });
