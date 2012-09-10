@@ -57,7 +57,7 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
             self.facebook_request("/me/friends", access_token=c_user.access_token, callback=cb, fields='first_name,last_name,id,picture')
             
         self.set_secure_cookie("access_token", c_user.access_token)
-        self.redirect("/")   
+        self.redirect("/learn/main")   
     
     def _save_user_profile(self, c_user, response):
         '''
