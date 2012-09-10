@@ -19,7 +19,6 @@ class User(Document):
     fb_id = StringField(required=True)
     access_token = StringField(required=True)
     moderator = BooleanField(required=True, default=False)
-    #progress_cursors = ListField(DictField(), default=list)
 
     def toggle_moderator(self):
             self.moderator = not self.moderator
