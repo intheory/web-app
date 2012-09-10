@@ -81,7 +81,7 @@ class GetNextNuggetHandler(base.BaseHandler):
                                                             section_length=section_length)
                 self.xhr_response.update({"html":html})
             else:
-                self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Section Completed!", no_questions=10, score=2, learn=True)})
+                self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Section Completed!", no_questions=0, score=0, learn=True)})
             self.write(self.xhr_response)
 
 class GetQuestionHandler(base.BaseHandler):
