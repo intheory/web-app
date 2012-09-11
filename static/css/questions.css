@@ -348,7 +348,7 @@ margin-bottom: 5px;
 }
 .image123 .text {
     position:absolute;
-    top:38px; /* in conjunction with left property, decides the text position */
+    top:0px; /* in conjunction with left property, decides the text position */
     left:10px;
     width:800px; /* optional, though better have one */
 	  font-family: inherit;
