@@ -5,7 +5,7 @@ Created on 13 Nov 2011
 
 This module parses a txt file containing nuggets and saves them in the db.
 '''
-import app
+from src.app.model.content import Nugget
 
 f = open("nuggets.txt", "r")
 content = f.readline()
