@@ -4,16 +4,14 @@
     <div class="container">
     	<div class="hero-unit">
         	<div class="hero-unit1">
-        		Hey {{kwargs['user'].first_name}}!
-        		We're still working on the dashboard but it'll be awesome!
-        		<br><br>
-        		Your test scores:
-        		<br>
-        		----------------
-        		<br>
+        		<h1>Hey {{kwargs['user'].first_name}}!</h1>
+        		<p>We're still working on the dashboard but it'll be awesome!</p>
+
+        		<h2>Your test scores</h2>
         		{% for test in kwargs['history'] %}
-        			{{test.score}}
-        			<br>
+                <ul>
+        			<li><span class="badge">{{test.score}}/{{len(test.questions)}}</span></li>
+                </ul>
         		{% end %}
         		<br><br><br><br>
         	</div>
