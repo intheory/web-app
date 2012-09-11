@@ -27,7 +27,7 @@
 
     });
 
-    $("a.next").live("click", function() {
+    $("li.next").live("click", function() {
     	var choices = $("tr"); //Find all the selected choices by the user
     	var answers = [];
       var cursor = $(this).attr("cursor");
