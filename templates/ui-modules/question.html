@@ -1,7 +1,14 @@
 {% set question = test.questions[test.cursor] %}
 <div class="image123"><img alt="" src="{{static_url('imgs/questionbg.png')}}" />
+	
 	<div class="text">
-	    <p><font color="#FFFFFF"><b>{{ question.question }}</b></font></p>
+		 <div class="verticalalign" style="display: table; height: 100px; #position: relative; overflow: hidden;">
+    <div style=" #position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
+      <div class="greenBorder" style=" #position: relative; #top: -50%">
+        	    <p><font color="#FFFFFF"><b>{{ question.question }}</b></font></p>
+      </div>
+    </div>
+  </div>
 	</div>
 </div>
 </br></br></br></br></br>
