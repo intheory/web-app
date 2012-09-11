@@ -41,4 +41,11 @@
 	</tr>
 </tbody>
 </table>
-<center><a class="next" cursor="{{test.cursor}}" tid="{{test.id}}" remaining-answers="{{len(question.answer)}}"><button class="btn btn-large btn-primary" type="button">Next Question</button></a></center>
+ <ul class="pager">
+  <li class="previous">
+    <a href="#">&larr; Previous</a>
+  </li>
+  <li class="next" cursor="{{test.cursor}}" tid="{{test.id}}" remaining-answers="{{len(question.answer)}}">
+    <a href="#">Next &rarr;</a>
+  </li>
+</ul>

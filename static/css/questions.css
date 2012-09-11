@@ -369,3 +369,40 @@ margin-bottom: 5px;
 .choice{
   width: 95%;
 }
+
+.pager a {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #0589de;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  width: 100px;
+}
+.pager a:hover {
+  text-decoration: none;
+  background-color: #61c462;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.pager a {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #0589de;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  width: 100px;
+}
+.pager a:hover {
+  text-decoration: none;
+  background-color: #61c462;
+}
