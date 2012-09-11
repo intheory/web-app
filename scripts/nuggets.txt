@@ -1,28 +1,50 @@
 section
-title,Section A
+title, Section A
 nugget
-title,Rules For Pedestrians 
-content,<p>You should be really <strong>careful</strong> when you drive!</p>
-image,pedestrian.jpg
+title,Vehicle condition
+content,<p>Vehicle condition: Your vehicle has to comply with <strong style="color:#00B2EE;">Road Vehicles Regulations</strong>.</p>
+image,sample.png
 nugget
-title,Rules For Pedestrians 2
-content,<p>You should be really <strong>careful</strong> when you drive 2!</p>
-image,pedestrian.jpg
+title,Fitness to drive
+content,<p>If you're not <span style="color:#B0171F">fit</span> to drive, <span style="color:#006400">report it to the DVLA!</span></p><p>Don't fall <span style="color:#EE0000">asleep</span> at the <span>wheel!</span></p><ul><li>Get a good night's <span style="color:#000080"> sleep.</span></li><li>You're less alert between <span style="color:#000080">midnight </span>and <span style="color:#EEB422">6am</span>-don't risk travel!</li><li>Plan your journey and take breaks of at least <span style="#00688B">15 minutes</span> every <span style="color:#008B00">2 hours</span>.</li><li>If you feel <span style="color:#DC143C">sleepy</span>, stop somewhere <span style="color:#008000">safe</span>.</li><li>Drink 2 cups of <span style="color:#8B4513">coffee </span>and take a quick nap if you feel <span style="color:#B0171F">sleepy</span>.</li></ul>
+image,sample.png
 nugget
-title,Rules For Pedestrians 3
-content,<p>You should be really <strong>careful</strong> when you drive! 3</p>
-image,pedestrian.jpg
-section
-title,Section B
+title,Eyesight
+content,<p>Don't go in <span style="color:#B0171F">blind!</span></p><ul><li><span style="color:#008080">>Charlie </span>(Check)</li><li><span style="color:#00CD66">Eats </span>(your Eyesight)</li><li><span style="color:#EE9A00">Tarts </span>(to Twenty)</li><li><span style="color:#EE0000">Monthly </span>(Metres)</li></ul><br /><ul><li><span style="color:#008080">Olga</span> (Old)</li><li><span style="color:#00CD66">Plays</span> (Plates)</li><li><span style="color:#EE9A00">Astonishingly</span> (Are)</li><li><span style="color:#EE0000">Terrible</span> (Twenty)</li><li><span style="color:#9A32CD">Polo </span>(Point)</li>on<li><span style="color:#FFD700">Fridays</span>(Five)</li></ul><p>Wear your <strong style="color:#00E5EE">glasses </strong> if you need to!</p>
+image,sample.png
 nugget
-title,Rules For Cars 
-content,<p>You should be really <strong>careful</strong> when you drive a car!</p>
-image,pedestrian.jpg
+title,Sunlight and driving
+content,<p>Slow down or stop if the <span style="color:#EEC900; font-family:'Comic Sans MS';">SUN</span> gets too <span style="color:#CD0000">bright!</span></p>
+image,sample.png
 nugget
-title,Rules For Cars 2
-content,<p>You should be really <strong>careful</strong> when you drive 2 cars!</p>
-image,pedestrian.jpg
+title,Coolness kills
+content,<p>Looking <span style="color:#00CED1">cool </span> isn't that important-don't wear your <strong>sunglasses</strong> at night!</p>
+image,sample.png
 nugget
-title,Rules For Cars 3
-content,<p>You should be really <strong>careful</strong> when you drive! cars 3</p>
-image,pedestrian.jpg
+title,Alcohol
+content,<p>Don't <strong style="color:#000080">drink</strong> and <em style="color:#EEC900">drive</em>.</p><p><em>Above 35, you can't drive.</em> (Can't have breath alcohol level of greater than <span style="color:#DC143C">35 </span>microgrammes/100 millilitres)<p><p><em>More than 80, chances of getting home are shaky.</em> (Can't have a blood alcohol level of more than <span style="color:#DC143C">80</span> milligrammes/100mililitres)<p><p><strong>Alcohol</strong> will...</p><ul><li><span style="color:#008080">Frank</span> (give a <span style="color:#008080">False</span> sense of confidence)</li><li><span style="color:#00CD66">Claims</span> (reduce <span style="color:#00CD66">Co-ordination</span> and slow down reactions)</li><li><span style="color:#EE9A00">Justice</span> (affect <span style="color:#EE9A00">Judgement</span> of speed, distance and risk)</li><li><span style="color:#EE0000">Tomorrow</span> (<span style="color:#EE0000">Takes</span> time to leave your body)</li><li><span style="color:#9A32CD">Morning</span> (alcohol may stay in your blood the <span style="color:#9A32CD">Morning</span> after or in the evening after a lunchtime drink)</li></ul><p>Just don't drink at all when you drive-<em style="color:#00C78C">why risk it?</span></p>
+image,sample.png
+nugget
+title,Medicines & drugs
+content,<p>Don't use <span style="color:#B0171F">drugs</span> or <span style="color:#1874CD">medicines </span>while driving.</p><ul><li><span style="color:#008080">Norman (No)</span></li><li><span style="color:#00CD66">Drives (Drugs)</span></li><li><span style="color:#EE9A00">Anne (or Alcohol)</span></li><li><span style="color:#EE0000">West (When)</span></li><li><span style="color:#9A32CD">Daily (Driving)</span></li></ul><p>If you use <em style="color:#00CD00">prescription medicines</em>, check with your pharmacist!</p><p>Using <span style="color:#B0171F">drugs</span> when driving can be even worse than <span style="color:#912CEE">alcohol</span>...so, really, <em>really</em> bad.</p>
+image,sample.png
+nugget
+title,Preparation
+content,<p>Before you set off:</p><ul><li><span style="color:#008080">Peter (<span style="color:#008080">Plan</span> your route)</li><li><span style="color:#00CD66">Loves (Ensure your vehicle is Legal and roadworthy)</li><li><span style="color:#EE9A00">Climbing(Clothing and footwear don't get in the way)</li><li><span style="color:#EE0000">All (Adjust to your vehicle-know where all the controls are. Not all vehicles are the same)</li><li><span style="color:#9A32CD">High </span>(<span style="color:#9A32CD">Head </span>restraints are properly adjusted)</li><li><span style="color:#191970">Mountains</span> (<span style="color:#191970">Mirrors</span> and seats are adjusted for maximum control, vision and comfort)</li><li><span style="color:#32CD32">For</span>(you have enough <span style="color:#32CD32">Fuel</span>; especially important for motorway driving)</li><li><span style="color:#FF4500">Money</span>(switch off your <span style="color:#FF4500">Mobile</span> phone!)</li></ul>
+image,sample.png
+nugget
+title,Towing and loading
+content,<ol>You <strong>can't</strong><li>Tow <span style="color:#008080">more</span> than your license <span style="color:#008080">permits</span></li><li><span style="color:#00CD66">Overload</span> your vehicle or trailer-don't tow a weight more than the <span style="color:#00CD66">manufacturer recommends</span></li><li>Let your load <span style="color:#191970">stick out</span> dangerously. <span style="color:#191970">Secure</span> it properly-if you hit anyone in an accident, it can injure others</li><li><span style="color:#EE0000">Tow</span> a vehicle on a tow rope if you <span style="color:#EE0000">break down</span>-consider professional recovery</li></ol><ol>You <strong>should</strong><li>Properly <span style="color:#EE9A00">distribute</span> the weight in your trailer with heavy items over the <span style="color:#EE9A00">axles</span></li><li>Ensure a <span style="color:#FF4500">downward load</span> on the tow ball</li><li>Ease off the accelerator and <span style="color:#9A32CD">reduce speed gently</span> if the trailer <span style="color:#006400">swerves</span> or <span style="color:#104E8B">shakes</span></li><li>Adjust your <span style="color:#32CD32">headlights</span> when carrying a load/pulling a trailer</li></ol>
+image,sample.png
+nugget
+title,Seat belts
+content,<p>Driver</p><p>Must wear a seat belt</p><p>Children <span style="color:#00CD66">under 3</span></p><p>Must use a <span style="color:#008000">child restraint</span>, sit in a <span style="color:#008000">booster seat</span>, <span style="color:#008000">cushion</span> or <span style="color:#008000">child seat</span></p><p>Children from <span style="color:#00CD66">3-12th birthday or until 1.35 metres</span> (earlier of the two)</p><p>Must also use a <span style="color:#008000">child restraint</span> and/or <span style="color:#008000">booster seat</span></p><p>Correct child restraint must be used.</p><p>Child or adult <span style="color:#00CD66">over 12 years</span></p><p>Must wear an <span style="color:#008000">adult seat belt</span></p><ul>The Law says:<li>All children under 14 <strong>must wear seat belts</span> and sit in an <strong style="color:#008000">approved child restraint</strong></li><li>If a child is <strong>under 1.35m</strong>, they must use a <strong style="color:#008000">booster cushion/seat</span></li><li>Passenger seating is the responsibility of the <span style="color:#008080">driver.</span></li></ul>
+image,sample.png
+nugget
+title,Child safety
+content,<p>Don't fit a <span style="color:#008000">rear-facing baby seat </span>into a seat protected by an active <span style="color:#8B0000">frontal airbag</span>-it can injure your child!</p>
+image,sample.png
+nugget
+title,Children in vehicles
+content,<ul><li><span style="color:#008080">Never</span> (children should get into vehicles through a door <span style="color:#008080">Nearest</span> the kerb)</li><li><span style="color:#00CD66">Free</span> (<span style="color:#00CD66">Fit</span> child restraints properly)</li><li><span style="color:#EE9A00">Curious</span> (children are kept under <span style="color:#EE9A00">Control</span>)</li><li><span style="color:#EE0000">Rascals</span> (children don't sit behind <span style="color:#EE0000">Rear</span> seats in a hatchback or estate car without a child seat)</li>on<li><span style="color:#9A32CD">Saturdays<span> (<span style="color:#9A32CD">Safety</span> locks are fitted)</li></ul>
+image,sample.png

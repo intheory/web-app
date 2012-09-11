@@ -45,8 +45,11 @@
                  answers : JSON.stringify(answers),
                  cursor: cursor
   	     }, true, function(response) 
-  	     {       
-            $(".hero-unit1").empty().html(response.html);
+  	     {  
+            var hu = $(".hero-unit")
+            var parent = hu.parent();
+            hu.empty().remove()
+            parent.html(response.html);
           });    	
       }
       else{

@@ -2,12 +2,8 @@
 
 {% block content %}
     <div class="container">
-    	<div class="hero-unit">
-        	<div class="hero-unit1">
-        		{% set test=kwargs['test'] %}  
-        		{% module Question(test) %}
-        	</div>
-    	</div>
+		{% set test=kwargs['test'] %}  
+		{% module Question(test) %}
     </div>
 {% end %}
 

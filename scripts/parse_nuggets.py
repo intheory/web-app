@@ -13,9 +13,8 @@ from model.content import Section, Nugget
 connect("intheory_dev")
 
 f = open("nuggets.txt", "r")
+content = f.readline().strip()
 while 1:
-	print 'in'
-	content = f.readline().strip()
 	if len(content) ==0:
 		break # EOF
 
@@ -24,13 +23,12 @@ while 1:
 		s = Section()
 		s.title = s_title
 		content = f.readline().strip()
-		while (content!="section" and len(content)!=0):
-			if content=="nugget":
-				n = Nugget()
-				n.title = f.readline().split(',')[1].strip()
-				n.content = f.readline().split(',')[1].strip()
-				n.img = f.readline().split(',')[1].strip()
-				s.nuggets.append(n)
+		while (content=="nugget" and len(content)!=0):
+			n = Nugget()
+			n.title = f.readline().split(',')[1].strip()
+			n.content = f.readline().split(',')[1].strip()
+			n.img = f.readline().split(',')[1].strip()
+			s.nuggets.append(n)
 			content = f.readline().strip()
 		s.save()
 f.close()

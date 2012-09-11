@@ -29,7 +29,7 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
     def get(self):
         if self.get_argument("code", False):
             self.get_authenticated_user(
-              redirect_uri='http://intheory.co.uk/login',
+              redirect_uri='http://localhost:8888/login',
               client_id=self.settings["facebook_api_key"],
               client_secret=self.settings["facebook_secret"],
               code=self.get_argument("code"),
@@ -40,7 +40,7 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
             self.redirect('/circles/create')
             return
         
-        self.authorize_redirect(redirect_uri='http://intheory.co.uk/login',
+        self.authorize_redirect(redirect_uri='http://localhost:8888/login',
                                 client_id=self.settings["facebook_api_key"],
                                 extra_params={"scope": "email"})
     
@@ -57,7 +57,7 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
             self.facebook_request("/me/friends", access_token=c_user.access_token, callback=cb, fields='first_name,last_name,id,picture')
         
         self.set_secure_cookie("access_token", c_user.access_token)
-        self.redirect("/learn/main")   
+        self.redirect("/dashboard")   
     
     def _save_user_profile(self, c_user, response):
         '''
