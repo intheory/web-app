@@ -53,10 +53,10 @@
                {% else %}
               	 <ul class="nav nav-pills">
                     {% if current_user['moderator'] %}
-                      <li><a href="/admin">Admin</a></li>  
+                      <li id="admin-nav"><a href="/admin">Admin</a></li>  
                     {% end %}
               	 	  <li class="active"><a href="/learn/main">Learn</a></li>
-              		  <li><a href="/test/new">Mock Test</a></li>
+              		  <li id="mock-test-nav"><a href="/test/new">Mock Test</a></li>
                     <li><a href="#">Book Test</a></li>
                     <li><a href="/logout">Logout</a></li>
                     <li>|</li>	
