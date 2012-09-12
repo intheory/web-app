@@ -5,6 +5,7 @@
 <div class="hero-unit1">
     <img src="{{static_url('imgs/lheader.png')}}" alt="lheader.png"/>
 	</br></br>     
+	{% if len(kwargs['sections']) != 0 %}
 	<table class="table table-hover">
 		<thead>
 		<tr>					
@@ -24,6 +25,9 @@
 		{% end %}
 		</tbody>
 		</table>
+		{% else %}
+			<h2>No learning material found.</h2>
+		{% end %}
 </div>
 </div>
 {% end%}
