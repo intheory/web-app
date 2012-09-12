@@ -19,15 +19,15 @@ while 1:
 		break # EOF
 
 	if content=="section":
-		s_title = f.readline().split(',')[1].strip()
+		s_title = f.readline().split('|')[1].strip()
 		s = Section()
 		s.title = s_title
 		content = f.readline().strip()
 		while (content=="nugget" and len(content)!=0):
 			n = Nugget()
-			n.title = f.readline().split(',')[1].strip()
-			n.content = f.readline().split(',')[1].strip()
-			n.img = f.readline().split(',')[1].strip()
+			n.title = f.readline().split('|')[1].strip()
+			n.content = f.readline().split('|')[1].strip()
+			n.img = f.readline().split('|')[1].strip()
 			s.nuggets.append(n)
 			content = f.readline().strip()
 		s.save()
