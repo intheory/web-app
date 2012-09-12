@@ -33,7 +33,34 @@
   border-color: #d6e3e8;
   padding:10px;
   margin-right:20px;
-  margin-top:30px;  
+  margin-top:15px;  
+  height: 300px;
+}
+
+#nugget-content-container{
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+/* Let's get this party started */
+#nugget-content-container::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+#nugget-content-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+#nugget-content-container::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #D6E3E8; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 
 .progress .bar-inactive {
