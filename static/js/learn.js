@@ -12,8 +12,10 @@
                cursor: cursor
         }, true, function(response) 
         {       
-            var mainContainer = $(".hero-unit1");
-            mainContainer.empty().html(response.html);            
+            var hu = $(".hero-unit");
+            var parent = hu.parent();
+            hu.empty().remove()
+            parent.html(response.html);            
         });
     });
 
@@ -25,7 +27,7 @@
                cursor: cursor
         }, true, function(response) 
         {   
-            var hu = $(".hero-unit")
+            var hu = $(".hero-unit");
             var parent = hu.parent();
             hu.empty().remove()
             parent.html(response.html);

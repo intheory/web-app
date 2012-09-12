@@ -41,6 +41,8 @@
   height: 100%;
   width: 100%;
   overflow: auto;
+  font-size: 140%;
+  line-height:140%
 }
 
 /* Let's get this party started */
