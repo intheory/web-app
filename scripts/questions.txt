@@ -973,3 +973,9 @@ extract
 Newly qualified, and particularly young drivers, are more vulnerable in the first year after passing the test. Inexperience plays a part in this but it’s essential to have the correct attitude. Be responsible and always show courtesy and consideration to other road users.
 image
 no
+section
+title|Safety and your vehicle
+question
+options
+extract
+image

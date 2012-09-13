@@ -19,33 +19,32 @@ try:
 		if len(content) == 0:
 			break #EOF
 
-		if content == "section":
-			title = f.readline().strip().rpartition("|")[2]
-			s = Section(title="title")
+		title = f.readline().strip().rpartition("|")[2]
+		s = Section(title="title")
+		while True:
 			content = f.readline().strip()
-			while (content!="section"):
-				question = f.readline().strip()
-				q = Question()
-				q.question = question
+			if (content=="section"):
+				break		
+			question = f.readline().strip()
+			q = Question()
+			q.question = question
+			content = f.readline().strip()
+			while True:
 				content = f.readline().strip()
-				if content == "options":
-					while True:
-						content = f.readline().strip()
-						if content == "extract":
-							break
-						q.options.append(content)
-				extract = f.readline().strip()
-				q.extract = extract
-				image = f.readline().strip()
-				image_exists = f.readline().strip()
-				print image_exists
-				if image_exists=="yes":
-					pass#TODO:save image's name
-				q.sid = str(s.id)
-				q.answer.append("0")#TODO: Add actual answer/s
-				q.save()
-				content = f.readline().strip()
-		content = f.readline().strip()
+				if content == "extract":
+					break
+				q.options.append(content)
+			extract = f.readline().strip()
+			q.extract = extract
+			image = f.readline().strip()
+			image_exists = f.readline().strip()
+			print image_exists
+			if image_exists=="yes":
+				pass#TODO:save image's name
+			q.sid = str(s.id)
+			q.answer.append("0")#TODO: Add actual answer/s
+			q.save()
+
 	f.close()
 except Exception, e:
 	print e
