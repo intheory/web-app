@@ -2233,3 +2233,664 @@ extract
 When you leave your vehicle parked on a road, switch off the engine and secure the vehicle. Make sure there aren’t any valuables visible, shut all the windows, lock the vehicle, set the alarm if it has one and use an anti-theft device such as a steering wheel lock.
 image
 no
+section
+title|Safety Margins
+question
+Braking distances on ice can be
+options
+twice the normal distance
+five times the normal distance
+seven times the normal distance
+ten times the normal distance
+extract
+In icy and snowy weather, your stopping distance will increase by up to ten times compared to good, dry conditions. Take extra care when braking, accelerating and steering, to cut down the risk of skidding.
+image
+no
+question
+Freezing conditions will affect the distance it takes you to come to a stop. You should expect stopping distances to increase by up to
+options
+two times
+three times
+five times
+ten times
+extract
+Your tyre grip is greatly reduced on icy roads and you need to allow up to ten times the normal stopping distance
+image
+no
+question
+In windy conditions you need to take extra care when
+options
+using the brakes
+making a hill start
+turning into a narrow road
+passing pedal cyclists
+extract
+You should always give cyclists plenty of room when overtaking. When it’s windy, a sudden gust could blow them off course.
+image
+no
+question
+You have just gone through deep water. To dry off the brakes you should
+options
+accelerate and keep to a high speed for a short time
+go slowly while gently applying the brakes
+avoid using the brakes at all for a few miles
+stop for at least an hour to allow them time to dry
+extract
+Water on the brakes will act as a lubricant, causing them to work less efficiently. Using the brakes lightly as you go along will dry them out.
+image
+no
+question
+When approaching a right-hand bend you should keep well to the left. Why is this?
+options
+To improve your view of the road
+To overcome the effect of the road’s slope
+To let faster traffic from behind overtake
+To be positioned safely if you skid
+extract
+Doing this will give you an earlier view around the bend and enable you to see any hazards sooner. It also reduces the risk of collision with an oncoming vehicle that may have drifted over the centre line while taking the bend.
+image
+yes
+question
+In very hot weather the road surface can become soft. Which TWO of the following will be most affected?
+options
+The suspension
+The grip of the tyres
+The braking
+The exhaust
+extract
+Only a small part of your tyres is in contact with the road. This is why you must consider the surface on which you’re travelling, and alter your speed to suit the road conditions.
+image
+no
+question
+Where are you most likely to be affected by a side wind?
+options
+On a narrow country lane
+On an open stretch of road
+On a busy stretch of road
+On a long, straight road
+extract
+In windy conditions, care must be taken on exposed roads. A strong gust of wind can blow you off course. Watch out for other road users who are particularly likely to be affected, such as cyclists, motorcyclists, high-sided lorries and vehicles towing trailers.
+image
+no
+question
+What is the shortest overall stopping distance on a dry road at 60 mph?
+options
+53 metres (175 feet)
+58 metres (190 feet)
+73 metres (240 feet)
+96 metres (315 feet)
+extract
+This distance is the equivalent of 18 car lengths. Try pacing out 73 metres and then look back. It’s probably further than you think.
+image
+no
+question
+In good conditions, what is the typical stopping distance at 70 mph?
+options
+53 metres (175 feet)
+60 metres (197 feet)
+73 metres (240 feet)
+96 metres (315 feet)
+extract
+Note that this is the typical stopping distance. It will take at least this distance to think, brake and stop in good conditions. In poor conditions it will take much longer.
+image
+no
+question
+You are following a vehicle at a safe distance on a wet road. Another driver overtakes you and pulls into the gap you have left. What should you do?
+options
+Flash your headlights as a warning
+Try to overtake safely as soon as you can
+Drop back to regain a safe distance
+Stay close to the other vehicle until it moves on
+extract
+Wet weather will affect the time it takes for you to stop and can affect your control. Your speed should allow you to stop safely and in good time. If another vehicle pulls into the gap you’ve left, ease back until you’ve regained your stopping distance.
+image
+no
+question
+You are travelling at 50 mph on a good, dry road. What is your typical overall stopping distance?
+options
+36 metres (118 feet)
+53 metres (175 feet)
+75 metres (245 feet)
+96 metres (315 feet)
+extract
+Even in good conditions it will usually take you further than you think to stop. Don’t just learn the figures, make sure you understand how far the distance is.
+image
+no
+question
+What should you do when overtaking a motorcyclist in strong winds?
+options
+Pass close
+Pass quickly
+Pass wide
+Pass immediately
+extract
+In strong winds riders of two-wheeled vehicles are particularly vulnerable. When you overtake them allow plenty of room. Always check to the left as you pass.
+image
+no
+question
+You are on a good, dry, road surface. Your brakes and tyres are good. What is the typical overall stopping distance at 40 mph?
+options
+23 metres (75 feet)
+36 metres (118 feet)
+53 metres (175 feet)
+96 metres (315 feet)
+extract
+Stopping distances are affected by a number of variable factors. These include the type, model and condition of your vehicle, road and weather conditions, and your reaction time. Look well ahead for hazards and leave enough space between you and the vehicle in front. This should allow you to pull up safely if you have to, without braking sharply.
+image
+no
+question
+You are overtaking a motorcyclist in strong winds? What should you do?
+options
+Allow extra room
+Give a thank you wave
+Move back early
+Sound your horn
+extract
+It is easy for motorcyclists to be blown off course. Always give them plenty of room if you decide to overtake, especially in strong winds. Decide whether you need to overtake at all. Always check to the left as you pass.
+image
+no
+question
+Overall stopping distance is made up of thinking and braking distance. You are on a good, dry road surface with good brakes and tyres. What is the typical BRAKING distance from 50 mph?
+options
+14 metres (46 feet)
+24 metres (80 feet)
+38 metres (125 feet)
+55 metres (180 feet)
+extract
+Be aware this is just the braking distance. You need to add the thinking distance to this to give the OVERALL STOPPING DISTANCE. At 50 mph the typical thinking distance will be 15 metres (50 feet), plus a braking distance of 38 metres (125 feet), giving an overall stopping distance of 53 metres (175 feet). The distance could be greater than this depending on your attention and response to any hazards. These figures are a general guide.
+image
+no
+question
+You are following other vehicles in fog. You have your lights on. What else can you do to reduce the chances of being in a collision?
+options
+Keep close to the vehicle in front
+Use your main beam instead of dipped headlights
+Keep up with the faster vehicles
+Reduce your speed and increase the gap in front
+extract
+When it’s foggy use dipped headlights. This will help you see and be seen by other road users. If visibility is seriously reduced consider using front and rear fog lights. Keep a sensible speed and don’t follow the vehicle in front too closely. If the road is wet and slippery you’ll need to allow twice the normal stopping distance.
+image
+no
+question
+In heavy motorway traffic the vehicle behind you is following too closely. How can you lower the risk of a collision?
+options
+Increase your distance from the vehicle in front
+Operate the brakes sharply
+Switch on your hazard lights
+Move onto the hard shoulder and stop
+extract
+On busy roads traffic may still travel at high speeds despite being close together. Don’t follow too closely to the vehicle in front. If a driver behind seems to be ‘pushing’ you, gradually increase your distance from the vehicle in front by slowing down gently. This will give you more space in front if you have to brake, and lessen the risk of a collision involving several vehicles.
+image
+yes
+question
+To avoid a collision when entering a contraflow system, you should
+options
+reduce speed in good time
+switch lanes at any time to make progress
+choose an appropriate lane in good time
+keep the correct separation distance
+increase speed to pass through quickly
+follow other motorists closely to avoid long queues
+extract
+In a contraflow system you will be travelling close to oncoming traffic and sometimes in narrow lanes. You should obey the temporary speed limit signs, get into the correct lane at the proper time and keep a safe separation distance from the vehicle ahead. When traffic is at a very low speed, merging in turn is recommended if it’s safe and appropriate.
+image
+no
+question
+What is the most common cause of skidding?
+options
+Worn tyres
+Driver error
+Other vehicles
+Pedestrians
+extract
+A skid happens when the driver changes the speed or direction of their vehicle so suddenly that the tyres can't keep their grip on the road. Remember that the risk of skidding on wet or icy roads is much greater than in dry conditions.
+image
+no
+question
+Skidding is mainly caused by
+options
+the weather
+the driver
+the vehicle
+the road
+extract
+You should always consider the conditions and drive accordingly.
+image
+no
+question
+You are driving on an icy road. How can you avoid wheelspin?
+options
+Drive at a slow speed in as high a gear as possible
+Use the handbrake if the wheels start to slip
+Brake gently and repeatedly
+Drive in a low gear at all times
+extract
+If you’re travelling on an icy road extra caution will be required to avoid loss of control. Keeping your speed down and using the highest gear possible will reduce the risk of the tyres losing their grip on this slippery surface
+image
+no
+question
+You are driving in freezing conditions. What should you do when approaching a sharp bend?
+options
+Slow down before you reach the bend
+Gently apply your handbrake
+Firmly use your footbrake
+Coast into the bend
+Avoid sudden steering movements
+extract
+Harsh use of the accelerator, brakes or steering are likely to lead to skidding, especially on slippery surfaces. Avoid steering and braking at the same time. In icy conditions it’s very important that you constantly assess what’s ahead, so that you can take appropriate action in plenty of time.
+image
+no
+question
+You are turning left on a slippery road. The back of your vehicle slides to the right. You should
+options
+brake firmly and not turn the steering wheel
+steer carefully to the left
+steer carefully to the right
+brake firmly and steer to the left
+extract
+Steer into the skid but be careful not to overcorrect with too much steering. Too much movement may lead to a skid in the opposite direction. Skids don’t just happen, they are caused. The three important factors in order are, the driver, the vehicle and the road conditions.
+image
+no
+question
+You are trying to move off on snow. You should use
+options
+the lowest gear you can
+the highest gear you can
+a high engine speed
+the handbrake and footbrake together
+extract
+If you attempt to move off in a low gear, such as first, the engine will rev at a higher speed. This could cause the wheels to spin and dig further into the snow.
+image
+no
+question
+Before starting a journey in freezing weather you should clear ice and snow from your vehicle’s
+options
+aerial
+windows
+bumper
+lights
+mirrors
+number plates
+extract
+Don’t travel unless you have no choice. Making unnecessary journeys in bad weather can increase the risk of having a collision. It’s important that you can see and be seen. Make sure any snow or ice is cleared from lights, mirrors, number plates and windows.
+image
+no
+question
+When driving in falling snow you should
+options
+brake firmly and quickly
+be ready to steer sharply
+use sidelights only
+brake gently in plenty of time
+extract
+Braking on snow can be extremely dangerous. Be gentle with both the accelerator and brake to prevent wheelspin.
+image
+no
+question
+The MAIN benefit of having four-wheel drive is to improve
+options
+road holding
+fuel consumption
+stopping distances
+passenger comfort
+extract
+By driving all four wheels there is improved grip, but this does not replace the skills you need to drive safely. The extra grip helps road holding when travelling on slippery or uneven roads.
+image
+no
+question
+You wish to park facing DOWNHILL. Which TWO of the following should you do?
+options
+Turn the steering wheel towards the kerb
+Park close to the bumper of another car
+Park with two wheels on the kerb
+Put the handbrake on firmly
+Turn the steering wheel away from the kerb
+extract
+Turning the wheels towards the kerb will allow it to act as a chock, preventing any forward movement of the vehicle. It will also help to leave it in gear, or select Park if you have an automatic.
+image
+no
+question
+You are about to go down a steep hill. To control the speed of your vehicle you should
+options
+select a high gear and use the brakes carefully
+select a high gear and use the brakes firmly
+select a low gear and use the brakes carefully
+select a low gear and avoid using the brakes
+extract
+When going down a steep hill your vehicle will speed up. This will make it more difficult for you to stop. Select a lower gear to give you more engine braking and control. Use this in combination with careful use of the brakes.
+image
+no
+question
+You are driving in a built-up area. You approach a speed hump. You should
+options
+move across to the left-hand side of the road
+wait for any pedestrians to cross
+slow your vehicle right down
+stop and check both pavements
+extract
+Many towns have speed humps to slow down traffic. Slow down when driving over them. If you go too fast they may affect your steering and suspension, causing you to lose control or even damaging it. Be aware of pedestrians in these areas
+image
+yes
+question
+You are on a long, downhill slope. What should you do to help control the speed of your vehicle?
+options
+Select neutral
+Select a lower gear
+Grip the handbrake firmly
+Apply the parking brake gently
+extract
+Selecting a low gear when travelling downhill will help you to control your speed. The engine will assist the brakes and help prevent your vehicle gathering speed.
+image
+no
+question
+Anti-lock brakes reduce the chances of a skid occurring particularly when
+options
+driving down steep hills
+braking during normal driving
+braking in an emergency
+driving on good road surfaces
+extract
+The anti-lock braking system will operate when the brakes have been applied harshly. It will reduce the chances of your car skidding, but it is not a miracle cure for careless driving.
+image
+no
+question
+Anti-lock brakes prevent wheels from locking. This means the tyres are less likely to
+options
+aquaplane
+skid
+puncture
+wear
+extract
+If an anti-lock braking system is fitted it activates automatically when maximum braking pressure is applied or when it senses that the wheels are about to lock. It prevents the wheels from locking so you can continue to steer the vehicle during braking. It does not remove the need for good driving practices such as anticipation and correct speed for the conditions.
+image
+no
+question
+Vehicles fitted with anti-lock brakes
+options
+are impossible to skid
+can be steered while you are braking
+accelerate much faster
+are not fitted with a handbrake
+extract
+Preventing the wheels from locking means that the vehicle’s steering and stability can be maintained, leading to safer stopping. However, you must ensure that the engine does not stall, as this could disable the power steering. Look in your vehicle handbook for the correct method when stopping in an emergency.
+image
+no
+question
+Anti-lock brakes may not work as effectively if the road surface is
+options
+dry
+loose
+wet
+good
+firm
+extract
+Poor contact with the road surface could cause one or more of the tyres to lose grip on the road. This is more likely to happen when braking in poor weather conditions, when the road surface is uneven or has loose chippings.
+image
+no
+question
+Driving a vehicle fitted with anti-lock brakes allows you to
+options
+brake harder because it is impossible to skid
+drive at higher speeds
+steer and brake at the same time
+pay less attention to the road ahead
+extract
+When stopping in an emergency anti-lock brakes will help you continue to steer when braking. In poor weather conditions this may be less effective. You need to depress the clutch pedal to prevent the car stalling as most power steering systems use an engine-driven pump and will only operate when the engine is running. Look in your vehicle handbook for the correct method when stopping in an emergency.
+image
+no
+question
+Anti-lock brakes are of most use when you are
+options
+braking gently
+driving on worn tyres
+braking excessively
+driving normally
+extract
+Anti-lock brakes will not be required when braking normally. Looking well down the road and anticipating possible hazards could prevent you having to brake late and harshly. Knowing that you have anti-lock brakes is not an excuse to drive in a careless or reckless way.
+image
+no
+question
+Anti-lock brakes can greatly assist with
+options
+a higher cruising speed
+steering control when braking
+control when accelerating
+motorway driving
+extract
+If the wheels of your vehicle lock they will not grip the road and you will lose steering control. In good conditions the anti-lock system will prevent the wheels locking and allow you to retain steering control.
+image
+no
+question
+You are driving a vehicle fitted with anti-lock brakes. You need to stop in an emergency. You should apply the footbrake
+options
+slowly and gently
+slowly but firmly
+rapidly and gently
+rapidly and firmly
+extract
+Look well ahead down the road as you drive and give yourself time and space to react safely to any hazards. You may have to stop in an emergency due to a misjudgement by another driver or a hazard arising suddenly such as a child running out into the road. In this case, if your vehicle has anti-lock brakes, you should apply the brakes immediately and keep them firmly applied until you stop.
+image
+no
+question
+You are driving along a country road. You see this sign. AFTER dealing safely with the hazard you should always
+options
+check your tyre pressures
+switch on your hazard warning lights
+accelerate briskly
+test your brakes
+extract
+Deep water can affect your brakes, so you should check that they’re working properly before you build up speed again. Before you do this, remember to check your mirrors and consider what’s behind you
+image
+yes
+question
+Your vehicle has anti-lock brakes, but they may not always prevent skidding. This is most likely to happen when driving
+options
+in foggy conditions
+on surface water
+on loose road surfaces
+on dry tarmac
+at night on unlit roads
+extract
+In very wet weather water can build up between the tyre and the road surface. As a result your vehicle actually rides on a thin film of water and your tyres will not grip the road. Gravel or shingle surfaces also offer less grip and can present problems when braking. An anti-lock braking system may be ineffective in these conditions.
+image
+no
+question
+You are driving in heavy rain. Your steering suddenly becomes very light. You should
+options
+steer towards the side of the road
+apply gentle acceleration
+brake firmly to reduce speed
+ease off the accelerator
+extract
+If the steering becomes light in these conditions it is probably due to a film of water that has built up between your tyres and the road surface. Easing off the accelerator should allow your tyres to displace the film of water and they should then regain their grip on the road.
+image
+no
+question
+The roads are icy. You should drive slowly
+options
+in the highest gear possible
+in the lowest gear possible
+with the handbrake partly on
+with your left foot on the brake
+extract
+Driving at a slow speed in a high gear will reduce the likelihood of wheel-spin and help your vehicle maintain the best possible grip.
+image
+no
+question
+How can you tell if you are driving on ice?
+options
+The tyres make a rumbling noise
+The tyres make hardly any noise
+The steering becomes heavier
+The steering becomes lighter
+extract
+Drive extremely carefully when the roads are icy. When travelling on ice, tyres make virtually no noise and the steering feels unresponsive. In icy conditions, avoid harsh braking, acceleration and steering.
+image
+no
+question
+You are driving along a wet road. How can you tell if your vehicle is aquaplaning?
+options
+The engine will stall
+The engine noise will increase
+The steering will feel very heavy
+The steering will feel very light
+extract
+If you drive at speed in very wet conditions your steering may suddenly feel ‘light’. This means that the tyres have lifted off the surface of the road and are skating on the surface of the water. This is known as aquaplaning. Reduce speed by easing off the accelerator, but don’t brake until your steering returns to normal.
+image
+no
+question
+You are driving along a wet road. How can you tell if your vehicle’s tyres are losing their grip on the surface?
+options
+The engine will stall
+The steering will feel very heavy
+The engine noise will increase
+The steering will feel very light
+extract
+If you drive at speed in very wet conditions your steering may suddenly feel lighter than usual. This means that the tyres have lifted off the surface of the road and are skating on the surface of the water. This is known as aquaplaning. Reduce speed but don’t brake until your steering returns to a normal feel.
+image
+no
+question
+Your overall stopping distance will be much longer when driving
+options
+in the rain
+in fog
+at night
+in strong winds
+extract
+Extra care should be taken in wet weather as, on wet roads, your stopping distance could be double that necessary for dry conditions.
+image
+no
+question
+You are on a fast, open road in good conditions. For safety, the distance between you and the vehicle in front should be
+options
+a two-second time gap
+one car length
+2 metres (6 feet 6 inches)
+two car lengths
+extract
+One useful method of checking that you’ve allowed enough room between you and the vehicle in front is the two-second rule. To check for a two-second time gap, choose a stationary object ahead, such as a bridge or road sign. When the car in front passes the object say 'Only a fool breaks the two-second rule'. If you reach the object before you finish saying it you're too close.
+image
+yes
+question
+You have driven through a flood. What is the first thing you should do?
+options
+Stop and check the tyres
+Stop and dry the brakes
+Check your exhaust
+Test your brakes
+extract
+Before you test your brakes you must check for following traffic. If it is safe, gently apply the brakes to clear any water that may be covering the braking surfaces.
+image
+no
+question
+How can you use your vehicle’s engine as a brake?
+options
+By changing to a lower gear
+By selecting reverse gear
+By changing to a higher gear
+By selecting neutral gear
+extract
+When driving on downhill stretches of road selecting a lower gear gives increased engine braking. This will prevent excess use of the brakes, which become less effective if they overheat.
+image
+no
+question
+Anti-lock brakes are most effective when you
+options
+keep pumping the foot brake to prevent skidding
+brake normally, but grip the steering wheel tightly
+brake promptly and firmly until you have slowed down
+apply the handbrake to reduce the stopping distance
+extract
+Releasing the brake before you have slowed right down will disable the system. If you have to brake in an emergency ensure that you keep your foot firmly on the brake pedal until the vehicle has stopped.
+image
+no
+question
+When would an anti-lock braking system start to work?
+options
+After the parking brake has been applied
+Whenever pressure on the brake pedal is applied
+Just as the wheels are about to lock
+When the normal braking system fails to operate
+extract
+The anti-lock braking system has sensors that detect when the wheels are about to lock. It releases the brakes momentarily to allow the wheels to revolve and grip, then automatically reapplies them. This cycle is repeated several times a second to maximise braking performance.
+image
+no
+question
+Your car is fitted with anti-lock brakes. You need to stop in an emergency. You should
+options
+brake normally and avoid turning the steering wheel
+press the brake pedal promptly and firmly until you have stopped
+keep pushing and releasing the foot brake quickly to prevent skidding
+apply the handbrake to reduce the stopping distance
+extract
+Keep pressure on the brake pedal until you have come to a stop. The anti-lock mechanism will activate automatically if it senses the wheels are about to lock.
+image
+no
+question
+Anti-lock brakes will take effect when
+options
+you do not brake quickly enough
+maximum brake pressure has been applied
+you have not seen a hazard ahead
+speeding on slippery road surfaces
+extract
+If your car is fitted with anti-lock brakes they will take effect when you use them very firmly in an emergency. The system will only activate when it senses the wheels are about to lock.
+image
+no
+question
+You are on a wet motorway with surface spray. You should use
+options
+hazard flashers
+dipped headlights
+rear fog lights
+sidelights
+extract
+When surface spray reduces visibility switch on your dipped headlights. This will help other road users to see you.
+image
+no
+question
+Travelling for long distances in neutral (known as coasting)
+options
+improves the driver’s control
+makes steering easier
+reduces the driver’s control
+uses more fuel
+extract
+Coasting, is the term used when the clutch is held down, or the gear lever is in neutral, and the vehicle is allowed to freewheel. This reduces the driver’s control of the vehicle. When you coast, the engine can’t drive the wheels to pull you through a corner. Coasting also removes theassistance of engine braking that helps to slow the car.
+image
+no
+question
+Your vehicle is fitted with anti-lock brakes. To stop quickly in an emergency you should
+options
+brake firmly and pump the brake pedal on and off
+brake rapidly and firmly without releasing the brake pedal
+brake gently and pump the brake pedal on and off
+brake rapidly once, and immediately release the brake pedal
+extract
+Once you have applied the brake keep your foot firmly on the pedal. Releasing the brake and reapplying it will disable the antilock brake system.
+image
+no
+question
+How can you tell when you are driving over black ice?
+options
+It is easier to brake
+The noise from your tyres sounds louder
+You will see tyre tracks on the road
+Your steering feels light
+extract
+Sometimes you may not be able to see that the road is icy. Black ice makes a road look damp. The signs that you’re travelling on black ice can be that<ul><li>the steering feels light</li><li>the noise from your tyres suddenly goes quiet.</li></ul>
+image
+no
+question
+When driving in fog, which THREE of these are correct?
+options
+Use dipped headlights
+Position close to the centre line
+Allow more time for your journey
+Keep close to the car in front
+Slow down
+Use side lights only
+extract
+Don’t venture out if your journey is not necessary. If you have to travel and someone is expecting you at the other end, let them know that you will be taking longer than usual for your journey. This will stop them worrying if you don’t turn up on time and will also take the pressure off you, so you don’t feel you have to rush.
+image
+no
