@@ -976,6 +976,1260 @@ no
 section
 title|Safety and your vehicle
 question
+Which TWO are badly affected if the tyres are under-inflated?
 options
+Braking
+Steering
+Changing gear
+Parking
 extract
+Your tyres are your only contact with the road so it is very important to ensure that they are free from defects, have sufficient tread depth and are correctly inflated. Correct tyre pressures help reduce the risk of skidding and provide a safer and more comfortable drive or ride.
 image
+no
+question
+You must NOT sound your horn
+options
+between 10 pm and 6 am in a built-up area
+at any time in a built-up area
+between 11.30 pm and 7 am in a builtup area
+between 11.30 pm and 6 am on any road
+extract
+Vehicles can be noisy. Every effort must be made to prevent excessive noise, especially in built-up areas at night. Don’t<ul><li>rev the engine</li><li>sound the horn</li></ul>unnecessarily. It is illegal to sound your horn in a built-up area between 11.30 pm and 7 am, except when another vehicle poses a danger.
+image
+no
+question
+The pictured vehicle is ‘environmentally friendly’ because it
+options
+reduces noise pollution
+uses diesel fuel
+uses electricity
+uses unleaded fuel
+reduces parking spaces
+reduces town traffic
+extract
+Trams are powered by electricity and therefore do not emit exhaust fumes. They are also much quieter than petrol or diesel engined vehicles and can carry a large number of passengers.
+image
+yes
+question
+'Red routes' in major cities have been introduced to
+options
+raise the speed limits
+help the traffic flow
+provide better parking
+allow lorries to load more freely
+extract
+Traffic jams today are often caused by the volume of traffic. However, inconsiderate parking can lead to the closure of an inside lane or traffic having to wait for oncoming vehicles. Driving slowly in traffic increases fuel consumption and causes a build-up of exhaust fumes.
+image
+no
+question
+Supertrams or Light Rapid Transit (LRT) systems are environmentally friendly because
+options
+they use diesel power
+they use quieter roads
+they use electric power
+they do not operate during rush hour
+extract
+This means that they do not emit toxic fumes, which add to city pollution problems. They are also a lot quieter and smoother to ride on.
+image
+no
+question
+Road humps, chicanes, and narrowings are
+options
+always at major road works
+used to increase traffic speed
+at toll-bridge approaches only
+traffic calming measures
+extract
+Traffic calming measures help keep vehicle speeds low in congested areas where there are pedestrians and children. A pedestrian is much more likely to survive a collision with a vehicle travelling at 20 mph than at 40 mph.
+image
+no
+question
+The purpose of a catalytic converter is to reduce
+options
+fuel consumption
+the risk of fire
+toxic exhaust gases
+engine wear
+extract
+Catalytic converters are designed to reduce a large percentage of toxic emissions. They work more efficiently when the engine has reached its normal working temperature.
+image
+no
+question
+It is essential that tyre pressures are checked regularly. When should this be done?
+options
+After any lengthy journey
+After travelling at high speed
+When tyres are hot
+When tyres are cold
+extract
+When you check the tyre pressures do so when the tyres are cold. This will give you a more accurate reading. The heat generated from a long journey will raise the pressure inside the tyre.
+image
+no
+question
+Catalytic converters are fitted to make the
+options
+engine produce more power
+exhaust system easier to replace
+engine run quietly
+exhaust fumes cleaner
+extract
+Harmful gases in the exhaust system pollute the atmosphere. These gases are sreduced by up to 90% if a catalytic converter is fitted. Cleaner air benefits everyone, especially people who live or work near congested roads.
+image
+no
+question
+When should you NOT use your horn in a built-up area?
+options
+Between 8 pm and 8 am
+Between 9 pm and dawn
+Between dusk and 8 am
+Between 11.30 pm and 7 am
+extract
+By law you must not sound your horn in a built-up area between 11.30 pm and 7.00 sam. The exception to this is when another road user poses a danger.
+image
+no
+question
+You will use more fuel if your tyres are
+options
+under-inflated
+of different makes
+over-inflated
+new and hardly used
+extract
+Check your tyre pressures frequently – normally once a week. If pressures are lower than those recommended by the manufacturer, there will be more ‘rolling resistance’. The engine will have to work harder to overcome this, leading to increased fuel consumption.
+image
+no
+question
+What is most likely to cause high fuel consumption?
+options
+Poor steering control
+Accelerating around bends
+Staying in high gears
+Harsh braking and accelerating
+extract
+Accelerating and braking gently and smoothly will help to save fuel, reduce wear on your vehicle and is better for the environment.
+image
+no
+question
+How should you dispose of a used battery?
+options
+Take it to a local authority site
+Put it in the dustbin
+Break it up into pieces
+Leave it on waste land
+Take it to a garage
+Burn it on a fire
+extract
+Batteries contain acid which is hazardous and must be disposed of safely.
+image
+no
+question
+The fluid level in your battery is low. What should you top it up with?
+options
+Battery acid
+Distilled water
+Engine oil
+Engine coolant
+extract
+Some modern batteries are maintenancefree. Check your vehicle handbook and, if necessary, make sure that the plates in each battery cell are covered.
+image
+no
+question
+You are parked on the road at night. Where must you use parking lights?
+options
+Where there are continuous white lines in the middle of the road
+Where the speed limit exceeds 30 mph
+Where you are facing oncoming traffic
+Where you are near a bus stop
+extract
+When parking at night, park in the direction of the traffic. This will enable other road users to see the reflectors on the rear of your vehicle. Use your parking lights if the speed limit is over 30 mph.
+image
+no
+question
+Excessive or uneven tyre wear can be caused by faults in which THREE of the following?
+options
+The gearbox
+The braking system
+The accelerator
+The exhaust system
+Wheel alignment
+The suspension
+extract
+Regular servicing will help to detect faults at an early stage and this will avoid the risk of minor faults becoming serious or even dangerous.
+image
+no
+question
+Motor vehicles can harm the environment. This has resulted in
+options
+air pollution
+damage to buildings
+less risk to health
+improved public transport
+less use of electrical vehicles
+using up of natural resources
+extract
+Exhaust emissions are harmful to health. Together with vibration from heavy traffic this can result in damage to buildings. Most petrol and diesel fuels come from a finite and non-renewable source. Anything you can do to reduce your use of these fuels will help the environment.
+image
+no
+question
+You need to top up your battery. What level should you fill to?
+options
+The top of the battery
+Half-way up the battery
+Just below the cell plates
+Just above the cell plates
+extract
+Top up the battery with distilled water and make sure each cell plate is covered.
+image
+no
+question
+You are parking on a two-way road at night. The speed limit is 40 mph. You should park on the
+options
+left with parking lights on
+left with no lights on
+right with parking lights on
+right with dipped headlights on
+extract
+At night all vehicles must display parking lights when parked on a road with a speed limit greater than 30 mph. They should be close to the kerb, facing in the direction of the traffic flow and not within a distance as specified in The Highway Code.
+image
+no
+question
+It can help to plan your route before starting a journey. You can do this by contacting
+options
+your local filling station
+a motoring organisation
+the Driver Vehicle Licensing Agency
+your vehicle manufacturer
+extract
+Most motoring organisations will give you a detailed plan of your trip showing directions and distance. Some will also include advice on rest and fuel stops. The Highways Agency website will also give you information on roadworks and incidents and gives expected delay times.
+image
+no
+question
+Before starting a journey it is wise to plan your route. How can you do this?
+options
+Look at a map
+Contact your local garage
+Look in your vehicle handbook
+Check your vehicle registration document
+extract
+Planning your journey before you set out can help to make it much easier, more pleasant and may help to ease traffic congestion. Look at a map to help you to do this. You may need different scale maps depending on where and how far you’re going. Printing or writing out the route can also help.
+image
+no
+question
+How can you plan your route before starting a long journey?
+options
+Check your vehicle’s workshop manual
+Ask your local garage
+Use a route planner on the internet
+Consult your travel agents
+extract
+Various route planners are available on the internet. Most of them give you various options allowing you to choose the most direct, quickest or scenic route. They can also include rest and fuel stops and distances. Print them off and take them with you.
+image
+no
+question
+Planning your route before setting out can be helpful. How can you do this?
+options
+Look in a motoring magazine
+Only visit places you know
+Try to travel at busy times
+Print or write down the route
+extract
+Print or write down your route before setting out. Some places are not well signed so using place names and road numbers may help you avoid problems en route. Try to get an idea of how far you’re going before you leave. You can also use it sto re-check the next stage at each rest stop.
+image
+no
+question
+Planning your journey to avoid busy times has a number of advantages. One of these is
+options
+your journey will take longer
+you will have a more pleasant journey
+you will cause more pollution
+your stress level will be greater
+extract
+Having a pleasant journey can have safety benefits. You will be less tired and stressed and this will allow you to concentrate more on your driving or riding.
+image
+no
+question
+Why is it a good idea to plan your journey to avoid busy times?
+options
+You will have an easier journey
+You will have a more stressful journey
+Your journey time will be longer
+It will cause more traffic congestion
+extract
+No one likes to spend time in traffic queues. Try to avoid busy times related to school or work travel. As well as moving vehicles you should also consider congestion caused by parked cars, buses and coaches around schools.
+image
+no
+question
+It is a good idea to plan your journey to avoid busy times. This is because
+options
+your vehicle will use more fuel
+you will see less road works
+it will help to ease congestion
+you will travel a much shorter distance
+extract
+Avoiding busy times means that you are not adding needlessly to traffic congestion. Other advantages are that you will use less fuel and feel less stressed.
+image
+no
+question
+By avoiding busy times when travelling
+options
+you are more likely to be held up
+your journey time will be longer
+you will travel a much shorter distance
+you are less likely to be delayed
+extract
+If possible, avoid the early morning and, late afternoon and early evening ‘rush hour’. Doing this should allow you to travel in a more relaxed frame of mind, concentrate solely on what you’re doing and arrive at your destination feeling less stressed.
+image
+no
+question
+As well as planning your route before starting a journey, you should also plan an alternative route. Why is this? vehicles
+options
+To let another driver overtake
+Your first route may be blocked
+To avoid a railway level crossing
+In case you have to avoid emergency
+extract
+It’s a good idea to plan an alternative route in case your original route is blocked for any reason. You’re less likely to feel worried and stressed if you’ve got an alternative in mind. This will enable you to concentrate fully on your driving or riding. Always carry a map that covers the area you will travel in.
+image
+no
+question
+It can help to plan your route before starting a journey. Why should you also plan an alternative route?
+options
+Your original route may be blocked
+Your maps may have different scales
+You may find you have to pay a congestion charge
+Because you may get held up by a tractor
+extract
+It can be frustrating and worrying to find your planned route is blocked by roadworks or diversions. If you have planned an alternative you will feel less stressed and more able to concentrate fully on your driving or riding. If your original route is mostly on motorways it’s a good idea to plan an alternative using nonmotorway roads. Always carry a map with you just in case you need to refer to it.
+image
+no
+question
+You are making an appointment and will have to travel a long distance. You should
+options
+allow plenty of time for your journey
+plan to go at busy times
+avoid all national speed limit roads
+prevent other drivers from overtaking
+extract
+Always allow plenty of time for your journey in case of unforeseen problems. Anything can happen, punctures, breakdowns, road closures, diversions etc. You will feel less stressed and less inclined to take risks if you are not ‘pushed for time’.
+image
+no
+question
+Rapid acceleration and heavy braking can lead to
+options
+reduced pollution
+increased fuel consumption
+reduced exhaust emissions
+increased road safety
+extract
+Using the controls smoothly can reduce fuel consumption by about 15% as well as reducing wear and tear on your vehicle. Plan ahead and anticipate changes of speed well in advance. This will reduce the need to accelerate rapidly or brake sharply.
+image
+no
+question
+Which of these, if allowed to get low, could cause you to crash?
+options
+Anti-freeze level
+Brake fluid level
+Battery water level
+Radiator coolant level
+extract
+You should carry out frequent checks on all fluid levels but particularly brake fluid. As the brake pads or shoes wear down the brake fluid level will drop. If it drops below the minimum mark on the fluid reservoir, air could enter the hydraulic system and lead to a loss of braking efficiency or complete brake failure.
+image
+no
+question
+What percentage of all emissions does road transport account for?
+options
+10%
+20%
+30%
+40%
+extract
+Transport is an essential part of modern life but it does have environmental effects. In heavily populated areas traffic is the biggest source of air pollution. Eco-safe driving and riding will reduce emissions and can make a surprising difference to local air quality.
+image
+no
+question
+New petrol-engined cars must be fitted with catalytic converters. The reason for this is to
+options
+control exhaust noise levels
+prolong the life of the exhaust system
+allow the exhaust system to be recycled
+reduce harmful exhaust emissions
+extract
+We should all be concerned about the effect traffic has on our environment. Fumes from vehicles are polluting the air around us. Catalytic converters act like a filter, removing some of the toxic waste from exhaust gases.
+image
+no
+question
+What can cause heavy steering?
+options
+Driving on ice
+Badly worn brakes
+Over-inflated tyres
+Under-inflated tyres
+extract
+If your tyre pressures are low this will increase the drag on the road surface and make the steering feel heavy. Your vehicle will also use more fuel. Incorrectly inflated tyres can affect the braking, cornering and handling of your vehicle to a dangerous level.
+image
+no
+question
+Excessive or uneven tyre wear can be caused by faults in the
+options
+gearbox
+braking system
+suspension
+exhaust system
+extract
+Uneven wear on your tyres can be caused by the condition of your vehicle. Having it serviced regularly will ensure that the brakes, steering and wheel alignment are maintained in good order.
+image
+no
+question
+Driving with under-inflated tyres can affect
+options
+engine temperature
+fuel consumption
+braking
+oil pressure
+extract
+Keeping your vehicle’s tyres correctly inflated is a legal requirement. Driving with correctly inflated tyres will use less fuel and your vehicle will brake more safely.
+image
+no
+question
+The main cause of brake fade is
+options
+the brakes overheating
+air in the brake fluid
+oil on the brakes
+the brakes out of adjustment
+extract
+If your vehicle is fitted with drum brakes they can get hot and lose efficiency. This happens when they’re used continually, such as on a long, steep, downhill stretch of road. Using a lower gear will assist the braking and help prevent the vehicle gaining momentum.
+image
+no
+question
+Your anti-lock brakes warning light stays on. You should
+options
+check the brake fluid level
+check the footbrake free play
+check that the handbrake is released
+have the brakes checked immediately
+extract
+Consult the vehicle handbook or garage before driving the vehicle. Only drive to a garage if it is safe to do so. If you’re not sure get expert help.
+image
+no
+question
+It is important to wear suitable shoes when you are driving. Why is this?
+options
+To prevent wear on the pedals
+To maintain control of the pedals
+To enable you to adjust your seat
+To enable you to walk for assistance if you break down
+extract
+When you’re going to drive, ensure that you’re wearing suitable clothing. Comfortable shoes will ensure that you have proper control of the foot pedals.
+image
+no
+question
+While driving, this warning light on your dashboard comes on. It means
+options
+a fault in the braking system
+the engine oil is low
+a rear light has failed
+your seat belt is not fastened
+extract
+Don’t ignore this warning light. A fault in your braking system could have dangerous consequences.
+image
+yes
+question
+What will reduce the risk of neck injury resulting from a collision?
+options
+An air-sprung seat
+Anti-lock brakes
+A collapsible steering wheel
+A properly adjusted head restraint
+extract
+If you’re involved in a collision, head restraints will reduce the risk of neck injury. They must be properly adjusted. Make sure they aren’t positioned too low, in a crash this could cause damage to the neck.
+image
+no
+question
+You are testing your suspension. You notice that your vehicle keeps bouncing when you press down on the front wing. What does this mean?
+options
+Worn tyres
+Tyres under-inflated
+Steering wheel not located centrally
+Worn shock absorbers
+extract
+If you find that your vehicle bounces as you drive around a corner or bend in the road, the shock absorbers might be worn. Press down on the front wing and, if the vehicle continues to bounce, take it to be checked by a qualified mechanic.
+image
+no
+question
+It is illegal to drive with tyres that
+options
+have been bought second-hand
+have a large deep cut in the side wall
+are of different makes
+are of different tread patterns
+extract
+When checking your tyres for cuts and bulges in the side walls, don’t forget the inner walls (ie. those facing each other under the vehicle).
+image
+no
+question
+A roof rack fitted to your car will
+options
+reduce fuel consumption
+improve the road handling
+make your car go faster
+increase fuel consumption
+extract
+If you are carrying anything on a roof rack, make sure that any cover is securely fitted and does not flap about while driving. Aerodynamically designed roof boxes are available which reduce wind resistance and, in turn, fuel consumption.
+image
+no
+question
+The legal minimum depth of tread for car tyres over three quarters of the breadth is
+options
+1 mm
+1.6 mm
+2.5 mm
+4 mm
+extract
+Tyres must have sufficient depth of tread to give them a good grip on the road surface. The legal minimum for cars is 1.6 mm. This depth should be across the central three quarters of the breadth of the tyre and around the entire circumference.
+image
+no
+question
+You are carrying two 13 year old children and their parents in your car. Who is responsible for seeing that the children wear seat belts?
+options
+The children’s parents
+You, the driver
+The front-seat passenger
+The children
+extract
+Seat belts save lives and reduce the risk of injury. If you are carrying passengers under 14 years of age it’s your responsibility as the driver to ensure that their seat belts are fastened or they are seated in an approved child restraint.
+image
+no
+question
+How can you, as a driver, help the environment?
+options
+By reducing your speed
+By gentle acceleration
+By using leaded fuel
+By driving faster
+By harsh acceleration
+By servicing your vehicle properly
+extract
+Rapid acceleration and heavy braking lead to greater fuel consumption. They also increase wear and tear on your vehicle. Having your vehicle regularly serviced means your engine will maintain its efficiency, produce cleaner emissions and lengthen its life.
+image
+no
+question
+When a roof rack is not in use it should be removed. Why is this?
+options
+It will affect the suspension
+It is illegal
+It will affect your braking
+It will waste fuel
+extract
+We are all responsible for the environment we live in. If each driver takes responsibility for conserving fuel, together it will make a difference
+image
+no
+question
+To help the environment, you can avoid wasting fuel by
+options
+having your vehicle properly serviced
+making sure your tyres are correctly inflated
+not over-revving in the lower gears
+driving at higher speeds where possible
+keeping an empty roof rack properly fitted
+servicing your vehicle less regularly
+extract
+If you don’t have your vehicle serviced regularly, the engine will not burn all the fuel efficiently. This will cause excess gases to be discharged into the atmosphere.
+image
+no
+question
+To reduce the volume of traffic on the roads you could
+options
+use public transport more often
+share a car when possible
+walk or cycle on short journeys
+travel by car at all times
+use a car with a smaller engine
+drive in a bus lane
+extract
+Walking or cycling are good ways to get exercise. Using public transport also gives the opportunity for exercise if you walk to the railway station or bus stop. Leave the car at home whenever you can.
+image
+no
+question
+Which THREE things can you, as a road user, do to help the environment?
+options
+Cycle when possible
+Drive on under-inflated tyres
+Use the choke for as long as possible on a cold engine
+Have your vehicle properly tuned and serviced
+Watch the traffic and plan ahead
+Brake as late as possible without skidding
+extract
+Although the car is a convenient form of transport it can also cause damage to health and the environment, especially when used on short journeys. Before you travel consider other types of transport. Walking and cycling are better for your health and public transport can be quicker, more convenient and less stressful than driving.
+image
+no
+question
+Which THREE of the following are most likely to waste fuel?
+options
+Reducing your speed
+Carrying unnecessary weight
+Using the wrong grade of fuel
+Under-inflated tyres
+Using different brands of fuel
+A fitted, empty roof rack
+extract
+Wasting fuel costs you money and also causes unnecessary pollution. Ensuring your tyres are correctly inflated, avoiding carrying unnecessary weight, and removing a roof rack that is not in use, will all help to reduce your fuel consumption.
+image
+no
+question
+To help protect the environment you should NOT
+options
+remove your roof rack when unloaded
+use your car for very short journeys
+walk, cycle, or use public transport
+empty the boot of unnecessary weight
+extract
+Try not to use your car as a matter of routine. For shorter journeys, consider walking or cycling instead – this is much better for both you and the environment.
+image
+no
+question
+Which THREE does the law require you to keep in good condition?
+options
+Gears
+Transmission
+Headlights
+Windscreen
+Seat belts
+extract
+Other things to check include lights, get someone to help you check the brake lights and indicators. Battery, a lot of these are now maintenance-free. Steering, check for play in the steering. Oil, water and suspension also need checking. Always check that the speedometer is working once you’ve moved off.
+image
+no
+question
+Your vehicle pulls to one side when braking. You should
+options
+change the tyres around
+consult your garage as soon as possible
+pump the pedal when braking
+use your handbrake at the same time
+extract
+The brakes on your vehicle must be effective and properly adjusted. If your vehicle pulls to one side when braking, take it to be checked by a qualified mechanic. Don’t take risks.
+image
+no
+question
+Driving at 70 mph uses more fuel than driving at 50 mph by up to
+options
+10%
+30%
+75%
+100%
+extract
+Your vehicle will use less fuel if you avoid heavy acceleration. The higher the engine revs, the more fuel you will use. Using the same gear, a vehicle travelling at 70mph will use up to 30% more fuel to cover the same distance, than at 50mph. However, don’t travel so slowly that you inconvenience or endanger other road users.
+image
+no
+question
+Unbalanced wheels on a car may cause
+options
+the steering to pull to one side
+the steering to vibrate
+the brakes to fail
+the tyres to deflate
+extract
+If your wheels are out of balance it will cause the steering to vibrate at certain speeds. It is not a fault that will rectify itself. You will have to take your vehicle to a garage or tyre fitting firm as this is specialist work.
+image
+no
+question
+Turning the steering wheel while your car is stationary can cause damage to the
+options
+gearbox
+engine
+brakes
+steering
+tyres
+extract
+Turning the steering wheel when the car is not moving can cause unnecessary wear to the tyres and steering mechanism. This is known as ‘dry’ steering.
+image
+no
+question
+How could you deter theft from your car when leaving it unattended?
+options
+Leave valuables in a carrier bag
+Lock valuables out of sight
+Put valuables on the seats
+Leave valuables on the floor
+extract
+If you can see valuables in your car so can a thief. If you can’t take them with you lock them out of sight or you risk losing them, as well as having your car damaged.
+image
+no
+question
+You have to leave valuables in your car. It would be safer to
+options
+put them in a carrier bag
+park near a school entrance
+lock them out of sight
+park near a bus stop
+extract
+If you have to leave valuables in your car, always lock them out of sight. If you can see them, so can a thief.
+image
+no
+question
+Which of the following may help to deter a thief from stealing your car?
+options
+Always keeping the headlights on
+Fitting reflective glass windows
+Always keeping the interior light on
+Etching the car number on the windows
+extract
+Having your car registration number etched on all your windows is a cheap and effective way to deter professional car thieves.
+image
+no
+question
+Which of the following should not be kept in your vehicle?
+options
+A first aid kit
+A road atlas
+The tax disc
+The vehicle documents
+extract
+Never leave the vehicle’s documents inside it. They would help a thief dispose of the vehicle more easily.
+image
+no
+question
+Which of these is most likely to deter the theft of your vehicle?
+options
+An immobiliser
+Tinted windows
+Locking wheel nuts
+A sun screen
+extract
+An immobiliser makes it more difficult for your vehicle to be driven off by a thief. It is a particular deterrent to opportunist thieves.
+image
+no
+question
+What should you do when leaving your vehicle?
+options
+Put valuable documents under the seats
+Remove all valuables
+Cover valuables with a blanket
+Leave the interior light on
+extract
+When leaving your vehicle unattended it is best to take valuables with you. If you can't, then lock them out of sight in the boot. If you can see valuables in your car, so can a thief.
+image
+no
+question
+When parking and leaving your car you should
+options
+park under a shady tree
+remove the tax disc
+park in a quiet road
+engage the steering lock
+extract
+When you leave your car always engage the steering lock. This increases the security of your vehicle, as the ignition key is needed to release the steering lock.
+image
+no
+question
+When leaving your vehicle parked and unattended you should
+options
+park near a busy junction
+park in a housing estate
+remove the key and lock it
+leave the left indicator on
+extract
+An unlocked car is an open invitation to thieves. Leaving the keys in the ignition not only makes your car easy to steal, it could also invalidate your insurance.
+image
+no
+question
+You service your own vehicle. How should you get rid of the old engine oil?
+options
+Take it to a local authority site
+Pour it down a drain
+Tip it into a hole in the ground
+Put it into your dustbin
+extract
+It is illegal to pour engine oil down any drain. Oil is a pollutant and harmful to wildlife. Dispose of it safely at an authorised site.
+image
+no
+question
+Which TWO of the following will improve fuel consumption?
+options
+Reducing your road speed
+Planning well ahead
+Late and harsh braking
+Driving in lower gears
+Short journeys with a cold engine
+Rapid acceleration
+extract
+Harsh braking, constant gear changes and harsh acceleration increase fuel consumption. An engine uses less fuel when travelling at a constant low speed. You need to look well ahead so you are able to anticipate hazards early. Easing off the accelerator and timing your approach, at junctions, for example, could actually improve the fuel consumption of your vehicle.
+image
+no
+question
+Why do MOT tests include a strict exhaust emission test?
+options
+To recover the cost of expensive garage equipment
+To help protect the environment against pollution
+To discover which fuel supplier is used the most
+To make sure diesel and petrol engines emit the same fumes
+extract
+Emission tests are carried out to ensure your vehicle's engine is operating efficiently. This ensures the pollution produced by the engine is kept to a minimum. If your vehicle is not serviced regularly, it may fail the annual MOT test.
+image
+no
+question
+To reduce the damage your vehicle causes to the environment you should
+options
+use narrow side streets
+avoid harsh acceleration
+brake in good time
+anticipate well ahead
+use busy routes
+extract
+By looking well ahead and recognising hazards early you can avoid last-minute harsh braking. Watch the traffic flow and look well ahead for potential hazards so you can control your speed accordingly. Avoid over-revving the engine and accelerating harshly as this increases wear to the engine and uses more fuel.
+image
+no
+question
+A properly serviced vehicle will give
+options
+lower insurance premiums
+you a refund on your road tax
+better fuel economy
+cleaner exhaust emissions
+extract
+When you purchase your vehicle, check at what intervals you should have it serviced. This can vary depending on model and manufacturer. Use the service manual and keep it up to date. The cost of a service may well be less than the cost of running a poorly maintained vehicle.
+image
+no
+question
+Your vehicle has a catalytic converter. Its purpose is to reduce
+options
+exhaust noise
+fuel consumption
+exhaust emissions
+engine noise
+extract
+Catalytic converters reduce the harmful gases given out by the engine. The gases are changed by a chemical process as they pass through a special filter.
+image
+no
+question
+You enter a road where there are road humps. What should you do?
+options
+Maintain a reduced speed throughout
+Accelerate quickly between each one
+Always keep to the maximum legal speed
+Drive slowly at school times only
+extract
+The humps are there for a reason – to reduce the speed of the traffic. Don’t accelerate harshly between them as this means you will only have to brake harshly to negotiate the next hump. Harsh braking and accelerating uses more fuel.
+image
+yes
+question
+When should you especially check the engine oil level?
+options
+Before a long journey
+When the engine is hot
+Early in the morning
+Every 6000 miles
+extract
+During long journeys an engine can use more oil than on shorter trips. Insufficient oil is potentially dangerous: it can lead to excessive wear and expensive repairs. Most cars have a dipstick to allow the oil level to be checked. If not, you should refer to the vehicle’s handbook. Also make checks on:<ul><li>fuel</li><li>water</li><li>tyres</li></ul>
+image
+no
+question
+When leaving your car unattended for a few minutes you should
+options
+leave the engine running
+switch the engine off but leave the key in
+lock it and remove the key
+park near a traffic warden
+extract
+Always switch off the engine, remove the key and lock your car, even if you are only leaving it for a few minutes.
+image
+no
+question
+You are having difficulty finding a parking space in a busy town. You can see there is space on the zigzag lines of a zebra crossing. Can you park there?
+options
+No, unless you stay with your car
+Yes, in order to drop off a passenger
+Yes, if you do not block people from crossing
+No, not in any circumstances
+extract
+It’s an offence to park there. You will be causing an obstruction by obscuring the view of both pedestrians and drivers.
+image
+no
+question
+When parking and leaving your car for a few minutes you should
+options
+leave it unlocked
+lock it and remove the key
+leave the hazard warning lights on
+leave the interior light on
+extract
+Always remove the key and lock your car even if you only leave it for a few minutes.
+image
+no
+question
+When leaving your vehicle where should you park if possible?
+options
+Opposite a traffic island
+In a secure car park
+On a bend
+At or near a taxi rank
+extract
+Whenever possible leave your car in a secure car park. This will help stop thieves.
+image
+no
+question
+In which THREE places would parking cause an obstruction to others?
+options
+Near the brow of a hill
+In a lay-by
+Where the kerb is raised
+Where the kerb has been lowered for wheelchairs
+At or near a bus stop
+extract
+Think about the effect your parking will have on other road users. Don’t forget that not all vehicles are the size of a car. Large vehicles will need more room to pass and might need more time too. Parking out of the view of traffic, such as before the brow of a hill, causes unnecessary risks. Think before you park.
+image
+no
+question
+In which THREE places would parking your vehicle cause danger or obstruction to other road users?
+options
+In front of a property entrance
+At or near a bus stop
+On your driveway
+In a marked parking space
+On the approach to a level crossing
+extract
+Don’t park your vehicle where parking restrictions apply. Think carefully before you slow down and stop. Look at road markings and signs to ensure that you aren’t parking illegally.
+image
+no
+question
+You are away from home and have to park your vehicle overnight. Where should you leave it?
+options
+Opposite another parked vehicle
+In a quiet road
+Opposite a traffic island
+In a secure car park
+extract
+When leaving your vehicle unattended, use a secure car park whenever possible
+image
+no
+question
+The most important reason for having a properly adjusted head restraint is to
+options
+make you more comfortable
+help you to avoid neck injury
+help you to relax
+help you to maintain your driving position
+extract
+The restraint should be adjusted so that it gives maximum protection to the head and neck. This will help in the event of a rearend collision.
+image
+no
+question
+As a driver, you can help reduce pollution levels in town centres by
+options
+driving more quickly
+over-revving in a low gear
+walking or cycling
+driving short journeys
+extract
+Using a vehicle for short journeys means the engine does not have time to reach its normal running temperature. When an engine is running below its normal running temperature it produces increased amounts of pollution. Walking and cycling do not create pollution and have health benefits as well.
+image
+no
+question
+As a driver you can cause more damage to the environment by
+options
+choosing a fuel-efficient vehicle
+making a lot of short journeys
+driving in as high a gear as possible
+accelerating as quickly as possible
+having your vehicle regularly serviced
+extract
+For short journeys it may be quicker to walk, or cycle, which is far better for your health. Time spent stationary in traffic with the engine running is damaging to health, the environment and expensive in fuel costs.
+image
+no
+question
+How can you reduce the chances of your car being broken into when leaving it unattended?
+options
+Take all valuables with you
+Park near a taxi rank
+Place any valuables on the floor
+Park near a fire station
+extract
+When leaving your car take all valuables with you if you can, otherwise lock them out of sight.
+image
+no
+question
+How can you help to prevent your car radio being stolen?
+options
+Park in an unlit area
+Hide the radio with a blanket
+Park near a busy junction
+Install a security-coded radio
+extract
+A security-coded radio can deter thieves as it is likely to be of little use when removed from the vehicle.
+image
+no
+question
+Wherever possible, which one of the following should you do when parking at night?
+options
+Park in a quiet car park
+Park in a well-lit area
+Park facing against the flow of traffic
+Park next to a busy junction
+extract
+If you are away from home, try to avoid leaving your vehicle unattended in poorly-lit areas. If possible park in a secure, well-lit car park.
+image
+no
+question
+You are parking your car. You have some valuables which you are unable to take with you. What should you do?
+options
+Park near a police station
+Put them under the driver’s seat
+Lock them out of sight
+Park in an unlit side road
+extract
+Your vehicle is like a shop window for thieves. Either remove all valuables or lock them out of sight.
+image
+no
+question
+How can you lessen the risk of your vehicle being broken into at night?
+options
+Leave it in a well-lit area
+Park in a quiet side road
+Don’t engage the steering lock
+Park in a poorly-lit area
+extract
+Having your vehicle broken into or stolen can be very distressing and inconvenient. Avoid leaving your vehicle unattended in poorly-lit areas.
+image
+no
+question
+To help keep your car secure you could join a
+options
+vehicle breakdown organisation
+vehicle watch scheme
+advanced driver’s scheme
+car maintenance class
+extract
+The vehicle watch scheme helps reduce the risk of having your car stolen. By displaying high visibility vehicle watch stickers in your car you are inviting the police to stop your vehicle if seen in use between midnight and 5 am.
+image
+no
+question
+When leaving your car to help keep it secure you should
+options
+leave the hazard warning lights on
+lock it and remove the key
+park on a one-way street
+park in a residential area
+extract
+To help keep your car secure when you leave it, you should always remove the key from the ignition, lock it and take the key with you. Don’t make it easy for thieves.
+image
+no
+question
+On a vehicle, where would you find a catalytic converter?
+options
+In the fuel tank
+In the air filter
+On the cooling system
+On the exhaust system
+extract
+Although carbon dioxide is still produced, a catalytic converter reduces the toxic and polluting gases by up to 90%. Unleaded fuel must be used in vehicles fitted with a catalytic converter.
+image
+no
+question
+You will find that driving smoothly can
+options
+reduce journey times by about 15%
+increase fuel consumption by about 15%
+reduce fuel consumption by about 15%
+increase journey times by about 15%
+extract
+Not only will you save about 15% of your fuel by driving smoothly, but you will also reduce the amount of wear and tear on your vehicle as well as reducing pollution. You will also feel more relaxed and have a more pleasant journey.
+image
+no
+question
+You can save fuel when conditions allow by
+options
+using lower gears as often as possible
+accelerating sharply in each gear
+using each gear in turn
+missing out some gears
+extract
+Missing out intermediate gears when appropriate, helps to reduce the amount of time spent accelerating and decelerating - the time when your vehicle uses most fuel.
+image
+no
+question
+What does Eco-safe driving achieve?
+options
+Increased fuel consumption
+Improved road safety
+Damage to the environment
+Increased exhaust emissions
+extract
+The emphasis is on hazard awareness and planning ahead. By looking well ahead you will have plenty of time to deal with hazards safely and won’t need to brake sharply. This will also reduce damage to the environment.
+image
+no
+question
+How can driving in an Eco-safe manner help protect the environment?
+options
+Through the legal enforcement of speed regulations
+By increasing the number of cars on the road
+Through increased fuel bills
+By reducing exhaust emissions
+extract
+Eco-safe driving is all about becoming a more environmentally-friendly driver. This will make your journeys more comfortable as well as considerably reducing your fuel bills and reducing emissions that can damage the environment.
+image
+no
+question
+How can missing out some gear changes save fuel?
+options
+By reducing the amount of time you are accelerating
+Because there is less need to use the footbrake
+By controlling the amount of steering
+Because coasting is kept to a minimum
+extract
+Missing out some gears helps to reduce the amount of time you are accelerating and this saves fuel. You don’t always need to change up or down through each gear. As you accelerate between each gear more fuel is injected into the engine than if you had maintained constant acceleration. Fewer gear changes means less fuel used.
+image
+no
+question
+Missing out some gears saves fuel by reducing the amount of time you spend
+options
+braking
+coasting
+steering
+accelerating
+extract
+It is not always necessary to change up or down through each gear. Missing out intermediate gears helps to reduce the amount of time you are accelerating. Because fuel consumption is at its highest when accelerating this can save fuel.
+image
+no
+question
+Fuel consumption is at its highest when you are
+options
+braking
+coasting
+accelerating
+steering
+extract
+Always try to use the accelerator smoothly. Taking your foot off the accelerator allows the momentum of the car to take you forward, especially when going downhill. This can save a considerable amount of fuel without any loss of control over the vehicle.
+image
+no
+question
+You are checking your trailer tyres. What is the legal minimum tread depth over the central three quarters of its breadth?
+options
+1 mm
+1.6 mm
+2 mm
+2.6 mm
+extract
+Trailers and caravans may be left in storage over the winter months and tyres can deteriorate. It’s important to check their tread depth and also the pressures and general condition. The legal tread depth applies to the central three quarters of its breadth over its entire circumference.
+image
+no
+question
+Car passengers MUST wear a seat belt/restraint if one is available, unless they are
+options
+under 14 years old
+under 1.5 metres (5 feet) in height
+sitting in the rear seat
+exempt for medical reasons
+extract
+If you have adult passengers it is their responsibility to wear a seat belt, but you should still remind them to use them as they get in the car. It is your responsibility to ensure that all children in your car are secured with an appropriate restraint.
+image
+no
+question
+Car passengers MUST wear a seat belt if one is available, unless they are
+options
+n a vehicle fitted with air bags
+travelling within a congestion charging zone
+sitting in the rear seat
+exempt for medical reasons
+extract
+When adult passengers are travelling in a vehicle, it is their own responsibility to wear a seat belt. However, you should still remind them to use a seat belt.
+image
+no
+question
+You have too much oil in your engine. What could this cause?
+options
+Low oil pressure
+Engine overheating
+Chain wear
+Oil leaks
+extract
+Too much oil in the engine will create excess pressure and could damage engine seals and cause oil leaks. Any excess oil should be drained off.
+image
+no
+question
+You are driving the children of a friend home from school. They are both under 14 years old. Who is responsible for making sure they wear a seat belt or approved child restraint where required?
+options
+An adult passenger
+The children
+You, the driver
+Your friend
+extract
+Passengers should always be secured and safe. Children should be encouraged to fasten their seat belts or approved restraints themselves from an early age so that it becomes a matter of routine. As the driver you must check that they are fastened securely. It’s your responsibility
+image
+no
+question
+You are carrying a 5 year-old child in the back seat of your car. They are under 1.35 metres (4 feet 5 inches). A correct child restraint is NOT available. They MUST
+options
+sit behind the passenger seat
+use an adult seat belt
+share a belt with an adult
+sit between two other children
+extract
+Usually a correct child restraint MUST be used. In a few exceptional cases if one is not available an adult seat belt MUST be used. In a collision unrestrained objects and people can cause serious injury or even death.
+image
+no
+question
+You are carrying a child using a rear-facing baby seat. You want to put it on the front passenger seat. What MUST you do before setting off?
+options
+Deactivate all front and rear airbags
+Make sure any front passenger airbag is deactivated
+Make sure all the child safety locks are off
+Recline the front passenger seat
+extract
+You MUST deactivate any frontal passenger airbag when using a rear-facing baby seat in a front passenger seat. It is ILLEGAL if you don’t. If activated in a crash it could cause serious injury or death. Ensure you follow the manufacturers instructions. In some cars this is now done automatically.
+image
+no
+question
+You are parked at the side of the road. You will be waiting for some time for a passenger. What should you do?
+options
+Switch off the engine
+Apply the steering lock
+Switch off the radio
+Use your headlights
+extract
+If your vehicle is stationary and is likely to remain so for some time, switch off the engine. We should all try to reduce global warming and pollution.
+image
+no
+question
+You are carrying an 11 year old child in the back seat of your car. They are under 1.35 metres (4 feet 5 inches) in height. You MUST make sure that
+options
+they sit between two belted people
+they can fasten their own seat belt
+a suitable child restraint is available
+they can see clearly out of the front window
+extract
+It is your responsibility as a driver to ensure that children are secure and safe in your vehicle. Make sure you are familiar with the rules. In a few very exceptional cases when a child restraint is not available, an adult seat belt MUST be used. Child restraints and seat belts save lives!
+image
+no
+question
+You are using a rear-facing baby seat. You want to put it on the front passenger seat which is protected by a frontal airbag. What MUST you do before setting off?
+options
+Deactivate the airbag
+Turn the seat to face sideways
+Ask a passenger to hold the baby
+Put the child in an adult seat belt
+extract
+If the airbag activates near a baby seat, it could cause serious injury or even death to the child. It is illegal to fit a rear-facing baby seat into a passenger seat protected by an active frontal airbag. You MUST secure it in a different seat or deactivate the relevant airbag. Follow the manufacturers advice when fitting a baby seat.
+image
+no
+question
+You are carrying a five year-old child in the back seat of your car. They are under 1.35 metres (4 feet 5 inches) in height. They MUST use an adult seat belt ONLY if
+options
+a correct child restraint is not available
+it is a lap type belt
+they sit between two adults
+it can be shared with another adult
+extract
+You should make all efforts to ensure a correct child restraint is used, with very few exceptions. If in specific circumstances one is not available, then an adult seat belt MUST be used. Unrestrained objects, including people, can be thrown violently around in a collision, and may cause serious injury or even death!
+image
+no
+question
+You are leaving your vehicle parked on a road unattended. When may you leave the engine running?
+options
+If you will be parking for less than five minutes
+If the battery keeps going flat
+When parked in a 20 mph zone
+Never if you are away from the vehicle
+extract
+When you leave your vehicle parked on a road, switch off the engine and secure the vehicle. Make sure there aren’t any valuables visible, shut all the windows, lock the vehicle, set the alarm if it has one and use an anti-theft device such as a steering wheel lock.
+image
+no
