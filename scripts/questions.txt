@@ -3972,3 +3972,879 @@ extract
 The only time you are permitted to use your hazard warning lights while moving is if you are on a motorway or dual carriageway and you need to warn other road users, particularly those behind, of a hazard or obstruction ahead. Only use them long enough to ensure your warning has been seen.
 image
 no
+section
+title|Vulnerable road users
+question
+You are turning left at a junction. Pedestrians have started to cross the road. You should
+options
+go on, giving them plenty of room
+stop and wave at them to cross
+blow your horn and proceed
+give way to them
+extract
+If you’re turning into a side road, pedestrians already crossing the road have priority and you should give way to them. Don’t wave them across the road, sound your horn, flash your lights or give any other misleading signal. Other road users may misinterpret your signal and this may lead the pedestrians into a dangerous situation. If a pedestrian is slow or indecisive be patient and wait. Don’t hurry them across by revving your engine.
+image
+yes
+question
+You are turning left from a main road into a side road. People are already crossing the road into which you are turning. You should
+options
+continue, as it is your right of way
+signal to them to continue crossing
+wait and allow them to cross
+sound your horn to warn them of your presence
+extract
+Always check the road into which you are turning. Approaching at the correct speed will allow you enough time to observe and react.<br>Give way to any pedestrians already crossing the road.
+image
+yes
+question
+You are turning left into a side road. What hazards should you be especially aware of?
+options
+One way street
+Pedestrians
+Traffic congestion
+Parked vehicles
+extract
+Make sure that you have reduced your speed and are in the correct gear for the turn. Look into the road before you turn and always give way to any pedestrians who are crossing.
+image
+no
+question
+You are at a road junction, turning into a minor road. There are pedestrians crossing the minor road. You should
+options
+stop and wave the pedestrians across
+sound your horn to let the pedestrians know that you are there
+give way to the pedestrians who are already crossing
+carry on; the pedestrians should give way to you
+extract
+Always look into the road into which you are turning. If there are pedestrians crossing, give way to them, but don’t wave or signal to them to cross. Signal your intention to turn as you approach.
+image
+yes
+question
+You intend to turn right into a side road. Just before turning you should check for motorcyclists who might be
+options
+overtaking on your left
+following you closely
+emerging from the side road
+overtaking on your right
+extract
+Never attempt to change direction to the right without first checking your right-hand mirror. A motorcyclist might not have seen your signal and could be hidden by the car behind you. This action should become a matter of routine.
+image
+no
+question
+A toucan crossing is different from other crossings because
+options
+moped riders can use it
+it is controlled by a traffic warden
+it is controlled by two flashing lights
+cyclists can use it
+extract
+Toucan crossings are shared by pedestrians and cyclists and they are shown the green light together. Cyclists are permitted to cycle across. The signals are push-button operated and there is no flashing amber phase.
+image
+no
+question
+Where would you see this sign?
+options
+In the window of a car taking children to school
+At the side of the road
+At playground areas
+On the rear of a school bus or coach
+extract
+Vehicles that are used to carry children to and from school will be travelling at busy times of the day. If you’re following a vehicle with this sign be prepared for it to make frequent stops. It might pick up or set down passengers in places other than normal bus stops.
+image
+yes
+question
+How will a school crossing patrol signal you to stop?
+options
+By pointing to children on the opposite pavement
+By displaying a red light
+By displaying a stop sign
+By giving you an arm signal
+extract
+If a school crossing patrol steps out into the road with a stop sign you must stop. Don’t wave anyone across the road and don’t get impatient or rev your engine.
+image
+no
+question
+What does this sign mean?
+options
+No route for pedestrians and cyclists
+A route for pedestrians only
+A route for cyclists only
+A route for pedestrians and cyclists
+extract
+This sign shows a shared route for pedestrians and cyclists: when it ends, the cyclists will be rejoining the main road.
+image
+yes
+question
+What action would you take when elderly people are crossing the road?
+options
+Wave them across so they know that you have seen them
+Be patient and allow them to cross in their own time
+Rev the engine to let them know that you are waiting
+Tap the horn in case they are hard of hearing
+extract
+Be aware that older people might take a long time to cross the road. They might also be hard of hearing and not hear you approaching. Don’t hurry older people across the road by getting too close to them or revving your engine.
+image
+yes
+question
+You see a pedestrian with a white stick and red band. This means that the person is
+options
+physically disabled
+deaf only
+blind only
+deaf and blind
+extract
+If someone is deaf as well as blind, they may be carrying a white stick with a red reflective band. You can’t see if a pedestrian is deaf. Don’t assume everyone can hear you approaching.
+image
+no
+question
+You see two elderly pedestrians about to cross the road ahead. You should
+options
+expect them to wait for you to pass
+speed up to get past them quickly
+stop and wave them across the road
+be careful, they may misjudge your speed
+extract
+Older people may have impaired hearing, vision, concentration and judgement. They may also walk slowly and so could take a long time to cross the road.
+image
+no
+question
+You are coming up to a roundabout. A cyclist is signalling to turn right. What should you do?
+options
+Overtake on the right
+Give a horn warning
+Signal the cyclist to move across
+Give the cyclist plenty of room
+extract
+If you’re following a cyclist who’s signalling to turn right at a roundabout leave plenty of room. Give them space and time to get into the correct lane.
+image
+no
+question
+Why should you look particularly for motorcyclists and cyclists at junctions?
+options
+They may want to turn into the side road
+They may slow down to let you turn
+They are harder to see
+They might not see you turn
+extract
+Cyclists and motorcyclists are smaller than other vehicles and so are more difficult to see. They can easily become hidden from your view by cars parked near a junction.
+image
+no
+question
+Which TWO should you allow extra room when overtaking?
+options
+Motorcycles
+Tractors
+Bicycles
+Road-sweeping vehicles
+extract
+Don’t pass riders too closely as this may cause them to lose balance. Always leave as much room as you would for a car, and don’t cut in.
+image
+no
+question
+You are waiting to come out of a side road. Why should you watch carefully for motorcycles?
+options
+Motorcycles are usually faster than cars
+Police patrols often use motorcycles
+Motorcycles are small and hard to see
+Motorcycles have right of way
+extract
+If you’re waiting to emerge from a side road watch out for motorcycles: they’re small and can be difficult to see. Be especially careful if there are parked vehicles restricting your view, there might be a motorcycle approaching. IF YOU DON’T KNOW, DON’T GO.
+image
+no
+question
+In daylight, an approaching motorcyclist is using a dipped headlight. Why?
+options
+So that the rider can be seen more easily
+To stop the battery overcharging
+To improve the rider’s vision
+The rider is inviting you to proceed
+extract
+A motorcycle can be lost from sight behind another vehicle. The use of the headlight helps to make it more conspicuous and therefore more easily seen.
+image
+no
+question
+There is a slow-moving motorcyclist ahead of you. You are unsure what the rider is going to do. You should
+options
+pass on the left
+pass on the right
+stay behind
+move closer
+extract
+If a motorcyclist is travelling slowly it may be that they are looking for a turning or entrance. Be patient and stay behind them in case they need to make a sudden change of direction.
+image
+no
+question
+Motorcyclists should wear bright clothing mainly because
+options
+they must do so by law
+it helps keep them cool in summer
+the colours are popular
+drivers often do not see them
+extract
+Motorcycles are small vehicles and can be difficult to see. If the rider wears bright clothing it can make it easier for other road users to see them approaching, especially at junctions.
+image
+no
+question
+Motorcyclists will often look round over their right shoulder just before turning right. This is because
+options
+they need to listen for following traffic
+motorcycles do not have mirrors
+looking around helps them balance as they turn
+they need to check for traffic in their blind area
+extract
+If you see a motorcyclist take a quick glance over their shoulder, this could mean they are about to change direction. Recognising a clue like this helps you to be prepared and take appropriate action, making you safer on the road.
+image
+no
+question
+At road junctions which of the following are most vulnerable?
+options
+Cyclists
+Motorcyclists
+Pedestrians
+Car drivers
+Lorry drivers
+extract
+Pedestrians and riders on two wheels can be harder to see than other road users. Make sure you keep a look-out for them, especially at junctions. Good effective observation, coupled with appropriate action, can save lives.
+image
+no
+question
+You are approaching a roundabout. There are horses just ahead of you. You should
+options
+be prepared to stop
+treat them like any other vehicle
+give them plenty of room
+accelerate past as quickly as possible
+sound your horn as a warning
+extract
+Horse riders often keep to the outside of the roundabout even if they are turning right. Give them plenty of room and remember that they may have to cross lanes of traffic.
+image
+no
+question
+Motorcyclists are particularly vulnerable
+options
+when moving off
+on dual carriageways
+when approaching junctions
+on motorways
+extract
+Another road user failing to see a motorcyclist is a major cause of collisions at junctions. Wherever streams of traffic join or cross there’s the potential for this type of incident to occur.
+image
+no
+question
+As you approach a pelican crossing the lights change to green. Elderly people are halfway across. You should
+options
+wave them to cross as quickly as they can
+rev your engine to make them hurry
+flash your lights in case they have not heard you
+wait because they will take longer to cross
+extract
+Even if the lights turn to green, wait for them to clear the crossing. Allow them to cross the road in their own time, and don’t try to hurry them by revving your engine
+image
+no
+question
+There are flashing amber lights under a school warning sign. What action should you take?
+options
+Reduce speed until you are clear of the area
+Keep up your speed and sound the horn
+Increase your speed to clear the area quickly
+Wait at the lights until they change to green
+extract
+The flashing amber lights are switched on to warn you that children may be crossing near a school. Slow down and take extra care as you may have to stop.
+image
+no
+question
+Where would you see this sign?
+options
+Near a school crossing
+At a playground entrance
+On a school bus
+At a ‘pedestrians only’ area
+extract
+Watch out for children crossing the road from the other side of the bus.
+image
+yes
+question
+These road markings must be kept clear to allow
+options
+school children to be dropped off
+for teachers to park
+school children to be picked up
+a clear view of the crossing area
+extract
+The markings are there to show that the area must be kept clear to allow an unrestricted view for<ul><li>approaching drivers and riders</li><li>children wanting to cross the road.</li></ul>
+image
+yes
+question
+You are following two cyclists. They approach a roundabout in the left-hand lane. In which direction should you expect the cyclists to go?
+options
+Left
+Right
+Any direction
+Straight ahead
+extract
+Cyclists approaching a roundabout in the left-hand lane may be turning right but may not have been able to get into the correct lane due to the heavy traffic. They may also feel safer keeping to the left all the way round the roundabout. Be aware of them and give them plenty of room.
+image
+no
+question
+You are travelling behind a moped. You want to turn left just ahead. You should
+options
+overtake the moped before the junction
+pull alongside the moped and stay level until just before the junction
+sound your horn as a warning and pull in front of the moped
+stay behind until the moped has passed the junction
+extract
+Passing the moped and turning into the junction could mean that you cut across the front of the rider. This might force them to slow down, stop or even lose control. Slow down and stay behind the moped until it has passed the junction and you can then turn safely.
+image
+no
+question
+How would you react to drivers who appear to be inexperienced?
+options
+Sound your horn to warn them of your presence
+Be patient and prepare for them to react more slowly
+Flash your headlights to indicate that it is safe for them to proceed
+Overtake them as soon as possible
+extract
+Learners might not have confidence when they first start to drive. Allow them plenty of room and don’t react adversely to their hesitation. We all learn from experience, but new drivers will have had less practice in dealing with all the situations that might occur.
+image
+no
+question
+You see a horse rider as you approach a roundabout. They are signalling right but keeping well to the left. You should
+options
+proceed as normal
+keep close to them
+cut in front of them
+stay well back
+extract
+Allow the horse rider to enter and exit the roundabout in their own time. They may feel safer keeping to the left all the way around the roundabout. Don’t get up close behind or alongside them. This is very likely to upset the horse and create a dangerous situation.
+image
+yes
+question
+You are following a learner driver who stalls at a junction. You should
+options
+be patient as you expect them to make mistakes
+stay very close behind and flash your headlights
+start to rev your engine if they take too long to restart
+immediately steer around them and drive on
+extract
+Learning is a process of practice and experience. Try to understand this and tolerate those who are at the beginning of this process.
+image
+no
+question
+You are on a country road. What should you expect to see coming towards you on YOUR side of the road?
+options
+Motorcycles
+Bicycles
+Pedestrians
+Horse riders
+extract
+On a quiet country road always be aware that there may be a hazard just around the next bend, such as a slow-moving vehicle or pedestrians. Pedestrians are advised to walk on the right-hand side of the road if there is no pavement, so they may be walking towards you on your side of the road.
+image
+no
+question
+You are following a car driven by an elderly driver. You should
+options
+expect the driver to drive badly
+flash your lights and overtake
+be aware that the driver’s reactions may not be as fast as yours
+stay very close behind but be careful
+extract
+You must show consideration to other road users. The reactions of older drivers may be slower and they might need more time to deal with a situation. Be tolerant and don’t lose patience or show your annoyance.
+image
+no
+question
+You are turning left into a side road. Pedestrians are crossing the road near the junction. You must
+options
+wave them on
+sound your horn
+switch on your hazard lights
+wait for them to cross
+extract
+Check that it’s clear before you turn into a junction. If there are pedestrians crossing they have priority, so let them cross in their own time.
+image
+yes
+question
+You are following a cyclist. You wish to turn left just ahead. You should
+options
+overtake the cyclist before the junction
+pull alongside the cyclist and stay level until after the junction
+hold back until the cyclist has passed the junction
+go around the cyclist on the junction
+extract
+Make allowances for cyclists. Allow them plenty of room. Don’t try to overtake and then immediately turn left. Be patient and stay behind them until they have passed the junction
+image
+yes
+question
+A horse rider is in the left-hand lane approaching a roundabout. You should expect the rider to
+options
+go in any direction
+turn right
+turn left
+go ahead
+extract
+Horses and their riders will move more slowly than other road users. They might not have time to cut across heavy traffic to take up positions in the offside lane. For this reason a horse and rider may approach a roundabout in the left-hand lane, even though they’re turning right.
+image
+no
+question
+You should never attempt to overtake a cyclist
+options
+just before you turn left
+on a left hand bend
+on a one-way street
+on a dual carriageway
+extract
+If you want to turn left and there’s a cyclist in front of you, hold back. Wait until the cyclist has passed the junction and then turn left behind them.
+image
+no
+question
+Powered vehicles used by disabled people are small and hard to see. How do they give early warning when on a dual carriageway?
+options
+They will have a flashing red light
+They will have a flashing green light
+They will have a flashing blue light
+They will have a flashing amber light.
+extract
+Powered vehicles used by disabled people are small, low, hard to see and travel very slowly. On a dual carriageway a flashing amber light will warn other road users.
+image
+no
+question
+Ahead of you there is a moving vehicle with a flashing amber beacon. This means it is
+options
+slow moving
+broken down
+a doctor’s car
+a school crossing patrol
+extract
+As you approach the vehicle, assess the situation. Due to its slow progress you will need to judge whether it is safe to overtake.
+image
+no
+question
+What does this sign mean?
+options
+Contraflow pedal cycle lane
+With-flow pedal cycle lane
+Pedal cycles and buses only
+No pedal cycles or buses
+extract
+The picture of a cycle will also usually be painted on the road, sometimes with a different coloured surface. Leave these clear for cyclists and don’t pass too closely when you overtake.
+image
+yes
+question
+You must not stop on these road markings because you may obstruct
+options
+children’s view of the crossing area
+teachers’ access to the school
+delivery vehicles’ access to the school
+emergency vehicles’ access to the school
+extract
+These markings are found on the road outside schools. DO NOT stop (even to set down or pick up children) or park on them. The markings are to make sure that drivers, riders, children and other pedestrians have a clear view.
+image
+yes
+question
+You notice horse riders in front. What should you do FIRST?
+options
+Pull out to the middle of the road
+Slow down and be ready to stop
+Accelerate around them
+Signal right
+extract
+Be particularly careful when approaching horse riders – slow down and be prepared to stop. Always pass wide and slowly and look out for signals given by horse riders. Horses are unpredictable: always treat them as potential hazards and take great care when passing them.
+image
+yes
+question
+The left-hand pavement is closed due to street repairs. What should you do?
+options
+Watch out for pedestrians walking in the road
+Use your right-hand mirror more often
+Speed up to get past the roadworks quicker
+Position close to the left-hand kerb
+extract
+Where street repairs have closed off pavements, proceed carefully and slowly as pedestrians might have to walk in the road.
+image
+no
+question
+You are following a motorcyclist on an uneven road. You should
+options
+allow less room so you can be seen in their mirrors
+overtake immediately
+allow extra room in case they swerve to avoid potholes
+allow the same room as normal because road surfaces do not affect motorcyclists
+extract
+Potholes and bumps in the road can unbalance a motorcyclist. For this reason the rider might swerve to avoid an uneven road surface. Watch out at places where this is likely to occur.
+image
+no
+question
+You are approaching this roundabout and see the cyclist signal right. Why is the cyclist keeping to the left?
+options
+It is a quicker route for the cyclist
+The cyclist is going to turn left instead
+The cyclist thinks The Highway Code does not apply to bicycles
+The cyclist is slower and more vulnerable
+extract
+Cycling in today’s heavy traffic can be hazardous. Some cyclists may not feel happy about crossing the path of traffic to take up a position in an outside lane. Be aware of this and understand that, although in the left-hand lane, the cyclist might be turning right.
+image
+yes
+question
+What does this sign tell you?
+options
+No cycling
+Cycle route ahead
+Cycle parking only
+End of cycle route
+extract
+With people’s concern today for the environment, cycle routes are being created in our towns and cities. These are usually defined by road markings and signs. Respect the presence of cyclists on the road and give them plenty of room if you need to pass.
+image
+yes
+question
+You are approaching this crossing. You should
+options
+prepare to slow down and stop
+stop and wave the pedestrians across
+speed up and pass by quickly
+continue unless the pedestrians step out
+extract
+Be courteous and prepare to stop. Do not wave people across as this could be dangerous if another vehicle is approaching the crossing.
+image
+yes
+question
+You see a pedestrian with a dog. The dog has a yellow or burgundy coat. This especially warns you that the pedestrian is
+options
+elderly
+dog training
+colour blind
+deaf
+extract
+Take extra care as the pedestrian may not be aware of vehicles approaching.
+image
+no
+question
+Some junctions controlled by traffic lights have a marked area between two stop lines. What is this for?
+options
+To allow taxis to position in front of other traffic
+To allow people with disabilities to cross the road
+To allow cyclists and pedestrians to cross the road together
+To allow cyclists to position in front of other traffic
+extract
+These are known as advanced stop lines. When the lights are red (or about to become red) you should stop at the first white line. However if you have crossed that line as the lights change you must stop at the second line even if it means you are in the area reserved for cyclists.
+image
+no
+question
+At toucan crossings
+options
+you only stop if someone is waiting to cross
+cyclists are not permitted
+there is a continuously flashing amber beacon
+pedestrians and cyclists may cross
+extract
+There are some crossings where cycle routes lead the cyclists to cross at the same place as pedestrians. These are called toucan crossings. Always look out for cyclists, as they’re likely to be approaching faster than pedestrians.
+image
+no
+question
+At some traffic lights there are advance stop lines and a marked area. What are these for?
+options
+To allow cyclists to position in front of other traffic
+To let pedestrians cross when the lights change
+To prevent traffic from jumping the lights
+To let passengers get off a bus which is queuing
+extract
+You should always stop at the first white line. Avoid going into the marked area which is reserved for cyclists only. However if you have crossed the first white line at the time the signal changes to red you must stop at the second line even if you are in the marked area.
+image
+no
+question
+When you are overtaking a cyclist you should leave as much room as you would give to a car. What is the main reason for this?
+options
+The cyclist might speed up
+The cyclist might get off the bike
+The cyclist might swerve
+The cyclist might have to make a left turn
+extract
+Before overtaking assess the situation. Look well ahead to see if the cyclist will need to change direction. Be especially aware of the cyclist approaching parked vehicles as they will need to alter course. Do not pass too closely or cut in sharply.
+image
+no
+question
+At night you see a pedestrian wearing reflective clothing and carrying a bright red light. What does this mean?
+options
+You are approaching roadworks
+You are approaching an organised walk
+You are approaching a slow-moving vehicle
+You are approaching a traffic danger spot
+extract
+The people on the walk should be keeping to the left, but don’t assume this. Pass slowly, make sure you have time to do so safely. Be aware that the pedestrians have their backs to you and may not know that you’re there.
+image
+no
+question
+Which THREE should you do when passing sheep on a road?
+options
+Allow plenty of room
+Go very slowly
+Pass quickly but quietly
+Be ready to stop
+Briefly sound your horn
+extract
+Slow down and be ready to stop if you see animals in the road ahead. Animals are easily frightened by noise and vehicles passing too close to them. Stop if signalled to do so by the person in charge.
+image
+no
+question
+You have just passed your test. How can you reduce your risk of being involved in a collision?
+options
+By always staying close to the vehicle in front
+By never going over 40 mph
+By staying only in the left-hand lane on all roads
+By taking further training
+extract
+New drivers and riders are often involved in a collision or incident early in their driving career. Due to a lack of experience they may not react to hazards as quickly as more experienced road users. Approved training courses are offered by driver and rider training schools. The Pass Plus scheme has been created by DSA for new drivers who would like to improve their basic skills and safely widen their driving experience.
+image
+no
+question
+You want to reverse into a side road. You are not sure that the area behind your car is clear. What should you do?
+options
+Look through the rear window only
+Get out and check
+Check the mirrors only
+Carry on, assuming it is clear
+extract
+If you cannot be sure whether there is anything behind you, it is always safest to check before reversing. There may be a small child or a low obstruction close behind your car. The shape and size of your vehicle can restrict visibility.
+image
+no
+question
+Who is especially in danger of not being seen as you reverse your car?
+options
+Motorcyclists
+Car drivers
+Cyclists
+Children
+extract
+As you look through the rear of your vehicle you may not be able to see a small child. Be aware of this before you reverse. If there are children about, get out and check if it is clear before reversing.
+image
+no
+question
+You are about to reverse into a side road. A pedestrian wishes to cross behind you. You should
+options
+wave to the pedestrian to stop
+give way to the pedestrian
+wave to the pedestrian to cross
+reverse before the pedestrian starts to cross
+extract
+If you need to reverse into a side road try to find a place that’s free from traffic and pedestrians. Look all around before and during the manoeuvre. Stop and give way to any pedestrians who want to cross behind you. Avoid waving them across, sounding the horn, flashing your lights or giving any misleading signals that could lead them into a dangerous situation.
+image
+no
+question
+You are reversing around a corner when you notice a pedestrian walking behind you. What should you do?
+options
+Slow down and wave the pedestrian across
+Continue reversing and steer round the pedestrian
+Stop and give way
+Continue reversing and sound your horn
+extract
+Wait until the pedestrian has passed, then look around again before you start to reverse. Don’t forget that you may not be able to see a small child directly behind your vehicle. Be aware of the possibility of hidden dangers.
+image
+no
+question
+You want to turn right from a junction but your view is restricted by parked vehicles. What should you do?
+options
+Move out quickly, but be prepared to stop
+Sound your horn and pull out if there is no reply
+Stop, then move slowly forward until you have a clear view
+Stop, get out and look along the main road to check
+extract
+If you want to turn right from a junction and your view is restricted, STOP. Ease forward until you can see – there might be something approaching. IF YOU DON’T KNOW, DON’T GO.
+image
+no
+question
+What must a driver do at a pelican crossing when the amber light is flashing?
+options
+Signal the pedestrian to cross
+Always wait for the green light before proceeding
+Give way to any pedestrians on the crossing
+Wait for the red-and-amber light before proceeding
+extract
+The flashing amber light allows pedestrians already on the crossing to get to the other side before a green light shows to the traffic. Be aware that some pedestrians, such as elderly people and young children, need longer to cross. Let them do this at their own pace.
+image
+no
+question
+You are at the front of a queue of traffic waiting to turn right into a side road. Why is it important to check your right mirror just before turning?
+options
+To look for pedestrians about to cross
+To check for overtaking vehicles
+To make sure the side road is clear
+To check for emerging traffic
+extract
+There could be a motorcyclist riding along the outside of the queue. Always check your mirror before turning as situations behind you can change in the time you have been waiting to turn.
+image
+no
+question
+You have stopped at a pelican crossing. A disabled person is crossing slowly in front of you. The lights have now changed to green. You should
+options
+allow the person to cross
+drive in front of the person
+drive behind the person
+sound your horn
+be patient
+edge forward slowly
+extract
+At a pelican crossing the green light means you may proceed as long as the crossing is clear. If someone hasn’t finished crossing, be patient and wait for them.
+image
+no
+question
+You are driving past a line of parked cars. You notice a ball bouncing out into the road ahead. What should you do?
+options
+Continue driving at the same speed and sound your horn
+Continue driving at the same speed and flash your headlights
+Slow down and be prepared to stop for children
+Stop and wave the children across to fetch their ball
+extract
+Beware of children playing in the street and running out into the road. If a ball bounces out from the pavement, slow down and stop. Don’t encourage anyone to retrieve it. Other road users may not see your signal and you might lead a child into a dangerous situation.
+image
+yes
+question
+You are driving in slow-moving queues of traffic. Just before changing lane you should
+options
+sound the horn
+look for motorcyclists filtering through the traffic
+give a ‘slowing down’ arm signal
+change down to first gear
+extract
+In this situation motorcyclists could be passing you on either side. Always check before you change lanes or change direction.
+image
+no
+question
+You want to turn right from a main road into a side road. Just before turning you should
+options
+cancel your right-turn signal
+select first gear
+check for traffic overtaking on your right
+stop and set the handbrake
+extract
+Motorcyclists often overtake queues of vehicles. Make one last check in your mirror and your blind spot to avoid turning across their path.
+image
+no
+question
+You are driving in town. There is a bus at the bus stop on the other side of the road. Why should you be careful?
+options
+The bus may have broken down
+Pedestrians may come from behind the bus
+The bus may move off suddenly
+The bus may remain stationary
+extract
+If you see a bus ahead watch out for pedestrians. They may not be able to see you if they’re crossing from behind the bus.
+image
+no
+question
+How should you overtake horse riders?
+options
+Drive up close and overtake as soon as possible
+Speed is not important but allow plenty of room
+Use your horn just once to warn them
+Drive slowly and leave plenty of room
+extract
+When you’re on country roads be aware of particular dangers. Be prepared for farm animals, horses, pedestrians, farm vehicles and wild animals. Always be prepared to slow down or stop.
+image
+no
+question
+Why should you allow extra room when overtaking a motorcyclist on a windy day?
+options
+The rider may turn off suddenly to get out of the wind
+The rider may be blown across in front of you
+The rider may stop suddenly
+The rider may be travelling faster than normal
+extract
+If you’re driving in high winds, be aware that the conditions might force a motorcyclist or cyclist to swerve or wobble. Take this into consideration if you’re following or wish to overtake a twowheeled vehicle.
+image
+no
+question
+You are driving on a main road. You intend to turn right into a side road. Just before turning you should
+options
+adjust your interior mirror
+flash your headlamps
+steer over to the left
+check for traffic overtaking on your right
+extract
+A last check in the offside mirror and blind spot will allow you sight of any cyclist or motorcyclist overtaking as you wait to turn.
+image
+no
+question
+Where in particular should you look out for motorcyclists?
+options
+In a filling station
+At a road junction
+Near a service area
+When entering a car park
+extract
+Always look out for motorcyclists, and cyclists, particularly at junctions. They are smaller and usually more difficult to see than other vehicles.
+image
+yes
+question
+Where should you take particular care to look out for motorcyclists and cyclists?
+options
+On dual carriageways
+At junctions
+At zebra crossings
+On one-way streets
+extract
+Motorcyclists and cyclists are often more difficult to see on the road. This is especially the case at junctions. You may not be able to see a motorcyclist approaching a junction if your view is blocked by other traffic. A motorcycle may be travelling as fast as a car, sometimes faster. Make sure that you judge speeds correctly before you emerge.
+image
+no
+question
+You are driving past parked cars. You notice a bicycle wheel sticking out between them. What should you do?
+options
+Accelerate past quickly and sound your horn
+Slow down and wave the cyclist across
+Brake sharply and flash your headlights
+Slow down and be prepared to stop for a cyclist
+extract
+Scan the road as you drive. Try to anticipate hazards by being aware of the places where they are likely to occur. You’ll then be able to react in good time, if necessary.
+image
+no
+question
+The road outside this school is marked with yellow zigzag lines. What do these lines mean?
+options
+You may park on the lines when dropping off schoolchildren
+You may park on the lines when picking schoolchildren up
+You must not wait or park your vehicle here at all
+You must stay with your vehicle if you park here
+extract
+Parking here would block the view of the school entrance and would endanger the lives of children on their way to and from school
+image
+yes
+question
+You are dazzled at night by a vehicle behind you. You should
+options
+set your mirror to anti-dazzle
+set your mirror to dazzle the other driver
+brake sharply to a stop
+switch your rear lights on and off
+extract
+The interior mirror of most vehicles can be set to the anti dazzle position. You will still be able to see the lights of the traffic behind you, but the dazzle will be greatly reduced.
+image
+no
+question
+You are driving towards a zebra crossing. A person in a wheelchair is waiting to cross. What should you do?
+options
+Continue on your way
+Wave to the person to cross
+Wave to the person to wait
+Be prepared to stop
+extract
+You should slow down and be prepared to stop as you would with an able-bodied person. Don’t wave them across as other traffic may not stop.
+image
+no
+question
+What do these road markings outside a school mean?
+options
+You may park here if you are a teacher
+Sound your horn before parking
+When parking, use your hazard warning lights
+You should not wait or park your vehicle here
+extract
+These markings are used outside schools so that children can see and be seen clearly when crossing the road. Parking here would block people’s view of the school entrance. This could endanger the lives of children on their way to and from school.
+image
+yes
+question
+Yellow zigzag lines on the road outside schools mean
+options
+sound your horn to alert other road users
+stop to allow children to cross
+you should not park or stop on these lines
+you must not drive over these lines
+extract
+Where there are yellow zigzag markings, you should not park, wait or stop, even to pick up or drop off children. A vehicle parked on the zigzag lines would obstruct children's view of the road and other drivers view of the pavement. Where there is an upright sign there is mandatory prohibition of stopping during the times shown.
+image
+yes
