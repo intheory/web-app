@@ -38,7 +38,14 @@ try:
 			q.extract = extract
 			image = f.readline().strip()
 			image_exists = f.readline().strip()
+
+			#Just for validation.
 			print image_exists
+			if image_exists != "no" and image_exists!="yes": 
+				while 1:
+					print q.question
+					print image_exists; 
+	
 			if image_exists=="yes":
 				pass#TODO:save image's name
 			q.sid = str(s.id)

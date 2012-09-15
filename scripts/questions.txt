@@ -2894,3 +2894,1081 @@ extract
 Don’t venture out if your journey is not necessary. If you have to travel and someone is expecting you at the other end, let them know that you will be taking longer than usual for your journey. This will stop them worrying if you don’t turn up on time and will also take the pressure off you, so you don’t feel you have to rush.
 image
 no
+section
+title|Hazard awareness
+question
+Where would you expect to see these markers?
+options
+On a motorway sign
+At the entrance to a narrow bridge
+On a large goods vehicle
+On a builder’s skip placed on the road
+extract
+These markers must be fitted to vehicles over 13 metres long, large goods vehicles, and rubbish skips placed in the road. They are reflective to make them easier to see in the dark.
+image
+yes
+question
+What is the main hazard shown in this picture?
+options
+Vehicles turning right
+Vehicles doing U-turns
+The cyclist crossing the road
+Parked cars around the corner
+extract
+Look at the picture carefully and try to imagine you’re there. The cyclist in this picture appears to be trying to cross the road. You must be able to deal with the unexpected, especially when you’re approaching a hazardous junction. Look well ahead to give yourself time to deal with any hazards.
+image
+yes
+question
+Which road user has caused a hazard?
+options
+The parked car (arrowed A)
+The pedestrian waiting to cross (arrowed B)
+The moving car (arrowed C)
+The car turning (arrowed D)
+extract
+The car arrowed A is parked within the area marked by zigzag lines at the pedestrian crossing. Parking here is illegal. It also<ul><li>blocks the view for pedestrians wishing to cross the road</li><li>restricts the view of the crossing for approaching traffic.</li></ul>
+image
+yes
+question
+What THREE things should the driver of the grey car (arrowed) be especially aware of?
+options
+Pedestrians stepping out between cars
+Other cars behind the grey car
+Doors opening on parked cars
+The bumpy road surface
+Cars leaving parking spaces
+Empty parking spaces
+extract
+You need to be aware that other road users may not have seen you. Always be on the lookout for hazards that may develop suddenly and need you to take avoiding action.
+image
+yes
+question
+What should the driver of the car approaching the crossing do?
+options
+Continue at the same speed
+Sound the horn
+Drive through quickly
+Slow down and get ready to stop
+extract
+Look well ahead to see if any hazards are developing. This will give you more time to deal with them in the correct way. The man in the picture is clearly intending to cross the road. You should be travelling at a speed that allows you to check your mirror, slow down and stop in good time. You shouldn’t have to brake harshly.
+image
+yes
+question
+You see this sign ahead. You should expect the road to
+options
+go steeply uphill
+go steeply downhill
+bend sharply to the left
+bend sharply to the right
+extract
+Adjust your speed in good time and select the correct gear for your speed. Going too fast into the bend could cause you to lose control. Braking late and harshly while changing direction reduces your vehicle’s grip on the road, and is likely to cause a skid.
+image
+yes
+question
+You are approaching this cyclist. You should
+options
+overtake before the cyclist gets to the junction
+flash your headlights at the cyclist
+slow down and allow the cyclist to turn
+overtake the cyclist on the left-hand side
+extract
+Keep well back and allow the cyclist room to take up the correct position for the turn. Don’t get too close behind or try to squeeze past.
+image
+yes
+question
+When approaching this bridge you should give way to
+options
+bicycles
+buses
+motorcycles
+cars
+extract
+A double-deck bus or high-sided lorry will have to take up a position in the centre of the road so that it can clear the bridge. There is normally a sign to indicate this. Look well down the road, through the bridge and be aware you may have to stop and give way to an oncoming large vehicle.
+image
+yes
+question
+Why must you take extra care when turning right at this junction?
+options
+Road surface is poor
+Footpaths are narrow
+Road markings are faint
+There is reduced visibility
+extract
+You may have to pull forward slowly until you can see up and down the road. Be aware that the traffic approaching the junction can’t see you either. If you don’t know that it’s clear, don’t go.
+image
+yes
+question
+What type of vehicle could you expect to meet in the middle of the road?
+options
+Lorry
+Bicycle
+Car
+Motorcycle
+extract
+The highest point of the bridge is in the centre so a large vehicle might have to move to the centre of the road to allow it enough room to pass under the bridge.
+image
+yes
+question
+At this blind junction you must stop
+options
+behind the line, then edge forward to see clearly
+beyond the line at a point where you can see clearly
+only if there is traffic on the main road
+only if you are turning to the right
+extract
+The ‘stop’ sign has been put here because there is a poor view into the main road. You must stop because it will not be possible to assess the situation on the move, however slowly you are travelling.
+image
+yes
+question
+An elderly person’s driving ability could be affected because they may be unable to
+options
+obtain car insurance
+understand road signs
+react very quickly
+give signals correctly
+extract
+Be tolerant of older drivers. Poor eyesight and hearing could affect the speed with which they react to a hazard and may cause them to be hesitant.
+image
+no
+question
+A driver pulls out of a side road in front of you. You have to brake hard. You should
+options
+ignore the error and stay calm
+flash your lights to show your annoyance
+sound your horn to show your annoyance
+overtake as soon as possible
+extract
+Where there are a number of side roads, be alert. Be especially careful if there are a lot of parked vehicles because they can make it more difficult for drivers emerging to see you. Try to be tolerant if a vehicle does emerge and you have to brake quickly. Don’t react aggressively.
+image
+no
+question
+You have just passed these warning lights. What hazard would you expect to see next?
+options
+A level crossing with no barrier
+An ambulance station
+A school crossing patrol
+An opening bridge
+extract
+These lights warn that children may be crossing the road to a nearby school. Slow down so that you’re ready to stop if necessary.
+image
+yes
+question
+You are planning a long journey. Do you need to plan rest stops?
+options
+Yes, you should plan to stop every half an hour
+Yes, regular stops help concentration
+No, you will be less tired if you get there as soon as possible
+No, only fuel stops will be needed
+extract
+Try to plan your journey so that you can take rest stops. It’s recommended that you take a break of at least 15 minutes after every two hours of driving. This should help to maintain your concentration.
+image
+no
+question
+The red lights are flashing. What should you do when approaching this level crossing?
+options
+Go through quickly
+Go through carefully
+Stop before the barrier
+Switch on hazard warning lights
+extract
+At level crossings the red lights flash before and when the barrier is down. At most crossings an amber light will precede the red lights. You must stop behind the white line unless you have already crossed it when the amber light comes on. NEVER zigzag around half-barriers.
+image
+yes
+question
+A driver does something that upsets you. You should
+options
+try not to react
+let them know how you feel
+flash your headlights several times
+sound your horn
+extract
+There are times when other road users make a misjudgement or mistake. When this happens try not to get annoyed and don’t react by showing anger. Sounding your horn, flashing your headlights or shouting won’t help the situation. Good anticipation will help to prevent these incidents becoming collisions.
+image
+no
+question
+You are approaching crossroads. The traffic lights have failed. What should you do?
+options
+Brake and stop only for large vehicles
+Brake sharply to a stop before looking
+Be prepared to brake sharply to a stop
+Be prepared to stop for any traffic.
+extract
+When approaching a junction where the traffic lights have failed, you should proceed with caution. Treat the situation as an unmarked junction and be prepared to stop.
+image
+no
+question
+What should the driver of the red car (arrowed) do?
+options
+Wave the pedestrians who are waiting to cross
+Wait for the pedestrian in the road to cross
+Quickly drive behind the pedestrian in the road
+Tell the pedestrian in the road she should not have crossed
+extract
+Some people might take longer to cross the road. They may be older or have a disability. Be patient and don’t hurry them by showing your impatience. They might have poor eyesight or not be able to hear traffic approaching. If pedestrians are standing at the side of the road, don’t signal or wave them to cross. Other road users may not have seen your signal and this could lead the pedestrians into a hazardous situation.
+image
+yes
+question
+What should you do as you approach this overhead bridge?
+options
+Move out to the centre of the road before going through
+Find another route, this is only for high vehicles
+Be prepared to give way to large vehicles in the middle of the road
+Move across to the right hand side before going through
+extract
+Oncoming large vehicles may need to move to the middle of the road so that they can pass safely under the bridge. There will not be enough room for you to continue and you should be ready to stop and wait.
+image
+yes
+question
+You are following a slower-moving vehicle on a narrow country road. There is a junction just ahead on the right. What should you do?
+options
+Overtake after checking your mirrors and signalling
+Stay behind until you are past the junction
+Accelerate quickly to pass before the junction
+Slow down and prepare to overtake on the left
+extract
+You should never overtake as you approach a junction. If a vehicle emerged from the junction while you were overtaking, a dangerous situation could develop very quickly.
+image
+no
+question
+Why are mirrors often slightly curved (convex)?
+options
+They give a wider field of vision
+They totally cover blind spots
+They make it easier to judge the speed of following traffic
+They make following traffic look bigger
+extract
+Although a convex mirror gives a wide view of the scene behind, you should be aware that it will not show you everything behind or to the side of the vehicle. Before you move off you will need to check over your shoulder to look for anything not visible in the mirrors.
+image
+no
+question
+You see this sign on the rear of a slowmoving lorry that you want to pass. It is travelling in the middle lane of a three-lane motorway. You should
+options
+cautiously approach the lorry then pass on either side
+follow the lorry until you can leave the motorway
+wait on the hard shoulder until the lorry has stopped
+approach with care and keep to the left of the lorry
+extract
+This sign is found on slow-moving or stationary works vehicles. If you wish to overtake, do so on the left, as indicated. Be aware that there might be workmen in the area.
+image
+yes
+question
+What is the main hazard the driver of the red car (arrowed) should be aware of?
+options
+Glare from the sun may affect the driver’s vision
+The black car may stop suddenly
+The bus may move out into the road
+Oncoming vehicles will assume the driver is turning right
+extract
+If you can do so safely give way to buses signalling to move off at bus stops. Try to anticipate the actions of other road users around you. The driver of the red car should be prepared for the bus pulling out. As you approach a bus stop look to see how many passengers are waiting to board. If the last one has just got on, the bus is likely to move off.
+image
+yes
+question
+You think the driver of the vehicle in front has forgotten to cancel their right indicator. You should
+options
+flash your lights to alert the driver
+sound your horn before overtaking
+overtake on the left if there is room
+stay behind and not overtake
+extract
+The driver may be unsure of the location of a junction and turn suddenly. Be cautious and don’t attempt to overtake.
+image
+no
+question
+This yellow sign on a vehicle indicates this is
+options
+a broken-down vehicle
+a school bus
+an ice cream van
+a private ambulance
+extract
+Buses which carry children to and from school may stop at places other than scheduled bus stops. Be aware that they might pull over at any time to allow children to get on or off. This will normally be when traffic is heavy during rush hour.
+image
+yes
+question
+What TWO main hazards should you be aware of when going along this street?
+options
+Glare from the sun
+Car doors opening suddenly
+Lack of road markings
+The headlights on parked cars being switched on
+Large goods vehicles
+Children running out from between vehicles
+extract
+On roads where there are many parked vehicles you should take extra care. You might not be able to see children between parked cars and they may run out into the road without looking. People may open car doors without realising the hazard this can create. You will also need to look well down the road for oncoming traffic.
+image
+yes
+question
+A driver’s behaviour has upset you. It may help if you
+options
+stop and take a break
+shout abusive language
+gesture to them with your hand
+follow their car, flashing your headlights
+extract
+Tiredness may make you more irritable than you would be normally. You might react differently to situations because of it. If you feel yourself becoming tense, take a break.
+image
+no
+question
+What is the main hazard you should be aware of when following this cyclist?
+options
+The cyclist may move to the left and dismount
+The cyclist may swerve out into the road
+The contents of the cyclist’s carrier may fall onto the road
+The cyclist may wish to turn right at the end of the road
+extract
+When following a cyclist be aware that they have to deal with the hazards around them. They may wobble or swerve to avoid a pothole in the road or see a potential hazard and change direction suddenly. Don’t follow them too closely or rev your engine impatiently.
+image
+yes
+question
+In areas where there are ‘traffic calming’ measures you should
+options
+travel at a reduced speed
+always travel at the speed limit
+position in the centre of the road
+only slow down if pedestrians are near
+extract
+Traffic calming measures such as road humps, chicanes and narrowings are intended to slow you down. Maintain a reduced speed until you reach the end of these features. They are there to protect pedestrians. Kill your speed!
+image
+no
+question
+When approaching this hazard why should you slow down?
+options
+Because of the bend
+Because it’s hard to see to the right
+Because of approaching traffic
+Because of animals crossing
+Because of the level crossing
+extract
+There are two hazards clearly signed in this picture. You should be preparing for the bend by slowing down and selecting the correct gear. You might also have to stop at the level crossing, so be alert and be prepared to stop if necessary.
+image
+yes
+question
+Some two-way roads are divided into three lanes. Why are these particularly dangerous?
+options
+Traffic in both directions can use the middle lane to overtake
+Traffic can travel faster in poor weather conditions
+Traffic can overtake on the left
+Traffic uses the middle lane for emergencies only
+extract
+If you intend to overtake you must consider that approaching traffic could be planning the same manoeuvre. When you have considered the situation and have decided it is safe, indicate your intentions early. This will show the approaching traffic that you intend to pull out.
+image
+no
+question
+Why are place names painted on the road surface?
+options
+To restrict the flow of traffic
+To warn you of oncoming traffic
+To enable you to change lanes early
+To prevent you changing lanes
+extract
+The names of towns and cities may be painted on the road at busy junctions and complex road systems. Their purpose is to let you move into the correct lane in good time, allowing traffic to flow more freely.
+image
+no
+question
+You are on a dual carriageway. Ahead you see a vehicle with an amber flashing light. What could this be?
+options
+An ambulance
+A fire engine
+A doctor on call
+A disabled person’s vehicle
+extract
+An amber flashing light on a vehicle indicates that it is slow-moving. Battery powered vehicles used by disabled people are limited to 8 mph. It’s not advisable for them to be used on dual carriageways where the speed limit exceeds 50 mph. If they are then an amber flashing light must be used.
+image
+no
+question
+What does this signal from a police officer mean to oncoming traffic?
+options
+Go ahead
+Stop
+Turn left
+Turn right
+extract
+Police officers may need to direct traffic, for example, at a junction where the traffic lights have broken down. Check your copy of The Highway Code for the signals that they use.
+image
+yes
+question
+Overtaking is a major cause of collisions. In which THREE of these situations should you NOT overtake?
+options
+If you are turning left shortly afterwards
+When you are in a one-way street
+When you are approaching a junction
+If you are travelling up a long hill
+When your view ahead is blocked
+extract
+You should not overtake unless it is really necessary. Arriving safely is more important than taking risks. Also look out for road signs and markings that show it is illegal or would be unsafe to overtake. In many cases overtaking is unlikely to significantly improve journey times.
+image
+no
+question
+Why should you be especially cautious when going past this stationary bus?
+options
+There is traffic approaching in the distance
+The driver may open the door
+It may suddenly move off
+People may cross the road in front of it
+There are bicycles parked on the pavement
+extract
+A stationary bus at a bus stop can hide pedestrians just in front of it who might be about to cross the road. Only go past at a speed that will enable you to stop safely if you need to.
+image
+yes
+question
+Which THREE result from drinking alcohol?
+options
+Less control
+A false sense of confidence
+Faster reactions
+Poor judgement of speed
+Greater awareness of danger
+extract
+You must understand the serious dangers of mixing alcohol with driving or riding. Alcohol will severely reduce your ability to drive or ride safely. Just one drink could put you over the limit. Don’t risk people’s lives – DON’T DRINK AND DRIVE OR RIDE!
+image
+no
+question
+What does the solid white line at the side of the road indicate?
+options
+Traffic lights ahead
+Edge of the carriageway
+Footpath on the left
+Cycle path
+extract
+The continuous white line shows the edge of the carriageway. It can be especially useful when visibility is restricted, for example at night or in bad weather. It is discontinued where it crosses junctions, lay-bys etc.
+image
+yes
+question
+You are behind this cyclist. When the traffic lights change, what should you do?
+options
+Try to move off before the cyclist
+Allow the cyclist time and room
+Turn right but give the cyclist room
+Tap your horn and drive through first
+extract
+Hold back and allow the cyclist to move off. In some towns, junctions have special areas marked across the front of the traffic lane. These allow cyclists to wait for the lights to change and move off ahead of other traffic.
+image
+yes
+question
+You are driving towards this level crossing. What would be the first warning of an approaching train?
+options
+Both half barriers down
+A steady amber light
+One half barrier down
+Twin flashing red lights
+extract
+The steady amber light will be followed by twin flashing red lights that mean you must stop. An alarm will also sound to alert you to the fact that a train is approaching.
+image
+yes
+question
+While driving, you see this sign ahead. You should
+options
+stop at the sign
+slow, but continue around the bend
+slow to a crawl and continue
+stop and look for open farm gates
+extract
+Drive around the bend at a steady speed in the correct gear. Be aware that you might have to stop for approaching trains.
+image
+yes
+question
+When the traffic lights change to green the white car should
+options
+wait for the cyclist to pull away
+move off quickly and turn in front of the cyclist
+move close up to the cyclist to beat the lights
+sound the horn to warn the cyclist
+extract
+If you are waiting at traffic lights, check all around you before you move away, as cyclists often filter through waiting traffic. Allow the cyclist to move off safely.
+image
+yes
+question
+You should reduce your speed when driving along this road because
+options
+there is a staggered junction ahead
+there is a low bridge ahead
+there is a change in the road surface
+the road ahead narrows
+extract
+Traffic could be turning off ahead of you, to the left or right. Vehicles turning left will be slowing down before the junction and any vehicles turning right may have to stop to allow oncoming traffic to clear. Be prepared for this as you might have to slow down or stop behind them.
+image
+yes
+question
+You intend to turn left at the traffic lights. Just before turning you should
+options
+check your right mirror
+move close up to the white car
+straddle the lanes
+check for bicycles on your left
+extract
+Check your nearside for cyclists before moving away. This is especially important if you have been in a stationary queue of traffic and are about to move off, as cyclists often try to filter past on the nearside of stationary vehicles.
+image
+yes
+question
+You are driving at 60 mph. As you approach this hazard you should
+options
+maintain your speed
+reduce your speed
+take the next right turn
+take the next left turn
+extract
+There could be stationary traffic ahead, waiting to turn right. Other traffic could be emerging and it may take time for them to gather speed.
+image
+yes
+question
+What might you expect to happen in this situation?
+options
+Traffic will move into the right-hand lane
+Traffic speed will increase
+Traffic will move into the left-hand lane
+Traffic will not need to change position
+extract
+Be courteous and allow the traffic to merge into the left-hand lane.
+image
+yes
+question
+You are invited to a pub lunch. You know that you will have to drive in the evening. What is your best course of action?
+options
+Avoid mixing your alcoholic drinks
+Not drink any alcohol at all
+Have some milk before drinking alcohol
+Eat a hot meal with your alcoholic drinks
+extract
+Alcohol will stay in the body for several hours and may make you unfit to drive later in the day. Drinking during the day will also affect your performance at work or study.
+image
+yes
+question
+You are driving on a road with several lanes. You see these signs above the lanes. What do they mean?
+options
+The two right lanes are open
+The two left lanes are open
+Traffic in the left lanes should stop
+Traffic in the right lanes should stop
+extract
+If you see a red cross above your lane it means that there is an obstruction ahead. You will have to move into one of the lanes which is showing the green light. If all the lanes are showing a red cross, then you must stop.
+image
+yes
+question
+You have been convicted of driving whilst unfit through drink or drugs. You will find this is likely to cause the cost of one of the following to rise considerably. Which one?
+options
+Road fund licence
+Insurance premiums
+Vehicle test certificate
+Driving licence
+extract
+You have shown that you are a risk to yourself and others on the road. For this reason insurance companies may charge you a higher premium.
+image
+no
+question
+What advice should you give to a driver who has had a few alcoholic drinks at a party?
+options
+Have a strong cup of coffee and then drive home
+Drive home carefully and slowly
+Go home by public transport
+Wait a short while and then drive home
+extract
+Drinking black coffee or waiting a few hours won’t make any difference. Alcohol takes time to leave the body. A driver who has been drinking should go home by public transport or taxi. They might even be unfit to drive the following morning.
+image
+no
+question
+You are about to return home from holiday when you become ill. A doctor prescribes drugs which are likely to affect your driving. You should
+options
+drive only if someone is with you
+avoid driving on motorways
+not drive yourself
+never drive at more than 30 mph
+extract
+Find another way to get home even if this proves to be very inconvenient. You must not put other road users, your passengers or yourself at risk.
+image
+no
+question
+You have been taking medicine for a few days which made you feel drowsy. Today you feel better but still need to take the medicine. You should only drive
+options
+if your journey is necessary
+at night on quiet roads
+if someone goes with you
+after checking with your doctor
+extract
+Take care – it’s not worth taking risks. Always check with your doctor to be really sure. You may not feel drowsy now, but the medicine could have an effect on you later in the day.
+image
+no
+question
+During periods of illness your ability to drive may be impaired. You MUST
+options
+see your doctor each time before you drive
+only take smaller doses of any medicines
+be medically fit to drive
+not drive after taking certain medicines
+take all your medicines with you when you drive
+extract
+Be responsible and only drive if you are fit to do so. Some medication can affect your concentration and judgement when dealing with hazards. It may also cause you to become drowsy or even fall asleep. Driving while taking such medication is highly dangerous.
+image
+no
+question
+You feel drowsy when driving. You should
+options
+stop and rest as soon as possible
+turn the heater up to keep you warm and comfortable
+make sure you have a good supply of fresh air
+continue with your journey but drive more slowly
+close the car windows to help you concentrate
+extract
+You will be putting other road users at risk if you continue to drive when drowsy. Pull over and stop in a safe place. If you are driving a long distance, think about finding some accommodation so you can get some sleep before continuing your journey.
+image
+no
+question
+You are taking drugs that are likely to affect your driving. What should you do?
+options
+Seek medical advice before driving
+Limit your driving to essential journeys
+Only drive if accompanied by a full licence-holder
+Drive only for short distances
+extract
+Check with your doctor or pharmacist if you think that the drugs you’re taking are likely to make you feel drowsy or impair your judgement.
+image
+no
+question
+You are driving along a motorway and become tired. You should
+options
+stop at the next service area and rest
+leave the motorway at the next exit and rest
+increase your speed and turn up the radio volume
+close all your windows and set heating to warm
+pull up on the hard shoulder and change drivers
+extract
+If you have planned your journey properly, to include rest stops, you should arrive at your destination in good time.
+image
+no
+question
+You are about to drive home. You feel very tired and have a severe headache. You should
+options
+wait until you are fit and well before driving
+drive home, but take a tablet for headaches
+drive home if you can stay awake for the journey
+wait for a short time, then drive home slowly
+extract
+All your concentration should be on your driving. Any pain you feel will distract you and you should avoid driving when drowsy. The safest course of action is to wait until you have rested and feel better.
+image
+no
+question
+If you are feeling tired it is best to stop as soon as you can. Until then you should
+options
+increase your speed to find a stopping place quickly
+ensure a supply of fresh air
+gently tap the steering wheel
+keep changing speed to improve concentration
+extract
+If you’re going on a long journey plan your route before you leave. This will help you to be decisive at intersections and junctions, plan rest stops and have an idea of how long the journey will take. Make sure your vehicle is well-ventilated to stop you becoming drowsy. You need to maintain concentration so that your judgement is not impaired.
+image
+no
+question
+You go to a social event and need to drive a short time after. What precaution should you take?
+options
+Avoid drinking alcohol on an empty stomach
+Drink plenty of coffee after drinking alcohol
+Avoid drinking alcohol completely
+Drink plenty of milk before drinking alcohol
+extract
+This is always going to be the safest option. Just one drink could put you over the limit and dangerously impair your judgement and reactions.
+image
+no
+question
+Driving long distances can be tiring. You can prevent this by
+options
+stopping every so often for a walk
+opening a window for some fresh air
+ensuring plenty of refreshment breaks
+completing the journey without stopping
+eating a large meal before driving
+extract
+Long-distance driving can be boring. This, coupled with a stuffy, warm vehicle, can make you feel tired. Make sure you take rest breaks to keep yourself awake and alert. Stop in a safe place before you get to the stage of fighting sleep.
+image
+no
+question
+You take some cough medicine given to you by a friend. What should you do before driving?
+options
+Ask your friend if taking the medicine affected their driving
+Drink some strong coffee one hour before driving
+Check the label to see if the medicine will affect your driving
+Drive a short distance to see if the medicine is affecting your driving
+extract
+Never drive if you have taken drugs, without first checking what the side effects might be. They might affect your judgement and perception, and therefore endanger lives.
+image
+no
+question
+You take the wrong route and find you are on a one-way street. You should
+options
+reverse out of the road
+turn round in a side road
+continue to the end of the road
+reverse into a driveway
+extract
+Never reverse or turn your vehicle around in a one-way street. This is highly dangerous. Carry on and find another route, checking the direction signs as you drive. If you need to check a map, first stop in a safe place.
+image
+yes
+question
+You are driving along this road. The driver on the left is reversing from a driveway. You should
+options
+move to the opposite side of the road
+drive through as you have priority
+sound your horn and be prepared to stop
+speed up and drive through quickly
+extract
+White lights at the rear of a car show that it is about to reverse. Sound your horn to warn of your presence and reduce your speed as a precaution.
+image
+yes
+question
+Which THREE are likely to make you lose concentration while driving?
+options
+Looking at road maps
+Listening to loud music
+Using your windscreen washers
+Looking in your wing mirror
+Using a mobile phone
+extract
+Looking at road maps while driving is very dangerous. If you aren’t sure of your route stop in a safe place and check the map. You must not allow anything to take your attention away from the road. If you need to use a mobile phone, stop in a safe place before doing so.
+image
+no
+question
+You have been involved in an argument before starting your journey. This has made you feel angry. You should
+options
+start to drive, but open a window
+drive slower than normal and turn your radio on
+have an alcoholic drink to help you relax before driving
+calm down before you start to drive
+extract
+If you are feeling upset or angry you should wait until you have calmed down before setting out on a journey.
+image
+no
+question
+You start to feel tired while driving. What should you do?
+options
+Increase your speed slightly
+Decrease your speed slightly
+Find a less busy route
+Pull over at a safe place to rest
+extract
+If you start to feel tired, stop at a safe place for a rest break. Every year many fatal incidents are caused by drivers falling asleep at the wheel.
+image
+no
+question
+You have just been overtaken by this motorcyclist who is cutting in sharply. You should
+options
+sound the horn
+brake firmly
+keep a safe gap
+flash your lights
+extract
+If another vehicle cuts in too sharply, ease off the accelerator and drop back to allow a safe separation distance. Try not to overreact by braking sharply or swerving, as you could lose control. If vehicles behind you are too close or unprepared, it could lead to a crash.
+image
+yes
+question
+You are driving on this dual carriageway. Why may you need to slow down?
+options
+There is a broken white line in the centre
+There are solid white lines either side
+There are roadworks ahead of you
+There are no footpaths
+extract
+Look well ahead and read any road signs as you drive. They are there to inform you of what is ahead. In this case you may need to slow right down and change direction. Make sure you can take whatever action is necessary in plenty of time. Check your mirrors so you know what is happening around you before you change speed or direction.
+image
+yes
+question
+You are about to drive home. You cannot find the glasses you need to wear. You should
+options
+drive home slowly, keeping to quiet roads
+borrow a friend’s glasses and use those
+drive home at night, so that the lights will help you
+find a way of getting home without driving
+extract
+Don’t be tempted to drive if you’ve lost or forgotten your glasses. You must be able to see clearly when driving.
+image
+no
+question
+Which THREE of these are likely effects of drinking alcohol?
+options
+Reduced co-ordination
+Increased confidence
+Poor judgement
+Increased concentration
+Faster reactions
+Colour blindness
+extract
+Alcohol can increase confidence to a point where a driver’s behaviour might become ‘out of character’. Someone who normally behaves sensibly suddenly takes risks and enjoys it. Never let yourself or your friends get into this situation.
+image
+no
+question
+Your doctor has given you a course of medicine. Why should you ask how it will affect you?
+options
+Drugs make you a better driver by quickening your reactions
+You will have to let your insurance company know about the medicine
+Some types of medicine can cause your reactions to slow down
+The medicine you take may affect your hearing
+extract
+Always check the label of any medication container. The contents might affect your driving. If you aren’t sure, ask your doctor or pharmacist.
+image
+no
+question
+How does alcohol affect you?
+options
+It speeds up your reactions
+It increases your awareness
+It improves your co-ordination
+It reduces your concentration
+extract
+Concentration and good judgement are needed at all times to be a good, safe driver. Don’t put yourself or others at risk by drinking and driving.
+image
+no
+question
+You are on a motorway. You feel tired. You should
+options
+carry on but go slowly
+leave the motorway at the next exit
+complete your journey as quickly as possible
+stop on the hard shoulder
+extract
+If you do feel tired and there’s no service station for many miles, leave the motorway at the next exit. Find a road off the motorway where you can pull up and stop safely.
+image
+no
+question
+You find that you need glasses to read vehicle number plates at the required distance. When MUST you wear them?
+options
+Only in bad weather conditions
+At all times when driving
+Only when you think it necessary
+Only in bad light or at night time
+extract
+Have your eyesight tested before you start your practical training. Then, throughout your driving life, have checks periodically to ensure that your eyes haven’t deteriorated.
+image
+no
+question
+Which of the following types of glasses should NOT be worn when driving at night?
+options
+Half-moon
+Round
+Bi-focal
+Tinted
+extract
+If you are driving at night or in poor visibility, tinted lenses will reduce the efficiency of your vision, by reducing the amount of available light reaching your eyes.
+image
+no
+question
+Which TWO things would help to keep you alert during a long journey?
+options
+Finishing your journey as fast as you can
+Keeping off the motorways and using country roads
+Making sure that you get plenty of fresh air
+Making regular stops for refreshments
+extract
+Make sure that the vehicle you’re driving is well ventilated. A warm, stuffy atmosphere will make you feel drowsy. Open a window and turn down the heating.
+image
+no
+question
+Drinking any amount of alcohol is likely to
+options
+slow down your reactions to hazards
+increase the speed of your reactions
+worsen your judgement of speed
+improve your awareness of danger
+give a false sense of confidence
+extract
+If you are going to drive it’s always the safest option not to drink at all. Don’t be tempted – it’s not worth it.
+image
+no
+question
+What else can seriously affect your concentration, other than alcoholic drinks?
+options
+Drugs
+Tiredness
+Tinted windows
+Contact lenses
+Loud music
+extract
+Even a slight distraction can allow your concentration to drift. Maintain full concentration at all times so you stay in full control of your vehicle
+image
+no
+question
+When should you use hazard warning lights?
+options
+When you are double-parked on a two way road
+When your direction indicators are not working
+When warning oncoming traffic that you intend to stop
+When your vehicle has broken down and is causing an obstruction
+extract
+Hazard warning lights are an important safety feature and should be used if you have broken down and are causing an obstruction. Don’t use them as an excuse to park illegally such as when using a cash machine or post box. You may also use them on motorways to warn traffic behind you of danger ahead.
+image
+no
+question
+As a driver you find that your eyesight has become very poor. Your optician says they cannot help you. The law says that you should tell
+options
+the licensing authority
+your own doctor
+the local police station
+another optician
+extract
+This will have a serious effect on your judgement and concentration. If you cannot meet the eyesight requirements you must tell DVLA (or DVA in Northern Ireland).
+image
+no
+question
+You want to turn left at this junction. The view of the main road is restricted. What should you do?
+options
+Stay well back and wait to see if something comes
+Build up your speed so that you can emerge quickly
+Stop and apply the handbrake even if the road is clear
+Approach slowly and edge out until you can see more clearly
+extract
+You should slow right down, and stop if necessary, at any junction where the view is restricted. Edge forward until you can see properly. Only then can you decide if it is safe to go.
+image
+yes
+question
+When may you use hazard warning lights?
+options
+To park alongside another car
+To park on double yellow lines
+When you are being towed
+When you have broken down
+extract
+Hazard warning lights may be used to warn other road users when you have broken down and are causing an obstruction, or are on a motorway and want to warn following traffic of a hazard ahead. Don’t use them when being towed or when parking illegally.
+image
+no
+question
+When driving a car fitted with automatic transmission what would you use ‘kick down’ for?
+options
+Cruise control
+Quick acceleration
+Slow braking
+Fuel economy
+extract
+‘Kick down’ selects a lower gear, enabling the vehicle to accelerate faster.
+image
+no
+question
+Hazard warning lights should be used when vehicles are
+options
+broken down and causing an obstruction
+faulty and moving slowly
+being towed along a road
+reversing into a side road
+extract
+Don’t use hazard lights as an excuse for illegal parking. If you do use them, don’t forget to switch them off when you move away. There must be a warning light on the control panel to show when the hazard lights are in operation.
+image
+no
+question
+You are driving along this motorway. It is raining. When following this lorry you should
+options
+allow at least a two-second gap
+move left and drive on the hard shoulder
+allow at least a four-second gap
+be aware of spray reducing your vision
+move right and stay in the right-hand lane
+extract
+The usual two second time gap will increase to four seconds when the roads are wet. If you stay well back you will<ul><li>be able to see past the vehicle</li><li>be out of the spray thrown up by the lorry’s tyres</li><li>give yourself more time to stop if the need arises</li><li>increase your chances of being seen by the lorry driver.</li></ul>
+image
+yes
+question
+You are driving towards this left-hand bend. What dangers should you be aware of?
+options
+A vehicle overtaking you
+No white lines in the centre of the road
+No sign to warn you of the bend
+Pedestrians walking towards you
+extract
+Pedestrians walking on a road with no pavement should walk against the direction of the traffic. You can’t see around this bend: there may be hidden dangers. Always keep this in mind so you give yourself time to react if a hazard does arise.
+image
+yes
+question
+As a provisional licence holder, you must not drive a motor car
+options
+at more than 40 mph
+on your own
+on the motorway
+under the age of 18 years at night
+with passengers in the rear seats
+extract
+When you have passed your practical test you will be able to drive on a motorway. It is recommended that you have instruction on motorway driving before you venture out on your own. Ask your instructor about this.
+image
+no
+question
+The traffic ahead of you in the left-hand lane is slowing. You should
+options
+be wary of cars on your right cutting in
+accelerate past the vehicles in the lefthand lane
+pull up on the left-hand verge
+move across and continue in the righthand lane
+slow down, keeping a safe separation distance
+extract
+Allow the traffic to merge into the nearside lane. Leave enough room so that your separation distance is not reduced drastically if a vehicle pulls in ahead of you.
+image
+yes
+question
+You are not sure if your cough medicine will affect you. What TWO things should you do?
+options
+Ask your doctor
+Check the medicine label
+Drive if you feel alright
+Ask a friend or relative for advice
+extract
+If you’re taking medicine or drugs prescribed by your doctor, check to ensure that they won’t make you drowsy. If you forget to ask at the time of your visit to the surgery, check with your pharmacist. Some over-the-counter medication can also cause drowsiness. Read the label and don’t drive if you are affected.
+image
+no
+question
+For which of these may you use hazard warning lights?
+options
+When driving on a motorway to warn traffic behind of a hazard ahead
+When you are double-parked on a twoway road
+When your direction indicators are not working
+When warning oncoming traffic that you intend to stop
+extract
+Hazard warning lights are an important safety feature. Use them when driving on a motorway to warn traffic behind you of danger ahead.<br>You should also use them if your vehicle has broken down and is causing an obstruction.
+image
+no
+question
+After passing your driving test, you suffer from ill health. This affects your driving. You MUST
+options
+inform your local police station
+avoid using motorways
+always drive accompanied
+inform the licensing authority
+extract
+The licensing authority won’t automatically take away your licence without investigation. For advice, contact the Driver and Vehicle Licensing Agency (or DVA in Northern Ireland).
+image
+no
+question
+You are waiting to emerge at a junction. Your view is restricted by parked vehicles. What can help you to see traffic on the road you are joining?
+options
+Looking for traffic behind you
+Reflections of traffic in shop windows
+Making eye contact with other road users
+Checking for traffic in your interior mirror
+extract
+When your view is restricted into the new road you must still be completely sure it is safe to emerge. Try to look for traffic through the windows of the parked cars or the reflections in shop windows. Keep looking in all directions as you slowly edge forwards until you can see it is safe.
+image
+no
+question
+Why should the junction on the left be kept clear?
+options
+To allow vehicles to enter and emerge
+To allow the bus to reverse
+To allow vehicles to make a U-turn
+To allow vehicles to park
+extract
+You should always try to keep junctions clear. If you are in queuing traffic make sure that when you stop you leave enough space for traffic to flow in and out of the junction.
+image
+yes
+question
+Your motorway journey seems boring and you feel drowsy. What should you do?
+options
+Stop on the hard shoulder for a sleep
+Open a window and stop as soon as it’s safe and legal
+Speed up to arrive at your destination sooner
+Slow down and let other drivers overtake
+extract
+Never stop on the hard shoulder to rest. If there is no service station for several miles, leave the motorway at the next exit and find somewhere safe and legal to pull over.
+image
+no
+question
+You are driving on a motorway. The traffic ahead is braking sharply because of an incident. How could you warn traffic behind you?
+options
+Briefly use the hazard warning lights
+Switch on the hazard warning lights continuously
+Briefly use the rear fog lights
+Switch on the headlights continuously
+extract
+The only time you are permitted to use your hazard warning lights while moving is if you are on a motorway or dual carriageway and you need to warn other road users, particularly those behind, of a hazard or obstruction ahead. Only use them long enough to ensure your warning has been seen.
+image
+no
