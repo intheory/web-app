@@ -23,7 +23,7 @@
       }
       else{
         if (remainingAnswers==0){
-          $("td.choice").parent(".success:first").removeClass("success");
+          $("td.choice").parent(".success").first().removeClass("success");
           choiceRow.addClass("success");        
         }
         else{

@@ -2,7 +2,6 @@
 	<div class="hero-unit1">
 
 		{% set question = test.questions[test.cursor] %}
-		{% if not hasattr(question, 'image') %}
 		<div class="image123"><img alt="" src="{{static_url('imgs/questionbg.png')}}" />
 			
 			<div class="text">
@@ -20,6 +19,7 @@
 			<div class="bar bar-success progress-striped" style="width: {{100*test.cursor/len(test.questions)}}%">
 			</div>
 		</div>
+		{% if not hasattr(question, 'image') %}
 		<table class="table table-hover">
 		<thead>
 		<tr>
@@ -29,7 +29,7 @@
 		<tbody>
 			<tr>
 			<td><center><center><span class="badge badge-info">A</span></center></td>
-			<td class="choice first">{{question.options[0]}}</a></td>
+			<td class="choice first">{{question.options[0]}}</td>
 			</tr>
 			<tr>
 			<td><center><span class="badge badge-info">B</span></center></td>
@@ -58,23 +58,20 @@
 
 					<tr>
 					<td style="width: 5%; padding-top: 13px;"><center><center><span class="badge badge-info">A</span></center></td>
-					<td style="width: 40%; padding-top: 14px;">Rules for pedestrians</td>
-					</div></td>
+					<td class="choice first" style="width: 40%; padding-top: 14px;">{{question.options[0]}}
+					</td>
 					</tr>
 					<tr>
 					<td style="padding-top: 13px;"><center><span class="badge badge-info">B</span></center></td>
-					<td style="padding-top: 14px;">Rules for powered wheelchairs and mobility scooters</td>
-					</div></td>
+					<td  class="choice second" style="padding-top: 14px;">{{question.options[1]}}</td>
 					</tr>
 					<tr>
 					<td style="padding-top: 13px;"><center><span class="badge badge-info">C</span></center></td>
-					<td style="padding-top: 14px;">Rules about animals</td>
-					</div></td>
+					<td class="choice third" style="padding-top: 14px;">{{question.options[2]}}</td>
 					</tr>
 					<tr>
 					<td style="padding-top: 13px;"><center><span class="badge badge-info">D</span></center></td>
-					<td style="padding-top: 14px;">Rules for cyclists</td>
-					</div></td>
+					<td class="choice fourth" style="padding-top: 14px;">{{question.options[3]}}</td>
 					</tbody>
 				</table>
 			</div>
