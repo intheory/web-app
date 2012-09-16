@@ -4848,3 +4848,292 @@ extract
 Where there are yellow zigzag markings, you should not park, wait or stop, even to pick up or drop off children. A vehicle parked on the zigzag lines would obstruct children's view of the road and other drivers view of the pavement. Where there is an upright sign there is mandatory prohibition of stopping during the times shown.
 image
 yes
+section
+title|Other types of vehicle
+question
+You are waiting to emerge left from a minor road. A large vehicle is approaching from the right. You have time to turn, but you should wait. Why?
+options
+The large vehicle can easily hide an overtaking vehicle
+The large vehicle can turn suddenly
+The large vehicle is difficult to steer in a straight line
+The large vehicle can easily hide vehicles from the left
+extract
+Large vehicles can hide other vehicles that are overtaking, especially motorcycles which may be filtering past queuing traffic. You need to be aware of the possibility of hidden vehicles and not assume that it is safe to emerge.
+image
+no
+question
+You are following a long vehicle. It approaches a crossroads and signals left, but moves out to the right. You should
+options
+get closer in order to pass it quickly
+stay well back and give it room
+assume the signal is wrong and it is really turning right
+overtake as it starts to slow down
+extract
+A lorry may swing out to the right as it approaches a left turn. This is to allow the rear wheels to clear the kerb as it turns. Don’t try to filter through if you see a gap on the nearside.
+image
+yes
+question
+You are approaching a mini-roundabout. The long vehicle in front is signalling left but positioned over to the right. You should
+options
+sound your horn
+overtake on the left
+follow the same course as the lorry
+keep well back
+extract
+At mini-roundabouts there isn’t much room for a long vehicle to manoeuvre. It will have to swing out wide so that it can complete the turn safely. Keep well back and don’t try to move up alongside it.
+image
+yes
+question
+You are following a long vehicle approaching a crossroads. The driver signals right but moves close to the left-hand kerb. What should you do?
+options
+Warn the driver of the wrong signal
+Wait behind the long vehicle
+Report the driver to the police
+Overtake on the right-hand side
+extract
+When a long vehicle is going to turn right it may need to keep close to the left-hand kerb. This is to prevent the rear end of the trailer cutting the corner. You need to be aware of how long vehicles behave in such situations. Don’t overtake the lorry because it could turn as you’re alongside. Stay behind and wait for it to turn.
+image
+yes
+question
+Before overtaking a large vehicle you should keep well back. Why is this?
+options
+To give acceleration space to overtake quickly on blind bends
+To get the best view of the road ahead
+To leave a gap in case the vehicle stops and rolls back
+To offer other drivers a safe gap if they want to overtake you
+extract
+When following a large vehicle keep well back. If you’re too close you won’t be able to see the road ahead and the driver of the long vehicle might not be able to see you in their mirrors.
+image
+no
+question
+You are travelling behind a bus that pulls up at a bus stop. What should you do?
+options
+Accelerate past the bus sounding your horn
+Watch carefully for pedestrians
+Be ready to give way to the bus
+Pull in closely behind the bus
+extract
+There might be pedestrians crossing from in front of the bus. Look out for them if you intend to pass. Consider staying back and waiting. How many people are waiting to get on the bus? Check the queue if you can. The bus might move off straight away if there is no one waiting to get on. If a bus is signalling to pull out, give it priority as long as it is safe to do so.
+image
+no
+question
+You are following a large articulated vehicle. It is going to turn left into a narrow road. What action should you take?
+options
+Move out and overtake on the right
+Pass on the left as the vehicle moves out
+Be prepared to stop behind
+Overtake quickly before the lorry moves out
+extract
+Lorries are larger and longer than other vehicles and this can affect their position when approaching junctions. When turning left they may move out to the right so that they don’t cut in and mount the kerb with the rear wheels.
+image
+yes
+question
+You are following a large lorry on a wet road. Spray makes it difficult to see. You should
+options
+drop back until you can see better
+put your headlights on full beam
+keep close to the lorry, away from the spray
+speed up and overtake quickly
+extract
+Large vehicles may throw up a lot of spray when the roads are wet. This will make it difficult for you to see ahead. Dropping back further will<ul><li>move you out of the spray and allow you to see further</li><li>increase your separation distance. It takes longer to stop when the roads are wet and you need to allow more room.</li></ul>Don’t<ul><li>follow the vehicle in front too closely</li><li>overtake, unless you can see and are sure that the way ahead is clear.</li></ul>
+image
+yes
+question
+You keep well back while waiting to overtake a large vehicle. A car fills the gap. You should
+options
+sound your horn
+drop back further
+flash your headlights
+start to overtake
+extract
+It’s very frustrating when your separation distance is shortened by another vehicle. React positively, stay calm and drop further back.
+image
+no
+question
+You are following a long lorry. The driver signals to turn left into a narrow road. What should you do?
+options
+Overtake on the left before the lorry reaches the junction
+Overtake on the right as soon as the lorry slows down
+Do not overtake unless you can see there is no oncoming traffic
+Do not overtake, stay well back and be prepared to stop.
+extract
+When turning into narrow roads articulated and long vehicles will need more room. Initially they will need to swing out in the opposite direction to which they intend to turn. They could mask another vehicle turning out of the same junction. DON’T be tempted to overtake them or pass on the inside.
+image
+no
+question
+You wish to overtake a long, slow-moving vehicle on a busy road. You should
+options
+follow it closely and keep moving out to see the road ahead
+flash your headlights for the oncoming traffic to give way
+stay behind until the driver waves you past
+keep well back until you can see that it is clear
+extract
+If you want to overtake a long vehicle, stay well back so that you can get a better view of the road ahead. The closer you get the less you will be able to see of the road ahead. Be patient, overtaking calls for sound judgement. DON’T take a gamble, only overtake when you are certain that you can complete the manoeuvre safely.
+image
+no
+question
+When you approach a bus signalling to move off from a bus stop you should
+options
+get past before it moves
+allow it to pull away, if it is safe to do so
+flash your headlights as you approach
+signal left and wave the bus on
+extract
+Try to give way to buses if you can do so safely, especially when they signal to pull away from bus stops. Look out for people who’ve stepped off the bus or are running to catch it, and may try to cross the road without looking. Don’t try to accelerate past before it moves away or flash your lights as other road users may be misled by this signal.
+image
+yes
+question
+Which of these is LEAST likely to be affected by crosswinds?
+options
+Cyclists
+Motorcyclists
+High-sided vehicles
+Cars
+extract
+Although cars are the least likely to be affected, crosswinds can take anyone by surprise. This is most likely to happen, after overtaking a large vehicle, when passing gaps between hedges or buildings, and on exposed sections of road.
+image
+no
+question
+What should you do as you approach this lorry?
+options
+Slow down and be prepared to wait
+Make the lorry wait for you
+Flash your lights at the lorry
+Move to the right-hand side of the road
+extract
+When turning, long vehicles need much more room on the road than other vehicles. At junctions they may take up the whole of the road space, so be patient and allow them the room they need.
+image
+yes
+question
+Powered vehicles, such as wheelchairs or scooters, used by disabled people have a maximum speed of
+options
+8 mph
+12 mph
+16 mph
+20 mph
+extract
+These are small battery powered vehicles and include wheelchairs and mobility scooters. Some are designed for use on the pavement only and have an upper speed limit of 4 mph (6 km/h). Others can go on the road as well and have a speed limit of 8 mph (12 km/h). They are now very common and are generally used by the elderly, disabled or infirm. Take great care as they are extremely vulnerable because of their low speed and small size.
+image
+no
+question
+You are following a large vehicle approaching crossroads. The driver signals to turn left. What should you do?
+options
+Overtake if you can leave plenty of room
+Overtake only if there are no oncoming vehicles
+Do not overtake until the vehicle begins to turn.
+Do not overtake when at or approaching a junction.
+extract
+Hold back and wait until the vehicle has turned before proceeding. Do not overtake because the vehicle turning left could hide a vehicle emerging from the same junction.
+image
+no
+question
+Why is it more difficult to overtake a large vehicle than a car?
+options
+It takes longer to pass one
+They may suddenly pull up
+Their brakes are not as good
+They climb hills more slowly
+extract
+Depending on relevant speed, it will usually take you longer to pass a lorry than other vehicles. Some hazards to watch for include oncoming traffic, junctions ahead, bends or dips which could restrict your view, and signs or road markings that prohibit overtaking. Make sure you can see that it’s safe to complete the manoeuvre before you start to overtake.
+image
+no
+question
+In front of you is a class 3 powered vehicle (powered wheelchair) driven by a disabled person. These vehicles have a maximum speed of
+options
+8 mph (12 km/h)
+18 mph (29 km/h)
+28 mph (45 km/h)
+38 mph (61 km/h)
+extract
+These vehicles are battery powered and very vulnerable due to their slow speed, small size and low height. Some are designed for pavement and road use and have a maximum speed of 8 mph (12 km/h). Others are for pavement use only and are restricted to 4 mph (6 km/h). Take extra care and be patient if you are following one. Allow plenty of room when overtaking and do not go past unless you can do so safely.
+image
+no
+question
+It is very windy. You are about to overtake a motorcyclist. You should
+options
+overtake slowly
+allow extra room
+sound your horn
+keep close as you pass
+extract
+Crosswinds can blow a motorcyclist or cyclist across the lane. Passing too close could also cause a draught, unbalancing the rider.
+image
+no
+question
+It is very windy. You are behind a motorcyclist who is overtaking a high-sided vehicle. What should you do?
+options
+Overtake the motorcyclist immediately
+Keep well back
+Stay level with the motorcyclist
+Keep close to the motorcyclist
+extract
+Motorcyclists are affected more by windy weather than other vehicles. In windy conditions, high-sided vehicles cause air turbulence. You should keep well back as the motorcyclist could be blown off course.
+image
+no
+question
+You are driving in town. Ahead of you a bus is at a bus stop. Which TWO of the following should you do?
+options
+Be prepared to give way if the bus suddenly moves off
+Continue at the same speed but sound your horn as a warning
+Watch carefully for the sudden appearance of pedestrians
+Pass the bus as quickly as you possibly can
+extract
+As you approach, look out for any signal the driver might make. If you pass the vehicle watch out for pedestrians attempting to cross the road from the other side of the bus. They will be hidden from view until the last moment.
+image
+no
+question
+You are driving along this road. What should you be prepared to do?
+options
+Sound your horn and continue
+Slow down and give way
+Report the driver to the police
+Squeeze through the gap
+extract
+Sometimes large vehicles may need more space than other road users. If a vehicle needs more time and space to turn be prepared to stop and wait.
+image
+yes
+question
+You are towing a caravan. Which is the safest type of rear-view mirror to use?
+options
+Interior wide-angle mirror
+Extended-arm side mirrors
+Ordinary door mirrors
+Ordinary interior mirror
+extract
+Towing a large trailer or caravan can greatly reduce your view of the road behind. You need to use the correct equipment to make sure you can see clearly behind and down both sides of the caravan or trailer.
+image
+no
+question
+As a driver why should you be more careful where trams operate?
+options
+Because they do not have a horn
+Because they do not stop for cars
+Because they do not have lights
+Because they cannot steer to avoid you
+extract
+You should take extra care when you first encounter trams. You will have to get used to dealing with a different traffic system. Be aware that they can accelerate and travel very quickly and that they cannot change direction to avoid obstructions.
+image
+no
+question
+You are driving in heavy traffic on a wet road. Spray makes it difficult to be seen. You should use your
+options
+full beam headlights
+rear fog lights if visibility is less than 100 metres (328 feet)
+rear fog lights if visibility is more than 100 metres (328 feet)
+dipped headlights
+sidelights only
+extract
+You must ensure that you can be seen by others on the road. Use your dipped headlights during the day if the visibility is bad. If you use your rear fog lights, don’t forget to turn them off when the visibility improves.
+image
+no
+question
+It is a very windy day and you are about to overtake a cyclist. What should you do?
+options
+Overtake very closely
+Keep close as you pass
+Sound your horn repeatedly
+Allow extra room
+extract
+Cyclists, and motorcyclists, are very vulnerable in crosswinds. They can easily be blown well off course and veer into your path. Always allow plenty of room when overtaking them. Passing too close could cause a draught and unbalance the rider.
+image
+no
