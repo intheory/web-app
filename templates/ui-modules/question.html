@@ -2,6 +2,7 @@
 	<div class="hero-unit1">
 
 		{% set question = test.questions[test.cursor] %}
+		{% if not hasattr(question, 'image') %}
 		<div class="image123"><img alt="" src="{{static_url('imgs/questionbg.png')}}" />
 			
 			<div class="text">
@@ -44,6 +45,46 @@
 			</tr>
 		</tbody>
 		</table>
+		{% else %}
+		<div id="left">
+		    <div id="object1">
+		    	<table class="table table-hover">
+					<thead>
+					<tr>
+
+					</tr>
+					</thead>
+					<tbody>
+
+					<tr>
+					<td style="width: 5%; padding-top: 13px;"><center><center><span class="badge badge-info">A</span></center></td>
+					<td style="width: 40%; padding-top: 14px;">Rules for pedestrians</td>
+					</div></td>
+					</tr>
+					<tr>
+					<td style="padding-top: 13px;"><center><span class="badge badge-info">B</span></center></td>
+					<td style="padding-top: 14px;">Rules for powered wheelchairs and mobility scooters</td>
+					</div></td>
+					</tr>
+					<tr>
+					<td style="padding-top: 13px;"><center><span class="badge badge-info">C</span></center></td>
+					<td style="padding-top: 14px;">Rules about animals</td>
+					</div></td>
+					</tr>
+					<tr>
+					<td style="padding-top: 13px;"><center><span class="badge badge-info">D</span></center></td>
+					<td style="padding-top: 14px;">Rules for cyclists</td>
+					</div></td>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div id="right">
+			<div id="object3"><img src="/static/imgs/{{question.image}}" alt="some_text"/></div>
+		</div>		
+		{% end %}
+
 		 <ul class="pager">
 		  <li class="previous">
 		    <a href="#">&larr; Previous</a>
@@ -54,3 +95,8 @@
 		</ul>
 	</div>
 </div>
+
+
+
+
+	

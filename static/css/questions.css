@@ -392,3 +392,17 @@ a:hover {
   color: #FFFFFF;
   text-decoration: underline;
 }
+
+#left, #right { 
+  width: 50%; 
+  margin:0px; 
+  background: white; 
+} 
+
+#left  { 
+  float:left;  
+}
+
+#right { 
+  float:right; 
+} 

@@ -1,6 +1,6 @@
 import tornado, tornado.escape
 from app.handlers import base
-from app.model.content import Section, Nugget, MockTest, MiniQuizQuestion#!@UnresolvedImport
+from app.model.content import Section, Nugget, MockTest, Question#!@UnresolvedImport
 
 class GetNewTestHandler(base.BaseHandler):
     '''
@@ -12,7 +12,7 @@ class GetNewTestHandler(base.BaseHandler):
         try:
             mt = MockTest()
             mt.user = str(self.current_user.id)
-            mt.questions = [question for question in MiniQuizQuestion.objects]
+            mt.questions = [question for question in Question.objects]
             mt.score = 0
             mt.cursor = 0
             mt.save()

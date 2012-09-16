@@ -46,8 +46,8 @@ try:
 					print q.question
 					print image_exists; 
 	
-			if image_exists=="yes":
-				pass#TODO:save image's name
+			if image_exists=="yes" or image_exists=="no":			
+				q.image="sample-sign.png"
 			q.sid = str(s.id)
 			q.answer.append("0")#TODO: Add actual answer/s
 			q.save()

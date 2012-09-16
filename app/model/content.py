@@ -8,6 +8,7 @@ class Question(Document):
     answer = ListField(StringField(), required=True)
     sid = StringField(required=True, default="")
     extract = StringField(required=True, default="")
+    image = StringField(required=False)
     
 class MiniQuizQuestion(Document):
     meta = {"collection":"MiniQuizQuestions"}
@@ -29,6 +30,6 @@ class Section(Document):
 class MockTest(Document):
     meta = {"collection":"MockTests"}
     user = StringField(required=True)
-    questions = ListField(ReferenceField(MiniQuizQuestion), required=True, default=list)
+    questions = ListField(ReferenceField(Question), required=True, default=list)
     score = IntField(required=True, default=0)
     cursor = IntField(required=True, default=0) #Indicates which question is currently viewed
