@@ -19,7 +19,7 @@
 			<div class="bar bar-success progress-striped" style="width: {{100*test.cursor/len(test.questions)}}%">
 			</div>
 		</div>
-		{% if not hasattr(question, 'image') %}
+		{% if not question.image  %}
 		<table class="table table-hover">
 		<thead>
 		<tr>

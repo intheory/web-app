@@ -1,6 +1,7 @@
 import tornado, tornado.escape
 from app.handlers import base
 from app.model.content import Section, Nugget, MockTest, Question#!@UnresolvedImport
+from random import shuffle
 
 class GetNewTestHandler(base.BaseHandler):
     '''
@@ -12,7 +13,9 @@ class GetNewTestHandler(base.BaseHandler):
         try:
             mt = MockTest()
             mt.user = str(self.current_user.id)
-            mt.questions = [question for question in Question.objects]
+            questions = [question for question in Question.objects]
+            shuffle(questions)
+            mt.questions = questions[:40]
             mt.score = 0
             mt.cursor = 0
             mt.save()
