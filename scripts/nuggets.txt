@@ -53,11 +53,11 @@ title|Driving in adverse weather conditions B
 nugget
 title|Headlights
 content|In bad weather like thunder and LIGHTENING, you must use your lights when you can’t see further than 100m – Usain LIGHTENING Bolt’s favourite distance.
-image|sample.png
+image|Usain.png
 nugget
 title|Wet weather
 content|Double Trouble. Stopping distance doubles because tyres lose their grip.<br>So STAY BACK from the vehicle in front.<br><br>Advice <del>if you are a secret agent trying to follow someone</del> it’s raining:<ul><li>Keep well back from the car in front</li><li>No sudden movements (on the accelerator)</li><li>The rain makes it difficult to see and be seen</li><li>Watch out for diesel spills which make the surface slippery</li><li>Assume everyone will get in your way – take extra care around pedestrians, cyclists, motorcyclists and horse riders</li></ul>
-image|a-2.jpg
+image|WaveStop.png
 nugget
 title|Be prepared!
 content|Don’t travel unless you have to, and remember to always take the WEATHER with you, everywhere you <a href="http://www.youtube.com/watch?v=ag8XcMG1EX4">gooooooo<a>...<br><br><strong style="color:red;">W</strong>arm Clothing<br><strong style="color:red;">E</strong>mergency Shovel<br>first<strong style="color:red;">A</strong>id Kit<br><strong style="color:red;">T</strong>orch<br><strong style="color:red;">H</strong>ot drink and food<br><strong style="color:red;">E</strong>xtra de-icer and ice-scraper<br><strong style="color:red;">R</strong>eally long jump leads
@@ -65,7 +65,7 @@ image|sample.png
 nugget
 title|Before you set off
 content|And if you do venture out, you want to turn up to the party looking slick:<ul><li>Clear snow and ice from windows and mirrors</li><li>Clean lights and number plates</li><li>Remove snow that could fall off in the road</li><li>Check your route is clear and that no more snow is forecast</li><li>If it gets a little steamy, make sure you demist your windows and mirrors</li></ul>
-image|a-4.jpg
+image|Steam.png
 nugget
 title|Icy or snowy weather
 content|When driving in icy or snowy weather it seems like everyone is out to get you, so TAKE CARE.<ul><li>take care when overtaking vehicles spreading salt or other de-icer, particularly if you are riding a motorcycle or cycle</li><li>keep well back from the road user in front as stopping distances can be ten times greater than on dry roads</li><li>watch out for snowploughs which may throw out snow on either side. Do not overtake them unless the lane you intend to use has been cleared</li><li>be prepared for the road conditions to change over relatively short distances</li><li>listen to travel bulletins and take note of variable message  signs that may provide information about weather, road and traffic conditions ahead</li></ul>
@@ -73,19 +73,19 @@ image|sample.png
 nugget
 title|Drive extremely carefully when the roads are icy
 content|When the roads are icy imagine your are driving the queen around:<ul><li>drive at a <strong>slowly</strong> in a <strong>high</strong> gear</li><li>accelerate and break <strong>slowly</strong></li><li>drive particularly <strong>slowly</strong> on bends where loss of control is more likely</li><li>break on the straight <strong>before the bend</strong></li><li>check your grip on a safe bit of road – unresponsive steering means less grip</li></ul><br>….and remember, Tyres make almost <strong>no noise</strong> on ice
-image|a-6.jpg
+image|Queen.png
 nugget
 title|Windy weather
 content|High sided vehicles are most affected, but strong gusts also blow cars, motorcyclists and horse riders off course<br><br>This can happen:<ul><li>On open stretches of road</li><li>When passing bridges</li><li>And when passing gaps in hedges</li></ul>
 image|sample.png
 nugget
 title|Turbulance
-content|In very wind weather large vehicles can create turbulence, particularly for motorcyclists so keep back from them when are overtaking.
-image|sample.png
+content|In very windy weather large vehicles can create turbulence, particularly for motorcyclists so keep back from them when are overtaking.
+image|Plane.png
 nugget
 title|Fog
 content|Fog is crafty.<br><br>Approach with caution – check your mirrors and slow down<br><br>If there is a sign warning of fog, be prepared for it to jump out at any moment, even if the road seems clear.
-image|sample.png
+image|FogOnLoose.png
 nugget
 title|Fog
 content|When driving in fog, follow these steps <strong style="color:blue;">ASAP</strong> or your safety will go <strong style="color:red;">AWOL</strong><br><br><ul><li><strong style="color:red;">A</strong>llow room to pull up ahead – stay well behind the car in front</li><li><strong style="color:red;">W</strong>ipers and demisters must be used</li><li><strong style="color:red;">O</strong>ther drivers may not use headlights – BEWARE</li><li><strong style="color:red;">L</strong>ights must be used when required – rule 226</li><br><br><li><strong style="color:blue;">A</strong>lways check your mirrors and use your brake lights</li><li><strong style="color:blue;">S</strong>top at the correct position at a junction</li><li><strong style="color:blue;">A</strong>void hesitating in the middle of the road</li><li><strong style="color:blue;">P</strong>ull out positively</li></ul>
@@ -93,8 +93,8 @@ image|sample.png
 nugget
 title|Fog lights
 content|No one likes a showoff so don’t use your fog lights unless  you have to.
-image|sample.png
+image|Light.png
 nugget
 title|Hot weather
 content|In hot weather:<br><ul><li>Keep your vehicle well ventilated</li><li>The road may become soft</li><li>Or slippery after rain</li>Which effect steering and braking.<br><br></ul>And if the sun dazzles you, slow down or stop if you have to.
-image|sample.png
+image|SinkSpin.png

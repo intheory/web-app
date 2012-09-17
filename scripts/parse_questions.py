@@ -31,9 +31,13 @@ try:
 			content = f.readline().strip()
 			while True:
 				content = f.readline().strip()
-				if content == "extract":
+				if content == "answers":
 					break
 				q.options.append(content)
+			answers = f.readline().strip()
+			q.answer = [answer for answer in answers.split(',')]
+			print q.answer
+			extract_tag = f.readline().strip()
 			extract = f.readline().strip()
 			q.extract = extract
 			image = f.readline().strip()
