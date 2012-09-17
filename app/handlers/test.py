@@ -42,7 +42,7 @@ class EvaluateTestQuestionHandler(base.BaseHandler):
             #Fetch the question in hand and the correct answers
             cursor = int(cursor)
             q = mt.questions[cursor]
-            correct_answers = q.answer
+            correct_answers = [int(answer) for answer in q.answer]
             #Check if user answered correctly.
             inter = set(answers).intersection(correct_answers)
             if len(inter) == len(correct_answers): 

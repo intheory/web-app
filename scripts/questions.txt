@@ -144,19 +144,6 @@ If you attempt to move off in a low gear, such as first, the engine will rev at 
 image
 no
 question
-Before starting a journey in freezing weather you should clear ice and snow from your vehicle’s (mark THREE)
-options
-Arial
-Windows
-Lights
-Mirrors
-answers
-2,3,4
-extract
-Don’t travel unless you have no choice. Making unnecessary journeys in bad weather can increase the risk of having a collision. It’s important that you can see and be seen. Make sure any snow or ice is cleared from lights, mirrors, number plates and windows.
-image
-no
-question
 The roads are icy. You should drive slowly
 options
 In the highest gear possible
