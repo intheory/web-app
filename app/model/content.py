@@ -25,7 +25,7 @@ class Section(Document):
     meta = {"collection":"Sections"}
     title = StringField(required=True)
     nuggets = ListField(EmbeddedDocumentField(Nugget), default=list)
-    questions = ListField(ReferenceField(Question), required=True, default=list)
+    questions = ListField(ReferenceField(Question), required=False, default=list)
 
 class MockTest(Document):
     meta = {"collection":"MockTests"}
