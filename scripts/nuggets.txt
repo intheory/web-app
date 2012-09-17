@@ -52,15 +52,15 @@ section
 title|Driving in adverse weather conditions B
 nugget
 title|Headlights
-content|In bad weather like thunder and <strong>lightening</strong>, you must use your lights when you can’t see further than 100m<br><br>To remember this think of Usain <strong>lightening</strong> Bolt’s favourite distance.
+content|In bad weather like thunder and <strong>lightning</strong>, you must use your lights when you can’t see further than 100m.<br><br>To remember this think of Usain <strong>lightning</strong> Bolt’s favourite distance.
 image|Usain.png
 nugget
 title|Wet weather
-content|Double Trouble.<br><br>Stopping distance doubles because tyres lose their grip.<br><br>So <strong>STAY BACK</strong> from the vehicle in front.
+content|Double Trouble.<br><br>Stopping distance <strong>doubles</strong> because tyres lose their grip.<br><br>So <strong>STAY BACK</strong> from the vehicle in front.
 image|WaveStop.png
 nugget 
 title|Advice if it's raining
-content|Advice <del><strong style="color:#de0f0f">if you are a secret agent trying to follow someone</strong></del> it’s raining:<br><br><ul><li>Keep well back from the car in front.</li><br><li>No sudden movements (on the accelerator).</li><br><li>The rain makes it difficult to see and be seen.</li><br><li>Watch out for diesel spills which make the surface slippery.</li><br><li>Assume everyone will get in your way – take extra care around pedestrians, cyclists, motorcyclists and horse riders.</li></ul>
+content|Advice <del><strong style="color:#de0f0f">if you are a secret agent trying to follow someone</strong></del> it’s raining:<br><br><ul><li>Keep well <strong>back</strong> from the car in front.</li><br><li>No sudden movements (on the accelerator).</li><br><li>The rain makes it difficult to see and be seen.</li><br><li>Watch out for <strong>diesel spills</strong> which make the surface slippery.</li><br><li>Assume everyone will get in your way – take extra care around pedestrians, cyclists, motorcyclists and horse riders.</li></ul>
 image|Agent.png
 nugget
 title|Be prepared!
@@ -72,7 +72,7 @@ content|And if you do venture out, you want to turn up to the party <strong>look
 image|Steam.png
 nugget
 title|Icy or snowy weather
-content|When driving in icy or snowy weather it seems like everyone is out to get you, so <strong style="color:#de0f0f;">TAKE CARE.</strong><br><br><ul><li>Take care when overtaking vehicles spreading salt or other de-icer, particularly if you are riding a motorcycle or cycle.</li><br><li>Keep well back from the road user in front as stopping distances can be <strong style="color:#de0f0f;">ten times</strong> greater than on dry roads.</li><br><li>Watch out for snowploughs which may throw out snow on either side. Do not overtake them unless the lane you intend to use has been cleared.</li><br><li>Be prepared for the road conditions to change over relatively short distances.</li><br><li>Listen to travel bulletins and take note of variable message signs that may provide information about weather, road and traffic conditions ahead.</li></ul>
+content|When driving in icy or snowy weather it seems like everyone is out to get you, so <strong style="color:#de0f0f;">TAKE CARE.</strong><br><br><ul><li>Take care when overtaking vehicles spreading salt or other de-icer, particularly if you are riding a motorcycle or cycle.</li><br><li>Keep well back from the road user in front as stopping distances can be <strong style="color:#de0f0f;">ten times</strong> greater than on dry roads.</li><br><li>Watch out for snowploughs which may throw out snow on either side. Do not overtake them unless the lane you intend to use has been cleared.</li><br><li>Be prepared for the road conditions to change over relatively short distances.</li><br><li>Listen to <strong>travel bulletins</strong> and take note of variable message signs that may provide information about weather, road and traffic conditions ahead.</li></ul>
 image|Snow.png
 nugget
 title|Drive extremely carefully when the roads are icy
@@ -80,11 +80,11 @@ content|If the roads are icy imagine your are <strong style="color:#de0f0f">driv
 image|Queen.png
 nugget
 title|Windy weather
-content|High sided vehicles are most affected, but strong gusts also blow cars, motorcyclists and horse riders off course.<br><br>This can happen:<br><br><ul><li>On open stretches of road.</li><br><li>When passing bridges.</li><br><li>And when passing gaps in hedges.</li></ul>
+content|High sided vehicles are most affected, but <strong>strong gusts</strong> also blow cars, motorcyclists and horse riders off course.<br><br>This can happen:<br><br><ul><li>On <strong>open stretches</strong> of road.</li><br><li>When passing <strong>bridges</strong>.</li><br><li>And when passing gaps in <strong>hedges</strong>.</li></ul>
 image|Windy.png
 nugget
-title|Turbulance
-content|In very windy weather large vehicles can create turbulence, particularly for motorcyclists so keep back from them when are overtaking.<br><br>To remember this imagine a plane cruising down the motorway and creating serious turbulance for everyone else.
+title|Turbulence
+content|In very windy weather large vehicles can create <strong>turbulence</strong>, particularly for motorcyclists so keep <strong>back</strong> from them when are overtaking.<br><br>To remember this imagine a <strong>plane</strong> cruising down the <strong>motorway</strong> and creating serious turbulance for everyone else.
 image|Plane.png
 nugget
 title|Fog
@@ -92,13 +92,13 @@ content|<strong>Fog is crafty.</strong><br><br>Approach with caution – check y
 image|FogOnLoose.png
 nugget
 title|Fog
-content|When driving in fog, follow these steps <strong style="color:blue;">ASAP</strong> or your safety will go <strong style="color:red;">AWOL:</strong><br><br><strong style="color:red;">A</strong>llow plenty of room behind the car in front<br><br><strong style="color:red;">W</strong>ipers and demisters must be used<br><br><strong style="color:red;">O</strong>ther drivers may not use headlights – BEWARE<br><br><strong style="color:red;">L</strong>ights must be used when required – rule 226<br><br><br><strong style="color:blue;">A</strong>lways check your mirrors and use your brake lights<br><br><strong style="color:blue;">S</strong>top at the correct position at a junction<br><br><strong style="color:blue;">A</strong>void hesitating in the middle of the road<br><br><strong style="color:blue;">P</strong>ull out positively
+content|When driving in fog, follow these steps <strong style="color:blue;">ASAP</strong> or your safety will go <strong style="color:red;">AWOL:</strong><br><br><strong style="color:red;">A</strong>llow plenty of room behind the car in front<br><br><strong style="color:red;">W</strong>ipers and demisters must be used<br><br><strong style="color:red;">O</strong>ther drivers may not use headlights – BEWARE<br><br><strong style="color:red;">L</strong>ights must be used when required – Highway code rule 226<br><br><br><strong style="color:blue;">A</strong>lways check your mirrors and use your brake lights<br><br><strong style="color:blue;">S</strong>top at the correct position at a junction<br><br><strong style="color:blue;">A</strong>void hesitating in the middle of the road<br><br><strong style="color:blue;">P</strong>ull out positively
 image|Fog.png
 nugget
 title|Fog lights
-content|No one likes a showoff so don’t use your fog lights unless  you have to.
+content|No one likes a <strong>showoff</strong> so don’t use your <strong style="color:#de0f0f">fog lights</strong> unless  you have to.
 image|Light.png
 nugget
 title|Hot weather
-content|In hot weather:<br><br><ul><li>Keep your vehicle well ventilated.</li><br><li>The road may become soft.</li><br><li>Or slippery after rain.</li>Which effect steering and braking.<br><br></ul>And if the sun dazzles you, slow down or stop if you have to.
+content|In <strong style="color:#de0f0f">hot weather</strong>:<br><br><ul><li>Keep your vehicle well <strong>ventilated</strong>.</li><br><li>The road may become <strong>soft</strong>.</li><br><li>Or <strong>slippery</strong> after rain.</li>Which effect <strong>steering and braking</strong>.<br><br></ul>And if the sun dazzles you, slow down or stop if you have to.
 image|SinkSpin.png
