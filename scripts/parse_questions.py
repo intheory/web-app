@@ -35,8 +35,7 @@ try:
 					break
 				q.options.append(content)
 			answers = f.readline().strip()
-			q.answer = [answer for answer in answers.split(',')]
-			print q.answer
+			q.answer = [str(int(answer)-1) for answer in answers.split(',')]
 			extract_tag = f.readline().strip()
 			extract = f.readline().strip()
 			q.extract = extract
@@ -53,7 +52,6 @@ try:
 			if image_exists=="yes":			
 				q.image="sample-sign.png"
 			q.sid = str(s.id)
-			q.answer.append("0")#TODO: Add actual answer/s
 			q.save()
 
 	f.close()
