@@ -41,8 +41,8 @@
   height: 100%;
   width: 100%;
   overflow: auto;
-  font-size: 140%;
-  line-height:140%
+  font-size: 120%;
+  line-height:110%
 }
 
 /* Let's get this party started */
@@ -95,4 +95,17 @@
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.image123 .text {
+position: absolute;
+top: 30px;
+left: 10px;
+width: 800px;
+font-family: inherit;
+font-weight: bold;
+line-height: 1;
+color: inherit;
+text-rendering: optimizelegibility;
+font-size: 12px;
 }
