@@ -22,31 +22,31 @@ content|When driving in icy or snowy weather:<br><br><ul><li>Drive with care, ev
 image|sample.png
 nugget
 title|Drive extremely carefully when the roads are icy
-content|Avoid sudden actions as these could cause loss of control. You should<ul><li>drive at a slow speed in as high a gear as possible; accelerate and brake very gently</li><li>drive particularly slowly on bends where loss of control is more likely. Brake progressively on the straight before you reach a bend. Having slowed down, steer smoothly round the bend, avoiding sudden actions</li><li>check your grip on the road surface when there is snow or ice by choosing a safe place to brake gently. If the steering feels unresponsive this may indicate ice and your vehicle losing its grip on the road. When travelling on ice, tyres make virtually no noise</li></ul>
+content|Drive extremely carefully when the roads are <strong>icy</strong>:Avoid sudden actions as these could cause loss of control. You should:<ul><br><li>Drive at a slow speed in as high a gear as possible; accelerate and brake very gently.</li><br><li>Drive particularly slowly on bends where loss of control is more likely. Brake progressively on the straight before you reach a bend. Having slowed down, steer smoothly round the bend, avoiding sudden actions.</li><br><li>Check your grip on the road surface when there is snow or ice by choosing a safe place to brake gently. If the steering feels unresponsive this may indicate ice and your vehicle losing its grip on the road. When travelling on ice, tyres make virtually no noise.</li></ul>
 image|sample.png
 nugget
 title|Windy weather
-content|High-sided vehicles are most affected by windy weather, but strong gusts can also blow a car, cyclist, motorcyclist or horse rider off course. This can happen on open stretches of road exposed to strong crosswinds, or when passing bridges or gaps in hedges.
+content|High-sided vehicles are most affected by windy weather, but strong gusts can also blow a car, cyclist, motorcyclist or horse rider off course. <br><br>This can happen on open stretches of road exposed to strong crosswinds, or when passing bridges or gaps in hedges.
 image|sample.png
 nugget
 title|Turbulance
-content|In very windy weather your vehicle may be affected by turbulence created by large vehicles. Motorcyclists are particularly affected, so keep well back from them when they are overtaking a high-sided vehicle.
+content|In very windy weather your vehicle may be affected by turbulence created by large vehicles. <br><br>Motorcyclists are particularly affected, so keep well back from them when they are overtaking a high-sided vehicle.
 image|sample.png
 nugget
 title|Fog
-content|Before entering fog check your mirrors then slow down. If the word ‘Fog’ is shown on a roadside signal but the road is clear, be prepared for a bank of fog or drifting patchy fog ahead. Even if it seems to be clearing, you can suddenly find yourself in thick fog.
+content|Before entering fog check your mirrors then slow down. If the word ‘Fog’ is shown on a roadside signal but the road is clear, be prepared for a bank of fog or drifting patchy fog ahead. <br><br>Even if it seems to be clearing, you can suddenly find yourself in thick fog.
 image|sample.png
 nugget
 title|Fog 
-content|When driving in fog you should<ul><li>use your lights as required (see Rule 226)</li><li>keep a safe distance behind the vehicle in front. Rear lights can give a false sense of security</li><li>be able to pull up well within the distance you can see clearly. This is particularly important on motorways and dual carriageways, as vehicles are travelling faster</li><li>use your windscreen wipers and demisters</li><li>beware of other drivers not using headlights</li><li>not accelerate to get away from a vehicle which is too close behind you</li><li>check your mirrors before you slow down. Then use your brakes so that your brake lights warn drivers behind you that you are slowing down</li><li>stop in the correct position at a junction with limited visibility and listen for traffic. When you are sure it is safe to emerge, do so positively and do not hesitate in a position that puts you directly in the path of approaching vehicles</li></ul>
+content|When driving in fog you should:<ul><br><li>Use your lights as required.</li><br><li>Keep a safe distance behind the vehicle in front. Rear lights can give a false sense of security.</li><br><li>Be able to pull up well within the distance you can see clearly. This is particularly important on motorways and dual carriageways, as vehicles are travelling faster.</li><br><li>Use your windscreen wipers and demisters.</li><br><li>Beware of other drivers not using headlights.</li><br><li>Not accelerate to get away from a vehicle which is too close behind you.</li><br><li>Check your mirrors before you slow down. Then use your brakes so that your brake lights warn drivers behind you that you are slowing down.</li><br><li>Stop in the correct position at a junction with limited visibility and listen for traffic. When you are sure it is safe to emerge, do so positively and do not hesitate in a position that puts you directly in the path of approaching vehicles.</li></ul>
 image|sample.png
 nugget
 title|Fog lights
-content|You <strong>MUST NOT</strong> use front or rear fog lights unless visibility is seriously reduced (see Rule 226) as they dazzle other road users and can obscure your brake lights. You <strong>MUST</strong> switch them off when visibility improves.<br/>
+content|You <strong>MUST NOT</strong> use front or rear fog lights unless visibility is seriously reduced as they dazzle other road users and can obscure your brake lights. <br>You <strong>MUST</strong> switch them off when visibility improves.<br/>
 image|sample.png
 nugget
 title|Hot weather
-content|Keep your vehicle well ventilated to avoid drowsiness. Be aware that the road surface may become soft or if it rains after a dry spell it may become slippery. These conditions could affect your steering and braking. If you are dazzled by bright sunlight, slow down and if necessary, stop.
+content|Keep your vehicle well ventilated to avoid drowsiness. <br>Be aware that the road surface may become soft or if it rains after a dry spell it may become slippery. These conditions could affect your steering and braking. <br>If you are dazzled by bright sunlight, slow down and if necessary, <strong>stop</strong>.
 image|sample.png
 section
 title|Driving in adverse weather conditions B
@@ -76,7 +76,7 @@ content|When driving in icy or snowy weather it seems like everyone is out to ge
 image|Snow.png
 nugget
 title|Drive extremely carefully when the roads are icy
-content|If the roads are icy imagine your are <strong style="color:#de0f0f">driving the queen</strong>:<br><br><ul><li>Drive at a <strong>slowly</strong> in a <strong>high</strong> gear.</li><br><li>Accelerate and break <strong>slowly</strong>.</li><br><li>Drive particularly <strong>slowly</strong> on bends where loss of control is more likely.</li><br><li>Break on the straight <strong>before the bend.</strong></li><br><li>Check your grip on a safe bit of road – unresponsive steering means less grip.</li></ul><br>….and remember, tyres make almost <strong>no noise</strong> on ice.
+content|If the roads are icy imagine your are <strong style="color:#de0f0f">driving the queen</strong>:<br><br><ul><li>Drive <strong>slowly</strong> in a <strong>high</strong> gear.</li><br><li>Accelerate and break <strong>slowly</strong>.</li><br><li>Drive particularly <strong>slowly</strong> on bends where loss of control is more likely.</li><br><li>Break on the straight <strong>before the bend.</strong></li><br><li>Check your grip on a safe bit of road – unresponsive steering means less grip.</li></ul><br>….and remember, tyres make almost <strong>no noise</strong> on ice.
 image|Queen.png
 nugget
 title|Windy weather

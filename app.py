@@ -83,7 +83,6 @@ if __name__ == "__main__":
     
     env = "ITENV" in os.environ and os.environ["ITENV"] or "dev"
     config_file = options.config or os.path.join("config", "config.default")
-    print env
     config = ConfigParser.RawConfigParser()
     config.read(config_file)
     port = int(options.port or config.get(env, "port") or 8888)
