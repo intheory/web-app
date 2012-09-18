@@ -7,8 +7,11 @@ This module parses a txt file containing nuggets and saves them in the db.
 '''
 import os
 from mongoengine import connect
-#parentdir = os.path.dirname(os.path.dirname(os.path.abspath("/home/george/intheoryenv/intheory/src/app/model/content.py")))
-parentdir = os.path.dirname(os.path.dirname(os.path.abspath("/www/virtualenv/intheory/src/app/model/content.py")))
+env = "ITENV" in os.environ and os.environ["ITENV"] or "dev"
+if env="prod"
+	parentdir = os.path.dirname(os.path.dirname(os.path.abspath("/www/virtualenv/intheory/src/app/model/content.py")))
+else:
+	parentdir = os.path.dirname(os.path.dirname(os.path.abspath("/home/george/intheoryenv/intheory/src/app/model/content.py")))
 os.sys.path.insert(0,parentdir) 
 from model.content import Section, Nugget, Question
 connect("intheory_dev")
