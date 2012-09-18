@@ -26,8 +26,9 @@ class Intheory(tornado.web.Application):
                     'autoescape'    : "xhtml_escape",
                     'facebook_api_key': "486623404681319",
                     'facebook_secret': "4049a6a2d8dd781bbfb4a1b849869113",
+                    'twitter_consumer_key':"bJ5IIoEfSuuAWvfBM0Q",
+                    'twitter_consumer_secret':"GZZhvI0AP6kimS0IwsD401RfE2IVrXTatBMpnI4a0",
                     'ui_modules'     : uimodules
-
                     }
 
 	config = ConfigParser.RawConfigParser()

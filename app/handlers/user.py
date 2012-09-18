@@ -90,7 +90,45 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
             uf.fb_id = friend['id']
             c_user.friends.append(uf)
         c_user.save()
-        
+    
+
+class TwitterUserLoginHandler(base.BaseHandler, tornado.auth.TwitterMixin):
+    '''
+    Handles the login for the Twitter user, returning a user object.
+    '''
+    @tornado.web.asynchronous
+    def get(self):
+        if self.get_argument("oauth_token", None):
+            self.get_authenticated_user(self.async_callback(self._on_auth))
+            return
+
+        #self.authorize_redirect(callback_uri='http://127.0.0.1:8888/login/twitter')
+        self.authorize_redirect()
+
+    def _on_auth(self, user):
+        if not user:
+            raise tornado.web.HTTPError(500, "Twitter auth failed")
+       
+        try:
+            c_user = TwitterUser.objects(twitter_id=user['id']).get()
+        except DoesNotExist, e:
+            c_user = TwitterUser()
+            name = user['name'].split()
+            c_user.first_name = name[0]
+            if len(name)>1:
+                c_user.last_name = name[1]
+            else:
+                c_user.last_name = ""
+            c_user.username = user['username']
+            c_user.access_token = user['access_token']['secret']
+            c_user.twitter_id = str(user['id'])
+            c_user.save()
+
+        self.set_secure_cookie("access_token", c_user.access_token)
+        self.set_secure_cookie("user_type", "twitter")
+        self.redirect('/')
+
+
 class UserLogoutHandler(base.BaseHandler):
     @tornado.web.authenticated
     def on_get(self):

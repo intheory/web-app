@@ -8,6 +8,7 @@ from app.handlers import base, user, test, home, admin,  dashboard, learn
 url_patterns = [
     ("/", home.HomePageHandler),
     ("/quiz/evaluate", home.EvaluateHomeQuizHandler),
+    ("/login/twitter", user.TwitterUserLoginHandler),
     ("/login", user.UserLoginHandler),
     ("/logout", user.UserLogoutHandler),
     ###########Dashboard hanlders##############
