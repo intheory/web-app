@@ -37,5 +37,7 @@ url_patterns = [
     ("/admin/nuggets", admin.ViewNuggetsHandler),        
     ("/admin", admin.ViewAdminPanelHandler),
     ###########Landing pages hanlders##############
-    ("/terms", landing.ViewTermsAndConditionsHandler),
+    ("/landing/terms", landing.ViewTermsAndConditionsHandler),
+    ("/landing/privacy", landing.ViewPrivacyPolicyHandler),
+    ("/landing/about", landing.ViewAboutUsHandler),
 ]
