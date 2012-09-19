@@ -3,7 +3,7 @@
 # Author: Giorgos Eracleous #
 #############################
 
-from app.handlers import base, user, test, home, admin,  dashboard, learn
+from app.handlers import base, user, test, home, admin,  dashboard, learn, landing
 
 url_patterns = [
     ("/", home.HomePageHandler),
@@ -36,4 +36,6 @@ url_patterns = [
     ("/admin/nuggets/add", admin.AddNuggetHandler),        
     ("/admin/nuggets", admin.ViewNuggetsHandler),        
     ("/admin", admin.ViewAdminPanelHandler),
+    ###########Landing pages hanlders##############
+    ("/terms", landing.ViewTermsAndConditionsHandler),
 ]
