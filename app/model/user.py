@@ -8,10 +8,12 @@ class UserFriend(EmbeddedDocument):
     last_name = StringField(required=True)
 
 class User(Document):
+    meta = {"collection":"Users"}
     first_name = StringField(required=True)
     last_name = StringField(required=True)
     username = StringField(required=True)
     moderator = BooleanField(required=True, default=False)
+    locale = 'en_GB'
 
     def toggle_moderator(self):
         self.moderator = not self.moderator
@@ -30,7 +32,6 @@ class FacebookUser(User):
     meta = {"collection":"FacebookUsers"}
     email = StringField(required=True, unique=True)
     gender = StringField(required=False)
-    locale = StringField(required=False)
     friends = ListField(EmbeddedDocumentField(UserFriend), default=list)
     fb_id = StringField(required=True)
     access_token = StringField(required=True)

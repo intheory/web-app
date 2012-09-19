@@ -132,8 +132,7 @@ class BaseHandler(tornado.web.RequestHandler):
 
         if cookie:
             try: 
-                #user_types[user_type]
-                user = TwitterUser.objects(access_token=cookie).get()
+                user = user_types[user_type].objects(access_token=cookie).get()
                 cu = CachedUser()
                 cu.id = user.id
                 cu.name = user.first_name + " " + user.last_name
