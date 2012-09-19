@@ -35,8 +35,21 @@
     });
 
     $(".video-wrapper").click(function() {
-      $(".click-counter").append("<img src='/static/imgs/hazard.png'/>");
-      var video = $("#video-container")[0]
+      var video = $("#video-container")[0];
       var clickTime = video.currentTime;
+      $(".click-counter").append("<img time=" + clickTime + " src='/static/imgs/hazard.png'/>");
+    });
 
+    $("#evaluate-test").click(function() {
+        var clicks = $(".click-counter").children();
+        var click_times = []
+        clicks.each(function(index) {
+            click_times.push($(clicks[index]).attr("time"));
+        });   
+        IT.post("/learn/hazard/evaluate", {
+                 answers : JSON.stringify(click_times)
+         }, true, function(response) 
+         {  
+            console.log("Score:"+response.score)
+          });       
     });

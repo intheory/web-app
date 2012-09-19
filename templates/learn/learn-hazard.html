@@ -2,7 +2,7 @@
 
 {% block focus %}
 	<div class="video-wrapper">
-		<video id="video-container" width="320" height="240" controls="controls">
+		<video autoplay="true" id="video-container" width="320" height="240" controls="controls">
 		  <source src="{{static_url('videos/clip5.mp4')}}" type="video/mp4" />
 	      <source src="{{static_url('videos/clip5.ogg')}}" type="video/ogg" />
           <source src="{{static_url('videos/clip5.webm')}}" type="video/webm" />
@@ -13,4 +13,5 @@
 		<div class="click-counter">		
 		</div>
 	</div>
+	<a id="evaluate-test">Evaluate</a>
 {% end%}
