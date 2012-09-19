@@ -33,3 +33,7 @@
             parent.html(response.html);
         });
     });
+
+    $(".video-wrapper").click(function() {
+      $(".click-counter").append("<img src='/static/imgs/hazard.png'/>")
+    });
