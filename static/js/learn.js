@@ -35,5 +35,8 @@
     });
 
     $(".video-wrapper").click(function() {
-      $(".click-counter").append("<img src='/static/imgs/hazard.png'/>")
+      $(".click-counter").append("<img src='/static/imgs/hazard.png'/>");
+      var video = $("#video-container")[0]
+      var clickTime = video.currentTime;
+
     });

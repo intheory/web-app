@@ -1,4 +1,4 @@
-from mongoengine import Document, EmbeddedDocument, EmbeddedDocumentField, StringField, ListField, IntField, BooleanField, ReferenceField
+from mongoengine import Document, EmbeddedDocument, FloatField, EmbeddedDocumentField, StringField, ListField, IntField, BooleanField, ReferenceField
 # ============================ User ================================ #
 
 class Question(Document):
@@ -33,3 +33,9 @@ class MockTest(Document):
     questions = ListField(ReferenceField(Question), required=True, default=list)
     score = IntField(required=True, default=0)
     cursor = IntField(required=True, default=0) #Indicates which question is currently viewed
+
+class HazardPerceptionClip(Document):
+    meta = {"collection":"HazardPerceptionClips"}
+    base_dir = StringField(required=True)
+    clip_name = StringField(required=True)
+    hazards = ListField(FloatField(), required=True)
