@@ -57,6 +57,7 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
             self.facebook_request("/me/friends", access_token=c_user.access_token, callback=cb, fields='first_name,last_name,id,picture')
         
         self.set_secure_cookie("access_token", c_user.access_token)
+        self.set_secure_cookie("user_type", "fb")
         self.redirect("/dashboard")   
     
     def _save_user_profile(self, c_user, response):
@@ -110,7 +111,7 @@ class TwitterUserLoginHandler(base.BaseHandler, tornado.auth.TwitterMixin):
             raise tornado.web.HTTPError(500, "Twitter auth failed")
        
         try:
-            c_user = TwitterUser.objects(twitter_id=user['id']).get()
+            c_user = TwitterUser.objects(twitter_id=str(user['id'])).get()
         except DoesNotExist, e:
             c_user = TwitterUser()
             name = user['name'].split()

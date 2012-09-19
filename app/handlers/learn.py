@@ -97,4 +97,11 @@ class GetQuestionHandler(base.BaseHandler):
     def on_success(self, html):
         if self.is_xhr:
             self.xhr_response.update({"html": html})
-            self.write(self.xhr_response)    
+            self.write(self.xhr_response) 
+
+class GetHazardPerceptionHandler(base.BaseHandler):
+    '''
+    Gets the hazard perception clips 
+    '''
+    def on_get(self):
+        self.base_render("learn/learn-hazard.html")
