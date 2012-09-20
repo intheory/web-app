@@ -1,4 +1,4 @@
-import tornado, tornado.escape
+import tornado, tornado.escape, math
 from app.handlers import base
 from app.model.content import Section, Nugget, MiniQuizQuestion, HazardPerceptionClip#!@UnresolvedImport
 from mongoengine.queryset import DoesNotExist
@@ -117,12 +117,22 @@ class EvaluateHazardPerceptionHandler(base.BaseHandler):
     Evaluates a user's answers for a hazard perception clip
     '''
     def on_post(self):
-        answers = self.get_argument("answers", None)
-        if answers:
-            answers = tornado.escape.json_decode(answers)
-        answers = [float(answer) for answer in answers]
+        try:
+            cid = self.get_argument("cid", None)
+            answers = self.get_argument("answers", None)
+            if answers:
+                answers = tornado.escape.json_decode(answers)
+            answers = [float(answer) for answer in answers]
+            correct_answers = HazardPerceptionClip.objects(id=cid).get().hazards
+            score = 0
+            for a in answers:
+                for ca in correct_answers:
+                    if math.fabs(a-ca) < 2:
+                        score+=1
 
-        return (0,)
+            return (score,)
+        except Exception, e:
+            print e
 
     def on_success(self, score): 
         if self.is_xhr:

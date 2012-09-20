@@ -3,7 +3,7 @@
 	{%if kwargs['clip'] %}
 		{% set clip = kwargs['clip'] %}
 		{% set path = kwargs['clip'].base_dir + kwargs['clip'].clip_name %}
-		<div class="video-wrapper" vid="{{clip.id}}">
+		<div class="video-wrapper">
 			<video autoplay="true" id="video-container" width="320" height="240" controls="controls">
 			  <source src="{{path}}.mp4" type="video/mp4" />
 		      <source src="{{path}}.ogg" type="video/ogg" />
@@ -15,7 +15,7 @@
 			<div class="click-counter">		
 			</div>
 		</div>
-		<a id="evaluate-test">Evaluate</a>
+		<a id="evaluate-test" cid="{{clip.id}}">Evaluate</a>
 	{% else %}
 		No clips found.
 	{% end %}

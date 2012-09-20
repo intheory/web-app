@@ -34,20 +34,36 @@
         });
     });
 
+    var lastClick = 0;
+
     $(".video-wrapper").click(function() {
-      var video = $("#video-container")[0];
-      var clickTime = video.currentTime;
-      $(".click-counter").append("<img time=" + clickTime + " src='/static/imgs/hazard.png'/>");
+      var clicks =  $(".click-counter").children();
+      if (clicks.length > 15 ){
+        IT.notifier.show("Tap count cannot exceed beyond 15");
+      } 
+      else {
+        var video = $("#video-container")[0];
+        var clickTime = video.currentTime;
+        
+        if (clickTime - lastClick < 0.5){
+          lastClick = clickTime;
+          return;
+        } 
+        lastClick = clickTime;
+        $(".click-counter").append("<img time=" + clickTime + " src='/static/imgs/hazard.png'/>");
+      }
     });
 
     $("#evaluate-test").click(function() {
         var clicks = $(".click-counter").children();
-        var click_times = []
+        var click_times = [];
+        var cid = $(this).attr("cid");
         clicks.each(function(index) {
             click_times.push($(clicks[index]).attr("time"));
         });   
         IT.post("/learn/hazard/evaluate", {
-                 answers : JSON.stringify(click_times)
+                 answers : JSON.stringify(click_times),
+                 cid: cid
          }, true, function(response) 
          {  
             console.log("Score:"+response.score)
