@@ -27,16 +27,14 @@ try:
 			break # EOF
 		clip = HazardPerceptionClip()
 		clip.base_dir = base_dir
-		clip.title = f.readline().strip()
+		clip.clip_name = f.readline().strip()
 		while 1:
 			hazard_point = f.readline().strip()
 			if hazard_point=="end":
 				break;
-			clip.hazards.append(hazard_point)
-		print clip.title
-		print clip.base_dir
-		print clip.hazards
-		#clip.save()
+			clip.hazards.append(float(hazard_point))
+
+		clip.save()
 
 	f.close()
 except Exception, e:

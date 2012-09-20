@@ -1,11 +1,4 @@
 /static/videos/
-clip1
-5
-10
-15
-60
-end
-/static/videos/
 clip5
 5
 10

@@ -1,6 +1,7 @@
-import tornado
+import tornado, tornado.escape
 from app.handlers import base
-from app.model.content import Section, Nugget, MiniQuizQuestion#!@UnresolvedImport
+from app.model.content import Section, Nugget, MiniQuizQuestion, HazardPerceptionClip#!@UnresolvedImport
+from mongoengine.queryset import DoesNotExist
 
 class ViewLearnMainHandler(base.BaseHandler):
     '''
@@ -88,6 +89,7 @@ class GetQuestionHandler(base.BaseHandler):
     '''
     Gets a new question
     '''
+    @tornado.web.authenticated
     def on_get(self):
         sid = self.get_argument("sid", None)
         question = MiniQuizQuestion.objects[0]
@@ -104,4 +106,25 @@ class GetHazardPerceptionHandler(base.BaseHandler):
     Gets the hazard perception clips 
     '''
     def on_get(self):
-        self.base_render("learn/learn-hazard.html")
+        try:
+            hpc = HazardPerceptionClip.objects
+            self.base_render("learn/learn-hazard.html", clip=hpc[0])
+        except Exception, e:
+            self.base_render("learn/learn-hazard.html", clip=None)
+
+class EvaluateHazardPerceptionHandler(base.BaseHandler):
+    '''
+    Evaluates a user's answers for a hazard perception clip
+    '''
+    def on_post(self):
+        answers = self.get_argument("answers", None)
+        if answers:
+            answers = tornado.escape.json_decode(answers)
+        answers = [float(answer) for answer in answers]
+
+        return (0,)
+
+    def on_success(self, score): 
+        if self.is_xhr:
+            self.xhr_response.update({"score": score})
+            self.write(self.xhr_response) 

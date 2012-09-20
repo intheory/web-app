@@ -1,17 +1,22 @@
 {% extends "learn-base.html" %}
-
 {% block focus %}
-	<div class="video-wrapper">
-		<video autoplay="true" id="video-container" width="320" height="240" controls="controls">
-		  <source src="{{static_url('videos/clip5.mp4')}}" type="video/mp4" />
-	      <source src="{{static_url('videos/clip5.ogg')}}" type="video/ogg" />
-          <source src="{{static_url('videos/clip5.webm')}}" type="video/webm" />
-          <object data="{{static_url('videos/clip5.mp4')}}" width="320" height="240">
-		    <embed src="{{static_url('videos/clip5.swf')}}" width="320" height="240" />
-  		  </object> 
-		</video>
-		<div class="click-counter">		
+	{%if kwargs['clip'] %}
+		{% set clip = kwargs['clip'] %}
+		{% set path = kwargs['clip'].base_dir + kwargs['clip'].clip_name %}
+		<div class="video-wrapper" vid="{{clip.id}}">
+			<video autoplay="true" id="video-container" width="320" height="240" controls="controls">
+			  <source src="{{path}}.mp4" type="video/mp4" />
+		      <source src="{{path}}.ogg" type="video/ogg" />
+	          <source src="{{path}}.webm" type="video/webm" />
+	          <object data="{{path}}.mp4" width="320" height="240">
+			    <embed src="{{path}}.swf" width="320" height="240" />
+	  		  </object> 
+			</video>
+			<div class="click-counter">		
+			</div>
 		</div>
-	</div>
-	<a id="evaluate-test">Evaluate</a>
+		<a id="evaluate-test">Evaluate</a>
+	{% else %}
+		No clips found.
+	{% end %}
 {% end%}
