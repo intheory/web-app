@@ -35,7 +35,7 @@
     });
 
     var lastClick = 0;
-    
+
     $(".video-wrapper").click(function() {
       var clicks =  $(".click-counter").children();
       if (clicks.length > 15 ){
@@ -68,4 +68,18 @@
          {  
             console.log("Score:"+response.score)
           });       
+    });
+
+    $(".thumbnail").click(function() {
+
+      $(this).animate({
+           width: $(document).width()/2, 
+           height: $(document).height()/2,
+           zIndex:'200',
+           margin:'0 auto'
+      }, 600, function() {$(this).html("<video autoplay='true' id='video-container' controls='controls'><source src='/static/videos/clip1_a.mp4' type='video/mp4' /></video>")});
+
+
+      $("#dim").css("height", $(document).height());
+      $("#dim").fadeIn();  
     });
