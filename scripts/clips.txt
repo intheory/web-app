@@ -1,5 +1,6 @@
 /static/videos/
-clip5
+clip1_a
+clip1_b
 5
 10
 15

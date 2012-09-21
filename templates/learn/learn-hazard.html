@@ -1,22 +1,63 @@
 {% extends "learn-base.html" %}
 {% block focus %}
-	{%if kwargs['clip'] %}
-		{% set clip = kwargs['clip'] %}
-		{% set path = kwargs['clip'].base_dir + kwargs['clip'].clip_name %}
-		<div class="video-wrapper">
-			<video autoplay="true" id="video-container" width="320" height="240" controls="controls">
-			  <source src="{{path}}.mp4" type="video/mp4" />
-		      <source src="{{path}}.ogg" type="video/ogg" />
-	          <source src="{{path}}.webm" type="video/webm" />
-	          <object data="{{path}}.mp4" width="320" height="240">
-			    <embed src="{{path}}.swf" width="320" height="240" />
-	  		  </object> 
-			</video>
-			<div class="click-counter">		
-			</div>
-		</div>
-		<a id="evaluate-test" cid="{{clip.id}}">Evaluate</a>
-	{% else %}
-		No clips found.
-	{% end %}
+<div class="hero-unit">
+	<div class="hero-unit1">
+        <img src="{{static_url('imgs/hazardt.png')}}" alt="lheader.png"/></br>
+        <div class="progress progress-striped">
+	  		<div class="bar bar-success progress-striped" style="width: 100%;">
+	  		</div>
+  	    </div></br>
+		<center>
+		<ul class="thumbnails">
+		    <li class="span4">
+		      <a href="#" class="thumbnail">
+		        <img src="http://placehold.it/360x270" alt="">
+		      </a>
+		    </li>
+		    <li class="span2">
+		      <a href="#" class="thumbnail">
+		        <img src="http://placehold.it/160x120" alt="">
+		      </a>
+		    </li>
+		    <li class="span2">
+		      <a href="#" class="thumbnail">
+		        <img src="http://placehold.it/160x120" alt="">
+		      </a>
+		    </li>
+		    <li class="span2">
+		      <a href="#" class="thumbnail">
+		        <img src="http://placehold.it/160x120" alt="">
+		      </a>
+		    </li>
+		    <li class="span2">
+		      <a href="#" class="thumbnail">
+		        <img src="http://placehold.it/160x120" alt="">
+		      </a>
+		    </li>
+	    </ul>
+
+		 <ul class="thumbnails">
+		  <li class="span2">
+		    <a href="#" class="thumbnail">
+		      <img src="http://placehold.it/300x200" alt="">
+		    </a>
+		  </li>
+		   <li class="span2">
+		    <a href="#" class="thumbnail">
+		      <img src="http://placehold.it/300x200" alt="">
+		    </a>
+		  </li> <li class="span2">
+		    <a href="#" class="thumbnail">
+		      <img src="http://placehold.it/300x200" alt="">
+		    </a>
+		  </li>
+		   <li class="span2">
+		    <a href="#" class="thumbnail">
+		      <img src="http://placehold.it/300x200" alt="">
+		    </a>
+		  </li>
+		</ul>
+		</center>  
+	</div>        
+</div>
 {% end%}

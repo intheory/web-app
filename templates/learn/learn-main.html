@@ -12,9 +12,9 @@
 		</tr>
 		</thead>
 		<tbody>	
-		{%for section in kwargs['sections']%}				
+		{%for i, section in enumerate(kwargs['sections']) %}				
 			<tr>
-				<td style="width: 5%; padding-top: 13px;"><center><center><span class="badge badge-info">1</span></center></td>
+				<td style="width: 5%; padding-top: 13px;"><center><center><span class="badge badge-info">i</span></center></td>
 				<td style="width: 40%; padding-top: 14px;">{{section.title}}</td>
 				<td style="width: 35%; padding-top: 15px;"><div class="progress progress-striped progress-success">
 				  <div class="bar" style="width: 96%;"></div>
@@ -23,6 +23,15 @@
 				<td style="width: 10%"><center><a class="btn btn-success" href="http://www.youtube.com/v/3KyBRU9G-ZY?version=3&amp;amp;hl=en_GB">Practice</a></center></td>
 			</tr>		
 		{% end %}
+		<tr>
+			<td style="width: 5%; padding-top: 13px;"><center><center><span class="badge badge-info">1</span></center></td>
+			<td style="width: 40%; padding-top: 14px;">Hazard Perception Clips</td>
+			<td style="width: 35%; padding-top: 15px;"><div class="progress progress-striped progress-success">
+			  <div class="bar" style="width: 96%;"></div>
+			</div></td>
+			<td style="width: 10%"><center><a class="btn btn-primary " href="/learn/main">Learn</a></center></td>
+			<td style="width: 10%"><center><a class="btn btn-success" href="/learn/hazard">Practice</a></center></td>
+		</tr>
 		</tbody>
 		</table>
 		{% else %}

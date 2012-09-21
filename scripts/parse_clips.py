@@ -28,12 +28,12 @@ try:
 		clip = HazardPerceptionClip()
 		clip.base_dir = base_dir
 		clip.clip_name = f.readline().strip()
+		clip.solution_clip_name = f.readline().strip()
 		while 1:
 			hazard_point = f.readline().strip()
 			if hazard_point=="end":
 				break;
 			clip.hazards.append(float(hazard_point))
-
 		clip.save()
 
 	f.close()

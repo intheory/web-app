@@ -129,6 +129,7 @@ class EvaluateHazardPerceptionHandler(base.BaseHandler):
                 for ca in correct_answers:
                     if math.fabs(a-ca) < 2:
                         score+=1
+                        correct_answers.remove(ca)
 
             return (score,)
         except Exception, e:

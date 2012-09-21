@@ -39,6 +39,7 @@ class HazardPerceptionClip(Document):
     base_dir = StringField(required=True)
     clip_name = StringField(required=True)
     hazards = ListField(FloatField(), required=True)
+    solution_clip_name = StringField(required=True)
 
 class HazardPerceptionTest(Document):
     meta = {"collection":"HazardPerceptionTests"}

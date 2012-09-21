@@ -35,7 +35,7 @@
     });
 
     var lastClick = 0;
-
+    
     $(".video-wrapper").click(function() {
       var clicks =  $(".click-counter").children();
       if (clicks.length > 15 ){
@@ -44,13 +44,13 @@
       else {
         var video = $("#video-container")[0];
         var clickTime = video.currentTime;
-        
-        if (clickTime - lastClick < 0.5){
+        var diff = clickTime - lastClick;
+        if ( diff < 0.5){ 
           lastClick = clickTime;
           return;
         } 
         lastClick = clickTime;
-        $(".click-counter").append("<img time=" + clickTime + " src='/static/imgs/hazard.png'/>");
+        $(".click-counter").append("<img time=" + lastClick + " src='/static/imgs/hazard.png' />");
       }
     });
 
