@@ -108,9 +108,9 @@ class GetHazardPerceptionHandler(base.BaseHandler):
     def on_get(self):
         try:
             hpc = HazardPerceptionClip.objects
-            self.base_render("learn/learn-hazard.html", clip=hpc[0])
+            self.base_render("learn/learn-hazard.html", clips=hpc)
         except Exception, e:
-            self.base_render("learn/learn-hazard.html", clip=None)
+            self.base_render("learn/learn-hazard.html", clips=None)
 
 class EvaluateHazardPerceptionHandler(base.BaseHandler):
     '''

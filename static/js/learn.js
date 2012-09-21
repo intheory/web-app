@@ -37,6 +37,7 @@
     var lastClick = 0;
 
     $(".video-wrapper").click(function() {
+      console.log("asd")
       var clicks =  $(".click-counter").children();
       if (clicks.length > 15 ){
         IT.notifier.show("Tap count cannot exceed beyond 15");
@@ -71,13 +72,25 @@
     });
 
     $(".thumbnail").click(function() {
+      var clipPath = $(this).attr("clipPath");
+      var videoHtml = "<div class='video-wrapper'> \
+                        <video autoplay='true' id='video-container' controls='controls'>\
+                          <source src='"+ clipPath +".mp4' type='video/mp4' />\
+                              <source src='"+ clipPath +".webm' type='video/webm' />\
+                              <object data='"+ clipPath +".mp4' width='320' height='240'>\
+                            <embed src='" + clipPath +".swf' width='320' height='240' />\
+                            </object> \
+                        </video>\
+                      </div>\
+                      <div class='click-counter'>   \
+                      </div>"
 
       $(this).animate({
            width: $(document).width()/2, 
            height: $(document).height()/2,
            zIndex:'200',
            margin:'0 auto'
-      }, 600, function() {$(this).html("<video autoplay='true' id='video-container' controls='controls'><source src='/static/videos/clip1_a.mp4' type='video/mp4' /></video>")});
+      }, 600, function() {$(this).html(videoHtml)});
 
 
       $("#dim").css("height", $(document).height());
