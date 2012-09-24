@@ -1,6 +1,6 @@
 import tornado, tornado.escape, math
 from app.handlers import base
-from app.model.content import Section, Nugget, MiniQuizQuestion, HazardPerceptionClip#!@UnresolvedImport
+from app.model.content import Section, Nugget, MiniQuizQuestion, HazardPerceptionClip, HazardPerceptionTest#!@UnresolvedImport
 from mongoengine.queryset import DoesNotExist
 
 class ViewLearnMainHandler(base.BaseHandler):
@@ -105,10 +105,22 @@ class GetHazardPerceptionHandler(base.BaseHandler):
     '''
     Gets the hazard perception clips 
     '''
+    @tornado.web.authenticated
     def on_get(self):
         try:
             hpc = HazardPerceptionClip.objects
-            self.base_render("learn/learn-hazard.html", clips=hpc)
+            hpt = HazardPerceptionTest.objects(uid=str(self.current_user.id))
+
+            scores = {}
+            for test in hpt:
+                # if not scores[str(test.id)]: 
+                #     scores[str(test.id)] = test.score
+                # else:
+                #     if scores[str(test.id)] < test.score:
+                #         scores[str(test.id)] = test.score
+                scores[str(test.cid)] = test.score
+            
+            self.base_render("learn/learn-hazard.html", clips=hpc, has_seen=scores.keys(), older_scores=scores)
         except Exception, e:
             self.base_render("learn/learn-hazard.html", clips=None)
 
@@ -116,6 +128,7 @@ class EvaluateHazardPerceptionHandler(base.BaseHandler):
     '''
     Evaluates a user's answers for a hazard perception clip
     '''
+    @tornado.web.authenticated
     def on_post(self):
         try:
             cid = self.get_argument("cid", None)
@@ -132,11 +145,18 @@ class EvaluateHazardPerceptionHandler(base.BaseHandler):
                         score+=1
                         correct_answers.remove(ca)
 
-            return (score, clip.solution_clip_name, len(answers))
+            return (cid, score, clip.solution_clip_name, len(answers))
         except Exception, e:
             print e
 
-    def on_success(self, score, solution_clip_name, clicks): 
+    def on_success(self, cid, score, solution_clip_name, clicks): 
+        #Create a new test and save the score
+        hpt = HazardPerceptionTest()
+        hpt.uid = str(self.current_user.id)
+        hpt.cid = cid
+        hpt.score = score
+        hpt.save()
+
         if self.is_xhr:
             html = self.render_string("ui-modules/complete-video.html", clip=solution_clip_name, score=score, accuracy=score/clicks)
             self.xhr_response.update({"html": html})

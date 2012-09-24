@@ -43,6 +43,6 @@ class HazardPerceptionClip(Document):
 
 class HazardPerceptionTest(Document):
     meta = {"collection":"HazardPerceptionTests"}
-    user = StringField(required=True)
-    clip_id = StringField(required=True)
+    uid = StringField(required=True)
+    cid = StringField(required=True)
     score = IntField(required=True, default=0)
