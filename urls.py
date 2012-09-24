@@ -2,7 +2,7 @@
 # URL patterns.             #
 # Author: Giorgos Eracleous #
 #############################
-
+import tornado, os
 from app.handlers import base, user, test, home, admin,  dashboard, learn, landing
 
 url_patterns = [
@@ -42,4 +42,7 @@ url_patterns = [
     ("/landing/terms", landing.ViewTermsAndConditionsHandler),
     ("/landing/privacy", landing.ViewPrivacyPolicyHandler),
     ("/landing/about", landing.ViewAboutUsHandler),
+    ###########Static files handlers################
+    ("/obj/img/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "imgs"))}),
+    ("/obj/videos/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "videos"))}),
 ]

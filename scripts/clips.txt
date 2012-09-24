@@ -1,4 +1,4 @@
-/static/videos/
+/obj/videos/
 clip1_a
 clip1_b
 5
@@ -6,7 +6,7 @@ clip1_b
 15
 60
 end
-/static/videos/
+/obj/videos/
 clip2_a
 clip2_b
 5
@@ -14,7 +14,7 @@ clip2_b
 15
 60
 end
-/static/videos/
+/obj/videos/
 clip3_a
 clip3_b
 5
@@ -22,7 +22,7 @@ clip3_b
 15
 60
 end
-/static/videos/
+/obj/videos/
 clip4_a
 clip4_b
 5
@@ -30,7 +30,7 @@ clip4_b
 15
 60
 end
-/static/videos/
+/obj/videos/
 clip5_a
 clip5_b
 5
@@ -38,7 +38,7 @@ clip5_b
 15
 60
 end
-/static/videos/
+/obj/videos/
 clip6_a
 clip6_b
 5
@@ -46,7 +46,7 @@ clip6_b
 15
 60
 end
-/static/videos/
+/obj/videos/
 clip7_a
 clip7_b
 5
@@ -54,7 +54,7 @@ clip7_b
 15
 60
 end
-/static/videos/
+/obj/videos/
 clip8_a
 clip8_b
 5
