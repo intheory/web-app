@@ -36,7 +36,7 @@
 
     var lastClick = 0;
 
-    $(".video-wrapper").click(function() {
+    $(".video-wrapper").live("click", function() {
       console.log("asd")
       var clicks =  $(".click-counter").children();
       if (clicks.length > 15 ){
@@ -74,7 +74,7 @@
     $(".thumbnail").click(function() {
       var clipPath = $(this).attr("clipPath");
       var videoHtml = "<div class='video-wrapper'> \
-                        <video autoplay='true' id='video-container' controls='controls'>\
+                        <video autoplay='true' id='video-container'>\
                           <source src='"+ clipPath +".mp4' type='video/mp4' />\
                               <source src='"+ clipPath +".webm' type='video/webm' />\
                               <object data='"+ clipPath +".mp4' width='320' height='240'>\
@@ -84,15 +84,16 @@
                       </div>\
                       <div class='click-counter'>   \
                       </div>"
+      
+      $(".hero-unit1").empty();
+      $(".hero-unit1").append(videoHtml);
+      $("#dim").css("height", $(document).height());
+      $("#dim").fadeIn(); 
 
-      $(this).animate({
+/*      $(this).animate({
            width: $(document).width()/2, 
            height: $(document).height()/2,
-           zIndex:'200',
-           margin:'0 auto'
-      }, 600, function() {$(this).html(videoHtml)});
-
-
-      $("#dim").css("height", $(document).height());
-      $("#dim").fadeIn();  
+           zIndex:'200'
+      }, 400, function() {});*/
+ 
     });
