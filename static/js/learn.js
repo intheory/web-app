@@ -107,3 +107,12 @@
             $("#dim").fadeOut();
           });       
     }
+
+    $(".thumbnail").hover(
+      function () {
+        $(this).children("#text-over").css({"visibility":"visible"});
+      }, 
+      function () {
+        $(this).children("#text-over").css({"visibility":"hidden"});
+      }
+    );
