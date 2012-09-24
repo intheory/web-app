@@ -123,7 +123,8 @@ class EvaluateHazardPerceptionHandler(base.BaseHandler):
             if answers:
                 answers = tornado.escape.json_decode(answers)
             answers = [float(answer) for answer in answers]
-            correct_answers = HazardPerceptionClip.objects(id=cid).get().hazards
+            clip = HazardPerceptionClip.objects(id=cid).get()
+            correct_answers = clip.hazards
             score = 0
             for a in answers:
                 for ca in correct_answers:
@@ -131,11 +132,12 @@ class EvaluateHazardPerceptionHandler(base.BaseHandler):
                         score+=1
                         correct_answers.remove(ca)
 
-            return (score,)
+            return (score, clip.solution_clip_name, len(answers))
         except Exception, e:
             print e
 
-    def on_success(self, score): 
+    def on_success(self, score, solution_clip_name, clicks): 
         if self.is_xhr:
-            self.xhr_response.update({"score": score})
+            html = self.render_string("ui-modules/complete-video.html", clip=solution_clip_name, score=score, accuracy=score/clicks)
+            self.xhr_response.update({"html": html})
             self.write(self.xhr_response) 

@@ -94,7 +94,7 @@
         var clicks = $(".click-counter").children(),
             click_times = [],
             cid = $("video#video-container").attr("cid");
-            
+
         clicks.each(function(index) {
             click_times.push($(clicks[index]).attr("time"));
         });   
@@ -103,6 +103,7 @@
                  cid: cid
          }, true, function(response) 
          {  
-            console.log("Score:"+response.score)
+            $(".hero-unit1").empty().html(response.html);
+            $("#dim").fadeOut();
           });       
     }

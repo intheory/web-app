@@ -443,6 +443,13 @@ video {
   height: 100%;
 }
 
+.video-small {
+  display: block;
+  width: 320px;
+  height: 240px;
+  margin: auto;
+}
+
 .click-counter{
   position: relative;
   z-index: 200;

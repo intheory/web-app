@@ -1,0 +1,51 @@
+{% set soln_clip = clip %}
+{% set solution_path = '/static/videos/' + soln_clip %}
+<video class="video-small" autoplay='true' width='350' height='240' id='video-container' controls='controls'>
+  <source src="{{solution_path}}.mp4" type='video/mp4' />
+      <source src="{{solution_path}}.webm" type='video/webm' />
+      <object src="{{solution_path}}.mp4" width='350' height='240'>
+    <embed src="{{solution_path}}.swf" width='350' height='240' />
+    </object> 
+</video>
+
+ <div class="progress progress-striped">
+  <div class="bar bar-success progress-striped" style="width: 100%;"></div>
+</div>
+
+
+<table class="table table-striped">
+<thead>
+<tr>
+
+</tr>
+</thead>
+<tbody>
+ 
+<tr>
+<td style="width: 80%; padding-top: 10px; text-align:left;"><h4> Your Score:</h4></td>
+<td style="width: 40%; padding-top: 0px;"><h3><center>{{score}}</center></h3></td>
+</div></td>
+</tr>
+<tr>
+<td style="padding-top: 10px;"><h4> Accuracy:</h4></td>
+<td style="padding-top: 0px;"><h3><center>{{accuracy}}%</center></h3></td>
+</div></td>
+</tr>
+<tr>
+<td style="padding-top: 10px;"><h4> Points:</h4></td>
+<td style="padding-top: 0px;"><h3><center>{{100*score}}</center></h3></td>
+</div></td>
+</tr>
+</tbody>
+</table>
+    
+           
+  <button class="btn btn-large btn-primary" type="button">Continue To Next Section</button>
+
+</br>
+</br>
+    </div>
+</div>
+
+  </div>
+         </center>	
