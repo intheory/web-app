@@ -74,7 +74,7 @@
       var clipPath = $(this).attr("clipPath"), 
           cid=$(this).attr("cid"),
           videoHtml = "<div class='video-wrapper'> \
-                        <video autoplay='true' cid="+ cid +" id='video-container' controls='controls'>\
+                        <video autoplay='true' cid="+ cid +" id='video-container'>\
                           <source src='"+ clipPath +".mp4' type='video/mp4' />\
                               <source src='"+ clipPath +".webm' type='video/webm' />\
                               <object data='"+ clipPath +".mp4' width='320' height='240'>\
