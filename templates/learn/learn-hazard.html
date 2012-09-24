@@ -18,7 +18,7 @@
 		<ul class="thumbnails">
 		    <li class="span4">
 		      <a href="#" class="thumbnail" cid="{{kwargs['clips'][0].id}}" clipPath="{{base_dir +kwargs['clips'][0].clip_name}}" >
-		        <div class="text-over" id="text-over"><div class="text-over-text"> Learn more about the test</div></div>
+		        <div class="text-over-intro" id="text-over"><div class="text-over-text"> Learn more about the test</div></div>
 	        	<img src="http://placehold.it/360x270" alt="">
 		      </a>
 		    </li>
@@ -27,7 +27,7 @@
 		    <li class="span2">
 		      <a href="#" class="thumbnail" cid="{{clip.id}}" clipPath="{{base_dir +clip.clip_name}}">
 		      	{% if str(clip.id) in has_seen %}
-			        <div class="text-over" id="text-over"><div class="text-over-text"> Score: {{older_scores[str(clip.id)]}}</div></div>
+			        <div class="text-over-seen" id="text-over"><div class="text-over-text"> Best score: {{older_scores[str(clip.id)]}}</div></div>
 			    {% else %}
 				    <div class="text-over" id="text-over"><div class="text-over-text"> Try this!</div></div>
 				{% end %}    	
@@ -43,7 +43,7 @@
 		  <li class="span2">
 		    <a href="#" class="thumbnail" cid="{{clip.id}}" clipPath="{{base_dir +clip.clip_name}}">
 		        {% if str(clip.id) in has_seen %}
-			        <div class="text-over" id="text-over"><div class="text-over-text"> Score: {{older_scores[str(clip.id)]}}</div></div>
+			        <div class="text-over-seen" id="text-over"><div class="text-over-text">Best score: {{older_scores[str(clip.id)]}}</div></div>
 			    {% else %}
 				    <div class="text-over" id="text-over"><div class="text-over-text"> Try this!</div></div>
 				{% end %}  

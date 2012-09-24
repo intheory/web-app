@@ -113,11 +113,11 @@ class GetHazardPerceptionHandler(base.BaseHandler):
 
             scores = {}
             for test in hpt:
-                # if not scores[str(test.id)]: 
-                #     scores[str(test.id)] = test.score
-                # else:
-                #     if scores[str(test.id)] < test.score:
-                #         scores[str(test.id)] = test.score
+                if str(test.id) not in scores: 
+                    scores[str(test.id)] = test.score
+                else:
+                    if scores[str(test.id)] < test.score:
+                        scores[str(test.id)] = test.score
                 scores[str(test.cid)] = test.score
             
             self.base_render("learn/learn-hazard.html", clips=hpc, has_seen=scores.keys(), older_scores=scores)
