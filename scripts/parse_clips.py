@@ -18,7 +18,7 @@ else:
 os.sys.path.insert(0,parentdir) 
 from model.content import HazardPerceptionClip
 
-
+HazardPerceptionClip.drop_collection()
 try:
 	f = open("clips.txt", "r")
 	while 1:
