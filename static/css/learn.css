@@ -442,3 +442,9 @@ video {
   width: 100%;
   height: 100%;
 }
+
+.click-counter{
+  position: relative;
+  z-index: 200;
+  background-color: white;
+}

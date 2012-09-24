@@ -37,7 +37,6 @@
     var lastClick = 0;
 
     $(".video-wrapper").live("click", function() {
-      console.log("asd")
       var clicks =  $(".click-counter").children();
       if (clicks.length > 15 ){
         IT.notifier.show("Tap count cannot exceed beyond 15");
@@ -72,9 +71,10 @@
     });
 
     $(".thumbnail").click(function() {
-      var clipPath = $(this).attr("clipPath");
-      var videoHtml = "<div class='video-wrapper'> \
-                        <video autoplay='true' id='video-container'>\
+      var clipPath = $(this).attr("clipPath"), 
+          cid=$(this).attr("cid"),
+          videoHtml = "<div class='video-wrapper'> \
+                        <video autoplay='true' cid="+ cid +" id='video-container' controls='controls'>\
                           <source src='"+ clipPath +".mp4' type='video/mp4' />\
                               <source src='"+ clipPath +".webm' type='video/webm' />\
                               <object data='"+ clipPath +".mp4' width='320' height='240'>\
@@ -83,17 +83,26 @@
                         </video>\
                       </div>\
                       <div class='click-counter'>   \
-                      </div>"
+                      </div>";
       
-      $(".hero-unit1").empty();
-      $(".hero-unit1").append(videoHtml);
-      $("#dim").css("height", $(document).height());
-      $("#dim").fadeIn(); 
-
-/*      $(this).animate({
-           width: $(document).width()/2, 
-           height: $(document).height()/2,
-           zIndex:'200'
-      }, 400, function() {});*/
- 
+      $(".hero-unit1").empty().append(videoHtml);
+      $("#dim").css("height", $(document).height()).fadeIn(); 
+      $('#video-container').bind('ended',onEnd);
     });
+
+    function onEnd(){
+        var clicks = $(".click-counter").children(),
+            click_times = [],
+            cid = $("video#video-container").attr("cid");
+            
+        clicks.each(function(index) {
+            click_times.push($(clicks[index]).attr("time"));
+        });   
+        IT.post("/learn/hazard/evaluate", {
+                 answers : JSON.stringify(click_times),
+                 cid: cid
+         }, true, function(response) 
+         {  
+            console.log("Score:"+response.score)
+          });       
+    }
