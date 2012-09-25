@@ -2,12 +2,13 @@
 # URL patterns.             #
 # Author: Giorgos Eracleous #
 #############################
-
-from app.handlers import base, user, test, home, admin,  dashboard, learn
+import tornado, os
+from app.handlers import base, user, test, home, admin,  dashboard, learn, landing
 
 url_patterns = [
     ("/", home.HomePageHandler),
     ("/quiz/evaluate", home.EvaluateHomeQuizHandler),
+    ("/login/twitter", user.TwitterUserLoginHandler),
     ("/login", user.UserLoginHandler),
     ("/logout", user.UserLogoutHandler),
     ###########Dashboard hanlders##############
@@ -18,6 +19,8 @@ url_patterns = [
     ("/learn/get-question", learn.GetQuestionHandler),
     ("/learn/get-previous-nugget", learn.GetPreviousNuggetHandler),
     ("/learn/get-next-nugget", learn.GetNextNuggetHandler),
+    ("/learn/hazard/evaluate", learn.EvaluateHazardPerceptionHandler),
+    ("/learn/hazard", learn.GetHazardPerceptionHandler),
     ###########Practise pages hanlders##############
 
     ###########Mock test hanlders##############
@@ -35,4 +38,11 @@ url_patterns = [
     ("/admin/nuggets/add", admin.AddNuggetHandler),        
     ("/admin/nuggets", admin.ViewNuggetsHandler),        
     ("/admin", admin.ViewAdminPanelHandler),
+    ###########Landing pages hanlders##############
+    ("/landing/terms", landing.ViewTermsAndConditionsHandler),
+    ("/landing/privacy", landing.ViewPrivacyPolicyHandler),
+    ("/landing/about", landing.ViewAboutUsHandler),
+    ###########Static files handlers################
+    ("/obj/img/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "imgs"))}),
+    ("/obj/video/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "videos"))}),
 ]

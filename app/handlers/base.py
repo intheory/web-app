@@ -10,6 +10,8 @@ from mongoengine import ValidationError #@UnresolvedImport
 from mongoengine.queryset import OperationError, DoesNotExist #@UnresolvedImport
 from app.model.user import *
 
+user_types={"twitter": TwitterUser, "fb":FacebookUser}
+
 class BaseHandler(tornado.web.RequestHandler):
     '''
     The base class for all the handlers to inherit. It provides with
@@ -126,9 +128,11 @@ class BaseHandler(tornado.web.RequestHandler):
         '''
         self.cached_user = None
         cookie = self.get_secure_cookie("access_token")
+        user_type = self.get_secure_cookie("user_type")
+
         if cookie:
             try: 
-                user = User.objects(access_token=cookie).get()
+                user = user_types[user_type].objects(access_token=cookie).get()
                 cu = CachedUser()
                 cu.id = user.id
                 cu.name = user.first_name + " " + user.last_name

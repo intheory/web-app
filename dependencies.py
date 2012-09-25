@@ -5,6 +5,7 @@
 # CSS Dependencies.
 css_deps = ("css", "css",
             [
+             ("/landing/*", ["landing.css"]),
              ("/test", ["questions.css", "test.css"]),
              ("/learn/*", ["learn.css", "questions.css", "nuggets.css"]),			
              ("/", ["home.css"]),	
@@ -13,6 +14,7 @@ css_deps = ("css", "css",
 # JS Dependencies.
 js_deps = ("js", "js",
             [
+             ("/landing", ["landing.js"]),
              ("/test", ["test.js"]),    
              ("/learn/*", ["learn.js"]),    
              ("/admin/*", ["admin.js"]),    

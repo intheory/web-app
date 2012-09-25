@@ -399,3 +399,117 @@ width: 960px;
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
+
+#dim{ 
+  position:absolute; 
+  top:0; 
+  left:0; 
+  width:100%; 
+  z-index:100; 
+  height: 100%;
+  background: url(/static/imgs/dim.png); 
+  display:none; 
+  text-align:left; 
+} 
+
+.thumbnail{
+  position: relative;
+  width:100%;
+  cursor:pointer;
+}
+
+/*.video-wrapper {    
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    z-index: 200;
+    width: auto;
+    margin: 0;
+}*/
+
+.video-wrapper{
+  position: relative;
+  height: 500px;
+  width: auto;
+  z-index: 200;
+  border-color: white;
+  border-style: solid;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+
+.video-small {
+  display: block;
+  width: 320px;
+  height: 240px;
+  margin: auto;
+}
+
+.click-counter{
+  position: relative;
+  z-index: 200;
+  background-color: white;
+}
+
+.text-over{
+   position: absolute;
+   z-index: 1;
+   filter:alpha(opacity=50);
+   -moz-opacity:0.5;
+   -khtml-opacity: 0.5;
+   opacity: 0.5;
+   left: 0px;
+   margin-top: 0px;
+   width: 100%;
+   height: 20%;
+   visibility: hidden;
+   background-color: red;
+ 
+}
+
+.text-over-seen{
+   position: absolute;
+   z-index: 1;
+   filter:alpha(opacity=50);
+   -moz-opacity:0.5;
+   -khtml-opacity: 0.5;
+   opacity: 0.5;
+   left: 0px;
+   margin-top: 0px;
+   width: 100%;
+   height: 20%;
+   visibility: hidden;
+   background-color: green;
+ 
+}
+
+.text-over-intro{
+   position: absolute;
+   z-index: 1;
+   filter:alpha(opacity=50);
+   -moz-opacity:0.5;
+   -khtml-opacity: 0.5;
+   opacity: 0.5;
+   left: 0px;
+   margin-top: 0px;
+   width: 100%;
+   height: 20%;
+   visibility: hidden;
+   background-color: black;
+ 
+}
+
+.text-over-text{
+   color: white;
+   font-size: 20px;
+   text-align: right;
+   padding-bottom: 2px;
+   padding-right: 20px;
+   position: relative;
+   opacity: 1.0;
+}

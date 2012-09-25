@@ -1,6 +1,7 @@
-import tornado
+import tornado, tornado.escape, math
 from app.handlers import base
-from app.model.content import Section, Nugget, MiniQuizQuestion#!@UnresolvedImport
+from app.model.content import Section, Nugget, MiniQuizQuestion, HazardPerceptionClip, HazardPerceptionTest#!@UnresolvedImport
+from mongoengine.queryset import DoesNotExist
 
 class ViewLearnMainHandler(base.BaseHandler):
     '''
@@ -88,6 +89,7 @@ class GetQuestionHandler(base.BaseHandler):
     '''
     Gets a new question
     '''
+    @tornado.web.authenticated
     def on_get(self):
         sid = self.get_argument("sid", None)
         question = MiniQuizQuestion.objects[0]
@@ -97,4 +99,65 @@ class GetQuestionHandler(base.BaseHandler):
     def on_success(self, html):
         if self.is_xhr:
             self.xhr_response.update({"html": html})
-            self.write(self.xhr_response)    
+            self.write(self.xhr_response) 
+
+class GetHazardPerceptionHandler(base.BaseHandler):
+    '''
+    Gets the hazard perception clips 
+    '''
+    @tornado.web.authenticated
+    def on_get(self):
+        try:
+            hpc = HazardPerceptionClip.objects
+            hpt = HazardPerceptionTest.objects(uid=str(self.current_user.id))
+
+            scores = {}
+            for test in hpt:
+                if str(test.id) not in scores: 
+                    scores[str(test.id)] = test.score
+                else:
+                    if scores[str(test.id)] < test.score:
+                        scores[str(test.id)] = test.score
+                scores[str(test.cid)] = test.score
+            
+            self.base_render("learn/learn-hazard.html", clips=hpc, has_seen=scores.keys(), older_scores=scores)
+        except Exception, e:
+            self.base_render("learn/learn-hazard.html", clips=None)
+
+class EvaluateHazardPerceptionHandler(base.BaseHandler):
+    '''
+    Evaluates a user's answers for a hazard perception clip
+    '''
+    @tornado.web.authenticated
+    def on_post(self):
+        try:
+            cid = self.get_argument("cid", None)
+            answers = self.get_argument("answers", None)
+            if answers:
+                answers = tornado.escape.json_decode(answers)
+            answers = [float(answer) for answer in answers]
+            clip = HazardPerceptionClip.objects(id=cid).get()
+            correct_answers = clip.hazards
+            score = 0
+            for a in answers:
+                for ca in correct_answers:
+                    if math.fabs(a-ca) < 2:
+                        score+=1
+                        correct_answers.remove(ca)
+
+            return (cid, score, clip.solution_clip_name, len(answers))
+        except Exception, e:
+            print e
+
+    def on_success(self, cid, score, solution_clip_name, clicks): 
+        #Create a new test and save the score
+        hpt = HazardPerceptionTest()
+        hpt.uid = str(self.current_user.id)
+        hpt.cid = cid
+        hpt.score = score
+        hpt.save()
+
+        if self.is_xhr:
+            html = self.render_string("ui-modules/complete-video.html", clip=solution_clip_name, score=score, accuracy=score/clicks)
+            self.xhr_response.update({"html": html})
+            self.write(self.xhr_response) 
