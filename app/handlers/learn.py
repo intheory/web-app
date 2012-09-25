@@ -30,7 +30,7 @@ class ViewSectionHandler(base.BaseHandler):
                                                          cursor=0, 
                                                          section_length=len(section.nuggets))
         except Exception, e:
-            print e    
+            self.log.warning(str(e))    
 
 class GetPreviousNuggetHandler(base.BaseHandler):
     '''
@@ -70,7 +70,7 @@ class GetNextNuggetHandler(base.BaseHandler):
             else:
                 next_nugget = section.nuggets[new_cursor]
         except Exception, e:
-            print e
+            self.log.warning(str(e))
         return (section, next_nugget, new_cursor, len(section.nuggets))
 
     def on_success(self, section, n, new_cursor, section_length):
@@ -122,6 +122,7 @@ class GetHazardPerceptionHandler(base.BaseHandler):
             
             self.base_render("learn/learn-hazard.html", clips=hpc, has_seen=scores.keys(), older_scores=scores)
         except Exception, e:
+            self.log.info("No hazard perception clips were found")
             self.base_render("learn/learn-hazard.html", clips=None)
 
 class EvaluateHazardPerceptionHandler(base.BaseHandler):
@@ -147,7 +148,7 @@ class EvaluateHazardPerceptionHandler(base.BaseHandler):
 
             return (cid, score, clip.solution_clip_name, len(answers))
         except Exception, e:
-            print e
+            self.log.warning(str(e))
 
     def on_success(self, cid, score, solution_clip_name, clicks): 
         #Create a new test and save the score
