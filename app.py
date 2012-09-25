@@ -106,5 +106,5 @@ if __name__ == "__main__":
     config = ConfigParser.RawConfigParser()
     config.read(config_file)
     port = int(options.port or config.get(env, "port") or 8888)
-    Intheory(env, port, config_file).listen(port)
+    Intheory("prod", port, config_file).listen(port)
     tornado.ioloop.IOLoop.instance().start()
