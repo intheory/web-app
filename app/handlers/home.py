@@ -7,6 +7,7 @@ class HomePageHandler(base.BaseHandler):
     Renders the home page.    
     '''
     def on_get(self):
+        print self.log
         if  not self.current_user:
             questions = MiniQuizQuestion.objects                
             self.base_render("home.html", questions=questions, tweet="Woo hoo I passed my test. Thank you #intheory!")

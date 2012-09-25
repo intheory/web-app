@@ -54,11 +54,6 @@ class BaseHandler(tornado.web.RequestHandler):
         of the user that are cached throughout the website (id, name, url). If the
         user is not logged in, then None is given to the service pool.
         '''
-        #self.services.user = self.current_user
-        #self.services.cached_user = self.cached_user
-        #self.services.locale = self.locale
-        #self.widgets.current_user = self.current_user
-        #self.widgets.locale = self.locale
         self.xhr_response = None
 
     def _(self, text):
@@ -77,10 +72,6 @@ class BaseHandler(tornado.web.RequestHandler):
     def db(self):
         return self.application.db
     
-    #@property
-    #def log(self):
-    #    return self.application.log
-    
     @property
     def deps(self):
         return self.application.deps
@@ -88,14 +79,10 @@ class BaseHandler(tornado.web.RequestHandler):
     @property
     def env(self):
         return self.application.env
-    
+
     @property
-    def widgets(self):
-        return self.application.widget_pool
-    
-    @property
-    def services(self):
-        return self.application.service_pool
+    def log(self):
+        return self.application.log
     
     def get(self, *args, **kwargs):
         self._execute_request(self.on_get, *args, **kwargs)
