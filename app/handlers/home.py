@@ -42,7 +42,7 @@ class EvaluateHomeQuizHandler(base.BaseHandler):
                     count += 1
             return (count,)
         except Exception, e:
-            print e
+            self.warning(str(e))
     
     def on_success(self, score):
         self.xhr_response.update({"score": score}) 

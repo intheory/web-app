@@ -8,6 +8,7 @@ import ConfigParser #@UnresolvedImport
 import environment #@UnusedImport
 import tornado.web, os, pymongo, uimodules
 import app.deps
+from log import CustomLogger
 from urls import url_patterns
 from dependencies import css_deps, js_deps
 from mongoengine import connect #@UnresolvedImport
@@ -65,14 +66,24 @@ class Intheory(tornado.web.Application):
         
         deps = app.deps.ScriptDeps().registerDep(css_deps).registerDep(js_deps)
 
-	########################################################
+        ########################################################
+        ## Logging setup. ##
+        ########################################################	    
+        log_level = db_host = config.get(env, "log_level") or "debug"
+        log_db_collection = db_host = config.get(env, "log_db_collection") or "Log"
+        cl = CustomLogger(self.APP_NAME, log_level, log_db_collection, db)
+
+        ########################################################
         ## Initialize references to application-wide modules. ##
         ########################################################
             
         self.db   = db
         self.deps = deps
         self.env  = env
-	
+        self.log = cl.get_logger()
+	    
+        self.log.info("Server started successfully.")
+
         tornado.web.Application.__init__(self, url_patterns, **settings)
 
 
