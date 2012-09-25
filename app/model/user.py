@@ -25,7 +25,7 @@ class User(Document):
         #TODO: find where the user left off
 
     def update_points(self, score):
-        self.points += points * 100
+        self.points += score * 100
         self.save()
 
 class TwitterUser(User):
