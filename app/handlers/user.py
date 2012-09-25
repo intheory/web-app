@@ -137,7 +137,7 @@ class TwitterUserLoginHandler(base.BaseHandler, tornado.auth.TwitterMixin):
 class UserLogoutHandler(base.BaseHandler):
     @tornado.web.authenticated
     def on_get(self):
-        self.log.info("User " + self.current_user.name + " is logging out. See you later.")
+        self.log.info("User with id" + self.current_user.id + " is logging out. See you later.")
         self.clear_cookie("access_token")
         self.clear_cookie("user_type")
         self.redirect('/')
