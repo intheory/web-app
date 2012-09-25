@@ -69,8 +69,8 @@ class Intheory(tornado.web.Application):
         ########################################################
         ## Logging setup. ##
         ########################################################	    
-        log_level = db_host = config.get(env, "log_level")
-        log_db_collection = db_host = config.get(env, "log_db_collection")
+        log_level = db_host = config.get(env, "log_level") or "debug"
+        log_db_collection = db_host = config.get(env, "log_db_collection") or "Log"
         cl = CustomLogger(self.APP_NAME, log_level, log_db_collection, db)
 
         ########################################################
@@ -81,7 +81,9 @@ class Intheory(tornado.web.Application):
         self.deps = deps
         self.env  = env
         self.log = cl.get_logger()
-	
+	    
+        self.log.info("Server started successfully.")
+
         tornado.web.Application.__init__(self, url_patterns, **settings)
 
 

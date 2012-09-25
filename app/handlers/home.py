@@ -7,7 +7,6 @@ class HomePageHandler(base.BaseHandler):
     Renders the home page.    
     '''
     def on_get(self):
-        print self.log
         if  not self.current_user:
             questions = MiniQuizQuestion.objects                
             self.base_render("home.html", questions=questions, tweet="Woo hoo I passed my test. Thank you #intheory!")
@@ -43,7 +42,7 @@ class EvaluateHomeQuizHandler(base.BaseHandler):
                     count += 1
             return (count,)
         except Exception, e:
-            print e
+            self.warning(str(e))
     
     def on_success(self, score):
         self.xhr_response.update({"score": score}) 
