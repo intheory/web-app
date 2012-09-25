@@ -159,10 +159,7 @@ class EvaluateHazardPerceptionHandler(base.BaseHandler):
         hpt.save()
 
         #Update user's points
-        uid = self.current_user.id
-        utype = self.current_user.user_type
-        u = self.user_types[utype].objects(id=uid)
-        u.update_points(score)
+        self.current_user.update_points(score)
 
         if self.is_xhr:
             html = self.render_string("ui-modules/complete-video.html", clip=solution_clip_name, score=score, accuracy=score/clicks)
