@@ -54,8 +54,12 @@ class EvaluateTestQuestionHandler(base.BaseHandler):
             print e
 
     def on_success(self, mt):
-        if mt.cursor < len(mt.questions):
+        if mt.cursor < len(mt.questions): #is the test finished?
             self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=mt)})  
         else:
+            #Update user's points
+            uid = self.current_user.id
+            u = User.objects(id=uid)
+            u.update_points(mt.score)
             self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Congratulations!", no_questions=len(mt.questions), score=mt.score, learn=False)})
         self.write(self.xhr_response) 
