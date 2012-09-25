@@ -46,7 +46,8 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
     
     def _on_login(self, user):
         try:
-            c_user = FacebookUser.objects(fb_id=str(user['id'])).get()
+            print user['id']
+            c_user = FacebookUser.objects(fb_id=user['id']).get()
         except DoesNotExist, e:   
             c_user = FacebookUser()
             c_user.access_token = user["access_token"]        
