@@ -1,4 +1,4 @@
-from mongoengine import Document, ObjectIdField, StringField, EmbeddedDocument, EmbeddedDocumentField, ListField, BooleanField
+from mongoengine import Document, IntField, ObjectIdField, StringField, EmbeddedDocument, EmbeddedDocumentField, ListField, BooleanField
 # ============================ User ================================ #
 
 class UserFriend(EmbeddedDocument):
@@ -14,6 +14,7 @@ class User(Document):
     username = StringField(required=True)
     moderator = BooleanField(required=True, default=False)
     locale = 'en_GB'
+    points = IntField(required=True, default=0)
 
     def toggle_moderator(self):
         self.moderator = not self.moderator
@@ -22,6 +23,10 @@ class User(Document):
     def get_section_cursor(self, section_id):
         pass
         #TODO: find where the user left off
+
+    def update_points(self, score):
+        self.points += points * 100
+        self.save()
 
 class TwitterUser(User):
     meta = {'allow_inheritance': True}
