@@ -24,13 +24,13 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
     '''
     Handles the login for the Facebook user, returning a user object.
     '''
-    if  self.env == "prod":
-        URI = 'http://www.intheory.co.uk/login'
-    else:
-        URI = 'http://localhost:8888/login'
-
     @tornado.web.asynchronous
     def get(self):
+        if  self.env == "prod":
+            URI = 'http://www.intheory.co.uk/login'
+        else:
+            URI = 'http://localhost:8888/login'
+        
         if self.get_argument("code", False):
             self.get_authenticated_user(
               redirect_uri=URI,
