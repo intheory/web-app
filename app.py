@@ -102,6 +102,7 @@ if __name__ == "__main__":
     options, args = parser.parse_args()
     
     env = "ITENV" in os.environ and os.environ["ITENV"] or "dev"
+    self.log.debug(env)
     config_file = options.config or os.path.join("config", "config.default")
     config = ConfigParser.RawConfigParser()
     config.read(config_file)
