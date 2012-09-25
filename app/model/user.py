@@ -42,5 +42,6 @@ class FacebookUser(User):
     access_token = StringField(required=True)
 
 class CachedUser(EmbeddedDocument):
-    name = StringField(required=True)
     id = ObjectIdField(required=True)
+    name = StringField(required=True)
+    user_type = StringField(required=True)

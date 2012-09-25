@@ -13,6 +13,7 @@ from urls import url_patterns
 from dependencies import css_deps, js_deps
 from mongoengine import connect #@UnresolvedImport
 from optparse import OptionParser #@UnresolvedImport
+from app.model.user import *
 
 class Intheory(tornado.web.Application):
     def __init__(self, env, port, config_file):
@@ -76,7 +77,7 @@ class Intheory(tornado.web.Application):
         ########################################################
         ## Initialize references to application-wide modules. ##
         ########################################################
-            
+        self.user_types = {"twitter": TwitterUser, "fb": FacebookUser}    
         self.db   = db
         self.deps = deps
         self.env  = env

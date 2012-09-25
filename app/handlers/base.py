@@ -123,6 +123,7 @@ class BaseHandler(tornado.web.RequestHandler):
                 cu = CachedUser()
                 cu.id = user.id
                 cu.name = user.first_name + " " + user.last_name
+                cu.user_type = user_type
                 self.cached_user = cu
                 return user
             except DoesNotExist:
