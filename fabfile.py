@@ -35,7 +35,7 @@ def pull():
 def deploy():
         sudo('supervisorctl stop tornadoes:')
         pull()
-        sudo('pip install -r pip-reqs.txt')
+        sudo('sudo pip install -r pip-reqs.txt')
         sudo('supervisorctl start tornadoes:')
 
 def status():
