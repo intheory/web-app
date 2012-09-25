@@ -1,0 +1,36 @@
+{% extends "admin-main.html" %}
+
+{% block content %}
+    <div class="container">
+		<ul class="nav nav-tabs">
+		  <li><a href="/admin/questions">Questions</a></li>
+		  <li><a href="#">Users</a></li>
+  		  <li><a href="/admin/sections">Sections</a></li>	
+  		  <li><a href="/admin/nuggets">Nuggets</a></li>
+		  <li class="active"><a href="/admin/logs">Logs</a></li>
+		</ul>
+		{% block admin-content%}
+	    <div class="hero-unit">
+            <div class="hero-unit1">
+				<table class="table table-hover">
+					<thead>
+					<tr>					
+					</tr>
+					</thead>
+					<tbody>
+					{% for item in kwargs['logs']%}
+					<tr>
+						<td ><center><center><span class="badge badge-info">{{item.level}}</span></center></td>
+						<td >{{item.level}}</td>
+						<td >{{item.timestamp}}</td>
+						<td >{{item.message}}</td>
+						<td >{{item.filename}}</td>
+					</tr>					
+					{% end %}
+					</tbody>
+					</table>
+        	</div>
+    	</div>      
+    	{% end%}
+    </div> <!-- /container -->
+{% end%}

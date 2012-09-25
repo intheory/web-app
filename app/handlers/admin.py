@@ -2,6 +2,7 @@ import tornado, tornado.escape
 from app.handlers import base, user
 from app.model.content import Nugget, Section, Question, MiniQuizQuestion#!@UnresolvedImport
 from app.model.user import *#!@UnresolvedImport
+from app.model.logs import Log
 
 class ViewAdminPanelHandler(base.BaseHandler):
     '''
@@ -11,6 +12,16 @@ class ViewAdminPanelHandler(base.BaseHandler):
     @tornado.web.authenticated
     def on_get(self):
         self.base_render("admin/admin-main.html")
+
+class ViewLogsHandler(base.BaseHandler):
+    '''
+    Renders a page with all the logs
+    '''
+    @user.moderator 
+    @tornado.web.authenticated
+    def on_get(self):
+        logs = Log.objects.order_by("-timestamp")
+        self.base_render("admin/admin-logs.html", logs=logs)
 
 class ViewQuestionsHandler(base.BaseHandler):
     '''

@@ -6,6 +6,7 @@ corresponding handler. The logs are stored in the database.
 Adapted from Alex Michael the Master 
 '''
 import logging, datetime
+from app.model.logs import Log
 
 class CustomLogger(object):
 	log_levels = {
@@ -51,10 +52,10 @@ class DBHandler(logging.Handler):
         Overrides the base handler emit() method and
         writes the record in Mongo.
         '''
-        self.db[self.log_collection].insert({
-	                               'name'      : record.name,
-	                               'filename'  : record.filename,
-	                               'timestamp' : datetime.datetime.utcnow(),
-	                               'level'     : record.levelname,
-	                               'message'   : record.msg
-	                               })
+        l = Log()
+        l.name = record.name
+        l.filename = record.filename
+        l.timestamp = datetime.datetime.utcnow()
+        l.level = record.levelname
+        l.message = record.msg
+        l.save()
