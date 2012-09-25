@@ -26,7 +26,8 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
     '''
     @tornado.web.asynchronous
     def get(self):
-        if  self.env == "prod":
+        
+        if self.env == "prod":
             URI = 'http://www.intheory.co.uk/login'
         else:
             URI = 'http://localhost:8888/login'

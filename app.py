@@ -91,7 +91,7 @@ class Intheory(tornado.web.Application):
         self.log = cl.get_logger()
 	    
         self.log.info("Server started successfully.")
-
+        self.log.info(self.env)
         tornado.web.Application.__init__(self, url_patterns, **settings)
 
 
@@ -100,9 +100,8 @@ if __name__ == "__main__":
     parser.add_option("-p", type="int", dest="port", help="Server port.")
     parser.add_option("-c", type="string", dest="config", help="Config file location.")
     options, args = parser.parse_args()
-    
+
     env = "ITENV" in os.environ and os.environ["ITENV"] or "dev"
-    print env
     config_file = options.config or os.path.join("config", "config.default")
     config = ConfigParser.RawConfigParser()
     config.read(config_file)
