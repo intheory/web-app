@@ -8,7 +8,7 @@ db_user:
 db_pass:
 
 [prod]
-port: 8000exit
+port: 8000
 log_level: info
 log_db_collection: Log
 db_name: intheory_dev
