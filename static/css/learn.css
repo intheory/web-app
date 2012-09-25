@@ -430,6 +430,7 @@ width: 960px;
 }*/
 
 .video-wrapper{
+  cursor: pointer;
   position: relative;
   height: 500px;
   width: auto;

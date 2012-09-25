@@ -19,21 +19,28 @@ class Intheory(tornado.web.Application):
     def __init__(self, env, port, config_file):
 	self.APP_NAME = "intheory-" + str(port)
 	
-	settings = {
-                    'static_path'   : "static",
-                    'template_path' : "templates",
-                    'cookie_secret' : "aKlRsPkySWyOqByxAQfLsKMbEAKj3ErRtg1RgkBUQ6E=noteslib",
-                    'login_url'     : "/login", #landing page if user is not authenticated
-                    'xsrf_cookies'  : True,
-                    'autoescape'    : "xhtml_escape",
-                    'facebook_api_key': "486623404681319",
-                    'facebook_secret': "4049a6a2d8dd781bbfb4a1b849869113",
-                    'twitter_consumer_key':"bJ5IIoEfSuuAWvfBM0Q",
-                    'twitter_consumer_secret':"GZZhvI0AP6kimS0IwsD401RfE2IVrXTatBMpnI4a0",
-                    'ui_modules'     : uimodules
-                    }
+        if env == "prod":
+            facebook_api_key = "486623404681319"
+            facebook_secret = "4049a6a2d8dd781bbfb4a1b849869113"
+        else:
+            facebook_api_key = "387574291313993"
+            facebook_secret = "37c0042436064296a4c17242088cd1fe"
 
-	config = ConfigParser.RawConfigParser()
+    	settings = {
+                        'static_path'   : "static",
+                        'template_path' : "templates",
+                        'cookie_secret' : "aKlRsPkySWyOqByxAQfLsKMbEAKj3ErRtg1RgkBUQ6E=noteslib",
+                        'login_url'     : "/login", #landing page if user is not authenticated
+                        'xsrf_cookies'  : True,
+                        'autoescape'    : "xhtml_escape",
+                        'facebook_api_key': facebook_api_key,
+                        'facebook_secret': facebook_secret,
+                        'twitter_consumer_key':"bJ5IIoEfSuuAWvfBM0Q",
+                        'twitter_consumer_secret':"GZZhvI0AP6kimS0IwsD401RfE2IVrXTatBMpnI4a0",
+                        'ui_modules'     : uimodules
+                        }
+
+    	config = ConfigParser.RawConfigParser()
         config.read(config_file)
 
         ############################
