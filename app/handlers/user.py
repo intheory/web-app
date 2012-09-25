@@ -27,9 +27,14 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
     
     @tornado.web.asynchronous
     def get(self):
+        if  self.env == "prod":
+            uri = 'http://www.intheory.co.uk/login'
+        else:
+            uri = 'http://localhost:8888/login'
+
         if self.get_argument("code", False):
             self.get_authenticated_user(
-              redirect_uri='http://www.intheory.co.uk/login',
+              redirect_uri=uri,
               client_id=self.settings["facebook_api_key"],
               client_secret=self.settings["facebook_secret"],
               code=self.get_argument("code"),
@@ -40,7 +45,7 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
             self.redirect('/circles/create')
             return
         
-        self.authorize_redirect(redirect_uri='http://www.intheory.co.uk/login',
+        self.authorize_redirect(redirect_uri=uri,
                                 client_id=self.settings["facebook_api_key"],
                                 extra_params={"scope": "email"})
     
@@ -59,7 +64,7 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
         
         self.set_secure_cookie("access_token", c_user.access_token)
         self.set_secure_cookie("user_type", "fb")
-        self.log.info("Facebook user " + c_user.first_name + " " + c_user.last_name  + " has successfully logged in.")
+        self.log.info("Facebook user with id " + str(c_user.id ) + " has successfully logged in.")
         self.redirect("/dashboard")   
 
     
@@ -106,7 +111,6 @@ class TwitterUserLoginHandler(base.BaseHandler, tornado.auth.TwitterMixin):
             self.get_authenticated_user(self.async_callback(self._on_auth))
             return
 
-        #self.authorize_redirect(callback_uri='http://127.0.0.1:8888/login/twitter')
         self.authorize_redirect()
 
     def _on_auth(self, user):
@@ -130,7 +134,7 @@ class TwitterUserLoginHandler(base.BaseHandler, tornado.auth.TwitterMixin):
 
         self.set_secure_cookie("access_token", c_user.access_token)
         self.set_secure_cookie("user_type", "twitter")
-        self.log.info("Twitter user " + c_user.first_name + " " + c_user.last_name  + " has successfully logged in.")
+        self.log.info("Twitter user with id " + c_user.id + " has successfully logged in.")
         self.redirect('/')
 
 
