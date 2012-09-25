@@ -48,6 +48,7 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
         try:
             c_user = FacebookUser.objects(fb_id=user['id']).get()
         except DoesNotExist, e:   
+            self.log.info("A new Facebook user is trying to login.")
             c_user = FacebookUser()
             c_user.access_token = user["access_token"]        
             cb = functools.partial(self._save_user_profile, c_user)
@@ -129,11 +130,14 @@ class TwitterUserLoginHandler(base.BaseHandler, tornado.auth.TwitterMixin):
 
         self.set_secure_cookie("access_token", c_user.access_token)
         self.set_secure_cookie("user_type", "twitter")
+        self.log.info("Twitter user " + c_user.first_name + " " + c_user.last_name  + " has successfully logged in.")
         self.redirect('/')
 
 
 class UserLogoutHandler(base.BaseHandler):
     @tornado.web.authenticated
     def on_get(self):
+        self.log.info("User " + self.current_user.name + " is logging out. See you later.")
         self.clear_cookie("access_token")
+        self.clear_cookie("user_type")
         self.redirect('/')
