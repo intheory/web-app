@@ -14,7 +14,7 @@
 		<tbody>	
 		{%for i, section in enumerate(kwargs['sections']) %}				
 			<tr>
-				<td style="width: 5%; padding-top: 13px;"><center><center><span class="badge badge-info">i</span></center></td>
+				<td style="width: 5%; padding-top: 13px;"><center><center><span class="badge badge-info">{{i+1}}</span></center></td>
 				<td style="width: 40%; padding-top: 14px;">{{section.title}}</td>
 				<td style="width: 35%; padding-top: 15px;"><div class="progress progress-striped progress-success">
 				  <div class="bar" style="width: 96%;"></div>
@@ -24,7 +24,7 @@
 			</tr>		
 		{% end %}
 		<tr>
-			<td style="width: 5%; padding-top: 13px;"><center><center><span class="badge badge-info">1</span></center></td>
+			<td style="width: 5%; padding-top: 13px;"><center><center><span class="badge badge-info">3</span></center></td>
 			<td style="width: 40%; padding-top: 14px;">Hazard Perception Clips</td>
 			<td style="width: 35%; padding-top: 15px;"><div class="progress progress-striped progress-success">
 			  <div class="bar" style="width: 96%;"></div>
