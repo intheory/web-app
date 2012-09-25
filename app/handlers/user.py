@@ -137,10 +137,6 @@ class TwitterUserLoginHandler(base.BaseHandler, tornado.auth.TwitterMixin):
 class UserLogoutHandler(base.BaseHandler):
     @tornado.web.authenticated
     def on_get(self):
-        try: 
-            
-            self.clear_cookie("access_token")
-            self.clear_cookie("user_type")
-            self.redirect('/')
-        except Exception, e:
-            print e
+        self.clear_cookie("access_token")
+        self.clear_cookie("user_type")
+        self.redirect('/')
