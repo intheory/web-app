@@ -160,7 +160,8 @@ class EvaluateHazardPerceptionHandler(base.BaseHandler):
 
         #Update user's points
         uid = self.current_user.id
-        u = User.objects(id=uid)
+        utype = self.current_user.user_type
+        u = self.user_types[utype].objects(id=uid)
         u.update_points(score)
 
         if self.is_xhr:
