@@ -46,6 +46,7 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
     
     def _on_login(self, user):
         try:
+            print 'hello'
             c_user = User.objects(fb_id=user['id']).get()
         except DoesNotExist, e:   
             c_user = User()
