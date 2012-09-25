@@ -91,7 +91,7 @@ class Intheory(tornado.web.Application):
         self.log = cl.get_logger()
 	    
         self.log.info("Server started successfully.")
-        self.log.info(self.env)
+
         tornado.web.Application.__init__(self, url_patterns, **settings)
 
 
@@ -106,5 +106,5 @@ if __name__ == "__main__":
     config = ConfigParser.RawConfigParser()
     config.read(config_file)
     port = int(options.port or config.get(env, "port") or 8888)
-    Intheory("prod", port, config_file).listen(port)
+    Intheory(env, port, config_file).listen(port)
     tornado.ioloop.IOLoop.instance().start()
