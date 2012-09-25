@@ -133,6 +133,7 @@ class BaseHandler(tornado.web.RequestHandler):
         if cookie:
             try: 
                 user = user_types[user_type].objects(access_token=cookie).get()
+                print user
                 cu = CachedUser()
                 cu.id = user.id
                 cu.name = user.first_name + " " + user.last_name
