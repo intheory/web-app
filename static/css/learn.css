@@ -1,13 +1,12 @@
 .hero-unit {
   padding: 20px;
-  background-color: #edf4f7;
-    
+  background-color: #edf4f7;  
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
-   border-style:solid;
-border-width:1px;
-border-color: #d6e3e8;
+  border-style:solid;
+  border-width:1px;
+  border-color: #d6e3e8;
 }
 .hero-unit1 {
   padding: 0px;
@@ -17,8 +16,8 @@ border-color: #d6e3e8;
   -moz-border-radius: 6px;
   border-radius: 6px;
   border-style:solid;
-border-width:1px;
-border-color: #d6e3e8;
+  border-width:1px;
+  border-color: #d6e3e8;
   
 }
 

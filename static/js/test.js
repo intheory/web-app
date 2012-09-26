@@ -4,13 +4,6 @@
  * @author l </a>
  */
     // =============================== Listeners =============================== //
-    var navBtns = $(".nav.nav-pills").children();
-    navBtns.each(function(index) {
-      if ($(this).hasClass("active")){
-        $(this).removeClass("active");
-      }
-    });    
-    $("li#mock-test-nav").addClass("active");
 
     $("td.choice").live("click", function() {
       var choiceRow = $(this).parent();

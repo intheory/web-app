@@ -2,20 +2,33 @@
 
 {% block content %}
     <div class="container">
-    	<div class="hero-unit">
-        	<div class="hero-unit1">
-        		<h1>Hey {{kwargs['user'].first_name}}!</h1>
-        		<p>We're still working on the dashboard but it'll be awesome!</p>
+        <div class="landing">
+            <div class="row">
+              <div class="span5"><br />
+                <div class="landingdescrip">
+                    <h1>Welcome back {{kwargs['user'].first_name}}!</h1>
+                    <p>Good to see you back! You're <b>40%</b> of the way through leanring for the theory and should be ready to pass in about <b>8 days</b>.</p>
+                    <br />
+                    <p>
+                    <div class="progress progress-striped">
+                        <div class="bar" style="width: 20%;"></div>
+                    </div></p>
+                    <center> 
+                        <p><a href="/learn/main"><button class="btn btn-large btn-success" type="button">Continue Learning</button></a>&nbsp;&nbsp;&nbsp;
+                        <a href="/learn/main"><button class="btn btn-large btn-danger" type="button">Continue Practicing</button></a></p>
+                    </center>
+                </div>
 
-        		<h2>Your test scores</h2>
-        		{% for test in kwargs['history'] %}
-                <ul>
-        			<li><span class="badge">{{test.score}}/{{len(test.questions)}}</span></li>
-                </ul>
-        		{% end %}
-        		<br><br><br><br>
-        	</div>
-    	</div>
+                </div>
+                <br />
+              <div class="span7">  
+                <div class="row">
+                <div class="span3"><center><div class="dstat">5</div></center></div>
+                <div class="span3"><center><div class="dstat">5</div></center></div>
+                </div>
+              </div>
+            </div>
+        </div> 
     </div> <!-- /container -->
 {% end%}
 

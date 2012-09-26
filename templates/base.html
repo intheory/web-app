@@ -28,14 +28,6 @@
 	{% end %}
 
     <style type="text/css">
-      html{
-        background-image: url(/static/imgs/background.jpg);
-        background-repeat: no-repeat;
-      }
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      } 
     </style>
     <script type="text/javascript">
 
@@ -71,8 +63,8 @@
                   {% if current_user['moderator'] %}
                       <li id="admin-nav"><a href="/admin">Admin</a></li>  
                     {% end %}
-                  <li class="learn"><a href="/learn/main">Learn</a></li>
-                  <li class="dropdown practice"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Practice</a>
+                  <li class="learn-nav"><a href="/learn/main">Learn</a></li>
+                  <li class="dropdown practice-nav"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Practice</a>
                     <ul class="dropdown-menu">
                         <li><a href="/learn/hazard">Hazard Perception</a></li>
                         <li><a href="/test/new">Mock Test</a></li>
@@ -83,10 +75,10 @@
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="{{static_url('imgs/fbprofilepic.png')}}" alt="some_text"> &nbsp; David Mason <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#about">Dashboard</a></li>
-                              <li><a href="#about">Statistics</a></li>
-                              <li><a href="#about">Account Details</a></li>
-                              <li><a href="#about">Log Out</a></li>
+                        <li><a href="/dashboard">Dashboard</a></li>
+                              <li><a href="/dashboard">Statistics</a></li>
+                              <li><a href="/dashboard">Account Details</a></li>
+                              <li><a href="/logout">Log Out</a></li>
                     </ul>
                   </li>
                 </ul>

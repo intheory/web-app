@@ -14,12 +14,12 @@ body {
   background-color: #006fba;
 }
 
-.navbar-inverse .nav > li.practice > a {
+.navbar-inverse .nav > li.practice-nav > a {
     color: #ffffff;
     font-size:16px;
 }
 
-.navbar-inverse .nav > li.learn > a {
+.navbar-inverse .nav > li.learn-nav > a {
     color: #ffffff;
     font-size:16px;
 
@@ -55,10 +55,10 @@ border-radius: 5px;
   -moz-border-radius: 6px;
   border-radius: 6px;
    border-style:solid;
-border-width:0px;
-border-color: #000000;
-background-color:rgba(0,0,0,0.3);
-font-color: #FFFFFF;
+  border-width:0px;
+  border-color: #000000;
+  background-color:rgba(0,0,0,0.3);
+  font-color: #FFFFFF;
 }
 
 .alignleft {
@@ -68,11 +68,6 @@ font-color: #FFFFFF;
   float: right;
 }
 
-.align-left { float:left; margin: 0 10px 15px 0; }
-.frame { padding: 2px; border: 1px solid #aaa; -moz-border-radius: 3px; border-radius: 3px;}
-.fb { font-family: Arial, Helvetica, sans-serif}
-.fbpoints {font-size:12px; padding-top:2px;}
-.fbname {font-size:16px; padding-top:3px;}
 
 .notify {
   background-color: white;  
