@@ -149,6 +149,7 @@ options
 In the highest gear possible
 In the lowest gear possible With the handbrake partly on 
 With your left foot on the brake
+With the handbrake partly on
 answers
 1
 extract
@@ -161,6 +162,7 @@ options
 The tyres make a rumbling noise 
 The tyres make hardly any noise  The steering becomes heavier
 The steering becomes lighter
+The steering becomes heavier
 answers
 2
 extract
@@ -198,7 +200,8 @@ You are on a wet motorway with surface spray. You should use
 options
 Hazard flashers 
 Dipped headlights 
-Rear fog lights Sidelights
+Rear fog lights 
+Sidelights
 answers
 2
 extract
