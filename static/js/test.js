@@ -3,7 +3,6 @@
  * 
  * @author l </a>
  */
-    
     // =============================== Listeners =============================== //
     var navBtns = $(".nav.nav-pills").children();
     navBtns.each(function(index) {
@@ -47,7 +46,7 @@
 		  });
 
       if (remainingAnswers==0){
-        IT.post("/test/evaluate", {
+        IT.get("/test/get-next", {
                  tid: tid,
                  answers : JSON.stringify(answers),
                  cursor: cursor

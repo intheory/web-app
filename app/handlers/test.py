@@ -4,7 +4,7 @@ from app.handlers import base
 from app.model.content import Section, Nugget, MockTest, Question, TestAnswer#!@UnresolvedImport
 from random import shuffle
 
-TEST_SIZE = 50
+TEST_SIZE = 5 
 
 class GetNewTestHandler(base.BaseHandler):
     '''
@@ -33,12 +33,12 @@ class GetNewTestHandler(base.BaseHandler):
         except Exception, e:
             self.log.warning(str(e))
 
-class EvaluateTestQuestionHandler(base.BaseHandler):
+class GetNextQuestionHandler(base.BaseHandler):
     '''
-    Evaluates a given question and updates score for the test.    
+    Fetches next question.    
     '''
     @tornado.web.authenticated
-    def on_post(self): 
+    def on_get(self): 
         try:
             tid = self.get_argument("tid", None)
             answers = self.get_argument("answers", None)
@@ -48,19 +48,9 @@ class EvaluateTestQuestionHandler(base.BaseHandler):
 
             #Fetch the test object
             mt = MockTest.objects(id=tid).get()
-            
-            #Fetch the question in hand and the correct answers
-            cursor = int(cursor)
-            q = mt.questions[cursor]
-            correct_answers = [int(answer) for answer in q.answer]
-
-            #Check if user answered correctly.
-            inter = set(answers).intersection(correct_answers)
-            if len(inter) == len(correct_answers): 
-                mt.score += 1
 
             #Save user answers
-            mt.answers[cursor].selected_answers = answers
+            mt.answers[int(cursor)].selected_answers = answers
 
             mt.cursor += 1
             mt.save()
@@ -74,6 +64,8 @@ class EvaluateTestQuestionHandler(base.BaseHandler):
         if mt.cursor < len(mt.questions): #is the test finished?
             self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=mt)})  
         else:
+            #Calculate test score 
+            mt.calculate_score()
             #Update user's points
             self.current_user.update_points(mt.score)
             self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Congratulations!", no_questions=len(mt.questions), score=mt.score, learn=False)})
