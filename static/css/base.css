@@ -77,6 +77,11 @@ line-height: 0;
 padding-top: 7px;
 }
 
+.pull-right {
+  float: right;
+  width: 368px;
+}
+
 .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
 	width: 960px;
 }
@@ -104,6 +109,11 @@ font-color: #FFFFFF;
   float: right;
 }
 
+.align-left { float:left; margin: 0 10px 15px 0; }
+.frame { padding: 2px; border: 1px solid #aaa; -moz-border-radius: 3px; border-radius: 3px;}
+.fb { font-family: Arial, Helvetica, sans-serif}
+.fbpoints {font-size:12px; padding-top:2px;}
+.fbname {font-size:16px; padding-top:3px;}
 
 .notify {
   background-color: white;  
