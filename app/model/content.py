@@ -1,4 +1,4 @@
-from mongoengine import Document, EmbeddedDocument, FloatField, EmbeddedDocumentField, StringField, ListField, IntField, BooleanField, ReferenceField
+from mongoengine import Document, DictField, EmbeddedDocument, FloatField, EmbeddedDocumentField, StringField, ListField, IntField, BooleanField, ReferenceField
 # ============================ User ================================ #
 
 class Question(Document):
@@ -27,10 +27,15 @@ class Section(Document):
     nuggets = ListField(EmbeddedDocumentField(Nugget), default=list)
     questions = ListField(ReferenceField(Question), required=False, default=list)
 
+class TestAnswer(EmbeddedDocument):
+    qid = StringField(required=True, default="")
+    selected_answers = ListField(IntField(), required=True, default=list)
+
 class MockTest(Document):
     meta = {"collection":"MockTests"}
     user = StringField(required=True)
     questions = ListField(ReferenceField(Question), required=True, default=list)
+    answers = ListField(EmbeddedDocumentField(TestAnswer), default=list)
     score = IntField(required=True, default=0)
     cursor = IntField(required=True, default=0) #Indicates which question is currently viewed
 

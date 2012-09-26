@@ -26,6 +26,7 @@ url_patterns = [
     ###########Mock test hanlders##############
     ("/test/new", test.GetNewTestHandler),
     ("/test/evaluate", test.EvaluateTestQuestionHandler),
+    ("/test/get-previous", test.GetPreviousQuestionHandler),
     ###########Backend hanlders##############
     ("/admin/logs", admin.ViewLogsHandler),
     ("/admin/users/moderator", admin.MakeModeratorHandler),

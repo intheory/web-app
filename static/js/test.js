@@ -66,3 +66,19 @@
       }
 
     });
+
+    $("li.previous").live("click", function() {
+        var cursor = $(this).attr("cursor"), 
+            tid = $(this).attr("tid");
+
+        IT.get("/test/get-previous", {
+                 tid: tid,
+                 cursor: cursor
+         }, true, function(response) 
+         {  
+            var hu = $(".hero-unit")
+            var parent = hu.parent();
+            hu.empty().remove()
+            parent.html(response.html);
+          }); 
+    });    
