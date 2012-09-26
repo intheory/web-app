@@ -44,6 +44,8 @@ url_patterns = [
     ("/landing/privacy", landing.ViewPrivacyPolicyHandler),
     ("/landing/about", landing.ViewAboutUsHandler),
     ###########Static files handlers################
-    ("/obj/img/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "imgs"))}),
-    ("/obj/video/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "videos"))}),
+    #("/obj/img/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "imgs"))}),
+    #("/obj/video/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "videos"))}),
+    ("/obj/img/(.*)", tornado.web.StaticFileHandler, {"path": "~/home/george/intheorydata/imgs"}),
+    ("/obj/video/(.*)", tornado.web.StaticFileHandler, {"path": "~/home/george/intheorydata/videos"}),
 ]
