@@ -20,9 +20,7 @@ url_patterns = [
     ("/learn/get-previous-nugget", learn.GetPreviousNuggetHandler),
     ("/learn/get-next-nugget", learn.GetNextNuggetHandler),
     ("/learn/hazard/evaluate", learn.EvaluateHazardPerceptionHandler),
-    ("/learn/hazard", learn.GetHazardPerceptionHandler),
-    ###########Practise pages hanlders##############
-    
+    ("/learn/hazard", learn.GetHazardPerceptionHandler),    
     ###########Mock test hanlders##############
     ("/test/new", test.GetNewTestHandler),
     ("/test/get-next", test.GetNextQuestionHandler),

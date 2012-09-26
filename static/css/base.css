@@ -1,90 +1,49 @@
+body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        background: url('/static/imgs/background.jpg');
+}
+
 .navbar .brand {
   float: left;
   display: block;
-  padding: 0px 20px 0px;
+  padding: 10px 20px 10px;
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
-  color: #555555;
-  text-shadow: 0 1px 0 #ffffff;
-}
-
-.navbar .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus {
-color: white;
-background-color: #08C;
-}
-
-.navbar .brand, .navbar .nav > li > a {
-color: #08C;
-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-}
-
-.navbar .nav > li > a {
-float: none;
-padding: 5px 10px 5px;
-color: #555;
-text-decoration: none;
-text-shadow: 0 1px 0 white;
-font-size: 13px;
-}
-
-.nav > li > a:hover {
-  text-decoration: none;
-  background-color: #ccc;
-}
-
-  .nav-pills > .active > a,
-.nav-pills > .active > a:hover {
   color: #ffffff;
-  background-color: #0088cc;
+  background-color: #006fba;
 }
 
-.nav-tabs .open .dropdown-toggle,
-.nav-pills .open .dropdown-toggle,
-.nav > li.dropdown.open.active > a:hover {
-  color: #ffffff;
-  background-color: #999999;
-  border-color: #999999;
+.navbar-inverse .nav > li.practice > a {
+    color: #ffffff;
+    font-size:16px;
 }
 
-.navbar .nav > li > a {
-  color: #08C;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+.navbar-inverse .nav > li.learn > a {
+    color: #ffffff;
+    font-size:16px;
+
 }
 
-.navbar .brand:hover,
-.navbar .nav > li > a:hover {
-text-decoration: none;
-background-color: #EEE;
-}
-.navbar  .nav > li > a:focus,
-.navbar  .nav > li > a:hover {
-text-decoration: none;
-background-color: #EEE;
+.landing{
+  color:#FFF;
 }
 
-.navbar .nav > .active > a,
-.navbar .nav > .active > a:hover,
-.navbar .nav > .active > a:focus {
-  color: #ffffff;
-  background-color: #08C;
+.landingdescrip{
+  background-color:#000;
+  padding:15px;
+  -moz-border-radius: 5px;
+border-radius: 5px;
 }
 
-.nav-tabs::before, .nav-pills::before, .nav-tabs::after, .nav-pills::after {
-display: table;
-content: "";
-line-height: 0;
-padding-top: 7px;
+.navbar .btn,
+.navbar .btn-group {
+  margin-top: -2px;
+  margin-bottom: -2px;
 }
 
-.pull-right {
-  float: right;
-  width: 368px;
-}
-
-.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
-	width: 960px;
-}
+.toplinkmenu{
+  margin-top:8px;}
 
 .footer {
   padding: 2px;
