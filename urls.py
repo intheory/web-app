@@ -22,7 +22,7 @@ url_patterns = [
     ("/learn/hazard/evaluate", learn.EvaluateHazardPerceptionHandler),
     ("/learn/hazard", learn.GetHazardPerceptionHandler),
     ###########Practise pages hanlders##############
-
+    
     ###########Mock test hanlders##############
     ("/test/new", test.GetNewTestHandler),
     ("/test/evaluate", test.EvaluateTestQuestionHandler),
@@ -44,8 +44,6 @@ url_patterns = [
     ("/landing/privacy", landing.ViewPrivacyPolicyHandler),
     ("/landing/about", landing.ViewAboutUsHandler),
     ###########Static files handlers################
-    #("/obj/img/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "imgs"))}),
-    #("/obj/video/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "videos"))}),
-    ("/obj/img/(.*)", tornado.web.StaticFileHandler, {"path": "~/home/george/intheorydata/imgs"}),
-    ("/obj/video/(.*)", tornado.web.StaticFileHandler, {"path": "~/home/george/intheorydata/videos"}),
+    ("/obj/img/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "imgs"))}),
+    ("/obj/video/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "videos"))}),
 ]
