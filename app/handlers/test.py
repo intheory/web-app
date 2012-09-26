@@ -4,6 +4,8 @@ from app.handlers import base
 from app.model.content import Section, Nugget, MockTest, Question, TestAnswer#!@UnresolvedImport
 from random import shuffle
 
+TEST_SIZE = 50
+
 class GetNewTestHandler(base.BaseHandler):
     '''
     Renders a test page.    
@@ -16,8 +18,15 @@ class GetNewTestHandler(base.BaseHandler):
             mt.user = str(self.current_user.id)
             questions = [question for question in Question.objects]
             shuffle(questions)
-            mt.questions = questions[:40]
+            mt.questions = questions[:TEST_SIZE]
             mt.score = 0
+
+            for q in mt.questions:
+                ta = TestAnswer()
+                ta.qid = str(q.id)
+                ta.selected_answers = [] 
+                mt.answers.append(ta)
+
             mt.cursor = 0
             mt.save()
             self.base_render("test/test.html", test=mt)
@@ -51,10 +60,8 @@ class EvaluateTestQuestionHandler(base.BaseHandler):
                 mt.score += 1
 
             #Save user answers
-            ta = TestAnswer()
-            ta.qid = str(q.id)
-            ta.selected_answers = answers 
-            mt.answers.append(ta)
+            mt.answers[cursor].selected_answers = answers
+
             mt.cursor += 1
             mt.save()
 

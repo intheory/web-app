@@ -29,13 +29,13 @@ class Section(Document):
 
 class TestAnswer(EmbeddedDocument):
     qid = StringField(required=True, default="")
-    selected_answers = ListField(IntField(), required=True, default=list)
+    selected_answers = ListField(IntField(), default=list)
 
 class MockTest(Document):
     meta = {"collection":"MockTests"}
     user = StringField(required=True)
     questions = ListField(ReferenceField(Question), required=True, default=list)
-    answers = ListField(EmbeddedDocumentField(TestAnswer), default=list)
+    answers = ListField(EmbeddedDocumentField(TestAnswer), required=True, default=list)
     score = IntField(required=True, default=0)
     cursor = IntField(required=True, default=0) #Indicates which question is currently viewed
 

@@ -5,12 +5,14 @@
 		{% set question_tags = ["A", "B", "C", "D"] %}
 		{% set question_order = ["first", "second", "third", "fourth"] %}
 		{% set remaining_answers = len(question.answer) %}
+
 		{% if len(test.answers) > test.cursor %}
 			{% set selected_answers = test.answers[test.cursor].selected_answers %}
 			{% set remaining_answers = len(question.answer) - len(selected_answers) %}
 		{% else %}
 			{% set selected_answers = [] %}
 		{% end %}
+
 		<div class="image123"><img alt="" src="{{static_url('imgs/questionbg.png')}}" />
 			
 			<div class="text">
