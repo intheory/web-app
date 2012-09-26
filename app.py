@@ -91,7 +91,7 @@ class Intheory(tornado.web.Application):
         self.log = cl.get_logger()
 	    
         self.log.info("Server started successfully.")
-
+        self.log.info(os.path.expanduser("~/"))
         tornado.web.Application.__init__(self, url_patterns, **settings)
 
 
