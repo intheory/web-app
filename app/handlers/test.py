@@ -36,7 +36,7 @@ class EvaluateTestQuestionHandler(base.BaseHandler):
             if answers:
                 answers = tornado.escape.json_decode(answers)
             cursor = self.get_argument("cursor", None)
-            print answers            
+
             #Fetch the test object
             mt = MockTest.objects(id=tid).get()
             

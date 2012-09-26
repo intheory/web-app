@@ -4,8 +4,10 @@
 		{% set question = test.questions[test.cursor] %}
 		{% set question_tags = ["A", "B", "C", "D"] %}
 		{% set question_order = ["first", "second", "third", "fourth"] %}
+		{% set remaining_answers = len(question.answer) %}
 		{% if len(test.answers) > test.cursor %}
 			{% set selected_answers = test.answers[test.cursor].selected_answers %}
+			{% set remaining_answers = len(question.answer) - len(selected_answers) %}
 		{% else %}
 			{% set selected_answers = [] %}
 		{% end %}
@@ -82,7 +84,7 @@
 		    <a href="#">&larr; Previous</a>
 		  </li>
 		  {% end %}
-		  <li class="next" cursor="{{test.cursor}}" tid="{{test.id}}" remaining-answers="{{len(question.answer)}}">
+		  <li class="next" cursor="{{test.cursor}}" tid="{{test.id}}" remaining-answers="{{remaining_answers}}">
 		    <a href="#">Next &rarr;</a>
 		  </li>
 		</ul>
