@@ -118,7 +118,7 @@ class TwitterUserLoginHandler(base.BaseHandler, tornado.auth.TwitterMixin):
     def _on_auth(self, user):
         if not user:
             raise tornado.web.HTTPError(500, "Twitter auth failed")
-       
+
         try:
             c_user = TwitterUser.objects(twitter_id=str(user['id'])).get()
         except DoesNotExist, e:
@@ -132,11 +132,12 @@ class TwitterUserLoginHandler(base.BaseHandler, tornado.auth.TwitterMixin):
             c_user.username = user['username']
             c_user.access_token = user['access_token']['secret']
             c_user.twitter_id = str(user['id'])
+            c_user.profile_pic = user['profile_image_url']
             c_user.save()
 
         self.set_secure_cookie("access_token", c_user.access_token)
         self.set_secure_cookie("user_type", "twitter")
-        self.log.info("Twitter user with id " + c_user.id + " has successfully logged in.")
+        self.log.info("Twitter user with id " + str(c_user.id) + " has successfully logged in.")
         self.redirect('/')
 
 

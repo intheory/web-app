@@ -72,6 +72,7 @@ class TwitterUser(User):
     meta = {'allow_inheritance': True}
     access_token = StringField(required=True)
     twitter_id = StringField(required=True)
+    profile_pic = StringField()
     
 class FacebookUser(User):
     meta = {'allow_inheritance': True}
