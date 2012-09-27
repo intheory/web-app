@@ -108,9 +108,6 @@
 	<script src="{{static_url(js)}}"></script>
 {% end %}
 
-{% block jquery_templates %}
-
-{% end %}
 <div class="container">
    <div class="footer">
     <font color="#FFFFFF" size="2px">  
@@ -125,6 +122,17 @@
     <br/>
   </div>
 </div>
+
+{% block jquery_templates %}
+
+{% end %}
+
+<script type="text/javascript">
+    {% if current_user %} 
+      //TODO: Log user login 
+    {% end %}
+    IT.pageLoad();
+  </script>
 
 </body> 
 

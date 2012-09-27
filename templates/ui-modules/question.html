@@ -13,6 +13,10 @@
 			{% set selected_answers = [] %}
 		{% end %}
 
+		{% if not test.is_completed %}
+			<div class="hidden"></div>
+		{% end %}
+
 		<div class="image123"><img alt="" src="{{static_url('imgs/questionbg.png')}}" />
 			
 			<div class="text">

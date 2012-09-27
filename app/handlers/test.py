@@ -3,6 +3,7 @@ import tornado, tornado.escape
 from app.handlers import base
 from app.model.content import Section, Nugget, MockTest, Question, TestAnswer#!@UnresolvedImport
 from random import shuffle
+from mongoengine.queryset import DoesNotExist
 
 TEST_SIZE = 5 
 
@@ -14,6 +15,9 @@ class GetNewTestHandler(base.BaseHandler):
     def on_get(self):
         #Create new mock test object
         try:
+            mt = MockTest.objects(user=str(self.current_user.id), is_completed=False).get()
+            self.base_render("test/test.html", test=mt)
+        except DoesNotExist, e:
             mt = MockTest()
             mt.user = str(self.current_user.id)
             questions = [question for question in Question.objects]
@@ -21,6 +25,7 @@ class GetNewTestHandler(base.BaseHandler):
             mt.questions = questions[:TEST_SIZE]
             mt.score = 0
 
+            #Initialize the answer list
             for q in mt.questions:
                 ta = TestAnswer()
                 ta.qid = str(q.id)

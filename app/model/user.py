@@ -35,16 +35,21 @@ class User(Document):
         '''
         try:
             stats = {}
-            stats['points'] = self.points
-
             test_history = MockTest.objects(user=str(self.id))
-            no_of_correct_answers = 0
-            for test in test_history:
-                no_of_correct_answers += test.score
+            if len(test_history) != 0:
+                no_of_correct_answers = 0
+                for test in test_history:
+                    no_of_correct_answers += test.score
 
-            stats['correct_answers'] = no_of_correct_answers
-            total_questions_answered = float(len(test_history)*50)
-            stats['accuracy'] = no_of_correct_answers / total_questions_answered
+                stats['correct_answers'] = no_of_correct_answers
+                total_questions_answered = float(len(test_history)*50)
+                stats['accuracy'] = no_of_correct_answers / total_questions_answered
+            else:
+                stats['correct_answers'] = 0
+                stats['accuracy'] = 0
+
+            stats['points'] = 0 #The user may receive points without completing a test. We're good people
+
             return stats
         except Exception,e:
             print e

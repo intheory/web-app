@@ -15,4 +15,4 @@ class ViewDashBoardHandler(base.BaseHandler):
         self.base_render("dashboard.html", user=u, 
         								   correct_answers=stats['correct_answers'], 
         								   points=stats['points'],
-        								   accuracy="{0:.2f}".format(stats['accuracy']))
+        								   accuracy="{0:.1f}".format(stats['accuracy']))

@@ -38,26 +38,29 @@ class MockTest(Document):
     answers = ListField(EmbeddedDocumentField(TestAnswer), required=True, default=list)
     score = IntField(required=True, default=0)
     cursor = IntField(required=True, default=0) #Indicates which question is currently viewed
+    is_completed = BooleanField(required=True, default=False)
 
     def calculate_score(self):
         '''
         Calculates the test score based on user's answers
         '''
+        #Put all correct answers in a list
         correct_answers = []
-        #Fetch the question in hand and the correct answers
         for question in self.questions:
             correct_answers.append([int(answer) for answer in question.answer])                
 
+        #Put all user's answers in a list
         user_answers = []
         for user_answer in self.answers:
             user_answers.append([int(answer) for answer in user_answer.selected_answers])
 
+        #Check if user answered correctly by looking at the intersection of correct answers and user answers
         for i, correct_answer in enumerate(correct_answers):                
-            #Check if user answered correctly.
             user_answer = user_answers[i]
             inter = set(user_answer).intersection(correct_answer)
             if len(inter) == len(correct_answer): 
                 self.score += 1
+        self.is_completed = True
         self.save()
 
 class HazardPerceptionClip(Document):

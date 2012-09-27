@@ -3,6 +3,25 @@
  * 
  * @author l </a>
  */
+
+   $(document).ready(function () {
+        if ($('.hidden').length != 0){ //if there is an unfinished test
+          $("#dim").fadeIn();
+          var tmpl = $("#existing-test-info-template").tmpl();
+          IT.popup.show(tmpl);
+      }
+  });
+
+ $(".notify-blurb-close-btn, #carry-on-btn").live("click", function() {
+    $("#dim").fadeOut();
+    IT.popup.close();
+ });
+
+  $("#create-new-btn").live("click", function() {
+    
+  });
+
+
     // =============================== Listeners =============================== //
 
     $("td.choice").live("click", function() {

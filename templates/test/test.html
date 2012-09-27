@@ -5,7 +5,21 @@
 		{% set test=kwargs['test'] %}  
 		{% module Question(test) %}
     </div>
+    <div id="dim">
+    </div>
 {% end %}
 
 {% block jquery_templates %}
+	<script id="existing-test-info-template" type="text/x-jquery/tmpl">
+		<div class="info-popup clearfix">
+			<h1>Hey! You didn&#39;t finish the last test.</h1>
+			Do you want to carry on?
+			<br><br>
+			<div class="popup-actions">
+				<button id="carry-on-btn" class="span1 btn btn-primary">Yes</button>
+				<button id="create-new-btn" class="span1 btn btn-primary">No</button>
+
+			</div>
+		</div>
+	</script>
 {% end %}
