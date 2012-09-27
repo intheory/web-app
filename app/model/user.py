@@ -80,6 +80,7 @@ class FacebookUser(User):
     friends = ListField(EmbeddedDocumentField(UserFriend), default=list)
     fb_id = StringField(required=True)
     access_token = StringField(required=True)
+    profile_pic = StringField()
 
 class CachedUser(EmbeddedDocument):
     id = ObjectIdField(required=True)
