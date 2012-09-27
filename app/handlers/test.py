@@ -7,7 +7,7 @@ from mongoengine.queryset import DoesNotExist
 
 TEST_SIZE = 5 
 
-class GetNewTestHandler(base.BaseHandler):
+class CreateNewTestHandler(base.BaseHandler):
     '''
     Renders a test page.    
     '''
@@ -37,6 +37,41 @@ class GetNewTestHandler(base.BaseHandler):
             self.base_render("test/test.html", test=mt)
         except Exception, e:
             self.log.warning(str(e))
+
+class GetNewTestHandler(base.BaseHandler):
+    '''
+    Renders a new test page after the user decided to dismiss their last unfinished test.    
+    '''
+    def on_get(self):
+        try:
+            #Delete the old test
+            tid = self.get_argument("tid", None)
+            t = MockTest.objects(id=tid).get()
+            t.delete()
+            #Create new mock test object
+            mt = MockTest()
+            mt.user = str(self.current_user.id)
+            questions = [question for question in Question.objects]
+            shuffle(questions)
+            mt.questions = questions[:TEST_SIZE]
+            mt.score = 0
+
+            #Initialize the answer list
+            for q in mt.questions:
+                ta = TestAnswer()
+                ta.qid = str(q.id)
+                ta.selected_answers = [] 
+                mt.answers.append(ta)
+
+            mt.cursor = 0
+            mt.save()
+            return (mt,)
+        except Exception, e:
+            self.log.warning(str(e))
+
+    def on_success(self, mt):
+        self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=mt)})  
+        self.write(self.xhr_response) 
 
 class GetNextQuestionHandler(base.BaseHandler):
     '''

@@ -22,7 +22,8 @@ url_patterns = [
     ("/learn/hazard/evaluate", learn.EvaluateHazardPerceptionHandler),
     ("/learn/hazard", learn.GetHazardPerceptionHandler),    
     ###########Mock test hanlders##############
-    ("/test/new", test.GetNewTestHandler),
+    ("/test/new", test.CreateNewTestHandler),
+    ("/test/get-new", test.GetNewTestHandler),
     ("/test/get-next", test.GetNextQuestionHandler),
     ("/test/get-previous", test.GetPreviousQuestionHandler),
     ###########Backend hanlders##############

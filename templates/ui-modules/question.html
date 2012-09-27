@@ -13,7 +13,7 @@
 			{% set selected_answers = [] %}
 		{% end %}
 
-		{% if not test.is_completed %}
+		{% if not test.is_completed and test.cursor!=0 %}
 			<div class="hidden"></div>
 		{% end %}
 

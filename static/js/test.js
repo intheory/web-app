@@ -18,7 +18,18 @@
  });
 
   $("#create-new-btn").live("click", function() {
-    
+    var tid = $("li.next").attr("tid");
+    IT.get("/test/get-new", {
+                 tid: tid,
+         }, true, function(response) 
+         {  
+            var hu = $(".hero-unit")
+            var parent = hu.parent();
+            hu.empty().remove()
+            parent.html(response.html);
+            $("#dim").fadeOut();
+            IT.popup.close();
+          });
   });
 
 
