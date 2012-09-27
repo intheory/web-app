@@ -1,4 +1,5 @@
 from mongoengine import Document, IntField, ObjectIdField, StringField, EmbeddedDocument, EmbeddedDocumentField, ListField, BooleanField
+from app.model.content import MockTest
 # ============================ User ================================ #
 
 class UserFriend(EmbeddedDocument):
@@ -27,6 +28,40 @@ class User(Document):
     def update_points(self, score):
         self.points += score * 100
         self.save()
+
+    def get_user_stats(self):
+        '''
+        calculates user statts and returns a dict.
+        '''
+        try:
+            stats = {}
+            stats['points'] = self.points
+
+            test_history = MockTest.objects(user=str(self.id))
+            no_of_correct_answers = 0
+            for test in test_history:
+                no_of_correct_answers += test.score
+
+            stats['correct_answers'] = no_of_correct_answers
+            total_questions_answered = float(len(test_history)*50)
+            stats['accuracy'] = no_of_correct_answers / total_questions_answered
+            return stats
+        except Exception,e:
+            print e
+
+    def get_points(self):
+        return self.points
+
+    def get_correct_answers(self):
+
+        return no_of_correct_answers
+
+    def get_correct_answers(self):
+        test_history = MockTest.objects(user=str(self.id))
+        no_of_correct_answers = 0
+        for test in test_history:
+            no_of_correct_answers += test.score
+        return no_of_correct_answers
 
 class TwitterUser(User):
     meta = {'allow_inheritance': True}

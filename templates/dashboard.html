@@ -4,7 +4,7 @@
  <div class="container">
 <div class="landing">
 <div class="row">
-  <div class="span5"><br /><div class="landingdescrip"><h1>Welcome David!</h1>
+  <div class="span5"><br /><div class="landingdescrip"><h1>Welcome {{current_user.first_name}}!</h1>
       <p>Good to see you back! You're <b>14%</b> of the way through learning for the theory test and should be ready to pass in about <b>8 days</b>.</p>
      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>14%</b> <p><div class="progress progress-striped">
   <div class="bar" style="width: 20%;"></div>
@@ -18,14 +18,14 @@
   <br /><div class="span6">  <div class="row">
       <div class="span3"><center><ul class="bigstat">
           <li class="bigstat">
-            <h1>246</h1>
+            <h1>{{kwargs['correct_answers']}}</h1>
             <div class="bigstatUnderline"></div>
             <h2>Correct Answers</h2>
           </li><br /><br /><br />
            <li class="bigstat">
-            <h1>52</h1>
+            <h1>{{kwargs['points']}}</h1>
             <div class="bigstatUnderline"></div>
-            <h2>Best Streak</h2>
+            <h2>Total points</h2>
           </li>
         </ul></center></div>
       <div class="span3"><center> <ul class="bigstat"><li class="bigstat">
@@ -34,7 +34,7 @@
             <h2>Badges Awarded</h2>
           </li><br /><br /><br />
           <li class="bigstat">
-            <h1>82%</h1>
+            <h1>{{kwargs['accuracy']}}%</h1>
             <div class="bigstatUnderline"></div>
             <h2>Accuracy</h2>
           </li>
