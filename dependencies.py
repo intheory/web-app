@@ -7,7 +7,7 @@ css_deps = ("css", "css",
             [
              ("/landing/*", ["landing.css"]),
              ("/test", ["questions.css", "test.css"]),
-             ("/learn/*", ["learn.css", "questions.css", "nuggets.css"]),			
+             ("/learn/*", ["learn.css", "nuggets.css"]),			
              ("/", ["home.css"]),	
             ])
 

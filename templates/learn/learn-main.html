@@ -1,43 +1,47 @@
 {% extends "learn-base.html" %}
   
 {% block focus %}
-<div class="hero-unit">
-<div class="hero-unit1">
-    <img src="{{static_url('imgs/lheader.png')}}" alt="lheader.png"/>
-	</br></br>     
-	{% if len(kwargs['sections']) != 0 %}
-	<table class="table table-hover">
-		<thead>
-		<tr>					
-		</tr>
-		</thead>
-		<tbody>	
-		{%for i, section in enumerate(kwargs['sections']) %}				
-			<tr>
-				<td style="width: 5%; padding-top: 13px;"><center><center><span class="badge badge-info">{{i+1}}</span></center></td>
-				<td style="width: 40%; padding-top: 14px;">{{section.title}}</td>
-				<td style="width: 35%; padding-top: 15px;"><div class="progress progress-striped progress-success">
-				  <div class="bar" style="width: 96%;"></div>
-				</div></td>
-				<td style="width: 10%"><center><a class="btn btn-primary " href="/learn/section?sid={{section.id}}">Learn</a></center></td>
-				<td style="width: 10%"><center><a class="btn btn-success" href="/test/new">Practice</a></center></td>
-			</tr>		
-		{% end %}
-		<tr>
-			<td style="width: 5%; padding-top: 13px;"><center><center><span class="badge badge-info">3</span></center></td>
-			<td style="width: 40%; padding-top: 14px;">Hazard Perception Clips</td>
-			<td style="width: 35%; padding-top: 15px;"><div class="progress progress-striped progress-success">
-			  <div class="bar" style="width: 96%;"></div>
-			</div></td>
-			<td style="width: 10%"><a class="btn btn-success" href="/learn/hazard">Practice</a></center></td>
-		</tr>
-		</tbody>
-		</table>
-		{% else %}
-			<h2>No learning material found.</h2>
-		{% end %}
+
+<div class="landing">
+	<div class="row">
+  		<div class="span12"><br />
+  			<div class="mainborder">
+  				<h1>Learn Theory</h1>
+  				<div class="maincontent">
+  					{% if len(kwargs['sections']) != 0 %}
+					<table class="table table-striped">
+						<tbody>
+						{%for i, section in enumerate(kwargs['sections']) %}
+					    <tr>
+							<td class="section-no"><center><span class="badge badge-info">{{i}}</span></center></td>
+							<td class="section-title" >{{section.title}}</td>
+							<td class="section-progress"><div class="progress progress-striped progress-success">
+							  <div class="bar" style="width: 96%;"></div>
+							</div></td>
+							<td class="section-learn-btn"><center><a class="btn btn-primary " href="/learn/section?sid={{section.id}}">Learn</a></center></td>
+							<td class="section-practice-btn"><center><a class="btn btn-success" href="/test/new">Practice</a></center></td>
+						</tr>
+						{% end %}
+						<tr>
+							<td class="section-no"><center><span class="badge badge-info">2</span></center></td>
+							<td class="section-title">Hazard Perception Clips</td>
+							<td class="section-progress"><div class="progress progress-striped progress-warning">
+							  <div class="bar" style="width: 54%;"></div>
+							</div></td>
+							<td class="section-learn-btn"><center><a class="btn btn-primary " href="/learn/hazard">Learn</a></center></td>
+							<td class="section-practice-btn"><center><a class="btn btn-success " href="/learn/hazard">Practice</a></center></td>
+						</tr>
+					  </tbody>
+					</table>
+			    	{% else %}
+						<h2>No learning material found.</h2>
+					{% end %}
+     			</div>
+           </div>
+        </div>
+    </div>
 </div>
-</div>
+     
 {% end%}
 
 
