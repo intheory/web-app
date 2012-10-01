@@ -54,21 +54,6 @@
       }
     });
 
-    $("#evaluate-test").click(function() {
-        var clicks = $(".click-counter").children();
-        var click_times = [];
-        var cid = $(this).attr("cid");
-        clicks.each(function(index) {
-            click_times.push($(clicks[index]).attr("time"));
-        });   
-        IT.post("/learn/hazard/evaluate", {
-                 answers : JSON.stringify(click_times),
-                 cid: cid
-         }, true, function(response) 
-         {  
-            console.log("Score:"+response.score)
-          });       
-    });
 
     $(".thumbnail").click(function() {
       var clipPath = $(this).attr("clipPath"), 
