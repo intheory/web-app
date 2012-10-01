@@ -97,8 +97,7 @@ class GetNextQuestionHandler(base.BaseHandler):
 
             return (mt,)
         except Exception, e:
-            print e
-            #self.log.warning("Error while evaluating answers" + str(e))
+            self.log.warning("Error while fetching new question" + str(e))
 
     def on_success(self, mt):
         if mt.cursor < len(mt.questions): #is the test finished?
@@ -108,7 +107,7 @@ class GetNextQuestionHandler(base.BaseHandler):
             mt.calculate_score()
             #Update user's points
             self.current_user.update_points(mt.score)
-            self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Congratulations!", no_questions=len(mt.questions), score=mt.score, learn=False)})
+            self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Test complete!", no_questions=len(mt.questions), score=mt.score, learn=False)})
         self.write(self.xhr_response) 
 
 class GetPreviousQuestionHandler(base.BaseHandler):

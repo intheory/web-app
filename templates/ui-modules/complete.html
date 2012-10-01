@@ -1,54 +1,54 @@
-<center><div class="hero-unit">
-  <div class="hero-unit1">
-      <div class="image123"><img alt="" src="{{static_url('imgs/questionbg.png')}}" />
-      <div class="text">
-          <p><font color="#FFFFFF"><b>{{message}}</b></font></p>
-      </div>
-      </div>
-      </br></br></br></br></br>
-      <div class="progress progress-striped">
-      <div class="bar bar-success progress-striped" style="width: 100%;">
-      </div>
-      </div>
+<div class="row">
+<div class="span3">
+</div>
+  <div class="span6"><br />
+    <div class="mainborder">
+      <center>
+        <h2>{{message}}</h2>
+      </center>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td><h4>Questions Answered:</h4></td>
+            <td><h4>{{no_questions}}</h4></td>
+          </tr>
+            <tr>
+            <td><h4>Correct Answers:</h4></td>
+            <td><h4>{{score}}</h4></td>
+          </tr>
+           
+            <tr>
+            <td><h4>Accuracy:</h4></td>
+            <td>
+              <h4>
+                {% if no_questions > 0 %}
+                  {{100*score/no_questions}}%
+                {% else %}
+                  0%
+                {% end %}
+              </h4>
+            </td>
+          </tr>
+          <tr>
+            <td><h4>Points:</h4></td>
+            <td><h4>{{100*score}}</h4></td>
+          </tr>
+          <tr>
+          <td> </td>
+          <td> </td>
 
-      <table class="table table-striped">
-      <thead>
-      <tr>
-
-      </tr>
-      </thead>
-      <tbody>
-       
-      <tr>
-      <td style="width: 80%; padding-top: 10px; text-align:left;"><h4> Questions Answered:</h4></td>
-      <td style="width: 40%; padding-top: 0px;"><h3><center>{{no_questions}}</center></h3></td>
-      </tr>
-      <tr>
-      <td style="padding-top: 10px;"><h4> Correct Answers:</h4></td>
-      <td style="padding-top: 0px;"><h3><center>{{score}}</center></h3></td>
-      </tr>
-      <tr>
-      <td style="padding-top: 10px;"><h4> Accuracy:</h4></td>
-      <td style="padding-top: 0px;"><h3><center>
-        {% if no_questions > 0 %}
-          {{100*score/no_questions}}%
-        {% else %}
-          0%
-        {% end %}
-      </center></h3></td>
-      </tr>
-      <tr>
-      <td style="padding-top: 10px;"><h4> Points Earned:</h4></td>
-      <td style="padding-top: 0px;"><h3><center>{{100*score}}</center></h3></td>
-      </tbody>
+          </tr>
+        </tbody>
       </table>
-    </div>      
-    <br>  
-    {% if not learn %}       
-        <a href="/dashboard"><button class="btn btn-large btn-primary" type="button">Continue To Dashboard</button></a>
-    {% else %}
-        <a href="/test/new"><button class="btn btn-large btn-primary" type="button">Take the test</button></a>
-    {% end %}
+
+      <center>
+        {% if not learn %}       
+            <a href="/dashboard"><button class="btn btn-large btn-primary" type="button">Continue To Dashboard</button></a>
+        {% else %}
+            <a href="/test/new"><button class="btn btn-large btn-primary" type="button">Take the test</button></a>
+        {% end %}
+      </center>
+      <br />
+    </div>
   </div>
- </center>
 </div>

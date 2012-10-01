@@ -4,9 +4,9 @@
  * @author l </a>
  */
  
-  window.onbeforeunload =   function(e) {
+/*  window.onbeforeunload =   function(e) {
     return "Your test progress will be erased?"; 
-  }
+  }*/
 
   $(document).ready(function () {
         if ($('.hidden').length != 0){ //if there is an unfinished test
@@ -27,7 +27,7 @@
                  tid: tid,
          }, true, function(response) 
          {  
-            $(".mainborder").replaceWith(response.html);
+            $(".landing").empty().html(response.html);
             $("#dim").fadeOut();
             IT.popup.close();
           });
@@ -76,7 +76,7 @@
                  cursor: cursor
   	     }, true, function(response) 
   	     {  
-            $(".mainborder").replaceWith(response.html);
+           $(".landing").empty().html(response.html);
           });    	
       }
       else{
@@ -96,6 +96,6 @@
                  cursor: cursor
          }, true, function(response) 
          {  
-            $(".mainborder").replaceWith(response.html);
+            $(".landing").empty().html(response.html);
           }); 
     });    

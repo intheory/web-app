@@ -3,11 +3,7 @@
 {% block content %}
 	{% set test=kwargs['test'] %}
 	<div class="landing">
-		<div class="row">
-			<div class="span12"><br />
-				{% module Question(test, kwargs['timed']) %}
-			</div>
-		</div>
+		{% module Question(test, kwargs['timed']) %}
 	</div>	
 {% end %}
 
