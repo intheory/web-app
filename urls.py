@@ -26,6 +26,7 @@ url_patterns = [
     ("/test/get-new", test.GetNewTestHandler),
     ("/test/get-next", test.GetNextQuestionHandler),
     ("/test/get-previous", test.GetPreviousQuestionHandler),
+    ("/test/delete", test.DeleteTestHandler),
     ###########Backend hanlders##############
     ("/admin/logs", admin.ViewLogsHandler),
     ("/admin/users/moderator", admin.MakeModeratorHandler),

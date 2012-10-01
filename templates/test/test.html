@@ -2,8 +2,8 @@
 
 {% block content %}
     <div class="container">
-		{% set test=kwargs['test'] %}  
-		{% module Question(test) %}
+		{% set test=kwargs['test'] %}
+		{% module Question(test, kwargs['timed']) %}
     </div>
     <div id="dim">
     </div>
