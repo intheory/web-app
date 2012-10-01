@@ -51,19 +51,67 @@
 
 			</tbody>
 			</table>
+
+		  	<ul class="pager">
+				{% if test.cursor != 0 %}
+				<li class="previous" cursor="{{test.cursor}}" tid="{{test.id}}">
+					<a href="#">&larr; Previous</a>
+				</li>
+				{% end %}
+				<li class="next" cursor="{{test.cursor}}" tid="{{test.id}}" remaining-answers="{{remaining_answers}}">
+					<a href="#">Next &rarr;</a>
+				</li>
+			</ul>
 	    {% else %}
-	    	Image
+	    	<div class="row">
+				<div class="span7">
+					<table class="table table-hover">
+					<thead>
+					<tr>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td style="width:5%;"><center><center><span class="badge badge-info">A</span></center></center></td>
+					<td class="choice first">Slow down before you reach the bend</td>
+					</tr>
+					<tr>
+					<td><center><span class="badge badge-info">B</span></center></td>
+					<td class="choice second">Gently apply your handbrake</td>
+					</tr>
+					<tr>
+					<td><center><span class="badge badge-info">C</span></center></td>
+					<td class="choice third">Coast into the bend</td>
+					</tr>
+					<tr>
+					<td><center><span class="badge badge-info">D</span></center></td>
+					<td class="choice fourth">Avoid sudden steering movements</td>
+					</tr>
+					</tbody>
+					</table>
+
+				  	<ul class="pager">
+						{% if test.cursor != 0 %}
+						<li class="previous" cursor="{{test.cursor}}" tid="{{test.id}}">
+							<a href="#">&larr; Previous</a>
+						</li>
+						{% end %}
+						<li class="next" cursor="{{test.cursor}}" tid="{{test.id}}" remaining-answers="{{remaining_answers}}">
+							<a href="#">Next &rarr;</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="span4">
+					<ul class="thumbnails">				           
+			            <li>
+			            	<a href="#" class="thumbnail"><img src="{{static_url('imgs/qimages.png')}}" alt=""></a>
+					    </li>
+					</ul>
+	            </div>
+	        </div>
 	    {% end %}
-	  	<ul class="pager">
-			{% if test.cursor != 0 %}
-			<li class="previous" cursor="{{test.cursor}}" tid="{{test.id}}">
-				<a href="#">&larr; Previous</a>
-			</li>
-			{% end %}
-			<li class="next" cursor="{{test.cursor}}" tid="{{test.id}}" remaining-answers="{{remaining_answers}}">
-				<a href="#">Next &rarr;</a>
-			</li>
-		</ul>
+
   
 	</div>
 
