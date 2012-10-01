@@ -21,11 +21,17 @@ border-radius: 5px;
 }
 
 .questiontitle h2{
-  padding-left:10px;}
+  padding-left:10px;
+}
 
 .statbox{
   padding-top:7px;
-  padding-left: 50px;}
+  padding-left: 50px;
+}
+
+.statbox h3{
+  margin: auto;
+}
 
   
   
