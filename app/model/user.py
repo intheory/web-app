@@ -26,7 +26,7 @@ class User(Document):
         #TODO: find where the user left off
 
     def update_points(self, score):
-        self.points += score * 100
+        self.points += score * 10
         self.save()
 
     def get_user_stats(self):

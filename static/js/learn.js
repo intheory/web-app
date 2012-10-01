@@ -103,7 +103,7 @@
                  cid: cid
          }, true, function(response) 
          {  
-            $(".mainborder").empty().html(response.html);
+            $(".landing").empty().html(response.html);
             $("#dim").fadeOut();
           });       
     }

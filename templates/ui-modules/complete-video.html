@@ -1,47 +1,56 @@
 {% set soln_clip = clip %}
 {% set solution_path = '/obj/video/' + soln_clip %}
-<center>
-<video class="video-small" autoplay='true' width='350' height='240' id='video-container'>
-  <source src="{{solution_path}}.mp4" type='video/mp4' />
-      <source src="{{solution_path}}.webm" type='video/webm' />
-      <object src="{{solution_path}}.mp4" width='350' height='240'>
-    <embed src="{{solution_path}}.swf" width='350' height='240' />
-    </object> 
-</video>
 
-<div class="progress progress-striped">
-  <div class="bar bar-success progress-striped" style="width: 100%;"></div>
+<div class="row">
+	<div class="span7"><br />
+	  	<div class="landingdescrip">
+	  		<h2>The Solution:</h2>
+	  		<video class="video-small" autoplay='true' width='350' height='240' id='video-container'>
+			  <source src="{{solution_path}}.mp4" type='video/mp4' />
+			      <source src="{{solution_path}}.webm" type='video/webm' />
+			      <object src="{{solution_path}}.mp4" width='350' height='240'>
+			    <embed src="{{solution_path}}.swf" width='350' height='240' />
+			    </object> 
+			</video>
+	    </div>
+	</div>
+
+  	<br />
+  	<div class="span5">  
+	  	<div class="landingdescrip">
+	 		<center>
+	 			<h2>Your Statistics</h2>
+	 		</center>
+			<table class="table">
+			<tbody>
+			<tr>
+			  	<td><h4>Score:</h4></td>
+			  	<td><h4>{{score}}</h4></td>
+			</tr>
+			 
+			<tr>
+			  	<td><h4>Accuracy:</h4></td>
+			  	<td><h4>{{accuracy}}%</h4></td>
+			</tr>
+			<tr>
+			    <td><h4>Points:</h4></td>
+			    <td><h4>{{10*score}}</h4></td>
+			</tr>
+			<tr>
+		   	    <td> </td>
+		        <td> </td>
+			</tr>
+			</tbody>
+			</table>
+
+	  		<center>
+				<a href="/learn/hazard"><button class="btn btn-large btn-primary" type="button">Go back to Hazard Perception clips</button></a>
+	  		</center>
+	  		<br />
+	    </div>
+	</div>
 </div>
 
-<table class="table table-striped">
-	<thead>
-	<tr>
 
-	</tr>
-	</thead>
-	<tbody>
-	 
-	<tr>
-	<td style="width: 80%; padding-top: 10px; text-align:left;"><h4> Your Score:</h4></td>
-	<td style="width: 40%; padding-top: 0px;"><h3><center>{{score}}</center></h3></td>
-	</div></td>
-	</tr>
-	<tr>
-	<td style="padding-top: 10px;"><h4> Accuracy:</h4></td>
-	<td style="padding-top: 0px;"><h3><center>{{accuracy}}%</center></h3></td>
-	</div></td>
-	</tr>
-	<tr>
-	<td style="padding-top: 10px;"><h4> Points:</h4></td>
-	<td style="padding-top: 0px;"><h3><center>{{100*score}}</center></h3></td>
-	</div></td>
-	</tr>
-	</tbody>
-</table>
-    
 
-<a href="/learn/hazard"><button class="btn btn-large btn-primary" type="button">Go back to Hazard Perception clips</button></a>
 
-</br>
-</br>
-</center>	
