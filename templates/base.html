@@ -57,7 +57,7 @@
           <a class="brand pull-left" href="/">In<b>Theory</b></a>
           <div class="nav-collapse collapse pull-right">
             {% if not current_user%}
-               <a href="/login"><button type="submit" class="btn btn-success">Sign in</button></a>
+               <a href="/login"><button type="submit" class="btn btn-success signin-btn">Sign in</button></a>
              {% else %}
                 <ul class="nav">
                   {% if current_user['moderator'] %}
@@ -90,9 +90,28 @@
 
 {% end %}
 
-{% block content %}
+<div class="container">
 
-{% end %}
+  {% block content %}
+
+  {% end %}
+
+  {% block footer %}
+  <div class="footer fixed">
+    <font color="#FFFFFF" size="2px">  
+      <div class="span6">
+        <p>InTheory Media Limited © 2012</p>
+      </div>
+      <div class="span6">
+        <p class="alignright"><a href="/landing/about">About Us</a> | <a  href="/landing/terms">Terms & Conditions</a> | <a href="/landing/privacy">Privacy Policy</a> | Support </p>
+      </div> 
+    </font>      
+    <div style="clear:both"></div>
+    <br/>
+  </div>
+  {% end %}
+
+</div>
 
 {% raw xsrf_form_html() %}
 {% block scripts %}
@@ -107,21 +126,6 @@
 {% for js in kwargs['js_deps'] %}
 	<script src="{{static_url(js)}}"></script>
 {% end %}
-
-<div class="container">
-   <div class="footer">
-    <font color="#FFFFFF" size="2px">  
-      <div class="span6">
-        <p>InTheory Media Limited © 2012</p>
-      </div>
-      <div class="span6">
-        <p class="alignright"><a href="/landing/about">About Us</a> | <a  href="/landing/terms">Terms & Conditions</a> | <a href="/landing/privacy">Privacy Policy</a> | Support </p>
-      </div> 
-    </font>      
-    <div style="clear:both"></div>
-    <br/>
-  </div>
-</div>
 
 {% block jquery_templates %}
 

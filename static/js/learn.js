@@ -85,7 +85,7 @@
                       <div class='click-counter'>   \
                       </div>";
       
-      $(".hero-unit1").empty().append(videoHtml);
+      $(".mainborder").empty().append(videoHtml);
       $("#dim").css("height", $(document).height()).fadeIn(); 
       $('#video-container').bind('ended',onEnd);
     });
@@ -103,7 +103,7 @@
                  cid: cid
          }, true, function(response) 
          {  
-            $(".hero-unit1").empty().html(response.html);
+            $(".mainborder").empty().html(response.html);
             $("#dim").fadeOut();
           });       
     }
