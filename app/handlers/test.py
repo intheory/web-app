@@ -16,7 +16,7 @@ class CreateNewTestHandler(base.BaseHandler):
         #Create new mock test object
         try:
             mt = MockTest.objects(user=str(self.current_user.id), is_completed=False).get()
-            self.base_render("test/test.html", test=mt)
+            self.base_render("test/test.html", test=mt, timed=True)
         except DoesNotExist, e:
             mt = MockTest()
             mt.user = str(self.current_user.id)
@@ -34,7 +34,7 @@ class CreateNewTestHandler(base.BaseHandler):
 
             mt.cursor = 0
             mt.save()
-            self.base_render("test/test.html", test=mt)
+            self.base_render("test/test.html", test=mt, timed=True)
         except Exception, e:
             self.log.warning(str(e))
 
@@ -128,4 +128,18 @@ class GetPreviousQuestionHandler(base.BaseHandler):
             
     def on_success(self, mt):
         self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=mt)})  
+        self.write(self.xhr_response)
+
+class DeleteTestHandler(base.BaseHandler):
+    '''
+    Deletes a test from the db. This happens when the user exits the browser
+    before finishing a test.   
+    '''
+    @tornado.web.authenticated
+    def on_post(self):
+        tid = self.get_argument("tid", None)
+        print tid
+        return
+        
+    def on_success(self):
         self.write(self.xhr_response)

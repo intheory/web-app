@@ -3,6 +3,21 @@
  * 
  * @author l </a>
  */
+ 
+  window.onbeforeunload =   function(e) {
+    return "Your test progress will be erased?"; 
+  }
+
+
+/*  $(window).unload( function () { 
+    IT.post("/test/delete", {
+         tid: tid,
+    }, true, function(response) 
+    {  
+      console.log("sadas");
+    });
+  });*/
+
 
    $(document).ready(function () {
         if ($('.hidden').length != 0){ //if there is an unfinished test
