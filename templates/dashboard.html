@@ -1,54 +1,72 @@
 {% extends "base.html" %}
 
 {% block content %}
- <div class="container">
 <div class="landing">
-<div class="row">
-  <div class="span5"><br /><div class="landingdescrip"><h1>Welcome {{current_user.first_name}}!</h1>
-      <p>Good to see you back! You're <b>14%</b> of the way through learning for the theory test and should be ready to pass in about <b>8 days</b>.</p>
-     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>14%</b> <p><div class="progress progress-striped">
-  <div class="bar" style="width: 20%;"></div>
-</div></p>
-     <center> <p>  <button class="btn btn-large btn-success" type="button">Learn</button>&nbsp;&nbsp;&nbsp;
-           <button class="btn btn-large btn-danger" type="button">Practice</button></p></center></div>
+  <div class="row">
+    <div class="span5"><br />
+      <div class="landingdescrip">
+        <h1>Welcome {{current_user.first_name}}!</h1>
+        <p>
+          Good to see you back! You're <b>14%</b> of the way through learning for the theory test and should be ready to pass in about <b>8 days</b>.
+        </p>
+        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>14%</b> 
+        <p>
+          <div class="progress progress-striped">
+            <div class="bar" style="width: 20%;">
+            </div>
+          </div>
+        </p>
+        <center> 
+          <p> 
+            <a href="/learn/main"> <button class="btn btn-large btn-success" type="button">Learn</button></a>&nbsp;&nbsp;&nbsp;
+            <a href="/learn/main"><button class="btn btn-large btn-danger" type="button">Practice</button>
+          </p>
+        </center>
+      </div>
+    </div>
 
-</div>
-
-<div class="span1"></div>
-  <br /><div class="span6">  <div class="row">
-      <div class="span3"><center><ul class="bigstat">
-          <li class="bigstat">
-            <h1>{{kwargs['correct_answers']}}</h1>
-            <div class="bigstatUnderline"></div>
-            <h2>Correct Answers</h2>
-          </li><br /><br /><br />
-           <li class="bigstat">
-            <h1>{{kwargs['points']}}</h1>
-            <div class="bigstatUnderline"></div>
-            <h2>Total points</h2>
-          </li>
-        </ul></center>
+    <div class="span1">
+    </div>
+    <br />
+    <div class="span6">
+      <div class="row">
+        <div class="span3">
+          <center>
+            <ul class="bigstat">
+              <li class="bigstat">
+                <h1>{{kwargs['correct_answers']}}</h1>
+                <div class="bigstatUnderline"></div>
+                <h2>Correct Answers</h2>
+              </li><br /><br /><br />
+              <li class="bigstat">
+                <h1>{{kwargs['points']}}</h1>
+                <div class="bigstatUnderline"></div>
+                <h2>Total points</h2>
+              </li>
+            </ul>
+          </center>
+        </div>
+        <div class="span3">
+          <center> 
+            <ul class="bigstat">
+              <li class="bigstat">
+                <h1>8</h1>
+                <div class="bigstatUnderline"></div>
+                <h2>Badges Awarded</h2>
+              </li>
+              <br/><br/><br/>
+              <li class="bigstat">
+                <h1>{{kwargs['accuracy']}}%</h1>
+                <div class="bigstatUnderline"></div>
+                <h2>Accuracy</h2>
+              </li>
+            </ul>
+          </center>
+        </div>
       </div>
-      <div class="span3"><center> <ul class="bigstat">
-        <li class="bigstat">
-            <h1>8</h1>
-            <div class="bigstatUnderline"></div>
-            <h2>Badges Awarded</h2>
-          </li>
-          <br/><br/><br/>
-          <li class="bigstat">
-            <h1>{{kwargs['accuracy']}}%</h1>
-            <div class="bigstatUnderline"></div>
-            <h2>Accuracy</h2>
-          </li>
-          </ul></center>
-      </div>
-      </div>
-    
     </div>
 </div>
-      
-    </div> <!-- /container -->
+
 {% end%}
 
 {% block jquery_templates %}
