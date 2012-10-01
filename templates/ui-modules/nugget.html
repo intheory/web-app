@@ -1,37 +1,48 @@
-<div class="hero-unit">
-  <div class="hero-unit1">
-    <div class="image123">
-  		<img alt="" src="{{static_url('imgs/questionbg.png')}}" />
-  			<div id="nugget-title-container" class="text">
-    			<p><font color="#FFFFFF"><b>{{nugget.title}} </b></font></p>
-  			</div>
-	</div>
-	</br></br></br></br></br>
-	<div class="progress progress-striped">
-	  <div class="bar bar-success progress-striped" style="width: {{100*cursor/section_length}}%;"></div>
-	  <div class="bar bar-inactive progress-striped" style="width: {{100-100*cursor/section_length}}%;"></div>
-	</div>
-	<div class="columnA pull-left">
-	  <img alt="" src="/obj/img/{{nugget.img}}" />
-	</div>
+<div class="landing">
+	<div class="row">
+  		<div class="span12"><br />
+  			<div class="mainborder">
+  				<div class="row">
+  					<div class="span8">
+  						<div class="nuggettitle">
+  							<h2>{{nugget.title}}.</h2>
+  						</div>
+  					</div>
+  					<div class="span2 pull-right">
+  						<div class="statbox">
+  							<h3><center>{{cursor}} / {{section_length}}</center></h3>
+  						</div>
+  					</div>
+  				</div>
 
-	<div class="columnB pull-right">
-	        <div  class="learn">
-	       		<div id="nugget-content-container">{% raw nugget.content %}
-	       		</div>
-			</div></br>
-			<center><a cursor="{{cursor}}" sid="{{section.id}}" id="previous-nugget-btn"><button class="btn btn-primary" type="button"><i class="icon-arrow-left icon-white"></i> Previous</button></a>&nbsp;&nbsp;&nbsp;
-			<a cursor="{{cursor}}" sid="{{section.id}}" id="next-nugget-btn"><button class="btn btn-primary" type="button">&nbsp;&nbsp;&nbsp;Next <i class="icon-arrow-right icon-white"></i>&nbsp;&nbsp;&nbsp;</button></a>&nbsp;&nbsp;&nbsp;&nbsp;</center>
-	</div>
-  
-	</br></br></br></></br>
-	</br></br></br></></br>
-	</br></br></br></></br>
-	</br></br></br></></br>
-	</br>
+  				<div class="maincontent">
+					<div class="row">
+						<div class="span7">
+					    	<div  class="learn">
+					     		<p>{% raw nugget.content %}</p>
+					     	</div>
 
-	</br>
-	</br>           
-	</br>
-  </div>
+				            <ul class="pager">
+								<li class="previous">
+									<a cursor="{{cursor}}" sid="{{section.id}}" id="previous-nugget-btn">← Previous</a>
+								</li>
+								<li class="next" cursor="0" tid="5065c16f8e4c852a5f900e25" remaining-answers="2">
+									<a cursor="{{cursor}}" sid="{{section.id}}" id="next-nugget-btn">Next →</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="span4">
+							<ul class="thumbnails">							           
+					            <li>
+					            	<a href="#" class="thumbnail"><img src="/obj/img/{{nugget.img}}" alt=""></a>
+							    </li>
+					        </ul>
+			            </div>
+				    </div>
+					     
+	            </div>
+			</div>
+		</div>
+	</div>
 </div>

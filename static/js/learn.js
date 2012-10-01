@@ -12,10 +12,7 @@
                cursor: cursor
         }, true, function(response) 
         {       
-            var hu = $(".hero-unit");
-            var parent = hu.parent();
-            hu.empty().remove()
-            parent.html(response.html);            
+          $(".landing").empty().html(response.html);            
         });
     });
 
@@ -27,10 +24,7 @@
                cursor: cursor
         }, true, function(response) 
         {   
-            var hu = $(".hero-unit");
-            var parent = hu.parent();
-            hu.empty().remove()
-            parent.html(response.html);
+          $(".landing").empty().html(response.html);            
         });
     });
 
