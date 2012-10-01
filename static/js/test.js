@@ -8,18 +8,7 @@
     return "Your test progress will be erased?"; 
   }
 
-
-/*  $(window).unload( function () { 
-    IT.post("/test/delete", {
-         tid: tid,
-    }, true, function(response) 
-    {  
-      console.log("sadas");
-    });
-  });*/
-
-
-   $(document).ready(function () {
+  $(document).ready(function () {
         if ($('.hidden').length != 0){ //if there is an unfinished test
           $("#dim").fadeIn();
           var tmpl = $("#existing-test-info-template").tmpl();
@@ -38,10 +27,7 @@
                  tid: tid,
          }, true, function(response) 
          {  
-            var hu = $(".hero-unit")
-            var parent = hu.parent();
-            hu.empty().remove()
-            parent.html(response.html);
+            $(".mainborder").replaceWith(response.html);
             $("#dim").fadeOut();
             IT.popup.close();
           });
@@ -90,10 +76,7 @@
                  cursor: cursor
   	     }, true, function(response) 
   	     {  
-            var hu = $(".hero-unit")
-            var parent = hu.parent();
-            hu.empty().remove()
-            parent.html(response.html);
+            $(".mainborder").replaceWith(response.html);
           });    	
       }
       else{
@@ -113,9 +96,6 @@
                  cursor: cursor
          }, true, function(response) 
          {  
-            var hu = $(".hero-unit")
-            var parent = hu.parent();
-            hu.empty().remove()
-            parent.html(response.html);
+            $(".mainborder").replaceWith(response.html);
           }); 
     });    

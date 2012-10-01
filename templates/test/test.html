@@ -1,12 +1,14 @@
 {% extends "../base.html" %}
 
 {% block content %}
-    <div class="container">
-		{% set test=kwargs['test'] %}
-		{% module Question(test, kwargs['timed']) %}
-    </div>
-    <div id="dim">
-    </div>
+	{% set test=kwargs['test'] %}
+	<div class="landing">
+		<div class="row">
+			<div class="span12"><br />
+				{% module Question(test, kwargs['timed']) %}
+			</div>
+		</div>
+	</div>	
 {% end %}
 
 {% block jquery_templates %}
