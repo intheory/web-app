@@ -1,5 +1,5 @@
 from mongoengine import Document, DictField, IntField, ObjectIdField, StringField, EmbeddedDocument, EmbeddedDocumentField, ListField, BooleanField, ReferenceField
-from app.model.content import MockTest, Section
+from app.model.content import Test, Section
 
 # ============================ User ================================ #
 
@@ -46,7 +46,7 @@ class User(Document):
         '''
         try:
             stats = {}
-            test_history = MockTest.objects(user=str(self.id))
+            test_history = Test.objects(user=str(self.id))
             if len(test_history) != 0:
                 no_of_correct_answers = 0
                 for test in test_history:

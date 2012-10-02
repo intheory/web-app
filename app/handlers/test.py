@@ -1,7 +1,7 @@
 
 import tornado, tornado.escape
 from app.handlers import base
-from app.model.content import Section, Nugget, MockTest, Question, TestAnswer#!@UnresolvedImport
+from app.model.content import Section, Nugget, PractiseTest, MockTest, Test, Question, TestAnswer#!@UnresolvedImport
 from random import shuffle
 from mongoengine.queryset import DoesNotExist
 
@@ -9,32 +9,44 @@ TEST_SIZE = 5
 
 class CreateNewTestHandler(base.BaseHandler):
     '''
-    Renders a test page.    
+    Renders a test page. Note that if an argument is provided then that means that 
+    this request came from a practise page. In this case we create a practise test.    
     '''
     @tornado.web.authenticated
     def on_get(self):
+
+        #if an argument is passed then the test should be comprised of questions of a specific section
+        sid = self.get_argument("sid", None)
+
         #Create new mock test object
         try:
-            mt = MockTest.objects(user=str(self.current_user.id), is_completed=False).get()
-            self.base_render("test/test.html", test=mt, timed=True)
+            t = Test.objects(user=str(self.current_user.id), is_completed=False, cursor__ne=0).get()
+            self.base_render("test/test.html", test=t, timed=True)
         except DoesNotExist, e:
-            mt = MockTest()
-            mt.user = str(self.current_user.id)
-            questions = [question for question in Question.objects]
+
+            if sid:
+                t = PractiseTest()
+                questions = [question for question in Question.objects(sid=sid)] #Get questions related to that section
+            else:
+                t = MockTest()            
+                questions = [question for question in Question.objects]
+
+            t.user = str(self.current_user.id)
             shuffle(questions)
-            mt.questions = questions[:TEST_SIZE]
-            mt.score = 0
+            t.questions = questions[:TEST_SIZE]
+            t.score = 0
 
             #Initialize the answer list
-            for q in mt.questions:
+            for q in t.questions:
                 ta = TestAnswer()
                 ta.qid = str(q.id)
-                ta.selected_answers = [] 
-                mt.answers.append(ta)
+                ta.selected_answers = []
+                t.answers.append(ta)
 
-            mt.cursor = 0
-            mt.save()
-            self.base_render("test/test.html", test=mt, timed=True)
+            t.cursor = 0
+            t.save()
+
+            self.base_render("test/test.html", test=t, timed=True)
         except Exception, e:
             self.log.warning(str(e))
 
@@ -46,31 +58,31 @@ class GetNewTestHandler(base.BaseHandler):
         try:
             #Delete the old test
             tid = self.get_argument("tid", None)
-            t = MockTest.objects(id=tid).get()
+            t = Test.objects(id=tid).get()
             t.delete()
             #Create new mock test object
-            mt = MockTest()
-            mt.user = str(self.current_user.id)
+            m = Test()
+            t.user = str(self.current_user.id)
             questions = [question for question in Question.objects]
             shuffle(questions)
-            mt.questions = questions[:TEST_SIZE]
-            mt.score = 0
+            t.questions = questions[:TEST_SIZE]
+            t.score = 0
 
             #Initialize the answer list
-            for q in mt.questions:
+            for q in t.questions:
                 ta = TestAnswer()
                 ta.qid = str(q.id)
                 ta.selected_answers = [] 
-                mt.answers.append(ta)
+                t.answers.append(ta)
 
-            mt.cursor = 0
-            mt.save()
-            return (mt,)
+            t.cursor = 0
+            t.save()
+            return (t,)
         except Exception, e:
             self.log.warning(str(e))
 
-    def on_success(self, mt):
-        self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=mt)})  
+    def on_success(self, t):
+        self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t)})  
         self.write(self.xhr_response) 
 
 class GetNextQuestionHandler(base.BaseHandler):
@@ -87,27 +99,27 @@ class GetNextQuestionHandler(base.BaseHandler):
             cursor = self.get_argument("cursor", None)
 
             #Fetch the test object
-            mt = MockTest.objects(id=tid).get()
+            t = Test.objects(id=tid).get()
 
             #Save user answers
-            mt.answers[int(cursor)].selected_answers = answers
+            t.answers[int(cursor)].selected_answers = answers
 
-            mt.cursor += 1
-            mt.save()
+            t.cursor += 1
+            t.save()
 
-            return (mt,)
+            return (t,)
         except Exception, e:
-            self.log.warning("Error while fetching new question" + str(e))
+            self.log.warning("Error while fetching new question " + str(e))
 
-    def on_success(self, mt):
-        if mt.cursor < len(mt.questions): #is the test finished?
-            self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=mt)})  
+    def on_success(self, t):
+        if t.cursor < len(t.questions): #is the test finished?
+            self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t)})  
         else:
             #Calculate test score 
-            mt.calculate_score()
+            t.calculate_score()
             #Update user's points
-            self.current_user.update_points(mt.score)
-            self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Test complete!", no_questions=len(mt.questions), score=mt.score, learn=False)})
+            self.current_user.update_points(t.score)
+            self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Test complete!", no_questions=len(t.questions), score=t.score, learn=False)})
         self.write(self.xhr_response) 
 
 class GetPreviousQuestionHandler(base.BaseHandler):
@@ -118,15 +130,15 @@ class GetPreviousQuestionHandler(base.BaseHandler):
     def on_get(self):
         try:
             tid = self.get_argument("tid", None)
-            mt = MockTest.objects(id=tid).get()
-            mt.cursor -= 1
-            mt.save()
-            return (mt,)
+            t = Test.objects(id=tid).get()
+            t.cursor -= 1
+            t.save()
+            return (t,)
         except Exception,e:
             print e
             
-    def on_success(self, mt):
-        self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=mt)})  
+    def on_success(self, t):
+        self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t)})  
         self.write(self.xhr_response)
 
 class DeleteTestHandler(base.BaseHandler):

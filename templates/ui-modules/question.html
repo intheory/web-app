@@ -1,7 +1,7 @@
 
 {% set question = test.questions[test.cursor] %}
-{% set question_tags = ["A", "B", "C", "D"] %}
-{% set question_order = ["first", "second", "third", "fourth"] %}
+{% set question_tags = ["A", "B", "C", "D", "E", "F"] %}
+{% set question_order = ["first", "second", "third", "fourth", "fifth", "sixth"] %}
 {% set remaining_answers = len(question.answer) %}
 
 {% if len(test.answers) > test.cursor %}
@@ -11,7 +11,7 @@
 	{% set selected_answers = [] %}
 {% end %}
 
-{% if not test.is_completed and test.cursor!=0 %}
+{% if not test.is_completed %}
 	<div class="hidden"></div>
 {% end %}
 

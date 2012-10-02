@@ -9,6 +9,7 @@ class Question(Document):
     sid = StringField(required=True, default="")
     extract = StringField(required=True, default="")
     image = StringField(required=False)
+    question_number = StringField(required=True)
     
 class MiniQuizQuestion(Document):
     meta = {"collection":"MiniQuizQuestions"}
@@ -31,8 +32,8 @@ class TestAnswer(EmbeddedDocument):
     qid = StringField(required=True, default="")
     selected_answers = ListField(IntField(), default=list)
 
-class MockTest(Document):
-    meta = {"collection":"MockTests"}
+class Test(Document):
+    meta = {"collection":"Tests", 'allow_inheritance': True}
     user = StringField(required=True)
     questions = ListField(ReferenceField(Question), required=True, default=list)
     answers = ListField(EmbeddedDocumentField(TestAnswer), required=True, default=list)
@@ -62,6 +63,13 @@ class MockTest(Document):
                 self.score += 1
         self.is_completed = True
         self.save()
+
+class MockTest(Test):
+    pass
+    #In the future this test will have some different features than the Practise test
+
+class PractiseTest(Test):
+    pass
 
 
 class HazardPoint(EmbeddedDocument):
