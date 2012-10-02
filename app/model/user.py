@@ -1,5 +1,5 @@
 from mongoengine import Document, DictField, IntField, ObjectIdField, StringField, EmbeddedDocument, EmbeddedDocumentField, ListField, BooleanField, ReferenceField
-from app.model.content import MockTest
+from app.model.content import MockTest, Section
 
 # ============================ User ================================ #
 
@@ -78,6 +78,21 @@ class User(Document):
         for test in test_history:
             no_of_correct_answers += test.score
         return no_of_correct_answers
+
+    def get_overall_progress(self):
+        try:
+            number_nuggets = 0
+            sections = Section.objects
+            for section in sections:
+                number_nuggets += len(section.nuggets)
+
+            completed_nuggets = 0
+            for cursor in self.cursors.values():
+                completed_nuggets += cursor + 1
+
+            return 100*completed_nuggets/number_nuggets 
+        except Exception, e:
+            print e
 
 class TwitterUser(User):
     meta = {'allow_inheritance': True}
