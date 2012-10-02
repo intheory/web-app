@@ -88,7 +88,7 @@ class User(Document):
 
             completed_nuggets = 0
             for cursor in self.cursors.values():
-                completed_nuggets += cursor + 1
+                completed_nuggets += cursor + 1 #We need to add one cz the cursors start at 0
 
             return 100*completed_nuggets/number_nuggets 
         except Exception, e:

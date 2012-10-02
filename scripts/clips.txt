@@ -1,10 +1,8 @@
 /obj/video/
 clip1_a
 clip1_b
-5
-10
-15
-60
+43
+55
 end
 /obj/video/
 clip2_a
