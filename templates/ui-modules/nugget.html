@@ -1,4 +1,5 @@
-{% set nugget = section.nuggets[cursor] %}
+{% set c = cursor % (len(section.nuggets)-1) %}
+{% set nugget = section.nuggets[c] %}
 <div class="landing">
 	<div class="row">
   		<div class="span12"><br />
@@ -11,7 +12,7 @@
   					</div>
   					<div class="span2 pull-right">
   						<div class="statbox">
-  							<h3><center>{{cursor}} / {{section_length}}</center></h3>
+  							<h3><center>{{c+1}} / {{section_length}}</center></h3>
   						</div>
   					</div>
   				</div>
@@ -25,11 +26,13 @@
 					     	</div>
 
 				            <ul class="pager">
+				            	{% if c != 0 %}
 								<li class="previous">
-									<a cursor="{{cursor}}" sid="{{section.id}}" id="previous-nugget-btn">← Previous</a>
+									<a cursor="{{c}}" sid="{{section.id}}" id="previous-nugget-btn">← Previous</a>
 								</li>
-								<li class="next" cursor="0" tid="5065c16f8e4c852a5f900e25" remaining-answers="2">
-									<a cursor="{{cursor}}" sid="{{section.id}}" id="next-nugget-btn">Next →</a>
+								{% end %}
+								<li class="next">
+									<a cursor="{{c}}" sid="{{section.id}}" id="next-nugget-btn">Next →</a>
 								</li>
 							</ul>
 						</div>

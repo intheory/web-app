@@ -247,6 +247,7 @@ div.bigstatUnderline {
   -moz-border-radius: 15px;
   border-radius: 15px;
   width: 100px;
+  cursor: pointer;
 }
 .pager a:hover {
   text-decoration: none;
