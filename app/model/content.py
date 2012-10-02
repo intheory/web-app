@@ -18,6 +18,7 @@ class MiniQuizQuestion(Document):
     answer = ListField(IntField(), required=True)
     
 class Nugget(EmbeddedDocument):
+    section_sub_title = StringField(required=True)
     title = StringField(required=True)
     img = StringField(required=True)
     content = StringField(required=True)

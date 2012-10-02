@@ -1,104 +1,136 @@
 section
-title|Driving in adverse weather conditions A
+title|Alertness 
+section_sub_title
+title|Keeping Tabs on the Road
 nugget
-title|Headlights
-content|You <strong>MUST</strong> use headlights when visibility is seriously reduced, generally when you cannot see for more than 100 metres <strong>(328 feet)</strong>.<br><br> You may also use front or rear fog lights but you <strong>MUST</strong> switch them off when visibility improves.
-image|sample.png
-nugget
-title|Wet weather
-content|In wet weather, stopping distances will be at least <strong>double</strong> those required for stopping on dry roads. This is because your tyres have less grip on the road. <br><br>In wet weather:<br><ul><li>You should keep well back from the vehicle in front. This will increase your ability to see and plan ahead.</li><br><li>If the steering becomes unresponsive, it probably means that water is preventing the tyres from gripping the road. Ease off the accelerator and slow down gradually.</li><br><li>The rain and spray from vehicles may make it difficult to see and be seen.</li><br><li>Be aware of the dangers of spilt diesel that will make the surface very slippery.</li><br><li>Take extra care around pedestrians, cyclists, motorcyclists and horse riders.<br/></li></ul>
-image|sample.png
-nugget
-title|Be prepared!
-content|In winter check the local weather forecast for warnings of icy or snowy weather. <br><br><strong>DO NOT</strong> drive in these conditions unless your journey is essential.<br><br> If it is, take great care and allow more time for your journey. Take an emergency kit of de-icer and ice scraper, torch, warm clothing and boots, first aid kit, jump leads and a shovel, together with a warm drink and emergency food in case you get stuck or your vehicle breaks down.
-image|sample.png
-nugget
-title|Before you set off
-content|Before you set off:<br><br><ul><li>You <strong>MUST</strong> be able to see, so clear all snow and ice from all your windows.</li><br><li>You <strong>MUST</strong> ensure that lights are clean and number plates are clearly visible and legible.</li><br><li>Make sure the mirrors are clear and the windows are demisted thoroughly.</li><br><li>Remove all snow that might fall off into the path of other road users.</li><br><li>Check your planned route is clear of delays and that no further snowfalls or severe weather are predicted.<br/></li></ul>
-image|sample.png
-nugget
-title|When driving in icy or snowy weather
-content|When driving in icy or snowy weather:<br><br><ul><li>Drive with care, even if the roads have been treated.</li><br><li>Keep well back from the road user in front as stopping distances can be ten times greater than on dry roads.</li><br><li>Take care when overtaking vehicles spreading salt or other de-icer, particularly if you are riding a motorcycle or cycle.</li><br><li>Watch out for snowploughs which may throw out snow on either side. Do not overtake them unless the lane you intend to use has been cleared.</li><br><li>Be prepared for the road conditions to change over relatively short distances.</li><br><li>Listen to travel bulletins and take note of variable message signs that may provide information about weather, road and traffic conditions ahead.</li></ul>
-image|sample.png
-nugget
-title|Drive extremely carefully when the roads are icy
-content|Drive extremely carefully when the roads are <strong>icy</strong>:Avoid sudden actions as these could cause loss of control. You should:<ul><br><li>Drive at a slow speed in as high a gear as possible; accelerate and brake very gently.</li><br><li>Drive particularly slowly on bends where loss of control is more likely. Brake progressively on the straight before you reach a bend. Having slowed down, steer smoothly round the bend, avoiding sudden actions.</li><br><li>Check your grip on the road surface when there is snow or ice by choosing a safe place to brake gently. If the steering feels unresponsive this may indicate ice and your vehicle losing its grip on the road. When travelling on ice, tyres make virtually no noise.</li></ul>
-image|sample.png
-nugget
-title|Windy weather
-content|High-sided vehicles are most affected by windy weather, but strong gusts can also blow a car, cyclist, motorcyclist or horse rider off course. <br><br>This can happen on open stretches of road exposed to strong crosswinds, or when passing bridges or gaps in hedges.
-image|sample.png
-nugget
-title|Turbulance
-content|In very windy weather your vehicle may be affected by turbulence created by large vehicles. <br><br>Motorcyclists are particularly affected, so keep well back from them when they are overtaking a high-sided vehicle.
-image|sample.png
-nugget
-title|Fog
-content|Before entering fog check your mirrors then slow down. If the word ‘Fog’ is shown on a roadside signal but the road is clear, be prepared for a bank of fog or drifting patchy fog ahead. <br><br>Even if it seems to be clearing, you can suddenly find yourself in thick fog.
-image|sample.png
-nugget
-title|Fog 
-content|When driving in fog you should:<ul><br><li>Use your lights as required.</li><br><li>Keep a safe distance behind the vehicle in front. Rear lights can give a false sense of security.</li><br><li>Be able to pull up well within the distance you can see clearly. This is particularly important on motorways and dual carriageways, as vehicles are travelling faster.</li><br><li>Use your windscreen wipers and demisters.</li><br><li>Beware of other drivers not using headlights.</li><br><li>Not accelerate to get away from a vehicle which is too close behind you.</li><br><li>Check your mirrors before you slow down. Then use your brakes so that your brake lights warn drivers behind you that you are slowing down.</li><br><li>Stop in the correct position at a junction with limited visibility and listen for traffic. When you are sure it is safe to emerge, do so positively and do not hesitate in a position that puts you directly in the path of approaching vehicles.</li></ul>
-image|sample.png
-nugget
-title|Fog lights
-content|You <strong>MUST NOT</strong> use front or rear fog lights unless visibility is seriously reduced as they dazzle other road users and can obscure your brake lights. <br>You <strong>MUST</strong> switch them off when visibility improves.<br/>
-image|sample.png
-nugget
-title|Hot weather
-content|Keep your vehicle well ventilated to avoid drowsiness. <br>Be aware that the road surface may become soft or if it rains after a dry spell it may become slippery. These conditions could affect your steering and braking. <br>If you are dazzled by bright sunlight, slow down and if necessary, <strong>stop</strong>.
-image|sample.png
+title|Concentration: What You Need Most To Drive
+content|<p>Driving is like a video game.  Yeah, you&rsquo;ve got to concentrate on where you&rsquo;re going – and maybe your friends are being dumb and loud in the background – but you&rsquo;ve also got to <strong>concentrate </strong>on what&rsquo;s going on around you, because you never know when it will change.  Just because that guard is behind you doesn&rsquo;t mean he&rsquo;s not a threat, and if he comes out of nowhere, you want to be ready—so you want to be <strong>concentrating</strong>.</p>
+image|1.png
 section
-title|Driving in adverse weather conditions B
+title|Alertness 
+section_sub_title
+title|Keeping Tabs on the Road
 nugget
-title|Headlights
-content|In bad weather like thunder and <strong>lightning</strong>, you must use your lights when you can’t see further than 100m.<br><br>To remember this think of Usain <strong>lightning</strong> Bolt’s favourite distance.
-image|Usain.png
+title|Keeping an Eye on Other Drivers
+content|<p>When you drive, sometimes you&rsquo;ll have to do things that might confuse other drivers.  Check first to make sure that causing them a little confusion isn&rsquo;t going to hurt anyone.  If you&rsquo;re moving off, stopping, turning and changing lanes, check up on the cars around you by:</p><ul><li>Checking in the <strong>mirrors</strong> to see who&rsquo;s behind you (and that they&rsquo;re not too close)</li><li>Double-checking before you do anything, just in case (and be careful of those pesky windscreen pillars, which can make it hard to see)</li><li><strong>USING YOUR TURN SIGNAL</strong>.  This is not like giving information to the enemy, we promise. </li><li>If you&rsquo;re reversing and can&rsquo;t see, get someone to help guide you.  Preferably someone who isn&rsquo;t an idiot and who won&rsquo;t think it&rsquo;s funny to send you into a lamppost.</li></ul><p>So all this checking is great in theory—but what about when parked cars are blocking your view at a junction?<br><strong>Inching forward</strong> is the best plan here, until you can see properly!</p>
+image|2.png
+section
+title|Alertness 
+section_sub_title
+title|Keeping Tabs on the Road
 nugget
-title|Wet weather
-content|Double Trouble.<br><br>Stopping distance <strong>doubles</strong> because tyres lose their grip.<br><br>So <strong>STAY BACK</strong> from the vehicle in front.
-image|WaveStop.png
-nugget 
-title|Advice if it's raining
-content|Advice <del><strong style="color:#de0f0f">if you are a secret agent trying to follow someone</strong></del> it’s raining:<br><br><ul><li>Keep well <strong>back</strong> from the car in front.</li><br><li>No sudden movements (on the accelerator).</li><br><li>The rain makes it difficult to see and be seen.</li><br><li>Watch out for <strong>diesel spills</strong> which make the surface slippery.</li><br><li>Assume everyone will get in your way – take extra care around pedestrians, cyclists, motorcyclists and horse riders.</li></ul>
-image|Agent.png
+title|Fun with Overtaking 
+content|<p>Another potentially confusing situation is overtaking.  Beyond the potential social awkwardness (sorry mate, you&rsquo;re slow) is the real danger of having two cars in a part of the road designed for just one—so be <strong>super careful when overtaking</strong>.</p><strong><em>Your Overtaking Checklist:</em></strong><br>□ The road ahead is clear and straight and you can see what&rsquo;s going on<br>□ You have plenty of time to get all the way past<br>□ The other drivers realize you&rsquo;re there and won&rsquo;t be terrified when you pop out of nowhere
+image|3.png
+section
+title|Alertness 
+section_sub_title
+title|Keeping Tabs on the Road
 nugget
-title|Be prepared!
-content|Don’t travel unless you have to, and remember to always take the <strong style="color:#de0f0f;">WEATHER</strong> with you, everywhere you <a style="color:blue" href="http://www.youtube.com/watch?v=ag8XcMG1EX4">gooooooo</a>...<br><br><strong style="color:#de0f0f;">W</strong>arm Clothing<br><strong style="color:#de0f0f;"><br>E</strong>mergency Shovel<br><br>First<strong style="color:#de0f0f;"> A</strong>id Kit<br><strong style="color:#de0f0f;"><br>T</strong>orch<br><strong style="color:#de0f0f;"><br>H</strong>ot drink and food<br><strong style="color:#de0f0f;"><br>E</strong>xtra de-icer and ice-scraper<br><strong style="color:#de0f0f;"><br>R</strong>eally long jump leads
-image|Packed.png
+title|Times You Get To Be Loud or Unseasonably Bright
+content|<p>Streetlights are controlled by people (and sometimes even computers) so they definitely aren&rsquo;t the experts about when it&rsquo;s dark.  Once you start to feel like it&rsquo;s at all hard to see, <strong>turn on your lights</strong>, regardless of what the streetlights are doing.</p><p>Sometimes it&rsquo;s a good idea to be loud—like when you&rsquo;re crossing a hump bridge.  Honk your horn so other drivers know you&rsquo;re coming even if they can&rsquo;t see you!</p>
+image|4.png
+section
+title|Alertness 
+section_sub_title
+title|Things to Watch Out For
 nugget
-title|Before you set off
-content|And if you do venture out, you want to turn up to the party <strong>looking slick</strong>:<br><br><ul><li>Clear snow and ice from windows and mirrors.</li><br><li>Clean lights and number plates.</li><br><li>Remove snow that could fall off in the road.</li><br><li>Check your route is clear and that no more snow is forecast.</li><br><li>If it gets a little steamy, make sure you demist your windows and mirrors.</li></ul>
-image|Steam.png
+title|What Road Signs are For
+content|<p>Road signs aren&rsquo;t just there for decoration (even though obviously they&rsquo;re sooo pretty)—they&rsquo;re there to give you information, especially about possible danger.  A few key rules for road signs:</p><ul><li>Well, first of all… <strong>listen to the signs.  </strong>If they stay stop, stop.  If they say yield, yield.  If they set a certain speed limit, obey it.</li><li><strong>Slow down</strong> if there are any hazards.</li><li><strong>Watch the other cars</strong>. This will help you outsmart them if they do anything strange or create a dangerous situation.</li></ul>
+image|5.png
+section
+title|Alertness 
+section_sub_title
+title|Things to Watch Out For
 nugget
-title|Icy or snowy weather
-content|When driving in icy or snowy weather it seems like everyone is out to get you, so <strong style="color:#de0f0f;">TAKE CARE.</strong><br><br><ul><li>Take care when overtaking vehicles spreading salt or other de-icer, particularly if you are riding a motorcycle or cycle.</li><br><li>Keep well back from the road user in front as stopping distances can be <strong style="color:#de0f0f;">ten times</strong> greater than on dry roads.</li><br><li>Watch out for snowploughs which may throw out snow on either side. Do not overtake them unless the lane you intend to use has been cleared.</li><br><li>Be prepared for the road conditions to change over relatively short distances.</li><br><li>Listen to <strong>travel bulletins</strong> and take note of variable message signs that may provide information about weather, road and traffic conditions ahead.</li></ul>
-image|Snow.png
+title|Dual Carriageways 
+content|<p>Before you turn right onto a <strong>dual carriageway</strong>, make sure you think about whether the central reservation is wide enough for your car to fit through!</p>
+image|6.png
+section
+title|Alertness 
+section_sub_title
+title|Things to Watch Out For
 nugget
-title|Drive extremely carefully when the roads are icy
-content|If the roads are icy imagine your are <strong style="color:#de0f0f">driving the queen</strong>:<br><br><ul><li>Drive <strong>slowly</strong> in a <strong>high</strong> gear.</li><br><li>Accelerate and break <strong>slowly</strong>.</li><br><li>Drive particularly <strong>slowly</strong> on bends where loss of control is more likely.</li><br><li>Break on the straight <strong>before the bend.</strong></li><br><li>Check your grip on a safe bit of road – unresponsive steering means less grip.</li></ul><br>….and remember, tyres make almost <strong>no noise</strong> on ice.
-image|Queen.png
+title|Watch Out for the Big Guys…
+content|<p>Keep your distance from large vehicles!  If you can&rsquo;t see their mirrors, they can&rsquo;t see you—and if they can&rsquo;t see you, you are in danger of getting squashed.  Plus, the farther back you are, the more of the road ahead you&rsquo;ll actually be able to see.</p>
+image|7.png
+section
+title|Alertness 
+section_sub_title
+title|Things to Watch Out For
 nugget
-title|Windy weather
-content|High sided vehicles are most affected, but <strong>strong gusts</strong> also blow cars, motorcyclists and horse riders off course.<br><br>This can happen:<br><br><ul><li>On <strong>open stretches</strong> of road.</li><br><li>When passing <strong>bridges</strong>.</li><br><li>And when passing gaps in <strong>hedges</strong>.</li></ul>
-image|Windy.png
+title|…and the Little Guys
+content|<p>Compared to an 18-wheeler, you might not feel like the big guy on the road—but compared to some of the other people on the road, you&rsquo;re a hulking monster.</p><p> Be especially careful for:</p><ul><li>Pedestrians: especially where they might be hard to see, or tempted to cross</li><li>Cyclists: they can be a bit indecisive, so give them plenty of room</li><li>Motorcyclists: check twice, save a life! They find their way into your blind spot easily.</li></ul>
+image|8.png
+section
+title|Alertness 
+section_sub_title
+title|Things to Watch Out For
 nugget
-title|Turbulence
-content|In very windy weather large vehicles can create <strong>turbulence</strong>, particularly for motorcyclists so keep <strong>back</strong> from them when are overtaking.<br><br>To remember this imagine a <strong>plane</strong> cruising down the <strong>motorway</strong> and creating serious turbulance for everyone else.
-image|Plane.png
+title|Stop!
+content|<p>As you&rsquo;ve probably figured out, green traffic lights don&rsquo;t always stay green.  When you&rsquo;re approaching, be ready to stop if they <strong>change colours</strong>.</p><p>Road also don&rsquo;t always stay clear (kids run into them sometimes) and traffic jams can suddenly stop traffic.  If you have to stop short, breathe, and keep both hands on the wheel </p>
+image|9.png
+section
+title|Alertness 
+section_sub_title
+title|You’re Getting Sleeeeeeeeeepy…
 nugget
-title|Fog
-content|<strong>Fog is crafty.</strong><br><br>Approach with caution – check your mirrors and slow down.<br><br>If there is a sign warning of fog, be prepared for it to jump out at any moment, even if the road seems clear.
-image|FogOnLoose.png
+title|You’re Getting Sleeeeeeeeeepy…
+content|<p>Driving doesn&rsquo;t seem like it should tire you out—after all, you&rsquo;re not exactly running a marathon—but all that concentration can really tucker you out. To combat exhaustion, it&rsquo;s a good idea to:</p><ul><li>Plan your route beforehand!  Nothing will tire you out more than shouting at your SatNav while you drive in circles.</li><li>Take frequent rest stops (at least once every two hours) to think about something other than the road or have a snack.</li><li>Crack the window so you don&rsquo;t suffocate!  </li><li>If you feel tired, pull off at the next exit. Sleeping in cars is perfectly acceptable if it&rsquo;s for the sake of road safety.</li></ul>
+image|10.png
+section
+title|Alertness 
+section_sub_title
+title|It Is (or should be) Just You and the Road
 nugget
-title|Fog
-content|When driving in fog, follow these steps <strong style="color:blue;">ASAP</strong> or your safety will go <strong style="color:red;">AWOL:</strong><br><br><strong style="color:red;">A</strong>llow plenty of room behind the car in front<br><br><strong style="color:red;">W</strong>ipers and demisters must be used<br><br><strong style="color:red;">O</strong>ther drivers may not use headlights – BEWARE<br><br><strong style="color:red;">L</strong>ights must be used when required – Highway code rule 226<br><br><br><strong style="color:blue;">A</strong>lways check your mirrors and use your brake lights<br><br><strong style="color:blue;">S</strong>top at the correct position at a junction<br><br><strong style="color:blue;">A</strong>void hesitating in the middle of the road<br><br><strong style="color:blue;">P</strong>ull out positively
-image|Fog.png
+title|Friends Aren't Always for Driving
+content|<p>We&rsquo;re sure your friends are great.  But if they&rsquo;re loud or argumentative, you might want to think twice about offering them rides.  Being shouted at can&rsquo;t be good for your focus and could cause you to make mistakes.</p><p>You also might also want to set some ground rules before you offer a ride to that guy who&rsquo;s the life of the party.  Loud music and high spirits are great in a club, but in the car you should aim for a more peaceful environment. </p>
+image|11.png
+section
+title|Alertness 
+section_sub_title
+title|It Is (or should be) Just You and the Road
 nugget
-title|Fog lights
-content|No one likes a <strong>showoff</strong> so don’t use your <strong style="color:#de0f0f">fog lights</strong> unless  you have to.
-image|Light.png
+title|Other Attention Suckers
+content|<p>It&rsquo;s not just other people who can be distracting, though—there are plenty of ways to take your own focus off the road.  So don&rsquo;t do them…</p><ul><li>Those furry dice hanging from your mirror might make you feel ironically cool, but when they swing around and distract you from the road, you&rsquo;ll just look lame.</li><li>As much as you feel like you can&rsquo;t bear to hear &ldquo;Call Me Maybe&rdquo; one more time, it&rsquo;s better to suffer through it than to take your eyes off the road to turn the radio and cause an accident!</li><li>Talking into a microphone is distracting—wait &lsquo;til you&rsquo;re home to take any interviews.</li></ul><p>&ldquo;But I&rsquo;m just looking away for a second&rdquo;, you say.  Just remember that in that second, at 60 mph (96 km/h), your car will travel 27 metres.  That&rsquo;s the same distance as running to the goal from left wing—and think about how many collisions can happen in that distance on the football pitch!</p>
+image|12.png
+section
+title|Alertness 
+section_sub_title
+title|It Is (or should be) Just You and the Road
 nugget
-title|Hot weather
-content|In <strong style="color:#de0f0f">hot weather</strong>:<br><br><ul><li>Keep your vehicle well <strong>ventilated</strong>.</li><br><li>The road may become <strong>soft</strong>.</li><br><li>Or <strong>slippery</strong> after rain.</li>Which effect <strong>steering and braking</strong>.<br><br></ul>And if the sun dazzles you, slow down or stop if you have to.
-image|SinkSpin.png
+title|Mobile Phones: Not A Good Driving Companion
+content|<p>It&rsquo;s illegal to use a mobile phone while you drive, and for good reason: you&rsquo;re 4 times more likely to have an accident. This isn&rsquo;t just an arbitrary rule, so to avoid temptation turn off your phone while you drive.  Then, when you get to your destination or pull off the motorway for one of your rest stops, you can go respond to all your admirers with all the things you <strong>absolutely should not do while you drive</strong>:</p><ul><li>Check what hilarious voicemails your friends left from the pub last night</li><li>Make calls</li><li>Read or send a text</li></ul>
+image|13.png
+section
+title|Alertness 
+section_sub_title
+title|It Is (or should be) Just You and the Road
+nugget
+title|SatNavs: Let It Be
+content|<p>SatNavs are not made to be programmed while you drive.  If you need to change something, pull off the road.  If your SatNav gets you lost, pull over or pull off onto a side road before you scold it and fuss with the map.  <strong>Don&rsquo;t try to reprogram while you drive</strong>.</p>
+image|14.png
+section
+title|Alertness 
+section_sub_title
+title|Question and Answer Time
+nugget
+title|Question and Answer Time
+content|<p>QUESTION: Obviously I don&rsquo;t want to fuss with my phone while I drive.  But if I&rsquo;m not using my hands, it&rsquo;s OK, right?</p><p>ANSWER: The hands are only part of the problem.  The bigger problem is that your riveting conversation about East Enders will take your mind off the road.  <strong>Hands-free phones are just as dangerous</strong> because your mind can&rsquo;t deal with two things at once—and since your friend isn&rsquo;t in the car, she doesn&rsquo;t realize that her chat is distracting you from the brake lights of the lorry in front of you.</p><p><strong>It's never safe to use a phone while you drive. Wait and find a safe place to stop.</strong></p>
+image|15.png
+section
+title|Alertness 
+section_sub_title
+title|Question and Answer Time
+nugget
+title|Question and Answer Time
+content|<p>QUESTION: I get that yellow is a nice colour, but why are there yellow lines painted at intervals across the road?</p><p>ANSWER: Yellow is a nice colour, but sometimes they&rsquo;re also red.  They&rsquo;re meant to warn you about things like upcoming hazards, like roundabouts or areas with reduced speed limits.</p><p><strong>Yellow (or red) means pay extra attention to the road – because something weird will happen.</strong></p>
+image|16.png
+section
+title|Alertness 
+section_sub_title
+title|Question and Answer Time
+nugget
+title|Question and Answer Time
+content|<p>QUESTION: What is a &ldquo;blind spot&rdquo;?  Is it curable?</p><p>ANSWER: Blind spots aren&rsquo;t a medical condition, so even if you have 20-20 vision it&rsquo;s something to keep in mind.  A <strong>blind spot is the area of the road that you can&rsquo;t see in your mirrors or by looking ahead.</strong>  This means you have to take extra caution when doing things like changing lanes—since it&rsquo;s possible there&rsquo;s a car just behind you that you can&rsquo;t see!</p><p>The people with the worst blind spots are lorry drivers.  If you&rsquo;re close behind, they won&rsquo;t be able to see you—so keep back!</p>
+image|17.png

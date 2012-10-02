@@ -1,59 +1,46 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="container">
-      <div class="hero-unit">
-      	<div class="hero-unit1">
-       		<div class="row-fluid">
-        		<div class="columnA pull-left">
-             		<h2>Pass your theory test.<br>Guaranteed.</h2>
-		            <ul>
-		  				<li>The simplest and fastest way to pass your test.</li>
-					    <li>Use cool new learning techniques to help you remember the details.</li>	
-			     		<li>Don't pass first time? Get your money back.</li>		
-					</ul></br>
- 					<p><a id="get-started-btn" class="btn btn-block btn-success btn-large">Get Started Today</a></p>
-        		</div>
-        		
-		        <div class="columnB pull-right">
-					</br>
-					<div id="questions" data-questions=
-					'[{ "question":"{{kwargs["questions"][0].question}}","options": ["{{kwargs["questions"][0].options[0]}}", "{{kwargs["questions"][0].options[1]}}", "{{kwargs["questions"][0].options[2]}}", "{{kwargs["questions"][0].options[3]}}"],"answer": {{kwargs["questions"][0].answer}}},{ "question":"{{kwargs["questions"][1].question}}","options": ["{{kwargs["questions"][1].options[0]}}", "{{kwargs["questions"][1].options[1]}}", "{{kwargs["questions"][1].options[2]}}", "{{kwargs["questions"][1].options[3]}}"],"answer": {{kwargs["questions"][1].answer}}}, { "question":"{{kwargs["questions"][2].question}}","options": ["{{kwargs["questions"][2].options[0]}}", "{{kwargs["questions"][2].options[1]}}", "{{kwargs["questions"][2].options[2]}}", "{{kwargs["questions"][2].options[3]}}"],"answer": {{kwargs["questions"][2].answer}}},{ "question":"{{kwargs["questions"][3].question}}","options": ["{{kwargs["questions"][3].options[0]}}", "{{kwargs["questions"][3].options[1]}}", "{{kwargs["questions"][3].options[2]}}", "{{kwargs["questions"][3].options[3]}}"],"answer": {{kwargs["questions"][3].answer}}}, { "question":"{{kwargs["questions"][4].question}}","options": ["{{kwargs["questions"][4].options[0]}}", "{{kwargs["questions"][4].options[1]}}", "{{kwargs["questions"][4].options[2]}}", "{{kwargs["questions"][4].options[3]}}"],"answer": {{kwargs["questions"][4].answer}}}]'>
-					</div>
-					<div id="answers" data-answers='[]'></div>
-					<div id="mini-quiz-box" class="undimmed">
-				        {% set question = kwargs['questions'][0] %}
-						<h4> {{question.question}}</h4>
-     					<ul remaining-answers={{len(question.answer)}} class="nav nav-pills nav-stacked">
-							<li><a class="choice" ind="0"><span class="badge badge-info">A</span> {{question.options[0]}}</a></li>
-							<li><a class="choice" ind="1"><span class="badge badge-info">B</span> {{question.options[1]}}</a></li>
-							<li><a class="choice" ind="2"><span class="badge badge-info">C</span> {{question.options[2]}}</a></li>
-							<li><a class="choice" ind="3"><span class="badge badge-info">D</span> {{question.options[3]}}</a></li>
-						</ul>
-						<a id="next" class="btn btn-success btn-mini disabled">Next Question</a>
-					</div>
-		       </div>
-			</div>
-    	</div>
-      </div>
-
-		<div class="row">
-			<div class="span10">
-			</div>       
-	        <div class="span5 offset5">
-	         	</br></br>
-	         	<blockquote>
-	  				<p>
-	  					<h2><div class="funkytext"><font color="#ffffff">"{{kwargs['tweet']}}"</h2>
-	  					<div class="funkytext">- Dave Mason, London</font></div>
-	  				</p>
-				</blockquote>
-	        </div>
+<div class="landing">
+    <div class="row">
+        <div class="span5"><br />
+            <div class="landingdescrip">
+                <h1>Pass fast.</h1>
+                <h1>Pass first time.</h1>
+                <p>
+                    <ul>
+                        <li>The simplest and fastest way to pass your test.</li>
+                        <li>Use new learning techniques to help you remember the details.</li>
+                        <li>Don't pass first time? Get your money back.</li>
+                    </ul>     
+                </p>
+                <center> 
+                    <p><button class="btn btn-large btn-success" style="margin-top:7px;" type="button">Get Started Today - Free</button>&nbsp;&nbsp;&nbsp;
+                    </p>
+                </center>
+            </div>
         </div>
-    </div> <!-- /container -->
-    <div id="dim">
-    	  
-	</div>  
+        <br />
+        <div class="span7">  
+            <img src="{{static_url('imgs/usp1.png')}}" alt="some_text">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span3"><br />
+            <img src="{{static_url('imgs/uspu1.png')}}" alt="some_text">
+        </div>
+        <div class="span3"><br />
+            <img src="{{static_url('imgs/uspu2.png')}}" alt="some_text">
+        </div>
+        <div class="span3"><br />
+            <img src="{{static_url('imgs/uspu3.png')}}" alt="some_text">
+        </div>
+        <div class="span3"><br />
+            <img src="{{static_url('imgs/uspu4.png')}}" alt="some_text">
+        </div>
+    </div>
+  </div>
 {% end%}
 
 {% block jquery_templates %}
