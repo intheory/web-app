@@ -15,7 +15,7 @@ css_deps = ("css", "css",
 js_deps = ("js", "js",
             [
              ("/landing", ["landing.js"]),
-             ("/test", ["test.js", "libs/jquery.tmpl.min.js"]),    
+             ("/test", ["test.js", "libs/jquery.tmpl.min.js", "libs/jquery.timer.js"]),    
              ("/learn/*", ["learn.js"]),    
              ("/admin/*", ["admin.js"]),    
              ("/", ["home.js", "libs/jquery.tmpl.min.js"]),

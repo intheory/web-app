@@ -26,10 +26,12 @@ class CreateNewTestHandler(base.BaseHandler):
 
             if sid:
                 t = PractiseTest()
+                timed = False
                 questions = [question for question in Question.objects(sid=sid)] #Get questions related to that section
             else:
                 t = MockTest()            
                 questions = [question for question in Question.objects]
+                timed = True
 
             t.user = str(self.current_user.id)
             shuffle(questions)
@@ -46,7 +48,7 @@ class CreateNewTestHandler(base.BaseHandler):
             t.cursor = 0
             t.save()
 
-            self.base_render("test/test.html", test=t, timed=True)
+            self.base_render("test/test.html", test=t, timed=timed)
         except Exception, e:
             self.log.warning(str(e))
 
@@ -83,7 +85,7 @@ class GetNewTestHandler(base.BaseHandler):
             self.log.warning("Error while restarting a project:" + str(e))
 
     def on_success(self, t):
-        self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t)})  
+        self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t, timed=True)})  
         self.write(self.xhr_response) 
 
 class GetNextQuestionHandler(base.BaseHandler):

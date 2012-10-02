@@ -10,3 +10,14 @@ a:hover {
 .question-tag{
   width:5%;
 }
+
+.countdowntime{
+	width:80px;
+}
+.countdowntime h3{
+	background-color:black;
+	padding:10px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+    margin: 0 auto;
+}

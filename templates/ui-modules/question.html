@@ -28,6 +28,10 @@
 					<div class="statbox">
 						<h3><center>{{test.cursor}} / {{len(test.questions)}}</center></h3>
 					</div>
+					{% if timed %}
+						<div class="countdowntime">
+						</div>
+					{% end %}
 				</div>
 			</div>
 			<div class="maincontent">

@@ -4,7 +4,40 @@
  * @author l </a>
  */
 
+// =============================== Test timer code =============================== //
 
+var countdownTimer, countdownCurrent = 3.42 * 100000;
+$(document).ready(function() {
+  countdownTimer = $.timer(function() {
+    var min = parseInt(countdownCurrent/6000);
+    var sec = parseInt(countdownCurrent/100)-(min*60);
+    var output = "00"; if(min > 0) {output = pad(min,2);}
+    $('.countdowntime').html("<h3>" + output+":"+pad(sec,2) + "</h3>" );
+    if(countdownCurrent == 0) {
+      countdownTimer.stop();
+      alert('Example 2: Countdown timer complete!');
+      countdownReset();
+    } else {
+      countdownCurrent-=7;
+      if(countdownCurrent < 0) {countdownCurrent=0;}
+    }
+  }, 70, true);
+});
+
+function countdownReset() {
+  var newCount = parseInt($('input[name=startTime]').val())*100;
+  if(newCount > 0) {countdownCurrent = newCount;}
+  countdownTimer.stop().once();
+}
+
+// Padding function
+function pad(number, length) {
+  var str = '' + number;
+  while (str.length < length) {str = '0' + str;}
+  return str;
+}
+
+// =============================== Unfinished test code =============================== //
   $(document).ready(function () {
         if ($('.hidden').length != 0){ //if there is an unfinished test
           $("#dim").fadeIn();
