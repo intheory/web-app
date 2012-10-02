@@ -72,22 +72,18 @@
 							</tr>
 							</thead>
 							<tbody>
-							<tr>
-							<td style="width:5%;"><center><center><span class="badge badge-info">A</span></center></center></td>
-							<td class="choice first">Slow down before you reach the bend</td>
-							</tr>
-							<tr>
-							<td><center><span class="badge badge-info">B</span></center></td>
-							<td class="choice second">Gently apply your handbrake</td>
-							</tr>
-							<tr>
-							<td><center><span class="badge badge-info">C</span></center></td>
-							<td class="choice third">Coast into the bend</td>
-							</tr>
-							<tr>
-							<td><center><span class="badge badge-info">D</span></center></td>
-							<td class="choice fourth">Avoid sudden steering movements</td>
-							</tr>
+
+								{% for i, option in enumerate(question.options) %}
+									{% if i in selected_answers %}
+										<tr class="success">
+									{% else %}
+										<tr>
+									{% end %}
+									<td class="question-tag"><center><center><span class="badge badge-info">{{question_tags[i]}}</span></center></td>
+									<td class="choice {{question_order[i]}}">{{option}}</td>
+									</tr>
+								{% end %}
+
 							</tbody>
 							</table>
 
