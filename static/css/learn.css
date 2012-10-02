@@ -1,5 +1,11 @@
 .progress {
-margin-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.progress p {
+  position: relative;
+  float:right;
+  color: black;
 }
 
 td.section-no{

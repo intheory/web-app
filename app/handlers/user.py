@@ -3,6 +3,7 @@ from mongoengine.queryset import DoesNotExist
 from app.model.user import *
 import tornado.auth, tornado.web
 import functools
+from collections import defaultdict
     
 def moderator(method):
     ''' 
@@ -63,7 +64,9 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
             
             cb = functools.partial(self._save_user_friends, c_user)
             self.facebook_request("/me/friends", access_token=c_user.access_token, callback=cb, fields='first_name,last_name,id,picture')
-        
+        except Exception, e:
+            self.log.warning("Error while logging in user " + str(e))
+
         self.set_secure_cookie("access_token", c_user.access_token)
         self.set_secure_cookie("user_type", "fb")
         self.log.info("Facebook user with id " + str(c_user.id ) + " has successfully logged in.")

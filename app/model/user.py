@@ -1,5 +1,6 @@
-from mongoengine import Document, IntField, ObjectIdField, StringField, EmbeddedDocument, EmbeddedDocumentField, ListField, BooleanField
+from mongoengine import Document, DictField, IntField, ObjectIdField, StringField, EmbeddedDocument, EmbeddedDocumentField, ListField, BooleanField, ReferenceField
 from app.model.content import MockTest
+
 # ============================ User ================================ #
 
 class UserFriend(EmbeddedDocument):
@@ -16,14 +17,24 @@ class User(Document):
     moderator = BooleanField(required=True, default=False)
     locale = 'en_GB'
     points = IntField(required=True, default=0)
+    cursors = DictField()
 
     def toggle_moderator(self):
         self.moderator = not self.moderator
         self.save()
 
+    def update_section_cursor(self, section_id, current_cursor):
+        self.cursors.setdefault(section_id, 0)
+
+        #Only increment cursor if this is an unseen nugget
+        if current_cursor > self.cursors[section_id]:
+            self.cursors[section_id] += 1
+            self.save()
+
     def get_section_cursor(self, section_id):
-        pass
-        #TODO: find where the user left off
+        #Get either the first nugget of the section or where the user left it off.
+        #Note that we add 1 to the current cursor to get the last nugegt we've seen.
+        return self.cursors.has_key(section_id) and self.cursors[section_id]+1 or 0
 
     def update_points(self, score):
         self.points += score * 10

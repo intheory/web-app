@@ -23,11 +23,9 @@ class ViewSectionHandler(base.BaseHandler):
             #Get section object
             section = Section.objects(id=sid).get()
 
-            #Get either the first nugget of the section or where the user left it off.
-            nugget = section.nuggets[0]
-            self.base_render("learn/learn-content.html", section=section, 
-                                                         nugget=nugget, 
-                                                         cursor=0, 
+            cursor = self.current_user.get_section_cursor(sid)
+            self.base_render("learn/learn-content.html", section=section,
+                                                         cursor=cursor, 
                                                          section_length=len(section.nuggets))
         except Exception, e:
             self.log.warning(str(e))    
@@ -41,13 +39,11 @@ class GetPreviousNuggetHandler(base.BaseHandler):
         cursor = self.get_argument("cursor", None)
         section = Section.objects(id=sid).get()
         new_cursor = int(cursor)-1
-        previous_nugget = section.nuggets[new_cursor]
-        return (section, previous_nugget, new_cursor, len(section.nuggets))
+        return (section, new_cursor, len(section.nuggets))
 
-    def on_success(self,section, n, new_cursor, section_length):
+    def on_success(self,section, new_cursor, section_length):
         if self.is_xhr:
             html = self.render_string("ui-modules/nugget.html", section=section,
-                                                        nugget=n,
                                                         cursor=new_cursor,
                                                         section_length=section_length)
             self.xhr_response.update({"html":html})
@@ -63,21 +59,19 @@ class GetNextNuggetHandler(base.BaseHandler):
             cursor = self.get_argument("cursor", None)
             section = Section.objects(id=sid).get()
             new_cursor = int(cursor)+1
-            if new_cursor == len(section.nuggets): #if we reached the end of the section
-                new_cursor = int(cursor)
-                next_nugget = None
-                new_cursor += 1
-            else:
-                next_nugget = section.nuggets[new_cursor]
-        except Exception, e:
-            self.log.warning(str(e))
-        return (section, next_nugget, new_cursor, len(section.nuggets))
 
-    def on_success(self, section, n, new_cursor, section_length):
+            # #Update user's cursor
+            self.current_user.update_section_cursor(sid, int(cursor))
+
+        except Exception, e:
+            self.log.warning("Error while getting next nugget: " + str(e))
+
+        return (section, new_cursor, len(section.nuggets))
+
+    def on_success(self, section, new_cursor, section_length):
         if self.is_xhr:
-            if n: #if there exists a next nugget (not end of section)
+            if new_cursor < section_length: #if there exists a next nugget (not end of section)
                 html = self.render_string("ui-modules/nugget.html", section=section,
-                                                            nugget=n,
                                                             cursor=new_cursor,
                                                             section_length=section_length)
                 self.xhr_response.update({"html":html})

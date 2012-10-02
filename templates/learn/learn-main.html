@@ -12,15 +12,19 @@
 					<table class="table table-striped">
 						<tbody>
 						{%for i, section in enumerate(kwargs['sections']) %}
-					    <tr>
-							<td class="section-no"><center><span class="badge badge-info">{{i}}</span></center></td>
-							<td class="section-title" >{{section.title}}</td>
-							<td class="section-progress"><div class="progress progress-striped progress-success">
-							  <div class="bar" style="width: 96%;"></div>
-							</div></td>
-							<td class="section-learn-btn"><center><a class="btn btn-primary " href="/learn/section?sid={{section.id}}">Learn</a></center></td>
-							<td class="section-practice-btn"><center><a class="btn btn-success" href="/test/new">Practice</a></center></td>
-						</tr>
+							{% set progress = 100*(current_user.get_section_cursor(str(section.id))) / (len(section.nuggets)-1) %}
+						    <tr>
+								<td class="section-no"><center><span class="badge badge-info">{{i}}</span></center></td>
+								<td class="section-title" >{{section.title}}</td>
+								<td class="section-progress"><div class="progress progress-striped progress-success">
+								  {% if progress == 0 %}
+									  <p>Not started</p>
+								  {% end %}
+								  <div class="bar" style="width: {{progress}}%;"></div>
+								</div></td>
+								<td class="section-learn-btn"><center><a class="btn btn-primary " href="/learn/section?sid={{section.id}}">Learn</a></center></td>
+								<td class="section-practice-btn"><center><a class="btn btn-success" href="/test/new">Practice</a></center></td>
+							</tr>
 						{% end %}
 						<tr>
 							<td class="section-no"><center><span class="badge badge-info">2</span></center></td>
