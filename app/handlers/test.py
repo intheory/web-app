@@ -59,9 +59,10 @@ class GetNewTestHandler(base.BaseHandler):
             #Delete the old test
             tid = self.get_argument("tid", None)
             t = Test.objects(id=tid).get()
+            test_type =  type(t)
             t.delete()
             #Create new mock test object
-            m = Test()
+            t = test_type()
             t.user = str(self.current_user.id)
             questions = [question for question in Question.objects]
             shuffle(questions)
@@ -79,7 +80,7 @@ class GetNewTestHandler(base.BaseHandler):
             t.save()
             return (t,)
         except Exception, e:
-            self.log.warning(str(e))
+            self.log.warning("Error while restarting a project:" + str(e))
 
     def on_success(self, t):
         self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t)})  
@@ -149,7 +150,7 @@ class DeleteTestHandler(base.BaseHandler):
     @tornado.web.authenticated
     def on_post(self):
         tid = self.get_argument("tid", None)
-        print tid
+
         return
         
     def on_success(self):
