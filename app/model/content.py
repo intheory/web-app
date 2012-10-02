@@ -63,11 +63,16 @@ class MockTest(Document):
         self.is_completed = True
         self.save()
 
+
+class HazardPoint(EmbeddedDocument):
+    start = IntField(required=True) #When the hazard occurs initially
+    end = IntField(required=True)
+
 class HazardPerceptionClip(Document):
     meta = {"collection":"HazardPerceptionClips"}
     base_dir = StringField(required=True)
     clip_name = StringField(required=True)
-    hazards = ListField(FloatField(), required=True)
+    hazards = ListField(EmbeddedDocumentField(HazardPoint), required=True)
     solution_clip_name = StringField(required=True)
 
 class HazardPerceptionTest(Document):

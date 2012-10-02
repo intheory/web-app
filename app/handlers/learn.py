@@ -2,6 +2,7 @@ import tornado, tornado.escape, math
 from app.handlers import base
 from app.model.content import Section, Nugget, MiniQuizQuestion, HazardPerceptionClip, HazardPerceptionTest#!@UnresolvedImport
 from mongoengine.queryset import DoesNotExist
+import math
 
 class ViewLearnMainHandler(base.BaseHandler):
     '''
@@ -134,17 +135,23 @@ class EvaluateHazardPerceptionHandler(base.BaseHandler):
             clip = HazardPerceptionClip.objects(id=cid).get()
             correct_answers = clip.hazards
             score = 0
+            hits = 0
             for a in answers:
                 for ca in correct_answers:
-                    if math.fabs(a-ca) < 2:
-                        score+=1
+                    lower_limit = ca.start
+                    upper_limit = ca.end
+                    if lower_limit <= a <= upper_limit :
+                        hits += 1
+                        #Simple linear interpolation to get the score. The sooner u spot the hazard the more the points
+                        points = 5 * (1 - (a - lower_limit) / (upper_limit-lower_limit))
+                        score+= int(math.ceil(points))
                         correct_answers.remove(ca)
 
-            return (cid, score, clip.solution_clip_name, len(answers))
+            return (cid, score, clip.solution_clip_name, len(answers), hits)
         except Exception, e:
             self.log.warning(str(e))
 
-    def on_success(self, cid, score, solution_clip_name, clicks): 
+    def on_success(self, cid, score, solution_clip_name, clicks, hits): 
         #Create a new test and save the score
         hpt = HazardPerceptionTest()
         hpt.uid = str(self.current_user.id)
@@ -157,6 +164,6 @@ class EvaluateHazardPerceptionHandler(base.BaseHandler):
 
         if self.is_xhr:
             if clicks==0: clicks+=1 # Avoid ZeroDivisionError
-            html = self.render_string("ui-modules/complete-video.html", clip=solution_clip_name, score=score, accuracy=score/clicks)
+            html = self.render_string("ui-modules/complete-video.html", clip=solution_clip_name, score=score, accuracy=float(hits)/clicks)
             self.xhr_response.update({"html": html})
             self.write(self.xhr_response) 
