@@ -24,6 +24,7 @@ class CreateNewTestHandler(base.BaseHandler):
                 try:
                     t = PractiseTest.objects(user=str(self.current_user.id), is_completed=False, cursor__ne=0).get()
                     self.base_render("test/test.html", test=t, timed=False, existing=True)
+                    return
                 except DoesNotExist, e:
                     t = PractiseTest()
                     timed = False
@@ -43,7 +44,7 @@ class CreateNewTestHandler(base.BaseHandler):
 
             self.base_render("test/test.html", test=t, timed=timed)
         except Exception, e:
-            self.log.warning(str(e))
+            self.log.warning("Error while creating a new " + str(type(t)) + " : " + str(e))
 
 class GetNewTestHandler(base.BaseHandler):
     '''
@@ -63,7 +64,6 @@ class GetNewTestHandler(base.BaseHandler):
             shuffle(questions)
             t.questions = questions[:TEST_SIZE]
             t.score = 0
-
             t.cursor = 0
             t.save()
             return (t,)
