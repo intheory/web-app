@@ -115,7 +115,7 @@ class GetNextQuestionHandler(base.BaseHandler):
             timed = True
         elif isinstance(t, PractiseTest):
             timed = False
-        print timed
+
         if t.cursor < len(t.questions): #is the test finished?
             self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t, timed=timed)})  
         else:
@@ -158,7 +158,7 @@ class DeleteTestHandler(base.BaseHandler):
     def on_post(self):  
         tid = self.get_argument("tid", None)
         t = Test.objects(id=tid).get()
-        if len(t.answers) == 0: #if the user didn't start doing the test and left the page then delete the test.            
+        if len(t.answers) == 0 or isinstance(t, MockTest): #if the user didn't start doing the test and left the page then delete the test.            
             t.delete()
         return
         
