@@ -5,6 +5,11 @@
 	<div class="landing">
 		{% module Question(test, kwargs['timed']) %}
 	</div>	
+	{% if kwargs.has_key("existing") and kwargs['existing'] %}
+		<div class="hidden">
+		</div>
+	{% end %}
+	
 {% end %}
 
 {% block jquery_templates %}

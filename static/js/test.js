@@ -4,6 +4,8 @@
  * @author l </a>
  */
 
+// =============================== Delete test on unload code =============================== //
+
 $(window).unload( function () { 
   var tid = $(".next").attr("tid");
   IT.post("/test/delete", {

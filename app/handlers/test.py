@@ -23,7 +23,7 @@ class CreateNewTestHandler(base.BaseHandler):
             if sid:
                 try:
                     t = PractiseTest.objects(user=str(self.current_user.id), is_completed=False, cursor__ne=0).get()
-                    self.base_render("test/test.html", test=t, timed=False)
+                    self.base_render("test/test.html", test=t, timed=False, existing=True)
                 except DoesNotExist, e:
                     t = PractiseTest()
                     timed = False
