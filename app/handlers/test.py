@@ -20,14 +20,14 @@ class CreateNewTestHandler(base.BaseHandler):
 
         #Create new mock test object
         try:
-            t = Test.objects(user=str(self.current_user.id), is_completed=False, cursor__ne=0).get()
-            self.base_render("test/test.html", test=t, timed=True)
-        except DoesNotExist, e:
-
             if sid:
-                t = PractiseTest()
-                timed = False
-                questions = [question for question in Question.objects(sid=sid)] #Get questions related to that section
+                try:
+                    t = PractiseTest.objects(user=str(self.current_user.id), is_completed=False, cursor__ne=0).get()
+                    self.base_render("test/test.html", test=t, timed=False)
+                except DoesNotExist, e:
+                    t = PractiseTest()
+                    timed = False
+                    questions = [question for question in Question.objects(sid=sid)] #Get questions related to that section
             else:
                 t = MockTest()            
                 questions = [question for question in Question.objects]
@@ -68,10 +68,14 @@ class GetNewTestHandler(base.BaseHandler):
             t.save()
             return (t,)
         except Exception, e:
-            self.log.warning("Error while restarting a project:" + str(e))
+            self.log.warning("Error while restarting a test: " + str(e))
 
     def on_success(self, t):
-        self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t, timed=True)})  
+        if isinstance(t, MockTest):
+            timed = True
+        elif isinstance(t, PractiseTest):
+            timed = False
+        self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t, timed=timed)})  
         self.write(self.xhr_response) 
 
 class GetNextQuestionHandler(base.BaseHandler):
@@ -107,8 +111,13 @@ class GetNextQuestionHandler(base.BaseHandler):
             self.log.warning("Error while fetching new question: " + str(e))
 
     def on_success(self, t):
+        if isinstance(t, MockTest):
+            timed = True
+        elif isinstance(t, PractiseTest):
+            timed = False
+        print timed
         if t.cursor < len(t.questions): #is the test finished?
-            self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t, timed=True)})  
+            self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t, timed=timed)})  
         else:
             #Calculate test score 
             t.calculate_score()
@@ -133,7 +142,11 @@ class GetPreviousQuestionHandler(base.BaseHandler):
             print e
             
     def on_success(self, t):
-        self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t)})  
+        if isinstance(t, MockTest):
+            timed = True
+        elif isinstance(t, PractiseTest):
+            timed = False
+        self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t, timed=timed)})  
         self.write(self.xhr_response)
 
 class DeleteTestHandler(base.BaseHandler):

@@ -93,7 +93,7 @@ IT.popup = new Blurb({
  * @param {Boolean} showErrNotifier A flag indicating whether to show an error popup or not.
  * @param {Function} error A function to be called if the request results to an error.
  */
-IT.post = function(url, data, showLoader, success, showErrNotifier, error)
+IT.post = function(url, data, showLoader, success, showErrNotifier, error, async)
 {
     if (!url) {
         throw "No URL defined in IT.post().";
@@ -101,13 +101,19 @@ IT.post = function(url, data, showLoader, success, showErrNotifier, error)
     if (showErrNotifier === null || showErrNotifier === undefined) {
         showErrNotifier = true;
     }
+
+    if (async === null || async === undefined) {
+        async = true;
+    }
+
     IT.ajax(url, 
              data || {}, 
              success || function(){;}, 
              error || function(){;}, 
              "POST",
              showLoader || false,
-             showErrNotifier);
+             showErrNotifier,
+             async);
 };
 
 /**
@@ -121,7 +127,7 @@ IT.post = function(url, data, showLoader, success, showErrNotifier, error)
  * @param {Boolean} showErrNotifier A flag indicating whether to show an error popup or not.
  * @param {Function} error A function to be called if the request results to an error.
  */
-IT.get = function(url, data, showLoader, success, showErrNotifier, error)
+IT.get = function(url, data, showLoader, success, showErrNotifier, error, async)
 {
     if (!url) {
         throw "No URL defined in IT.get().";
@@ -129,13 +135,19 @@ IT.get = function(url, data, showLoader, success, showErrNotifier, error)
     if (showErrNotifier === null || showErrNotifier === undefined) {
         showErrNotifier = true;
     }
+
+    if (async === null || async === undefined) {
+        async = true;
+    }
+
     IT.ajax(url, 
             data || {}, 
             success || function(){;}, 
             error || function(){;}, 
             "GET",
             showLoader || false,
-            showErrNotifier);
+            showErrNotifier,
+            async);
 };
 
 /**
@@ -150,8 +162,9 @@ IT.get = function(url, data, showLoader, success, showErrNotifier, error)
  * @param {Boolean} showLoader A flag indicating whether to show the loader or not.
  * @param {Boolean} showErrNotifier A flag indicating whether to show an error popup or not.
  */
-IT.ajax = function(url, data, success, error, method, showLoader, showErrNotifier)
+IT.ajax = function(url, data, success, error, method, showLoader, showErrNotifier,  async)
 {
+
     var requestCompleted = false;
     var loader = null;
     if (showLoader) {
@@ -196,7 +209,8 @@ IT.ajax = function(url, data, success, error, method, showLoader, showErrNotifie
                 loader.hide();
                 IT.errorNotifier.show("<b>Unauthorized.</b><br><br>" + IT.fn.translateText("You are not authorized to perform this operation. Please login.", IT.user.locale))
             }
-        }
+        },
+        async: async
     });
 };
 

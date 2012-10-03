@@ -10,8 +10,9 @@ $(window).unload( function () {
              tid: tid,
          }, true, function(response) 
          {  
-           alert("dasdasdsadas")
-  });  
+
+         }, true, true, false
+  );  
   return false;
 });
 
