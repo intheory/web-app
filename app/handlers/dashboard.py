@@ -11,7 +11,7 @@ class ViewDashBoardHandler(base.BaseHandler):
     def on_get(self):
     	uid = self.current_user.id
     	u = User.objects(id=uid).get()
-    	stats = u.get_user_stats()
+        stats = u.get_user_stats()
         progress = u.get_overall_progress()
         self.base_render("dashboard.html", user=u, 
                                            progress = progress,

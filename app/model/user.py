@@ -72,7 +72,7 @@ class User(Document):
         return no_of_correct_answers
 
     def get_correct_answers(self):
-        test_history = MockTest.objects(user=str(self.id))
+        test_history = Test.objects(user=str(self.id))
         no_of_correct_answers = 0
         for test in test_history:
             no_of_correct_answers += test.score

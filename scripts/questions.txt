@@ -14463,10 +14463,10 @@ question_number
 question
 What is the maximum specified fine for driving without insurance?
 options
-\A350
-\A3500
-\A31,000
-\A35,000
+£50
+£500
+£1,000
+£5,000
 answers
 4
 extract

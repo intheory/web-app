@@ -6,6 +6,12 @@
 
 // =============================== Delete test on unload code =============================== //
 
+$(window).bind('beforeunload', function() {
+    if ($(".countdowntime").length != 0){  //TODO: find a better way to distinguish pracrise tests and mock tests pages
+      return 'If you leave now you will lose all the progress in this test.' ;
+    }
+});
+
 $(window).unload( function () { 
   var tid = $(".next").attr("tid");
   IT.post("/test/delete", {
