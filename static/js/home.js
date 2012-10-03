@@ -85,8 +85,7 @@
 	    $(this).parent().parent().attr("remaining-answers", remainingAnswers);
 	    if (remainingAnswers == 0) $("#next").removeClass("disabled").addClass("active");
 	}
-	
-		
+			
     });
 
     $("#mini-quiz-box").live("click", function() {return false;});
