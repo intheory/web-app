@@ -4,6 +4,17 @@
  * @author l </a>
  */
 
+$(window).unload( function () { 
+  var tid = $(".next").attr("tid");
+  IT.post("/test/delete", {
+             tid: tid,
+         }, true, function(response) 
+         {  
+           alert("dasdasdsadas")
+  });  
+  return false;
+});
+
 // =============================== Test timer code =============================== //
 
 var countdownTimer, countdownCurrent = 3.42 * 100000;

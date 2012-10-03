@@ -38,13 +38,6 @@ class CreateNewTestHandler(base.BaseHandler):
             t.questions = questions[:TEST_SIZE]
             t.score = 0
 
-            #Initialize the answer list
-            for q in t.questions:
-                ta = TestAnswer()
-                ta.qid = str(q.id)
-                ta.selected_answers = []
-                t.answers.append(ta)
-
             t.cursor = 0
             t.save()
 
@@ -70,13 +63,6 @@ class GetNewTestHandler(base.BaseHandler):
             shuffle(questions)
             t.questions = questions[:TEST_SIZE]
             t.score = 0
-
-            #Initialize the answer list
-            for q in t.questions:
-                ta = TestAnswer()
-                ta.qid = str(q.id)
-                ta.selected_answers = [] 
-                t.answers.append(ta)
 
             t.cursor = 0
             t.save()
@@ -105,18 +91,24 @@ class GetNextQuestionHandler(base.BaseHandler):
             t = Test.objects(id=tid).get()
 
             #Save user answers
-            t.answers[int(cursor)].selected_answers = answers
+            ta = TestAnswer()
+            ta.qid = str(t.questions[int(cursor)].id)
+            ta.selected_answers = answers 
+            try:
+                t.answers[int(cursor)] = ta
+            except IndexError:
+                t.answers.append(ta)
 
             t.cursor += 1
             t.save()
 
             return (t,)
         except Exception, e:
-            self.log.warning("Error while fetching new question " + str(e))
+            self.log.warning("Error while fetching new question: " + str(e))
 
     def on_success(self, t):
         if t.cursor < len(t.questions): #is the test finished?
-            self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t)})  
+            self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t, timed=True)})  
         else:
             #Calculate test score 
             t.calculate_score()
@@ -150,9 +142,11 @@ class DeleteTestHandler(base.BaseHandler):
     before finishing a test.   
     '''
     @tornado.web.authenticated
-    def on_post(self):
+    def on_post(self):  
         tid = self.get_argument("tid", None)
-
+        t = Test.objects(id=tid).get()
+        if len(t.answers) == 0: #if the user didn't start doing the test and left the page then delete the test.            
+            t.delete()
         return
         
     def on_success(self):

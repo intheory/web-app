@@ -37,7 +37,7 @@ class Test(Document):
     meta = {"collection":"Tests", 'allow_inheritance': True}
     user = StringField(required=True)
     questions = ListField(ReferenceField(Question), required=True, default=list)
-    answers = ListField(EmbeddedDocumentField(TestAnswer), required=True, default=list)
+    answers = ListField(EmbeddedDocumentField(TestAnswer), default=list)
     score = IntField(required=True, default=0)
     cursor = IntField(required=True, default=0) #Indicates which question is currently viewed
     is_completed = BooleanField(required=True, default=False)
