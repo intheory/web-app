@@ -1,4 +1,5 @@
-from mongoengine import Document, DictField, EmbeddedDocument, FloatField, EmbeddedDocumentField, StringField, ListField, IntField, BooleanField, ReferenceField
+from mongoengine import Document, DictField, EmbeddedDocument, FloatField, EmbeddedDocumentField, StringField, ListField, IntField, BooleanField, ReferenceField, DateTimeField
+from datetime import datetime
 # ============================ User ================================ #
 
 class Question(Document):
@@ -89,3 +90,9 @@ class HazardPerceptionTest(Document):
     uid = StringField(required=True)
     cid = StringField(required=True)
     score = IntField(required=True, default=0)
+
+class FeedbackItem(Document):
+    meta = {"collection":"FeedbackItems"}
+    description = StringField(required=True)
+    uid = StringField(required=True)
+    timestamp = DateTimeField(required=True, default=datetime.now())

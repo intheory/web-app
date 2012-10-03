@@ -1,6 +1,6 @@
 import tornado, tornado.escape
 from app.handlers import base, user
-from app.model.content import Nugget, Section, Question, MiniQuizQuestion#!@UnresolvedImport
+from app.model.content import Nugget, Section, Question, FeedbackItem, MiniQuizQuestion#!@UnresolvedImport
 from app.model.user import *#!@UnresolvedImport
 from app.model.logs import Log
 
@@ -190,3 +190,16 @@ class RearrangeNuggetsHandler(base.BaseHandler):
 
         except Exception, e:
             print e
+
+class SubmitFeedbackHandler(base.BaseHandler):
+    @tornado.web.authenticated    
+    def on_post(self):
+        description = self.get_argument("description", None)
+        fi = FeedbackItem()
+        fi.description = description
+        fi.uid = str(self.current_user.id)
+        fi.save()
+        return 
+
+    def on_success(self):
+        self.write(self.xhr_response)  
