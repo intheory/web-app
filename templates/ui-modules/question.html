@@ -26,12 +26,15 @@
 						</div>
 					{% end %}
 					<div class="statbox">
-						<h3><center>{{test.cursor}} / {{len(test.questions)}}</center></h3>
+						<h3><center>{{test.cursor + 1}} / {{len(test.questions)}}</center></h3>
 					</div>
 					<div class="clear"></div>
 				</div>
 			</div>
+
+
 			<div class="maincontent">
+				<div class="question">
 				{% if not question.image  %}
 					<table class="table table-hover">
 					<thead>
@@ -39,7 +42,6 @@
 					</tr>
 					</thead>
 					<tbody>
-
 						{% for i, option in enumerate(question.options) %}
 							{% if i in selected_answers %}
 								<tr class="success">
@@ -60,6 +62,9 @@
 							<a href="#">&larr; Previous</a>
 						</li>
 						{% end %}
+						<li class="explain">
+							<a href="#">Explain</a>
+						</li>
 						<li class="next" cursor="{{test.cursor}}" tid="{{test.id}}" remaining-answers="{{remaining_answers}}">
 							<a href="#">Next &rarr;</a>
 						</li>
@@ -94,6 +99,9 @@
 									<a href="#">&larr; Previous</a>
 								</li>
 								{% end %}
+								<li class="explain">
+									<a href="#">Explain</a>
+								</li>
 								<li class="next" cursor="{{test.cursor}}" tid="{{test.id}}" remaining-answers="{{remaining_answers}}">
 									<a href="#">Next &rarr;</a>
 								</li>
@@ -103,16 +111,30 @@
 						<div class="span4">
 							<ul class="thumbnails">				           
 					            <li>
-					            	<a href="#" class="thumbnail"><img src="{{static_url('imgs/questions/') + question.image}}" alt=""></a>
+					            	<a href="#" class="thumbnail"><img src="/obj/img/questions/{{question.image}}" alt=""></a>
 							    </li>
 							</ul>
 			            </div>
 			        </div>
 			    {% end %}
+				</div>
+				<div class="explanation">
+					<h2>Explanation</h2>
+					{{question.extract}}
+					<br>
+					<ul class="pager">
+						<li class="return">
+							<a href="#">&larr;Return</a>
+						</li>
+					</ul>
+				</div>
 			</div>
+
 		</div>
 	</div>
 </div>
+
+
 
 
 

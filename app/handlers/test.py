@@ -48,7 +48,8 @@ class CreateNewTestHandler(base.BaseHandler):
 
 class GetNewTestHandler(base.BaseHandler):
     '''
-    Renders a new test page after the user decided to dismiss their last unfinished test.    
+    Renders a new test page after the user decided to dismiss their last unfinished test.  
+    This is only applicable for practise tests. Mock tests are deleted if left unfinished.  
     '''
     def on_get(self):
         try:

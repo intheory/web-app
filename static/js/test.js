@@ -149,3 +149,14 @@ function pad(number, length) {
             $(".landing").empty().html(response.html);
           }); 
     });    
+
+    $("li.explain").live("click", function() {
+      $(".question").css({"display":"none"});
+      $(".explanation").css({"display":"block"});          
+    });    
+
+
+    $("li.return").live("click", function() {
+      $(".explanation").css({"display":"none"});
+      $(".question").css({"display":"block"});          
+    });    

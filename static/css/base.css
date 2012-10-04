@@ -266,6 +266,7 @@ div.bigstatUnderline {
   width: 100px;
   cursor: pointer;
 }
+
 .pager a:hover {
   text-decoration: none;
   background-color: #61c462;
