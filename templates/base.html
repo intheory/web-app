@@ -56,7 +56,7 @@
           <a class="brand pull-left" href="/">In<b>Theory</b></a>
           <div class="nav-collapse collapse pull-right">
             {% if not current_user%}
-               <a href="/login"><button type="submit" class="btn btn-success signin-btn">Sign in</button></a>
+               <a href="/login/options"><button type="submit" class="btn btn-success signin-btn">Sign in</button></a>
              {% else %}
                 <ul class="nav">
                   {% if current_user['moderator'] %}

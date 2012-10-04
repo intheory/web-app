@@ -280,6 +280,7 @@ div.bigstatUnderline {
   float: left;
   padding-top:7px;
   width: 80px;
+  margin: 7px 0px 7px 0px;
 }
 
 .statbox h3{  

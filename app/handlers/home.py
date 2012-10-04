@@ -16,6 +16,14 @@ class HomePageHandler(base.BaseHandler):
             history = MockTest.objects(user=str(uid)) #TODO: create a model for user's history
             self.redirect("/dashboard")
 
+
+class LoginScreenHandler(base.BaseHandler):
+    '''
+    Renders the login page.    
+    '''
+    def on_get(self):
+        self.base_render("login.html")
+
 class EvaluateHomeQuizHandler(base.BaseHandler):
     '''
     Evaluates homepage quiz
