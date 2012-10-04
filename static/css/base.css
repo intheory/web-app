@@ -4,6 +4,10 @@ body {
     background-repeat:no-repeat;
 }
 
+.clear{
+  clear:both;
+}
+
 .navbar .brand {
   float: left;
   display: block;
@@ -267,25 +271,22 @@ div.bigstatUnderline {
   background-color: #61c462;
 }
 
-.statbox h3{  background-color:#006fba;
-padding:10px;
-width:80px;
-  -moz-border-radius: 5px;
-border-radius: 5px;
-
-}
-
 .questiontitle, .nuggettitle h2{
   padding-left:10px;
 }
 
 .statbox{
+  float: left;
   padding-top:7px;
-  padding-left: 50px;
+  width: 80px;
 }
 
-.statbox h3{
+.statbox h3{  
   margin: auto;
+  background-color:#006fba;
+  padding:10px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 #feedback {

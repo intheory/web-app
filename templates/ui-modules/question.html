@@ -21,13 +21,14 @@
 					</div>
 				</div>
 				<div class="span2 pull-right">
-					<div class="statbox">
-						<h3><center>{{test.cursor}} / {{len(test.questions)}}</center></h3>
-					</div>
 					{% if timed %}
 						<div class="countdowntime">
 						</div>
 					{% end %}
+					<div class="statbox">
+						<h3><center>{{test.cursor}} / {{len(test.questions)}}</center></h3>
+					</div>
+					<div class="clear"></div>
 				</div>
 			</div>
 			<div class="maincontent">

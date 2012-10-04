@@ -12,12 +12,16 @@ a:hover {
 }
 
 .countdowntime{
+  float: left;
+  padding-top:7px;
 	width:80px;
+  margin: 0px 5px 0px 0px ; 
 }
+
 .countdowntime h3{
 	background-color:black;
 	padding:10px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-    margin: 0 auto;
+  margin: 0 auto;
 }
