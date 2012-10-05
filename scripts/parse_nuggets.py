@@ -38,6 +38,7 @@ try:
 		n = Nugget()
 		n.section_sub_title =section_sub_title
 		n.title = f.readline().split('|')[1].strip()
+		print n.title
 		n.content = f.readline().split('|')[1].strip()
 		n.img = f.readline().split('|')[1].strip()
 		s.nuggets.append(n)
