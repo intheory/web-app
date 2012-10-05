@@ -10,7 +10,6 @@
 	<meta name="author" content="intheory"> 
 	<meta name="description" content="Intheory 2012"> 
 	<meta property="og:image" content="http://www.petrominpng.com.pg/images/logo_big.png" />
-	<meta name="viewport" content="width=920, initial-scale=auto"> 
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Intheory 2012" /> 
 
@@ -28,14 +27,6 @@
 	{% end %}
 
     <style type="text/css">
-      html{
-        background-image: url(/static/imgs/background.jpg);
-        background-repeat: no-repeat;
-      }
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      } 
     </style>
     <script type="text/javascript">
 
@@ -54,7 +45,7 @@
 
 <body >
 {% block header %}
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -62,30 +53,73 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/"> <img src="{{static_url('imgs/logo.png')}}"></a>
-            <div class="pull-right">           
-               {% if not current_user%}
-           		 <a href="/login"><button type="submit" class="btn btn-success">Sign in</button></a>
-               {% else %}
-              	 <ul class="nav nav-pills">
-                    {% if current_user['moderator'] %}
+          <a class="brand pull-left" href="/">In<b>Theory</b></a>
+          <div class="nav-collapse collapse pull-right">
+            {% if not current_user%}
+               <a href="/login/options"><button type="submit" class="btn btn-success signin-btn">Sign in</button></a>
+             {% else %}
+                <ul class="nav">
+                  {% if current_user['moderator'] %}
                       <li id="admin-nav"><a href="/admin">Admin</a></li>  
                     {% end %}
-              	 	  <li class="active"><a href="/learn/main">Learn</a></li>
-              		  <li id="mock-test-nav"><a href="/test/new">Mock Test</a></li>
-                    <li><a href="/logout">Logout</a></li>
-                    <li>|</li>	
-            	 </ul>
-            	 <img src="{{static_url('imgs/fb.png')}}" alt="My Image Description" class="align-left frame" /><div class="fb"><div class="fbname"><b>David Mason</b></div><div class="fbpoints"><b><font color="#0589de">217 Points</font></b></div></div>
+                  <li class="learn-nav"><a href="/learn/main">Learn</a></li>
+                  <li class="dropdown practice-nav"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Practice</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/learn/hazard">Hazard Perception</a></li>
+                        <li><a href="/test/new">Mock Test</a></li>
+                    </ul>
+                  </li>
+                  <li class="divider-vertical"></li>
+                  <li><a href="#" rel="tooltip" title="These are your points"> <i class="icon-star icon-white"></i> {{current_user.points}}</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="{{current_user.profile_pic}}" alt="some_text" width="20" height="20"> &nbsp; {{current_user.first_name + " " + current_user.last_name}} <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/dashboard">Dashboard</a></li>
+                        <li><a href="/dashboard">Statistics</a></li>
+                        <li><a href="/logout">Log Out</a></li>
+                    </ul>
+                  </li>
+                </ul>
               {% end %}
-            </div>
-		</div>
+          </div><!--/.nav-collapse -->
         </div>
       </div>
+    </div>
+
 {% end %}
 
-{% block content %}
+<div class="container">
 
+  {% block content %}
+
+  {% end %}
+
+  {% block footer %}
+  <div class="footer fixed">
+    <font color="#FFFFFF" size="2px">  
+      <div class="span6">
+        <p>InTheory Media Limited © 2012</p>
+      </div>
+      <div class="span6">
+        <p class="alignright"><a href="/landing/about">About Us</a> | <a  href="/landing/terms">Terms & Conditions</a> | <a href="/landing/privacy">Privacy Policy</a> | Support </p>
+      </div> 
+    </font>      
+    <div style="clear:both"></div>
+    <br/>
+  </div>
+  {% end %}
+
+</div>
+
+<div id="dim">
+</div>
+
+{% block feedback %}
+  {% if current_user %}
+    <div id="feedback">
+      Feedback
+    </div>
+  {% end %}
 {% end %}
 
 {% raw xsrf_form_html() %}
@@ -93,23 +127,42 @@
 	<script src="{{static_url('js/libs/jquery-1.7.2.min.js')}}"></script>
 	<script src="{{static_url('js/libs/blurb.min.js')}}"></script>
 	<script src="{{static_url('js/IT.js')}}"></script>
-    <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
-    <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-button.js"></script>
-    <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-modal.js"></script>
+  <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+  <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-button.js"></script>
+  <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-modal.js"></script>
 {% end %}
 
 {% for js in kwargs['js_deps'] %}
 	<script src="{{static_url(js)}}"></script>
 {% end %}
 
+
+  <script id="feedback-template" type="text/x-jquery/tmpl">
+    <div class="info-popup clearfix">
+      <h1>Leave feedback</h1>
+      <label for="topic">Tell us what you think</label>
+      <div id="problem-desc" class="clearfix">
+        <textarea id="feedback-description"></textarea>
+      </div>
+      <br>
+      <div class="popup-actions">
+        <center>
+          <a id="submit-feedback-btn" class="btn btn-primary" style="width:160px"><i class=" icon-plus-sign icon-white"></i> Submit your feedback</a>
+        </center>
+      </div>
+    </div>
+  </script>
+
 {% block jquery_templates %}
 
 {% end %}
-<div class="container">
-   <div class="footer"><font color="#FFFFFF" size="2px">  <p class="alignleft">InTheory Media Limited © 2012</p>
-  <p class="alignright"><a href="/landing/about">About Us</a> | <a  href="/landing/terms">Terms & Conditions</a> | <a href="/landing/privacy">Privacy Policy</a> | Support </p></font></br>
-  </div>
-</div>
+
+<script type="text/javascript">
+    {% if current_user %} 
+      //TODO: Log user login 
+    {% end %}
+    IT.pageLoad();
+  </script>
 
 </body> 
 

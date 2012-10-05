@@ -1,22 +1,79 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="container">
-    	<div class="hero-unit">
-        	<div class="hero-unit1">
-        		<h1>Hey {{kwargs['user'].first_name}}!</h1>
-        		<p>We're still working on the dashboard but it'll be awesome!</p>
+{% set progress = kwargs['progress'] %}
+<div class="landing">
+  <div class="row">
+    <div class="span5"><br />
+      <div class="landingdescrip">
+        {% if progress != 0 %}
+          <h1>Hey {{current_user.first_name}}!</h1>
+          <p>
+            Good to see you back! You're <b>{{progress}}%</b> of the way through learning for the theory test and should be ready to pass really <b>soon</b>.
+          </p> 
+        {% else %}
+          <h1>Welcome {{current_user.first_name}}!</h1>
+          <p>
+            Welcome to your one and only study guide for the driving theory test. If you feel ready to start use one of the buttons below to get started.
+          </p> 
+        {% end %}
+        <p>
+          <div class="progress progress-striped">
+            <div class="bar" style="width: {{progress}}%;">
+            </div>
+          </div>
+        </p>
+        <center> 
+          <p> 
+            <a href="/learn/main"> <button class="btn btn-large btn-success" type="button">Learn</button></a>&nbsp;&nbsp;&nbsp;
+            <a href="/learn/main"><button class="btn btn-large btn-danger" type="button">Practice</button></a>
+          </p>
+        </center>
+      </div>
+    </div>
 
-        		<h2>Your test scores</h2>
-        		{% for test in kwargs['history'] %}
-                <ul>
-        			<li><span class="badge">{{test.score}}/{{len(test.questions)}}</span></li>
-                </ul>
-        		{% end %}
-        		<br><br><br><br>
-        	</div>
-    	</div>
-    </div> <!-- /container -->
+    <div class="span1">
+    </div>
+    <br />
+    <div class="span6">
+      <div class="row">
+        <div class="span3">
+          <center>
+            <ul class="bigstat">
+              <li class="bigstat">
+                <h1>{{kwargs['correct_answers']}}</h1>
+                <div class="bigstatUnderline"></div>
+                <h2>Correct Answers</h2>
+              </li><br /><br /><br />
+              <li class="bigstat">
+                <h1>{{kwargs['points']}}</h1>
+                <div class="bigstatUnderline"></div>
+                <h2>Total points</h2>
+              </li>
+            </ul>
+          </center>
+        </div>
+        <div class="span3">
+          <center> 
+            <ul class="bigstat">
+              <li class="bigstat">
+                <h1>8</h1>
+                <div class="bigstatUnderline"></div>
+                <h2>Badges Awarded</h2>
+              </li>
+              <br/><br/><br/>
+              <li class="bigstat">
+                <h1>{{kwargs['accuracy']}}%</h1>
+                <div class="bigstatUnderline"></div>
+                <h2>Accuracy</h2>
+              </li>
+            </ul>
+          </center>
+        </div>
+      </div>
+    </div>
+</div>
+
 {% end%}
 
 {% block jquery_templates %}

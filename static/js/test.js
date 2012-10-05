@@ -3,14 +3,88 @@
  * 
  * @author l </a>
  */
-    // =============================== Listeners =============================== //
-    var navBtns = $(".nav.nav-pills").children();
-    navBtns.each(function(index) {
-      if ($(this).hasClass("active")){
-        $(this).removeClass("active");
+
+// =============================== Delete test on unload code =============================== //
+
+$(window).bind('beforeunload', function() {
+    if ($(".countdowntime").length != 0){  //TODO: find a better way to distinguish pracrise tests and mock tests pages
+      return 'If you leave now you will lose all the progress in this test.' ;
+    }
+});
+
+$(window).unload( function () { 
+  var tid = $(".next").attr("tid");
+  IT.post("/test/delete", {
+             tid: tid,
+         }, true, function(response) 
+         {  
+
+         }, true, true, false
+  );  
+  return false;
+});
+
+// =============================== Test timer code =============================== //
+
+var countdownTimer, countdownCurrent = 3.42 * 100000;
+$(document).ready(function() {
+  countdownTimer = $.timer(function() {
+    var min = parseInt(countdownCurrent/6000);
+    var sec = parseInt(countdownCurrent/100)-(min*60);
+    var output = "00"; if(min > 0) {output = pad(min,2);}
+    $('.countdowntime').html("<h3>" + output+":"+pad(sec,2) + "</h3>" );
+    if(countdownCurrent == 0) {
+      countdownTimer.stop();
+      alert('Example 2: Countdown timer complete!');
+      countdownReset();
+    } else {
+      countdownCurrent-=7;
+      if(countdownCurrent < 0) {countdownCurrent=0;}
+    }
+  }, 70, true);
+});
+
+function countdownReset() {
+  var newCount = parseInt($('input[name=startTime]').val())*100;
+  if(newCount > 0) {countdownCurrent = newCount;}
+  countdownTimer.stop().once();
+}
+
+// Padding function
+function pad(number, length) {
+  var str = '' + number;
+  while (str.length < length) {str = '0' + str;}
+  return str;
+}
+
+// =============================== Unfinished test code =============================== //
+  $(document).ready(function () {
+        if ($('.hidden').length != 0){ //if there is an unfinished test
+          $("#dim").fadeIn();
+          var tmpl = $("#existing-test-info-template").tmpl();
+          IT.popup.show(tmpl);
       }
-    });    
-    $("li#mock-test-nav").addClass("active");
+  });
+
+ $(".notify-blurb-close-btn, #carry-on-btn").live("click", function() {
+    $("#dim").fadeOut();
+    IT.popup.close();
+ });
+
+  $("#create-new-btn").live("click", function() {
+    var tid = $("li.next").attr("tid");
+    IT.get("/test/get-new", {
+                 tid: tid,
+         }, true, function(response) 
+         {  
+            $(".landing").empty().html(response.html);
+            $("#dim").fadeOut();
+            IT.popup.close();
+          });
+  });
+
+
+    // =============================== Listeners =============================== //
 
     $("td.choice").live("click", function() {
       var choiceRow = $(this).parent();
@@ -52,10 +126,7 @@
                  cursor: cursor
   	     }, true, function(response) 
   	     {  
-            var hu = $(".hero-unit")
-            var parent = hu.parent();
-            hu.empty().remove()
-            parent.html(response.html);
+           $(".landing").empty().html(response.html);
           });    	
       }
       else{
@@ -75,9 +146,17 @@
                  cursor: cursor
          }, true, function(response) 
          {  
-            var hu = $(".hero-unit")
-            var parent = hu.parent();
-            hu.empty().remove()
-            parent.html(response.html);
+            $(".landing").empty().html(response.html);
           }); 
+    });    
+
+    $("li.explain").live("click", function() {
+      $(".question").css({"display":"none"});
+      $(".explanation").css({"display":"block"});          
+    });    
+
+
+    $("li.return").live("click", function() {
+      $(".explanation").css({"display":"none"});
+      $(".question").css({"display":"block"});          
     });    

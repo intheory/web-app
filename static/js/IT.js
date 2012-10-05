@@ -67,7 +67,7 @@ IT.notifier = new Blurb({
 IT.successNotifier = new Blurb({
     cssClass: "success-notify",
     position: "center-center",
-    displayDuration: 1400,
+    displayDuration: 3400,
     showCloseButton: false
 });
 
@@ -93,7 +93,7 @@ IT.popup = new Blurb({
  * @param {Boolean} showErrNotifier A flag indicating whether to show an error popup or not.
  * @param {Function} error A function to be called if the request results to an error.
  */
-IT.post = function(url, data, showLoader, success, showErrNotifier, error)
+IT.post = function(url, data, showLoader, success, showErrNotifier, error, async)
 {
     if (!url) {
         throw "No URL defined in IT.post().";
@@ -101,13 +101,19 @@ IT.post = function(url, data, showLoader, success, showErrNotifier, error)
     if (showErrNotifier === null || showErrNotifier === undefined) {
         showErrNotifier = true;
     }
+
+    if (async === null || async === undefined) {
+        async = true;
+    }
+
     IT.ajax(url, 
              data || {}, 
              success || function(){;}, 
              error || function(){;}, 
              "POST",
              showLoader || false,
-             showErrNotifier);
+             showErrNotifier,
+             async);
 };
 
 /**
@@ -121,7 +127,7 @@ IT.post = function(url, data, showLoader, success, showErrNotifier, error)
  * @param {Boolean} showErrNotifier A flag indicating whether to show an error popup or not.
  * @param {Function} error A function to be called if the request results to an error.
  */
-IT.get = function(url, data, showLoader, success, showErrNotifier, error)
+IT.get = function(url, data, showLoader, success, showErrNotifier, error, async)
 {
     if (!url) {
         throw "No URL defined in IT.get().";
@@ -129,13 +135,19 @@ IT.get = function(url, data, showLoader, success, showErrNotifier, error)
     if (showErrNotifier === null || showErrNotifier === undefined) {
         showErrNotifier = true;
     }
+
+    if (async === null || async === undefined) {
+        async = true;
+    }
+
     IT.ajax(url, 
             data || {}, 
             success || function(){;}, 
             error || function(){;}, 
             "GET",
             showLoader || false,
-            showErrNotifier);
+            showErrNotifier,
+            async);
 };
 
 /**
@@ -150,8 +162,9 @@ IT.get = function(url, data, showLoader, success, showErrNotifier, error)
  * @param {Boolean} showLoader A flag indicating whether to show the loader or not.
  * @param {Boolean} showErrNotifier A flag indicating whether to show an error popup or not.
  */
-IT.ajax = function(url, data, success, error, method, showLoader, showErrNotifier)
+IT.ajax = function(url, data, success, error, method, showLoader, showErrNotifier,  async)
 {
+
     var requestCompleted = false;
     var loader = null;
     if (showLoader) {
@@ -196,7 +209,8 @@ IT.ajax = function(url, data, success, error, method, showLoader, showErrNotifie
                 loader.hide();
                 IT.errorNotifier.show("<b>Unauthorized.</b><br><br>" + IT.fn.translateText("You are not authorized to perform this operation. Please login.", IT.user.locale))
             }
-        }
+        },
+        async: async
     });
 };
 
@@ -654,17 +668,6 @@ IT.xsrf = $("input[name='_xsrf']").val();
 // with that fragment as id.
 IT.fn.highlightURLFragment();
 
-// Check if a 'view-story' element exists.
-$("a.view-story").live("click", function() {
-   var c =$(this).parent().siblings(".related");
-   if (c.is(":visible")) {
-       $(this).html(IT.fn.translateText("View more", IT.user.locale));
-       c.hide();
-   } else {
-       $(this).html(IT.fn.translateText("Hide", IT.user.locale));
-       c.show();
-   }
-});
 
 //Open feedback popup.
 $("#feedback").click(function() {
@@ -674,23 +677,18 @@ $("#feedback").click(function() {
     }
 });
 
-$("a.feedback-btn").live("click", function() {
-    var type = $("#type").val();
-    var description = $("#description").val();	
-    IT.post("/admin/beta/feedback", 
-	    {type: type, description:description}, 
+$("a#submit-feedback-btn").live("click", function() {
+    var description = $("#feedback-description").val();	
+    IT.post("/admin/feedback", 
+	    {description:description}, 
 	    true, function(response) {
 		    if (response.s) {
-		        IT.successNotifier.show(IT.fn.translateText("Thank you for helping us make our website better.", IT.user.locale));
-		        IT.popup.close();
-		        window.setTimeout(function() { IT.fn.reloadPage(); }, 900);		
+            IT.popup.close()
+		        IT.successNotifier.show("Thank you for the feedback.");
 		    } 
     });
 });
 
-$("a.no-feedback-btn").live("click", function() {
-    IT.popup.close();
-});
 
 //Position the loader on the page.
 var y = $(window).height() / 2 - 31;

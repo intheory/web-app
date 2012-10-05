@@ -7,55 +7,46 @@
 {% set has_seen = kwargs['has_seen'] %}
 {% set older_scores = kwargs['older_scores'] %}
 
-<div class="hero-unit">
-	<div class="hero-unit1">
-        <img src="{{static_url('imgs/hazardt.png')}}" alt="lheader.png"/></br>
-        <div class="progress progress-striped">
-	  		<div class="bar bar-success progress-striped" style="width: 100%;">
-	  		</div>
-  	    </div></br>
-		<center>
-		<ul class="thumbnails">
-		    <li class="span4">
-		      <a href="#" class="thumbnail" clipPath="/obj/video/intro" >
-		        <div class="text-over-intro" id="text-over"><div class="text-over-text"> Learn more about the test</div></div>
-	        	<img src="/obj/img/thumbnail_intro.jpg" alt="">
-		      </a>
-		    </li>
-
-		    {% for clip in upper_clips %}
-		    <li class="span2">
-		      <a href="#" class="thumbnail" cid="{{clip.id}}" clipPath="{{base_dir +clip.clip_name}}">
-		      	{% if str(clip.id) in has_seen %}
-			        <div class="text-over-seen" id="text-over"><div class="text-over-text"> Best score: {{older_scores[str(clip.id)]}}</div></div>
-			    {% else %}
-				    <div class="text-over" id="text-over"><div class="text-over-text"> Try this!</div></div>
-				{% end %}    	
-		        <img src="/obj/img/thumbnail_{{clip.clip_name}}.jpg" alt="">
-		      </a>
-		    </li>
-		    {% end %}
-
-	    </ul>
-
-		 <ul class="thumbnails">
-		  {% for clip in lower_clips %}	
-		  <li class="span2">
-		    <a href="#" class="thumbnail" cid="{{clip.id}}" clipPath="{{base_dir +clip.clip_name}}">
-		        {% if str(clip.id) in has_seen %}
-			        <div class="text-over-seen" id="text-over"><div class="text-over-text">Best score: {{older_scores[str(clip.id)]}}</div></div>
-			    {% else %}
-				    <div class="text-over" id="text-over"><div class="text-over-text"> Try this!</div></div>
-				{% end %}  
-		      <img src="/obj/img/thumbnail_{{clip.clip_name}}.jpg" alt="">
-		    </a>
-		  </li>
-		  {% end %}
-		</ul>
-		</center>  
-	</div>        
+<div class="landing">
+<div class="row">
+  <div class="span12"><br /><div class="mainborder"><h1>Hazard Perception</h1><div class="maincontent">
+  <ul class="thumbnails">
+            <li class="span5">
+              <a href="#" class="thumbnail" clipPath="/obj/video/intro">
+                <div class="text-over-intro" id="text-over"><div class="text-over-text"> Learn more about the test</div></div>
+                <img src="/obj/img/thumbnail_intro.png" alt="http://placehold.it/460x400">
+              </a>
+            </li>
+            {% for clip in upper_clips %}
+            <li>
+              <a href="#" class="thumbnail" cid="{{clip.id}}" clipPath="{{base_dir +clip.clip_name}}" >
+                {% if str(clip.id) in has_seen %}
+                  <div class="text-over-seen" id="text-over"><div class="text-over-text"> Best score: {{older_scores[str(clip.id)]}}</div></div>
+                {% else %}
+                  <div class="text-over" id="text-over"><div class="text-over-text"> Try this!</div></div>
+                {% end %}
+                  <img src="/obj/img/thumbnail_{{clip.clip_name}}.png" alt="http://placehold.it/278x185">
+              </a>
+            </li>
+            {% end %}
+            {% for clip in lower_clips %} 
+            <li>
+              <a href="#" class="thumbnail" cid="{{clip.id}}" clipPath="{{base_dir +clip.clip_name}}">
+              {% if str(clip.id) in has_seen %}
+                <div class="text-over-seen" id="text-over"><div class="text-over-text">Best score: {{older_scores[str(clip.id)]}}</div></div>
+              {% else %}
+                <div class="text-over" id="text-over"><div class="text-over-text"> Try this!</div></div>
+              {% end %}  
+                <img src="/obj/img/thumbnail_{{clip.clip_name}}.png" alt="http://placehold.it/278x185">
+              </a>
+            </li>
+            {% end %}
+          </ul>          
+     </div>
+   </div>
 </div>
 {% else %}
-	No clips found.
+	No clips found
 {% end %}
+
 {% end%} 

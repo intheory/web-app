@@ -8,6 +8,7 @@ from app.handlers import base, user, test, home, admin,  dashboard, learn, landi
 url_patterns = [
     ("/", home.HomePageHandler),
     ("/quiz/evaluate", home.EvaluateHomeQuizHandler),
+    ("/login/options", home.LoginScreenHandler),
     ("/login/twitter", user.TwitterUserLoginHandler),
     ("/login", user.UserLoginHandler),
     ("/logout", user.UserLogoutHandler),
@@ -20,14 +21,15 @@ url_patterns = [
     ("/learn/get-previous-nugget", learn.GetPreviousNuggetHandler),
     ("/learn/get-next-nugget", learn.GetNextNuggetHandler),
     ("/learn/hazard/evaluate", learn.EvaluateHazardPerceptionHandler),
-    ("/learn/hazard", learn.GetHazardPerceptionHandler),
-    ###########Practise pages hanlders##############
-    
+    ("/learn/hazard", learn.GetHazardPerceptionHandler),    
     ###########Mock test hanlders##############
-    ("/test/new", test.GetNewTestHandler),
+    ("/test/new", test.CreateNewTestHandler),
+    ("/test/get-new", test.GetNewTestHandler),
     ("/test/get-next", test.GetNextQuestionHandler),
     ("/test/get-previous", test.GetPreviousQuestionHandler),
+    ("/test/delete", test.DeleteTestHandler),
     ###########Backend hanlders##############
+    ("/admin/feedback", admin.SubmitFeedbackHandler),
     ("/admin/logs", admin.ViewLogsHandler),
     ("/admin/users/moderator", admin.MakeModeratorHandler),
     ("/admin/users", admin.ViewUsersHandler),
@@ -45,6 +47,8 @@ url_patterns = [
     ("/landing/privacy", landing.ViewPrivacyPolicyHandler),
     ("/landing/about", landing.ViewAboutUsHandler),
     ###########Static files handlers################
+    ("/obj/img/question/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "imgs/questions"))}),
+    ("/obj/img/nugget/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "imgs/nuggets"))}),    
     ("/obj/img/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "imgs"))}),
     ("/obj/video/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "videos"))}),
 ]

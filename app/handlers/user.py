@@ -3,6 +3,7 @@ from mongoengine.queryset import DoesNotExist
 from app.model.user import *
 import tornado.auth, tornado.web
 import functools
+from collections import defaultdict
     
 def moderator(method):
     ''' 
@@ -55,13 +56,17 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
         except DoesNotExist, e:   
             self.log.info("A new Facebook user is trying to login.")
             c_user = FacebookUser()
-            c_user.access_token = user["access_token"]        
+            c_user.access_token = user["access_token"]    
+            c_user.profile_pic = str(user['picture']['data']['url'])   
+
             cb = functools.partial(self._save_user_profile, c_user)
             self.facebook_request("/me", access_token=c_user.access_token, callback=cb)
             
             cb = functools.partial(self._save_user_friends, c_user)
             self.facebook_request("/me/friends", access_token=c_user.access_token, callback=cb, fields='first_name,last_name,id,picture')
-        
+        except Exception, e:
+            self.log.warning("Error while logging in user " + str(e))
+
         self.set_secure_cookie("access_token", c_user.access_token)
         self.set_secure_cookie("user_type", "fb")
         self.log.info("Facebook user with id " + str(c_user.id ) + " has successfully logged in.")
@@ -116,7 +121,7 @@ class TwitterUserLoginHandler(base.BaseHandler, tornado.auth.TwitterMixin):
     def _on_auth(self, user):
         if not user:
             raise tornado.web.HTTPError(500, "Twitter auth failed")
-       
+
         try:
             c_user = TwitterUser.objects(twitter_id=str(user['id'])).get()
         except DoesNotExist, e:
@@ -130,11 +135,12 @@ class TwitterUserLoginHandler(base.BaseHandler, tornado.auth.TwitterMixin):
             c_user.username = user['username']
             c_user.access_token = user['access_token']['secret']
             c_user.twitter_id = str(user['id'])
+            c_user.profile_pic = user['profile_image_url']
             c_user.save()
 
         self.set_secure_cookie("access_token", c_user.access_token)
         self.set_secure_cookie("user_type", "twitter")
-        self.log.info("Twitter user with id " + c_user.id + " has successfully logged in.")
+        self.log.info("Twitter user with id " + str(c_user.id) + " has successfully logged in.")
         self.redirect('/')
 
 

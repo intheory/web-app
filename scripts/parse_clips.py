@@ -16,11 +16,12 @@ else:
 	connect("intheory_dev")
 
 os.sys.path.insert(0,parentdir) 
-from model.content import HazardPerceptionClip
+from model.content import HazardPerceptionClip, HazardPoint
 
 HazardPerceptionClip.drop_collection()
 try:
-	f = open("clips.txt", "r")
+	file_path = os.path.expanduser("~/" + os.path.join("intheorydata", "content"))
+	f = open(file_path+"/clips.txt", "r")
 	while 1:
 		base_dir = f.readline().strip()
 		if len(base_dir) ==0:
@@ -29,11 +30,11 @@ try:
 		clip.base_dir = base_dir
 		clip.clip_name = f.readline().strip()
 		clip.solution_clip_name = f.readline().strip()
-		while 1:
-			hazard_point = f.readline().strip()
-			if hazard_point=="end":
-				break;
-			clip.hazards.append(float(hazard_point))
+
+		hp = HazardPoint()
+		hp.start = int(f.readline().strip())
+		hp.end = int(f.readline().strip())
+		clip.hazards.append(hp)
 		clip.save()
 
 	f.close()

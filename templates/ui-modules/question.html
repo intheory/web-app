@@ -1,97 +1,145 @@
-<div class="hero-unit">
-	<div class="hero-unit1">
 
-		{% set question = test.questions[test.cursor] %}
-		{% set question_tags = ["A", "B", "C", "D"] %}
-		{% set question_order = ["first", "second", "third", "fourth"] %}
-		{% set remaining_answers = len(question.answer) %}
+{% set question = test.questions[test.cursor] %}
+{% set question_tags = ["A", "B", "C", "D", "E", "F"] %}
+{% set question_order = ["first", "second", "third", "fourth", "fifth", "sixth"] %}
+{% set remaining_answers = len(question.answer) %}
 
-		{% if len(test.answers) > test.cursor %}
-			{% set selected_answers = test.answers[test.cursor].selected_answers %}
-			{% set remaining_answers = len(question.answer) - len(selected_answers) %}
-		{% else %}
-			{% set selected_answers = [] %}
-		{% end %}
+{% if len(test.answers) > test.cursor %}
+	{% set selected_answers = test.answers[test.cursor].selected_answers %}
+	{% set remaining_answers = len(question.answer) - len(selected_answers) %}
+{% else %}
+	{% set selected_answers = [] %}
+{% end %}
 
-		<div class="image123"><img alt="" src="{{static_url('imgs/questionbg.png')}}" />
-			
-			<div class="text">
-				 <div class="verticalalign" style="display: table; height: 100px; #position: relative; overflow: hidden;">
-		    <div style=" #position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
-		      <div class="greenBorder" style=" #position: relative; #top: -50%">
-		        	    <p><font color="#FFFFFF"><b>{{ question.question }}</b></font></p>
-		      </div>
-		    </div>
-		  </div>
+<div class="row">
+	<div class="span12"><br />
+		<div class="mainborder">
+			<div class="row">
+				<div class="span8">
+					<div class="questiontitle">
+						<h2>{{ question.question }}</h2>
+					</div>
+				</div>
+				<div class="span2 pull-right">
+					{% if timed %}
+						<div class="countdowntime">
+						</div>
+					{% end %}
+					<div class="statbox">
+						<h3><center>{{test.cursor + 1}} / {{len(test.questions)}}</center></h3>
+					</div>
+					<div class="clear"></div>
+				</div>
 			</div>
-		</div>
-		</br></br></br></br></br>
-		<div class="progress progress-striped">
-			<div class="bar bar-success progress-striped" style="width: {{100*test.cursor/len(test.questions)}}%">
-			</div>
-		</div>
-		{% if not question.image  %}
-		<table class="table table-hover">
-		<thead>
-		<tr>
 
-		</tr>
-		</thead>
-		<tbody>
-			{% for i, option in enumerate(question.options) %}
-				{% if i in selected_answers %}
-					<tr class="success">
-				{% else %}
-					<tr>
-				{% end %}
-				<td><center><center><span class="badge badge-info">{{question_tags[i]}}</span></center></td>
-				<td class="choice {{question_order[i]}}">{{option}}</td>
-				</tr>
-			{% end %}
-		</tbody>
-		</table>
-		{% else %}
-		<div id="left">
-		    <div id="object1">
-		    	<table class="table table-hover">
+
+			<div class="maincontent">
+				<div class="question">
+				{% if not question.image  %}
+					<table class="table table-hover">
 					<thead>
 					<tr>
-
 					</tr>
 					</thead>
 					<tbody>
 						{% for i, option in enumerate(question.options) %}
 							{% if i in selected_answers %}
-							<tr class="success">
+								<tr class="success">
 							{% else %}
-							<tr>
+								<tr>
 							{% end %}
-							<td><center><center><span class="badge badge-info">{{question_tags[i]}}</span></center></td>
+							<td class="question-tag"><center><center><span class="badge badge-info">{{question_tags[i]}}</span></center></td>
 							<td class="choice {{question_order[i]}}">{{option}}</td>
 							</tr>
 						{% end %}
+
 					</tbody>
-				</table>
+					</table>
+
+				  	<ul class="pager">
+						{% if test.cursor != 0 and not timed %}
+						<li class="previous" cursor="{{test.cursor}}" tid="{{test.id}}">
+							<a href="#">&larr; Previous</a>
+						</li>
+						{% end %}
+						{% if not timed %}
+						<li class="explain">
+							<a href="#">Explain</a>
+						</li>
+						{% end %}
+						<li class="next" cursor="{{test.cursor}}" tid="{{test.id}}" remaining-answers="{{remaining_answers}}">
+							<a href="#">Next &rarr;</a>
+						</li>
+					</ul>
+			    {% else %}
+			    	<div class="row">
+						<div class="span7">
+							<table class="table table-hover">
+							<thead>
+							<tr>
+							</tr>
+							</thead>
+							<tbody>
+
+								{% for i, option in enumerate(question.options) %}
+									{% if i in selected_answers %}
+										<tr class="success">
+									{% else %}
+										<tr>
+									{% end %}
+									<td class="question-tag"><center><center><span class="badge badge-info">{{question_tags[i]}}</span></center></td>
+									<td class="choice {{question_order[i]}}">{{option}}</td>
+									</tr>
+								{% end %}
+
+							</tbody>
+							</table>
+
+						  	<ul class="pager">
+								{% if test.cursor != 0 and not timed %}
+								<li class="previous" cursor="{{test.cursor}}" tid="{{test.id}}">
+									<a href="#">&larr; Previous</a>
+								</li>
+								{% end %}
+								{% if not timed %}
+								<li class="explain">
+									<a href="#">Explain</a>
+								</li>
+								{% end %}
+								<li class="next" cursor="{{test.cursor}}" tid="{{test.id}}" remaining-answers="{{remaining_answers}}">
+									<a href="#">Next &rarr;</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="span4">
+							<ul class="thumbnails">				           
+					            <li>
+					            	<a href="#" class="thumbnail"><img src="/obj/img/questions/{{question.image}}" alt=""></a>
+							    </li>
+							</ul>
+			            </div>
+			        </div>
+			    {% end %}
+				</div>
+				<div class="explanation">
+					<h2>Explanation</h2>
+					{{question.extract}}
+					<br>
+					<ul class="pager">
+						<li class="return">
+							<a href="#">&larr;Return</a>
+						</li>
+					</ul>
+				</div>
 			</div>
+
 		</div>
-
-		<div id="right">
-			<div id="object3"><img src="/static/imgs/{{question.image}}" alt="some_text"/></div>
-		</div>		
-		{% end %}
-
-		 <ul class="pager">
-		 {% if test.cursor != 0 %}
-		  <li class="previous" cursor="{{test.cursor}}" tid="{{test.id}}">
-		    <a href="#">&larr; Previous</a>
-		  </li>
-		  {% end %}
-		  <li class="next" cursor="{{test.cursor}}" tid="{{test.id}}" remaining-answers="{{remaining_answers}}">
-		    <a href="#">Next &rarr;</a>
-		  </li>
-		</ul>
 	</div>
 </div>
+
+
+
 
 
 

@@ -1,0 +1,40 @@
+a.twitter {
+	display: block;
+	width: 223px;
+	height: 52px;
+	text-decoration: none;
+	float: left;
+	background: url("/static/imgs/twitter.png");
+	}
+
+a.twitter:hover {
+	background-position: -228px 0;
+	}
+a.twitter:active {
+	background-position: -455px 0;
+	}
+.dtwitter {
+	position: absolute;
+	left: -5000px;
+	}
+	
+	a.facebook {
+	display: block;
+	width: 255px;
+	height: 52px;
+	text-decoration: none;
+	background: url("/static/imgs/facebook.png");
+	float:right;
+	
+	}
+
+a.facebook:hover {
+	background-position: -264px 0;
+	}
+a.facebook:active {
+	background-position: -527px 0;
+	}
+.dfacebook {
+	position: absolute;
+	left: -5000px;
+	}

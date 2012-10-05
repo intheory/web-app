@@ -3,13 +3,6 @@
  * 
  */
     // =============================== Listeners =============================== //
-    var navBtns = $(".nav.nav-pills").children();
-    navBtns.each(function(index) {
-      if ($(this).hasClass("active")){
-        $(this).removeClass("active");
-      }
-    });    
-    $("li#admin-nav").addClass("active");
 
     $("#moderator-btn").live("click", function() {
         if ($(this).hasClass("disbaled")) return false; //if this user is a moderator do nothing

@@ -1,4 +1,5 @@
-from mongoengine import Document, DictField, EmbeddedDocument, FloatField, EmbeddedDocumentField, StringField, ListField, IntField, BooleanField, ReferenceField
+from mongoengine import Document, DictField, EmbeddedDocument, FloatField, EmbeddedDocumentField, StringField, ListField, IntField, BooleanField, ReferenceField, DateTimeField
+from datetime import datetime
 # ============================ User ================================ #
 
 class Question(Document):
@@ -9,6 +10,7 @@ class Question(Document):
     sid = StringField(required=True, default="")
     extract = StringField(required=True, default="")
     image = StringField(required=False)
+    question_number = StringField(required=True)
     
 class MiniQuizQuestion(Document):
     meta = {"collection":"MiniQuizQuestions"}
@@ -17,6 +19,7 @@ class MiniQuizQuestion(Document):
     answer = ListField(IntField(), required=True)
     
 class Nugget(EmbeddedDocument):
+    section_sub_title = StringField(required=True)
     title = StringField(required=True)
     img = StringField(required=True)
     content = StringField(required=True)
@@ -31,40 +34,55 @@ class TestAnswer(EmbeddedDocument):
     qid = StringField(required=True, default="")
     selected_answers = ListField(IntField(), default=list)
 
-class MockTest(Document):
-    meta = {"collection":"MockTests"}
+class Test(Document):
+    meta = {"collection":"Tests", 'allow_inheritance': True}
     user = StringField(required=True)
     questions = ListField(ReferenceField(Question), required=True, default=list)
-    answers = ListField(EmbeddedDocumentField(TestAnswer), required=True, default=list)
+    answers = ListField(EmbeddedDocumentField(TestAnswer), default=list)
     score = IntField(required=True, default=0)
     cursor = IntField(required=True, default=0) #Indicates which question is currently viewed
+    is_completed = BooleanField(required=True, default=False)
 
     def calculate_score(self):
         '''
         Calculates the test score based on user's answers
         '''
+        #Put all correct answers in a list
         correct_answers = []
-        #Fetch the question in hand and the correct answers
         for question in self.questions:
             correct_answers.append([int(answer) for answer in question.answer])                
 
+        #Put all user's answers in a list
         user_answers = []
         for user_answer in self.answers:
             user_answers.append([int(answer) for answer in user_answer.selected_answers])
 
+        #Check if user answered correctly by looking at the intersection of correct answers and user answers
         for i, correct_answer in enumerate(correct_answers):                
-            #Check if user answered correctly.
             user_answer = user_answers[i]
             inter = set(user_answer).intersection(correct_answer)
             if len(inter) == len(correct_answer): 
                 self.score += 1
+        self.is_completed = True
         self.save()
+
+class MockTest(Test):
+    pass
+    #In the future this test will have some different features than the Practise test
+
+class PractiseTest(Test):
+    pass
+
+
+class HazardPoint(EmbeddedDocument):
+    start = IntField(required=True) #When the hazard occurs initially
+    end = IntField(required=True)
 
 class HazardPerceptionClip(Document):
     meta = {"collection":"HazardPerceptionClips"}
     base_dir = StringField(required=True)
     clip_name = StringField(required=True)
-    hazards = ListField(FloatField(), required=True)
+    hazards = ListField(EmbeddedDocumentField(HazardPoint), required=True)
     solution_clip_name = StringField(required=True)
 
 class HazardPerceptionTest(Document):
@@ -72,3 +90,9 @@ class HazardPerceptionTest(Document):
     uid = StringField(required=True)
     cid = StringField(required=True)
     score = IntField(required=True, default=0)
+
+class FeedbackItem(Document):
+    meta = {"collection":"FeedbackItems"}
+    description = StringField(required=True)
+    uid = StringField(required=True)
+    timestamp = DateTimeField(required=True, default=datetime.now())

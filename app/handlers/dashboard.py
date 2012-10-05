@@ -11,5 +11,10 @@ class ViewDashBoardHandler(base.BaseHandler):
     def on_get(self):
     	uid = self.current_user.id
     	u = User.objects(id=uid).get()
-    	history = MockTest.objects(user=str(uid)) #TODO: create a model for user's history
-        self.base_render("dashboard.html", user=u, history=history)
+        stats = u.get_user_stats()
+        progress = u.get_overall_progress()
+        self.base_render("dashboard.html", user=u, 
+                                           progress = progress,
+        								   correct_answers=stats['correct_answers'], 
+        								   points=stats['points'],
+        								   accuracy="{0:.1f}".format(stats['accuracy']))

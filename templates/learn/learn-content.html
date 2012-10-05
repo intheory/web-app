@@ -2,9 +2,8 @@
 
 {% block focus %}
 	{% set section=kwargs['section'] %}
-	{% set nugget=kwargs['nugget'] %}
 	{% set cursor=kwargs['cursor'] %}
 	{% set section_length=kwargs['section_length'] %}
-    {% module Nugget(section, nugget, cursor, section_length) %}
+    {% module Nugget(section, cursor, section_length) %}
 {% end%}
 

@@ -12,10 +12,7 @@
                cursor: cursor
         }, true, function(response) 
         {       
-            var hu = $(".hero-unit");
-            var parent = hu.parent();
-            hu.empty().remove()
-            parent.html(response.html);            
+          $(".landing").empty().html(response.html);            
         });
     });
 
@@ -27,10 +24,7 @@
                cursor: cursor
         }, true, function(response) 
         {   
-            var hu = $(".hero-unit");
-            var parent = hu.parent();
-            hu.empty().remove()
-            parent.html(response.html);
+          $(".landing").empty().html(response.html);            
         });
     });
 
@@ -54,21 +48,6 @@
       }
     });
 
-    $("#evaluate-test").click(function() {
-        var clicks = $(".click-counter").children();
-        var click_times = [];
-        var cid = $(this).attr("cid");
-        clicks.each(function(index) {
-            click_times.push($(clicks[index]).attr("time"));
-        });   
-        IT.post("/learn/hazard/evaluate", {
-                 answers : JSON.stringify(click_times),
-                 cid: cid
-         }, true, function(response) 
-         {  
-            console.log("Score:"+response.score)
-          });       
-    });
 
     $(".thumbnail").click(function() {
       var clipPath = $(this).attr("clipPath"), 
@@ -85,7 +64,7 @@
                       <div class='click-counter'>   \
                       </div>";
       
-      $(".hero-unit1").empty().append(videoHtml);
+      $(".mainborder").empty().append(videoHtml);
       $("#dim").css("height", $(document).height()).fadeIn(); 
       $('#video-container').bind('ended',onEnd);
     });
@@ -103,7 +82,7 @@
                  cid: cid
          }, true, function(response) 
          {  
-            $(".hero-unit1").empty().html(response.html);
+            $(".landing").empty().html(response.html);
             $("#dim").fadeOut();
           });       
     }

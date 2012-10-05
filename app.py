@@ -22,11 +22,15 @@ class Intheory(tornado.web.Application):
         if env == "prod":
             facebook_api_key = "486623404681319"
             facebook_secret = "4049a6a2d8dd781bbfb4a1b849869113"
+            twitter_consumer_key = "bJ5IIoEfSuuAWvfBM0Q"
+            twitter_consumer_secret = "GZZhvI0AP6kimS0IwsD401RfE2IVrXTatBMpnI4a0"
         else:
             facebook_api_key = "387574291313993"
             facebook_secret = "37c0042436064296a4c17242088cd1fe"
-
-    	settings = {
+            twitter_consumer_key = "AZRl3bLEJPllQlflM97Fmg"
+            twitter_consumer_secret = "hgSzD1Emj1w8y6oStDDwxkK19r7d98asult7OmYA"
+    	
+        settings = {
                         'static_path'   : "static",
                         'template_path' : "templates",
                         'cookie_secret' : "aKlRsPkySWyOqByxAQfLsKMbEAKj3ErRtg1RgkBUQ6E=noteslib",
@@ -35,8 +39,8 @@ class Intheory(tornado.web.Application):
                         'autoescape'    : "xhtml_escape",
                         'facebook_api_key': facebook_api_key,
                         'facebook_secret': facebook_secret,
-                        'twitter_consumer_key':"bJ5IIoEfSuuAWvfBM0Q",
-                        'twitter_consumer_secret':"GZZhvI0AP6kimS0IwsD401RfE2IVrXTatBMpnI4a0",
+                        'twitter_consumer_key': twitter_consumer_key,
+                        'twitter_consumer_secret':twitter_consumer_secret,
                         'ui_modules'     : uimodules
                         }
 

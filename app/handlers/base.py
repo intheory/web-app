@@ -1,7 +1,7 @@
 '''
 Base handlers.
 
-@author: Alex Michael
+@author: Alex Michael, George Eracleous
 '''
 
 import tornado.web, sys, datetime
@@ -163,7 +163,7 @@ class BaseHandler(tornado.web.RequestHandler):
                 
             self.render(template, kwargs=kwargs)
         except Exception, e:
-            print e
+            self.log.warning(str(e))
     
     def on_success(self, *result):
         raise NotImplementedError()
