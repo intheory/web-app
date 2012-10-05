@@ -178,7 +178,9 @@ class BaseHandler(tornado.web.RequestHandler):
         response = {"s": False}
         if msg:
             response["err"] = msg
+            self.log.error("Ajax request failed with msg" + str(msg))
         else:
+            self.log.error("Ajax request failed.")
             response["err"] = self._("An error occured. We are working on fixing that now. Please try again.")
         return response
     

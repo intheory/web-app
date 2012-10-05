@@ -2,6 +2,17 @@
 	<div class="hero-unit1">
 
 		{% set question = test.questions[test.cursor] %}
+		{% set question_tags = ["A", "B", "C", "D"] %}
+		{% set question_order = ["first", "second", "third", "fourth"] %}
+		{% set remaining_answers = len(question.answer) %}
+
+		{% if len(test.answers) > test.cursor %}
+			{% set selected_answers = test.answers[test.cursor].selected_answers %}
+			{% set remaining_answers = len(question.answer) - len(selected_answers) %}
+		{% else %}
+			{% set selected_answers = [] %}
+		{% end %}
+
 		<div class="image123"><img alt="" src="{{static_url('imgs/questionbg.png')}}" />
 			
 			<div class="text">
@@ -27,22 +38,16 @@
 		</tr>
 		</thead>
 		<tbody>
-			<tr>
-			<td><center><center><span class="badge badge-info">A</span></center></td>
-			<td class="choice first">{{question.options[0]}}</td>
-			</tr>
-			<tr>
-			<td><center><span class="badge badge-info">B</span></center></td>
-			<td class="choice second">{{question.options[1]}}</td>
-			</tr>
-			<tr>
-			<td><center><span class="badge badge-info">C</span></center></td>
-			<td class="choice third">{{question.options[2]}}</td>
-			</tr>
-			<tr>
-			<td><center><span class="badge badge-info">D</span></center></td>
-			<td class="choice fourth">{{question.options[3]}}</td>
-			</tr>
+			{% for i, option in enumerate(question.options) %}
+				{% if i in selected_answers %}
+					<tr class="success">
+				{% else %}
+					<tr>
+				{% end %}
+				<td><center><center><span class="badge badge-info">{{question_tags[i]}}</span></center></td>
+				<td class="choice {{question_order[i]}}">{{option}}</td>
+				</tr>
+			{% end %}
 		</tbody>
 		</table>
 		{% else %}
@@ -55,23 +60,16 @@
 					</tr>
 					</thead>
 					<tbody>
-
-					<tr>
-					<td style="width: 5%; padding-top: 13px;"><center><center><span class="badge badge-info">A</span></center></td>
-					<td class="choice first" style="width: 40%; padding-top: 14px;">{{question.options[0]}}
-					</td>
-					</tr>
-					<tr>
-					<td style="padding-top: 13px;"><center><span class="badge badge-info">B</span></center></td>
-					<td  class="choice second" style="padding-top: 14px;">{{question.options[1]}}</td>
-					</tr>
-					<tr>
-					<td style="padding-top: 13px;"><center><span class="badge badge-info">C</span></center></td>
-					<td class="choice third" style="padding-top: 14px;">{{question.options[2]}}</td>
-					</tr>
-					<tr>
-					<td style="padding-top: 13px;"><center><span class="badge badge-info">D</span></center></td>
-					<td class="choice fourth" style="padding-top: 14px;">{{question.options[3]}}</td>
+						{% for i, option in enumerate(question.options) %}
+							{% if i in selected_answers %}
+							<tr class="success">
+							{% else %}
+							<tr>
+							{% end %}
+							<td><center><center><span class="badge badge-info">{{question_tags[i]}}</span></center></td>
+							<td class="choice {{question_order[i]}}">{{option}}</td>
+							</tr>
+						{% end %}
 					</tbody>
 				</table>
 			</div>
@@ -83,10 +81,12 @@
 		{% end %}
 
 		 <ul class="pager">
-		  <li class="previous">
+		 {% if test.cursor != 0 %}
+		  <li class="previous" cursor="{{test.cursor}}" tid="{{test.id}}">
 		    <a href="#">&larr; Previous</a>
 		  </li>
-		  <li class="next" cursor="{{test.cursor}}" tid="{{test.id}}" remaining-answers="{{len(question.answer)}}">
+		  {% end %}
+		  <li class="next" cursor="{{test.cursor}}" tid="{{test.id}}" remaining-answers="{{remaining_answers}}">
 		    <a href="#">Next &rarr;</a>
 		  </li>
 		</ul>

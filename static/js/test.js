@@ -3,7 +3,6 @@
  * 
  * @author l </a>
  */
-    
     // =============================== Listeners =============================== //
     var navBtns = $(".nav.nav-pills").children();
     navBtns.each(function(index) {
@@ -47,7 +46,7 @@
 		  });
 
       if (remainingAnswers==0){
-        IT.post("/test/evaluate", {
+        IT.get("/test/get-next", {
                  tid: tid,
                  answers : JSON.stringify(answers),
                  cursor: cursor
@@ -66,3 +65,19 @@
       }
 
     });
+
+    $("li.previous").live("click", function() {
+        var cursor = $(this).attr("cursor"), 
+            tid = $(this).attr("tid");
+
+        IT.get("/test/get-previous", {
+                 tid: tid,
+                 cursor: cursor
+         }, true, function(response) 
+         {  
+            var hu = $(".hero-unit")
+            var parent = hu.parent();
+            hu.empty().remove()
+            parent.html(response.html);
+          }); 
+    });    
