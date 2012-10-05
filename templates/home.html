@@ -43,6 +43,22 @@
   </div>
 {% end%}
 
+{% block footer %}
+  <div class="footer fixed">
+    <font color="#FFFFFF" size="2px">  
+      <div class="span6">
+        <p>InTheory Media Limited © 2012</p>
+      </div>
+      <div class="span6">
+        <p class="alignright"><a href="/landing/about">About Us</a> | <a  href="/landing/terms">Terms & Conditions</a> | <a href="/landing/privacy">Privacy Policy</a> | Support </p>
+      </div> 
+    </font>      
+    <div style="clear:both"></div>
+    <br/>
+    Crown copyright material reproduced under licence from the Driving Standards Agency, which does not accept any responsibility for the accuracy of the reproduction
+  </div>
+{% end %}
+
 {% block jquery_templates %}
 <script id="signup-template" type="text/x-jquery-tmpl">
 <div id="windowTitleDialog" class="modal hide fade">
@@ -69,77 +85,6 @@
 <script id="show-arrow-template" type="text/x-jquery-tmpl">
 <div class="arrow-container">
 	<img src="{{static_url('imgs/arrow.png')}}"/>
-</div>
-</script>
-
-<script id="email-template" type="text/x-jquery-tmpl">
-<div id="windowTitleDialog" class="modal hide fade">
-    <div class="modal-header">
-        <a class="close">&times;</a>
-        <h3>You scored ${score} out of 10!</h3>
-    </div>
-    <div class="modal-body">
-		<center>
-		<p>Leave your email and we'll let you know when we launch!</p>
-<form method="post" class="af-form-wrapper" action="http://www.aweber.com/scripts/addlead.pl"  >
-<div style="display: none;">
-<input type="hidden" name="meta_web_form_id" value="677441365" />
-<input type="hidden" name="meta_split_id" value="" />
-<input type="hidden" name="listname" value="intheory" />
-<input type="hidden" name="redirect" value="http://www.aweber.com/thankyou-coi.htm?m=video" id="redirect_b3be9783c304109a8d9d9ca013e7b651" />
-
-<input type="hidden" name="meta_adtracking" value="Waiting_List_/_Splash" />
-<input type="hidden" name="meta_message" value="1" />
-<input type="hidden" name="meta_required" value="name,email" />
-
-<input type="hidden" name="meta_tooltip" value="" />
-</div>
-<div id="af-form-677441365" class="af-form"><div id="af-body-677441365"  class="af-body af-standards">
-<div class="af-element">
-<div class="af-textWrap"></br>
-<input id="awf_field-39151245" type="text" name="name" class="text" placeholder="Enter Your Name"  tabindex="500" />
-</div>
-<div class="af-clear"></div></div>
-<div class="af-element">
-<div class="af-textWrap"><input class="text" id="awf_field-39151246" type="text" name="email" placeholder="Enter Your Email" tabindex="501"  />
-</div><div class="af-clear"></div>
-</div>
-<input name="submit" class="btn btn-primaryw" type="submit" value="Submit" tabindex="502" />
-</br>
-<a href="/login">or connect with Facebook</a>
-</div>
-</br></br>
-<div class="af-element privacyPolicy" style="text-align: center"><p>We respect your <a title="Privacy Policy" href="http://www.aweber.com/permission.htm" target="_blank">email privacy</a></p>
-<div class="af-clear"></div>
-</div>
-</div>
-</div>
-<div style="display: none;"><img src="http://forms.aweber.com/form/displays.htm?id=bOzsLCyMzGys" alt="" /></div>
-</form>
-</center>
-<script type="text/javascript">
-    <!--
-    (function() {
-        var IE = /*@cc_on!@*/false;
-        if (!IE) { return; }
-        if (document.compatMode && document.compatMode == 'BackCompat') {
-            if (document.getElementById("af-form-677441365")) {
-                document.getElementById("af-form-677441365").className = 'af-form af-quirksMode';
-            }
-            if (document.getElementById("af-body-677441365")) {
-                document.getElementById("af-body-677441365").className = "af-body inline af-quirksMode";
-            }
-            if (document.getElementById("af-header-677441365")) {
-                document.getElementById("af-header-677441365").className = "af-header af-quirksMode";
-            }
-            if (document.getElementById("af-footer-677441365")) {
-                document.getElementById("af-footer-677441365").className = "af-footer af-quirksMode";
-            }
-        }
-    })();
-    -->
-	</script>
-    </div>
 </div>
 </script>
 {% end %}
