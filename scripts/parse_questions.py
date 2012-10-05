@@ -18,7 +18,8 @@ from model.content import Section, Nugget, Question
 connect("intheory_dev")
 
 try:
-	f = open("questions.txt", "r")
+	file_path = os.path.expanduser("~/" + os.path.join("intheorydata", "content"))
+	f = open(file_path+"/questions.txt", "r")
 	while 1:
 		content = f.readline().strip()
 		print content
