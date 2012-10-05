@@ -62,9 +62,11 @@
 							<a href="#">&larr; Previous</a>
 						</li>
 						{% end %}
+						{% if not timed %}
 						<li class="explain">
 							<a href="#">Explain</a>
 						</li>
+						{% end %}
 						<li class="next" cursor="{{test.cursor}}" tid="{{test.id}}" remaining-answers="{{remaining_answers}}">
 							<a href="#">Next &rarr;</a>
 						</li>
@@ -99,9 +101,11 @@
 									<a href="#">&larr; Previous</a>
 								</li>
 								{% end %}
+								{% if not timed %}
 								<li class="explain">
 									<a href="#">Explain</a>
 								</li>
+								{% end %}
 								<li class="next" cursor="{{test.cursor}}" tid="{{test.id}}" remaining-answers="{{remaining_answers}}">
 									<a href="#">Next &rarr;</a>
 								</li>

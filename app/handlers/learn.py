@@ -64,7 +64,6 @@ class GetNextNuggetHandler(base.BaseHandler):
             # #Update user's cursor
             self.current_user.update_section_cursor(sid, len(section.nuggets), int(cursor)) 
             new_cursor = int(cursor) + 1
-            print new_cursor
 
         except Exception, e:
             self.log.warning("Error while getting next nugget: " + str(e))

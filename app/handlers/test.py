@@ -5,7 +5,7 @@ from app.model.content import Section, Nugget, PractiseTest, MockTest, Test, Que
 from random import shuffle
 from mongoengine.queryset import DoesNotExist
 
-TEST_SIZE = 5 
+TEST_SIZE = 50 
 
 class CreateNewTestHandler(base.BaseHandler):
     '''
