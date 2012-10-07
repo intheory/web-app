@@ -15,9 +15,9 @@ css_deps = ("css", "css",
 # JS Dependencies.
 js_deps = ("js", "js",
             [
-             ("/landing", ["landing.js"]),
+             ("/landing", ["landing.js", "libs/jquery.tmpl.min.js"]),
              ("/test", ["test.js", "libs/jquery.tmpl.min.js", "libs/jquery.timer.js"]),    
-             ("/learn/*", ["learn.js"]),    
+             ("/learn/*", ["learn.js", "libs/jquery.tmpl.min.js"]),    
              ("/admin/*", ["admin.js"]),    
              ("/", ["home.js", "libs/jquery.tmpl.min.js"]),
 	    ])

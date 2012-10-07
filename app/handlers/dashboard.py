@@ -9,7 +9,6 @@ class ViewDashBoardHandler(base.BaseHandler):
     '''
     @tornado.web.authenticated
     def on_get(self):
-        self.log.info( str(self.request.host))
     	uid = self.current_user.id
     	u = User.objects(id=uid).get()
         stats = u.get_user_stats()
