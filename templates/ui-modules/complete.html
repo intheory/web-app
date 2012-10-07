@@ -45,8 +45,8 @@
         {% if not learn %}       
             <a href="/dashboard"><button class="btn btn-large btn-primary" type="button">Continue To Dashboard</button></a>
         {% else %}
-            <a href="/test/new"><button class="btn btn-large btn-primary" type="button">Practise Section</button></a>
-            <a href="/test/new"><button class="btn btn-large btn-primary" type="button">Study another section</button></a>
+            <a href="/test/new?sid={{sid}}"><button class="btn btn-large btn-primary" type="button">Practise Section</button></a>
+            <a href="/learn/main"><button class="btn btn-large btn-primary" type="button">Study Another Section</button></a>
         {% end %}
       </center>
       <br />
