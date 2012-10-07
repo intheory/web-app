@@ -402,104 +402,6 @@ IT.fn = {
 
 };
 
-//============================ Notiffic ================================ //
-
-/**
- * @class
- * The notification "manager" class. Does everything from showing the notification
- * box, to loading new notifications and marking them as read.
- */
-var Notiffic = function(nid)
-{
-    var target = $(nid);
-    var container = $("#notifications");
-    var xhrTarget = container.find("#xhr-target");
-    
-    /**
-     * Hooks up the notifications container to the notifications
-     * 'target' i.e the notifications count button.
-     */
-    this.hook = function() 
-    {
-      var that = this;
-      target.click(function(e) { 
-          var left = target.offset().left + target.width() - container.width();
-          container.css("left", left);
-          if ($(this).hasClass("dd-up")) {
-              that.open();
-          } else {
-              that.close();
-          }
-          e.stopPropagation();
-      });
-      
-      $("#n-clear-btn").click(function(e) {
-          that.clearNotifications();
-          e.stopPropagation();
-      });
-      
-      $("#n-show-all").click(function(e) {
-          that.close();
-          e.stopPropagation();
-          location.href = $(this).attr("href");
-      });
-      
-      $(".n-click").live("click", function() {
-          location.href = $(this).attr("click-url");
-      });
-      
-      // Make sure to close this on click anywhere else.
-      $(document).click(function() {
-          IT.notiffic.close();
-      });
-    
-    };
-    
-    this.loadUserNotifications = function()
-    {
-        var that = this;
-        xhrTarget.addClass("loading");
-        IT.post("/u/notifications", {min: 5}, false, function(response) {
-            if (response.s) {
-                xhrTarget.html(response.html).removeClass("loading");
-                var unread = xhrTarget.find(".unread").length;
-                if (unread > 0 ) {
-                    target.addClass("has-n").find("span").show().html(unread)
-                }
-            }
-        });
-    };
-    
-    this.clearNotifications = function()
-    {
-        IT.post("/u/notifications/clear", {}, true, function(response) {
-           if (response.s) {
-               container.find(".unread").removeClass("unread");
-               target.find("span").hide();
-               target.removeClass("has-n");
-               $("#n-clear-btn").html(IT.fn.translateText("Clear unread"), IT.user.locale);
-           } 
-        });
-    };
-    
-    this.close = function()
-    {
-        target.removeClass("dd-down").addClass("dd-up");
-        container.hide();
-    };
-    
-    this.open = function()
-    {
-         container.show();
-         container.find("a, div").css("display", "block");
-         target.removeClass("dd-up").addClass("dd-down");
-         this.loadUserNotifications();
-    };
-};
-
-IT.notiffic = new Notiffic("#n-btn");
-IT.notiffic.hook();
-
 
 //============================ Navigator ================================ //
 
@@ -645,7 +547,7 @@ var Navigator = function()
 IT.navigator = new Navigator();
 
 
-// ============================ CYAPI ================================ //
+// ============================ ITAPI ================================ //
 
 
 /**

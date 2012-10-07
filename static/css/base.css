@@ -111,13 +111,14 @@ div.bigstatUnderline {
 
 .landing{
   color:#FFF;
-  overflow:auto;
 }
+
 
 .footer {
   position:absolute;
   height: 28px;
   margin-bottom: 20px;
+  margin-top: 20px;
   bottom: 0px;
   padding: 2px;
   padding-left: 10px;
