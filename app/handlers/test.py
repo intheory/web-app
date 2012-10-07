@@ -32,6 +32,7 @@ class CreateNewTestHandler(base.BaseHandler):
                     questions = [question for question in Question.objects(sid=sid)] #Get questions related to that section
                     shuffle(questions)
                     questions = questions[:PRACTISE_TEST_SIZE]
+                    
             else:
                 t = MockTest()            
                 questions = [question for question in Question.objects]
