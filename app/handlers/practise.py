@@ -7,6 +7,15 @@ from mongoengine.queryset import DoesNotExist
 
 TEST_SIZE = 5 
 
+class ViewPractiseMainHandler(base.BaseHandler):
+    '''
+    Renders the main practise page.    
+    '''
+    @tornado.web.authenticated
+    def on_get(self):
+        sections = Section.objects
+        self.base_render("practise/practise-main.html", sections=sections)
+
 class CreateNewPractiseTestHandler(base.BaseHandler):
     '''
     Renders a new practise test page.    
