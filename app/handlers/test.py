@@ -5,7 +5,8 @@ from app.model.content import Section, Nugget, PractiseTest, MockTest, Test, Que
 from random import shuffle
 from mongoengine.queryset import DoesNotExist
 
-TEST_SIZE = 50 
+MOCK_TEST_SIZE = 50 
+PRACTISE_TEST_SIZE = 20 
 
 class CreateNewTestHandler(base.BaseHandler):
     '''
@@ -29,14 +30,18 @@ class CreateNewTestHandler(base.BaseHandler):
                     t = PractiseTest()
                     timed = False
                     questions = [question for question in Question.objects(sid=sid)] #Get questions related to that section
+                    shuffle(questions)
+                    questions = questions[:PRACTISE_TEST_SIZE]
             else:
                 t = MockTest()            
                 questions = [question for question in Question.objects]
+                shuffle(questions)
+                questions = questions[:MOCK_TEST_SIZE]
+
                 timed = True
 
             t.user = str(self.current_user.id)
-            shuffle(questions)
-            t.questions = questions[:TEST_SIZE]
+            t.questions = questions
             t.score = 0
 
             t.cursor = 0
@@ -63,7 +68,7 @@ class GetNewTestHandler(base.BaseHandler):
             t.user = str(self.current_user.id)
             questions = [question for question in Question.objects]
             shuffle(questions)
-            t.questions = questions[:TEST_SIZE]
+            t.questions = questions[:PRACTISE_TEST_SIZE]
             t.score = 0
             t.cursor = 0
             t.save()
