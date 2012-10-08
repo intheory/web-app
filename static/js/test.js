@@ -108,13 +108,13 @@ function pad(number, length) {
     });
 
     $("li.next-after-wrong-answer").live("click", function() {
-       var tid = $(this).attr("tid");
+        var tid = $(this).attr("tid");
         IT.get("/test/get-next-after-wrong", {
                  tid: tid
-         }, true, function(response) 
-         {  
-           $(".landing").empty().html(response.html);
-          });
+        }, true, function(response) 
+        {  
+          $(".landing").empty().html(response.html);
+        });
     });
 
     $("li.next").live("click", function() {

@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+{% if not kwargs['user'].has_read_welcome_msg %}
+  <div class="hidden">
+  </div>
+{% end %}
+
 {% set progress = kwargs['progress'] %}
 <div class="landing">
   <div class="row">
@@ -38,41 +44,44 @@
     <br />
     <div class="span6">
       <div class="row">
-        <div class="span3">
-          <center>
-            <ul class="bigstat">
-              <li class="bigstat">
-                <h1>{{kwargs['correct_answers']}}</h1>
-                <div class="bigstatUnderline"></div>
-                <h2>Correct Answers</h2>
-              </li><br /><br /><br />
-              <li class="bigstat">
-                <h1>{{kwargs['points']}}</h1>
-                <div class="bigstatUnderline"></div>
-                <h2>Total points</h2>
-              </li>
-            </ul>
-          </center>
-        </div>
-        <div class="span3">
-          <center> 
-            <ul class="bigstat">
-              <li class="bigstat">
-                <h1>0</h1>
-                <div class="bigstatUnderline"></div>
-                <h2>Badges Awarded</h2>
-              </li>
-              <br/><br/><br/>
-              <li class="bigstat">
-                <h1>{{kwargs['accuracy']}}%</h1>
-                <div class="bigstatUnderline"></div>
-                <h2>Accuracy</h2>
-              </li>
-            </ul>
-          </center>
+        <div class="stats-section">
+          <div class="span3">
+            <center>
+              <ul class="bigstat">
+                <li class="bigstat">
+                  <h1>{{kwargs['correct_answers']}}</h1>
+                  <div class="bigstatUnderline"></div>
+                  <h2>Correct Answers</h2>
+                </li><br /><br /><br />
+                <li class="bigstat">
+                  <h1>{{kwargs['points']}}</h1>
+                  <div class="bigstatUnderline"></div>
+                  <h2>Total points</h2>
+                </li>
+              </ul>
+            </center>
+          </div>
+          <div class="span3">
+            <center> 
+              <ul class="bigstat">
+                <li class="bigstat">
+                  <h1>0</h1>
+                  <div class="bigstatUnderline"></div>
+                  <h2>Badges Awarded</h2>
+                </li>
+                <br/><br/><br/>
+                <li class="bigstat">
+                  <h1>{{kwargs['accuracy']}}%</h1>
+                  <div class="bigstatUnderline"></div>
+                  <h2>Accuracy</h2>
+                </li>
+              </ul>
+            </center>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 </div>
 
 {% end%}

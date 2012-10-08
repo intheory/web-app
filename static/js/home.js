@@ -4,6 +4,14 @@
  * @author l </a>
  */
     
+
+	$(document).ready(function () {
+        if ($('.hidden').length != 0){ //if there is an unfinished test
+          $("#dim").fadeIn();
+          $(".stats-section").empty().addClass("welcome-msg").html("Copy goes here!")
+      }
+  	});
+
     // =============================== Listeners =============================== //
     
     $("#next").live("click", function() {
