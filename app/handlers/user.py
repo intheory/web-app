@@ -84,6 +84,7 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
         c_user.last_name = response['last_name']
         c_user.email = response['email'] 
         c_user.username = response['username']
+        print response['gender']
         c_user.gender = response['gender']
         c_user.locale = response['locale']
         c_user.fb_id = response['id']
