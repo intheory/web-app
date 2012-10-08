@@ -1,0 +1,32 @@
+{% extends "../base.html" %}
+
+{% block content %}
+<div class="landing">
+	<div class="row">
+  		<div class="span12"><br />
+  			<div class="mainborder">
+  				<h1>Practice Theory</h1>
+
+  				<div class="maincontent">  
+		  			<table class="table table-striped">
+		  			<tbody>
+					{%for i, section in enumerate(kwargs['sections'	]) %}
+						<tr>
+							<td style="width: 5%; padding-top:16px;"><center><span class="badge badge-info">{{i+1}}</span></center></td>
+							<td style="width: 40%; padding-top: 14px;">{{section.title}}</td>
+							<td style="width: 15%; padding-top: 15px;">Highest Score: <span class="badge badge-success">0/20</span></td>
+							<td style="width: 15%; padding-top: 15px;">Best Streak: <span class="badge badge-important">0</span></td>
+							<td style="width: 10%"><center><a class="btn btn-success" href="/test/new?sid={{section.id}}">Practice</a></center></td>
+						</tr>
+					{% end %}
+		  			</tbody>
+					</table>    
+		     	</div>
+           </div>
+		</div>
+	</div>
+</div>
+{% end %}
+
+{% block jquery_templates %}
+{% end %}

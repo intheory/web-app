@@ -3,7 +3,7 @@
 # Author: Giorgos Eracleous #
 #############################
 import tornado, os
-from app.handlers import base, user, test, home, admin,  dashboard, learn, landing
+from app.handlers import base, user, test, home, admin,  dashboard, learn, landing, practise
 
 url_patterns = [
     ("/", home.HomePageHandler),
@@ -22,6 +22,8 @@ url_patterns = [
     ("/learn/get-next-nugget", learn.GetNextNuggetHandler),
     ("/learn/hazard/evaluate", learn.EvaluateHazardPerceptionHandler),
     ("/learn/hazard", learn.GetHazardPerceptionHandler),    
+    ###########Dashboard hanlders##############
+    ("/practise/main", practise.ViewPractiseMainHandler),
     ###########Mock test hanlders##############
     ("/test/new", test.CreateNewTestHandler),
     ("/test/get-new", test.GetNewTestHandler),
