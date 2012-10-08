@@ -1,6 +1,21 @@
 <h4>Oops! Your answer was wrong.</h4>
 <h4>Correct answer</h4>
-asdasd
+	<table class="table table-hover">
+		<thead>
+			<tr>
+			</tr>
+		</thead>
+		<tbody>
+			{% for correct_answer in question.answer %}
+			<tr class="success">
+				<td>
+					{{question.options[int(correct_answer)]}}
+				</td>
+			</tr>
+		    {% end %}
+		</tbody>
+	</table>
+
 <h4>Explanation</h4>
 {{question.extract}}
 

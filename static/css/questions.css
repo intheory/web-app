@@ -29,3 +29,8 @@ a:hover {
 .explanation{
   display: none;
 }
+
+.pager .next-after-wrong-answer a,
+.pager .next-after-wrong-answer span {
+  float: right;
+}

@@ -126,7 +126,7 @@ class GetNextQuestionHandler(base.BaseHandler):
                 self.xhr_response.update({"correct": correct, "html": self.render_string("ui-modules/question.html", test=t, timed=timed)}) 
             else:
                 self.xhr_response.update({"correct": correct,
-                                          "html": self.render_string("ui-modules/explanation.html", test=t, question=t.questions[t.cursor-1])})
+                                          "html": self.render_string("ui-modules/explanation.html", test=t, question=t.questions[t.cursor])})
         else:
             #Calculate test score 
             t.calculate_score()
