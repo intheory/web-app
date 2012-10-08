@@ -53,7 +53,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand pull-left" href="/">In<b>Theory</b></a>
+          <a class="brand pull-left" href="/">In<b>Theory</b><sup> beta</sup></a>
           <div class="nav-collapse collapse pull-right">
             {% if not current_user%}
                <a href="/login/options"><button type="submit" class="btn btn-success signin-btn">Sign in</button></a>
@@ -127,6 +127,7 @@
 {% raw xsrf_form_html() %}
 {% block scripts %}
 	<script src="{{static_url('js/libs/jquery-1.7.2.min.js')}}"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 	<script src="{{static_url('js/libs/blurb.min.js')}}"></script>
 	<script src="{{static_url('js/IT.js')}}"></script>
   <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>

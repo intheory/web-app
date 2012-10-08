@@ -66,12 +66,35 @@ class Test(Document):
         self.is_completed = True
         self.save()
 
+    def update_cursor(self, value):
+        self.cursor += value
+        self.save()
+
 class MockTest(Test):
     pass
     #In the future this test will have some different features than the Practise test
 
 class PractiseTest(Test):
-    pass
+    
+    def evaluate_question(self, cursor, user_answer):
+        '''
+        Evaluates the question at cursor position
+        '''
+        try:
+            #Put correct answers in a list
+            correct_answers =[int(answer) for answer in self.questions[cursor].answer]
+
+            #Put user's answers in a list
+            user_answers = [int(answer) for answer in user_answer.selected_answers]
+
+            #Check if user answered correctly by looking at the intersection of correct answers and user answers
+            inter = set(user_answers).intersection(correct_answers)
+            if len(inter) == len(correct_answers): 
+                return 1
+            else:
+                return 0
+        except Exception, e:
+            print e
 
 
 class HazardPoint(EmbeddedDocument):

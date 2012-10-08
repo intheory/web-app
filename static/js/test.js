@@ -107,6 +107,16 @@ function pad(number, length) {
 
     });
 
+    $("li.next-after-wrong-answer").live("click", function() {
+       var tid = $(this).attr("tid");
+        IT.get("/test/get-next-after-wrong", {
+                 tid: tid
+         }, true, function(response) 
+         {  
+           $(".landing").empty().html(response.html);
+          });
+    });
+
     $("li.next").live("click", function() {
     	var choices = $("tr"); //Find all the selected choices by the user
     	var answers = [];
@@ -126,7 +136,16 @@ function pad(number, length) {
                  cursor: cursor
   	     }, true, function(response) 
   	     {  
-           $(".landing").empty().html(response.html);
+           if (response.correct){
+             $(".landing").empty().html(response.html);
+           }
+           else{
+             $(".maincontent").empty().html(response.html);
+             //Color transition
+             $(".maincontent").css({ backgroundColor: "#B94A48" });
+             $(".maincontent").animate({ backgroundColor: "#F2DEDE" }, 1500);
+
+           }
           });    	
       }
       else{

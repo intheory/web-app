@@ -110,12 +110,54 @@ class GetNextQuestionHandler(base.BaseHandler):
             except IndexError:
                 t.answers.append(ta)
 
-            t.cursor += 1
-            t.save()
+            result = t.evaluate_question(int(cursor), ta)
 
-            return (t,)
+            if result == 1:
+                correct = True
+                t.update_cursor(1)
+            elif result == 0:
+                correct = False;
+                t.save()
+
+            return (t, correct)
         except Exception, e:
             self.log.warning("Error while fetching new question: " + str(e))
+
+    def on_success(self, t, correct):
+        if isinstance(t, MockTest):
+            timed = True
+        elif isinstance(t, PractiseTest):
+            timed = False
+
+        if t.cursor < len(t.questions): #is the test finished?
+            if correct:
+                self.xhr_response.update({"correct": correct, "html": self.render_string("ui-modules/question.html", test=t, timed=timed)}) 
+            else:
+                self.xhr_response.update({"correct": correct,
+                                          "html": self.render_string("ui-modules/explanation.html", test=t, question=t.questions[t.cursor-1])})
+        else:
+            #Calculate test score 
+            t.calculate_score()
+            #Update user's points
+            self.current_user.update_points(t.score)
+            self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Test complete!", no_questions=len(t.questions), score=t.score, learn=False)})
+        self.write(self.xhr_response) 
+
+class GetNextAfterWrongQuestionHandler(base.BaseHandler):
+    '''
+    Simply fetches the next question after a wrong answer dialog.
+    '''
+    @tornado.web.authenticated
+    def on_get(self):
+        try:
+            tid = self.get_argument("tid", None) 
+
+            #Fetch the test object
+            t = Test.objects(id=tid).get()
+            t.update_cursor(1)
+            return (t,)
+        except Exception, e:
+            self.log.warning("Error while fetching new question after wrong answer dialog: " + str(e))
 
     def on_success(self, t):
         if isinstance(t, MockTest):
@@ -123,14 +165,7 @@ class GetNextQuestionHandler(base.BaseHandler):
         elif isinstance(t, PractiseTest):
             timed = False
 
-        if t.cursor < len(t.questions): #is the test finished?
-            self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t, timed=timed)})  
-        else:
-            #Calculate test score 
-            t.calculate_score()
-            #Update user's points
-            self.current_user.update_points(t.score)
-            self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Test complete!", no_questions=len(t.questions), score=t.score, learn=False)})
+        self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t, timed=timed)})
         self.write(self.xhr_response) 
 
 class GetPreviousQuestionHandler(base.BaseHandler):
