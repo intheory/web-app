@@ -1,0 +1,44 @@
+2012-08-30 13:05:41,619 CRIT Supervisor running as root (no user in config file)
+2012-08-30 13:05:41,820 INFO RPC interface 'supervisor' initialized
+2012-08-30 13:05:41,821 WARN cElementTree not installed, using slower XML parser for XML-RPC
+2012-08-30 13:05:41,821 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2012-08-30 13:05:41,830 INFO daemonizing the supervisord process
+2012-08-30 13:05:41,831 INFO supervisord started with pid 31490
+2012-08-30 13:05:42,850 INFO spawned: 'intheory-8891' with pid 31491
+2012-08-30 13:05:42,863 INFO spawned: 'intheory-8890' with pid 31492
+2012-08-30 13:05:42,889 INFO spawned: 'intheory-8888' with pid 31493
+2012-08-30 13:05:42,914 INFO spawned: 'intheory-8889' with pid 31494
+2012-08-30 13:05:43,411 INFO exited: intheory-8891 (exit status 1; not expected)
+2012-08-30 13:05:43,430 INFO exited: intheory-8890 (exit status 1; not expected)
+2012-08-30 13:05:43,450 INFO exited: intheory-8888 (exit status 1; not expected)
+2012-08-30 13:05:43,454 INFO exited: intheory-8889 (exit status 1; not expected)
+2012-08-30 13:05:44,470 INFO spawned: 'intheory-8891' with pid 31495
+2012-08-30 13:05:44,498 INFO spawned: 'intheory-8890' with pid 31496
+2012-08-30 13:05:44,544 INFO spawned: 'intheory-8888' with pid 31497
+2012-08-30 13:05:44,598 INFO spawned: 'intheory-8889' with pid 31498
+2012-08-30 13:05:45,014 INFO exited: intheory-8891 (exit status 1; not expected)
+2012-08-30 13:05:45,027 INFO exited: intheory-8890 (exit status 1; not expected)
+2012-08-30 13:05:45,056 INFO exited: intheory-8888 (exit status 1; not expected)
+2012-08-30 13:05:45,057 INFO exited: intheory-8889 (exit status 1; not expected)
+2012-08-30 13:05:47,075 INFO spawned: 'intheory-8891' with pid 31499
+2012-08-30 13:05:47,118 INFO spawned: 'intheory-8890' with pid 31500
+2012-08-30 13:05:47,155 INFO spawned: 'intheory-8888' with pid 31501
+2012-08-30 13:05:47,186 INFO spawned: 'intheory-8889' with pid 31502
+2012-08-30 13:05:47,720 INFO exited: intheory-8891 (exit status 1; not expected)
+2012-08-30 13:05:47,724 INFO exited: intheory-8890 (exit status 1; not expected)
+2012-08-30 13:05:47,748 INFO exited: intheory-8888 (exit status 1; not expected)
+2012-08-30 13:05:47,749 INFO exited: intheory-8889 (exit status 1; not expected)
+2012-08-30 13:05:50,771 INFO spawned: 'intheory-8891' with pid 31503
+2012-08-30 13:05:50,783 INFO spawned: 'intheory-8890' with pid 31504
+2012-08-30 13:05:50,825 INFO spawned: 'intheory-8888' with pid 31505
+2012-08-30 13:05:50,912 INFO spawned: 'intheory-8889' with pid 31506
+2012-08-30 13:05:51,476 INFO exited: intheory-8890 (exit status 1; not expected)
+2012-08-30 13:05:51,503 INFO gave up: intheory-8890 entered FATAL state, too many start retries too quickly
+2012-08-30 13:05:51,504 INFO exited: intheory-8891 (exit status 1; not expected)
+2012-08-30 13:05:51,517 INFO gave up: intheory-8891 entered FATAL state, too many start retries too quickly
+2012-08-30 13:05:51,524 INFO exited: intheory-8888 (exit status 1; not expected)
+2012-08-30 13:05:51,525 INFO gave up: intheory-8888 entered FATAL state, too many start retries too quickly
+2012-08-30 13:05:51,548 INFO exited: intheory-8889 (exit status 1; not expected)
+2012-08-30 13:05:52,550 INFO gave up: intheory-8889 entered FATAL state, too many start retries too quickly
+2012-08-30 13:37:07,285 CRIT Supervisor running as root (no user in config file)
+2012-09-08 18:16:49,812 WARN received SIGTERM indicating exit request
