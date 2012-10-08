@@ -67,7 +67,7 @@ function pad(number, length) {
   });
 
  $(".notify-blurb-close-btn, #carry-on-btn").live("click", function() {
-    $("#dim").fadeOut();
+    $("#dim").fadeOut(1500);
     IT.popup.close();
  });
 
@@ -78,7 +78,7 @@ function pad(number, length) {
          }, true, function(response) 
          {  
             $(".landing").empty().html(response.html);
-            $("#dim").fadeOut();
+            $("#dim").fadeOut(1500);
             IT.popup.close();
           });
   });
