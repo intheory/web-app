@@ -101,23 +101,15 @@ class GetNextQuestionHandler(base.BaseHandler):
             #Fetch the test object
             t = Test.objects(id=tid).get()
 
-            #Save user answers
-            ta = TestAnswer()
-            ta.qid = str(t.questions[int(cursor)].id)
-            ta.selected_answers = answers 
-            try:
-                t.answers[int(cursor)] = ta
-            except IndexError:
-                t.answers.append(ta)
+            #Save user answers  
+            t.save_answers(answers)
 
-            result = t.evaluate_question(int(cursor), ta)
-
+            result = t.evaluate_question(int(cursor))
             if result == 1:
                 correct = True
                 t.update_cursor(1)
             elif result == 0:
                 correct = False;
-                t.save()
 
             return (t, correct)
         except Exception, e:

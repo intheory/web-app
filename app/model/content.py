@@ -66,6 +66,19 @@ class Test(Document):
         self.is_completed = True
         self.save()
 
+    def save_answers(self, answers):
+        '''
+        Saves user's answers for a question at position cursor
+        '''
+        ta = TestAnswer()
+        ta.qid = str(self.questions[self.cursor].id)
+        ta.selected_answers = answers 
+        try:
+            self.answers[self.cursor] = ta
+        except IndexError:
+            self.answers.append(ta)
+        self.save()
+
     def update_cursor(self, value):
         self.cursor += value
         self.save()
@@ -76,7 +89,7 @@ class MockTest(Test):
 
 class PractiseTest(Test):
     
-    def evaluate_question(self, cursor, user_answer):
+    def evaluate_question(self, cursor):
         '''
         Evaluates the question at cursor position
         '''
@@ -85,7 +98,7 @@ class PractiseTest(Test):
             correct_answers =[int(answer) for answer in self.questions[cursor].answer]
 
             #Put user's answers in a list
-            user_answers = [int(answer) for answer in user_answer.selected_answers]
+            user_answers = [int(answer) for answer in self.answers[cursor].selected_answers]
 
             #Check if user answered correctly by looking at the intersection of correct answers and user answers
             inter = set(user_answers).intersection(correct_answers)
