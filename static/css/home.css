@@ -1,18 +1,4 @@
-.welcome-msg{
-  position:relative; 
-  z-index:300;
-  border-style:solid;
-  border-width:thin;
-  border-color:white;
-  height:206px;
 
-  background-color:#000;
-  padding:5px 15px 15px 15px;
-  margin: 0px 15px 0px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  background: rgba(0, 0, 0, 0.7);
-}
 
 ul.bigstat > li > h1 {
   display: block;
@@ -51,4 +37,41 @@ div.bigstatUnderline {
   -moz-border-radius: 5px;
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.7);
+}
+
+.welcome-msg-container{
+  display: none;
+  position:relative; 
+  z-index:300;
+  border-style:solid;
+  border-width:thin;
+  border-color:white;
+  height:206px;
+
+  background-color:#000;
+  padding:5px 15px 15px 15px;
+  margin: 0px 15px 0px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.welcome-msg-content{
+  height:190px;
+}
+
+.welcome-msg-footer{
+  position: relative;
+  bottom: 0px;
+}
+
+.welcome-msg-footer label{
+  position: absolute;
+  right:2px;
+  font-size: 12px;
+}
+
+#close-welcome-msg-btn{
+  position: absolute;
+  left: 2px;
 }
