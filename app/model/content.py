@@ -80,6 +80,9 @@ class Test(Document):
         self.save()
 
     def update_cursor(self, value):
+        # if self.cursor + value >= len(self.questions) :
+        #     #Do not overflow 
+        #     return
         self.cursor += value
         self.save()
 

@@ -149,7 +149,7 @@ class GetNextAfterWrongQuestionHandler(base.BaseHandler):
 
             #Fetch the test object
             t = Test.objects(id=tid).get()
-            t.update_cursor(1)
+            t.update_cursor(1)    
             return (t,)
         except Exception, e:
             self.log.warning("Error while fetching new question after wrong answer dialog: " + str(e))
@@ -159,9 +159,14 @@ class GetNextAfterWrongQuestionHandler(base.BaseHandler):
             timed = True
         elif isinstance(t, PractiseTest):
             timed = False
+
         if t.cursor < len(t.questions): #is the test finished?
             self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t, timed=timed)})
         else:
+            #Calculate test score 
+            t.calculate_score()
+            #Update user's points
+            self.current_user.update_points(t.score)
             self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Test complete!", no_questions=len(t.questions), score=t.score, learn=False)})
         self.write(self.xhr_response) 
 
