@@ -24,7 +24,7 @@
                cursor: cursor
         }, true, function(response) 
         {   
-          $(".landing").empty().html(response.html);            
+          $(".landing").empty().html(response.html);          
         });
     });
 

@@ -143,8 +143,8 @@ function pad(number, length) {
              //Color transition
              $(".maincontent").css({ backgroundColor: "#B94A48" });
              $(".maincontent").animate({ backgroundColor: "#F2DEDE" }, 1500);
-
            }
+           IT.popup.close();
           });    	
       }
       else{
