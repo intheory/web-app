@@ -49,11 +49,11 @@ div.bigstatUnderline {
   height:206px;
 
   background-color:#000;
-  padding:5px 15px 15px 15px;
+  padding: 5px 15px 15px 15px;
   margin: 0px 15px 0px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .welcome-msg-content{
@@ -74,4 +74,5 @@ div.bigstatUnderline {
 #close-welcome-msg-btn{
   position: absolute;
   left: 2px;
+  bottom: -10px;
 }

@@ -21,13 +21,12 @@
       $(".welcome-msg-container").hide();
     	$(".stats-section").fadeIn();
 	    $("#dim").fadeOut(2000);
-      if ($("#remove-msg-checkbox").is(':checked')){
-        IT.post("/dashboard/remove-msg", {
-        }, true, function(response) 
-        {  
-          
-        });
-      }
+      IT.post("/dashboard/remove-msg", {
+      }, true, function(response) 
+      {  
+        
+      });
+
 	});
 
 
