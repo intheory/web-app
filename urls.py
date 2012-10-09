@@ -13,6 +13,7 @@ url_patterns = [
     ("/login", user.UserLoginHandler),
     ("/logout", user.UserLogoutHandler),
     ###########Dashboard hanlders##############
+    ("/dashboard/remove-msg", dashboard.RemoveDashBoardMsgHandler),
     ("/dashboard", dashboard.ViewDashBoardHandler),
     ###########Learning pages hanlders##############
     ("/learn/main", learn.ViewLearnMainHandler),

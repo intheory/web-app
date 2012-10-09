@@ -94,6 +94,10 @@ class User(Document):
         except Exception, e:
             print e
 
+    def mark_welcome_msg_as_read(self):
+        self.has_read_welcome_msg = True
+        self.save()
+
 class TwitterUser(User):
     meta = {'allow_inheritance': True}
     access_token = StringField(required=True)

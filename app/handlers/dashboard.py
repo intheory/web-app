@@ -18,3 +18,12 @@ class ViewDashBoardHandler(base.BaseHandler):
         								   correct_answers=stats['correct_answers'], 
         								   points=stats['points'],
         								   accuracy="{0:.1f}".format(stats['accuracy']))
+
+class RemoveDashBoardMsgHandler(base.BaseHandler):
+    '''
+    Removes the dashboard welcome messgae.    
+    '''
+    @tornado.web.authenticated
+    def on_post(self):
+        self.current_user.mark_welcome_msg_as_read()
+        self.write(self.xhr_response) 

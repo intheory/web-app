@@ -104,7 +104,6 @@ function pad(number, length) {
           $(".next").attr("remaining-answers", remainingAnswers-1);
         }
       }
-
     });
 
     $("li.next-after-wrong-answer").live("click", function() {
