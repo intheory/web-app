@@ -104,12 +104,19 @@ class GetNextQuestionHandler(base.BaseHandler):
             #Save user answers  
             t.save_answers(answers)
 
-            result = t.evaluate_question(int(cursor))
-            if result == 1:
-                correct = True
+            #This will only be executed for practice tests
+            if isinstance(t, PractiseTest):
+                result = t.evaluate_question(int(cursor))
+                if result == 1:
+                    correct = True
+                    t.update_cursor(1)
+                elif result == 0:
+                    correct = False;
+            else:
+                #if this is a mock test jsut increase cursor and 
+                #assume it's correct
                 t.update_cursor(1)
-            elif result == 0:
-                correct = False;
+                correct = True
 
             return (t, correct)
         except Exception, e:
