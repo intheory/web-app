@@ -209,7 +209,7 @@ class BaseHandler(tornado.web.RequestHandler):
         except:
             ex = sys.exc_info()[1]
             msg = ex.message.encode("utf-8")
-            #self.log.exception(msg)
+            self.log.exception(msg)
             self._execute_on_error(ex)
         else:
             self._execute_on_success(*result)

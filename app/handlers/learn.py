@@ -24,7 +24,10 @@ class ViewSectionHandler(base.BaseHandler):
             #Get section object
             section = Section.objects(id=sid).get()
 
-            cursor = self.current_user.get_section_cursor(sid)
+            if self.current_user.get_section_cursor(sid) == len(section.nuggets)-1:
+                cursor=0
+            else:
+                cursor = self.current_user.get_section_cursor(sid)
             self.base_render("learn/learn-content.html", section=section,
                                                          cursor=cursor, 
                                                          section_length=len(section.nuggets))
@@ -60,7 +63,6 @@ class GetNextNuggetHandler(base.BaseHandler):
             sid = self.get_argument("sid", None)
             cursor = self.get_argument("cursor", None)
             section = Section.objects(id=sid).get()
-
             # #Update user's cursor
             self.current_user.update_section_cursor(sid, len(section.nuggets), int(cursor)) 
 
@@ -74,7 +76,8 @@ class GetNextNuggetHandler(base.BaseHandler):
         if self.is_xhr:
             if current_cursor < section_length: #if there exists a next nugget (not end of section)
                 html = self.render_string("ui-modules/nugget.html", section=section,
-                                                            section_length=section_length)
+                                                                    cursor = current_cursor,
+                                                                    section_length=section_length)
                 self.xhr_response.update({"html":html})
             else:
                 self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Section Completed!", no_questions=0, score=0, learn=True, sid=str(section.id))})
