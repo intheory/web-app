@@ -4,11 +4,11 @@ from app.handlers import base
 from app.model.content import Section
 
 
-class ViewPractiseMainHandler(base.BaseHandler):
+class ViewPracticeMainHandler(base.BaseHandler):
     '''
     Renders the main practise page.    
     '''
     @tornado.web.authenticated
     def on_get(self):
         sections = Section.objects
-        self.base_render("practise/practise-main.html", sections=sections)
+        self.base_render("practice/practice-main.html", sections=sections)
