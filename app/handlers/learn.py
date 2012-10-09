@@ -63,19 +63,17 @@ class GetNextNuggetHandler(base.BaseHandler):
 
             # #Update user's cursor
             self.current_user.update_section_cursor(sid, len(section.nuggets), int(cursor)) 
-            new_cursor = int(cursor) + 1
 
         except Exception, e:
             self.log.warning("Error while getting next nugget: " + str(e))
 
-        return (section, new_cursor)
+        return (section, int(cursor)+1)
 
-    def on_success(self, section, new_cursor):
+    def on_success(self, section, current_cursor):
         section_length = len(section.nuggets)
         if self.is_xhr:
-            if new_cursor + 1 < section_length: #if there exists a next nugget (not end of section)
+            if current_cursor < section_length: #if there exists a next nugget (not end of section)
                 html = self.render_string("ui-modules/nugget.html", section=section,
-                                                            cursor=new_cursor,
                                                             section_length=section_length)
                 self.xhr_response.update({"html":html})
             else:

@@ -1,5 +1,10 @@
-{% set c = cursor % (len(section.nuggets)-1) %}
+{% if current_user.cursors.has_key(str(section.id))  %}
+	{% set c = current_user.cursors[str(section.id)] % (section_length) %}
+{% else %}
+	{% set c = 0 %}
+{% end%}
 {% set nugget = section.nuggets[c] %}
+{{c}}
 <div class="landing">
 	<div class="row">
   		<div class="span12"><br />
