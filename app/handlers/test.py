@@ -6,7 +6,7 @@ from random import shuffle
 from mongoengine.queryset import DoesNotExist
 
 MOCK_TEST_SIZE = 50 
-PRACTISE_TEST_SIZE = 20 
+PRACTISE_TEST_SIZE = 2 
 
 class CreateNewTestHandler(base.BaseHandler):
     '''
@@ -128,11 +128,14 @@ class GetNextQuestionHandler(base.BaseHandler):
                 self.xhr_response.update({"correct": correct,
                                           "html": self.render_string("ui-modules/explanation.html", test=t, question=t.questions[t.cursor])})
         else:
-            #Calculate test score 
-            t.calculate_score()
-            #Update user's points
-            self.current_user.update_points(t.score)
-            self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Test complete!", no_questions=len(t.questions), score=t.score, learn=False)})
+            if correct:
+                #Calculate test score 
+                t.calculate_score()
+                #Update user's points
+                self.current_user.update_points(t.score)
+                self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Test complete!", no_questions=len(t.questions), score=t.score, learn=False)})
+            else:
+                self.xhr_response.update({"correct": correct, "html": self.render_string("ui-modules/question.html", test=t, timed=timed)}) 
         self.write(self.xhr_response) 
 
 class GetNextAfterWrongQuestionHandler(base.BaseHandler):
@@ -156,8 +159,10 @@ class GetNextAfterWrongQuestionHandler(base.BaseHandler):
             timed = True
         elif isinstance(t, PractiseTest):
             timed = False
-
-        self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t, timed=timed)})
+        if t.cursor < len(t.questions): #is the test finished?
+            self.xhr_response.update({"html": self.render_string("ui-modules/question.html", test=t, timed=timed)})
+        else:
+            self.xhr_response.update({"html": self.render_string("ui-modules/complete.html", message="Test complete!", no_questions=len(t.questions), score=t.score, learn=False)})
         self.write(self.xhr_response) 
 
 class GetPreviousQuestionHandler(base.BaseHandler):
