@@ -58,8 +58,13 @@ class Test(Document):
             user_answers.append([int(answer) for answer in user_answer.selected_answers])
 
         #Check if user answered correctly by looking at the intersection of correct answers and user answers
-        for i, correct_answer in enumerate(correct_answers):                
-            user_answer = user_answers[i]
+        for i, correct_answer in enumerate(correct_answers):     
+            try:              
+                user_answer = user_answers[i]
+            except IndexError:
+                #This means that an answer for this question was not provided (timer ended)
+                user_answer = [] #just allocate no answer to this question
+
             inter = set(user_answer).intersection(correct_answer)
             if len(inter) == len(correct_answer): 
                 self.score += 1

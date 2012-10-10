@@ -96,12 +96,19 @@ class GetNextQuestionHandler(base.BaseHandler):
             if answers:
                 answers = tornado.escape.json_decode(answers)
             cursor = self.get_argument("cursor", None)
+            timer_is_over = self.get_argument("timer_over", None)
 
             #Fetch the test object
             t = Test.objects(id=tid).get()
-
             #Save user answers  
             t.save_answers(answers)
+
+            #if this request is made because the timer is over evaluate the test and 
+            #end it
+            if timer_is_over:
+                t.cursor = 50
+                t.save()
+                return (t, True)
 
             #This will only be executed for practice tests
             if isinstance(t, PractiseTest):

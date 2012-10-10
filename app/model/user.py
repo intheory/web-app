@@ -92,7 +92,7 @@ class User(Document):
             #uncomment the next line:
             #sections = Section.objects()
             sections = Section.objects(title__ne="Traffic Signs")
-            print sections
+
             for section in sections:
                 number_nuggets += len(section.nuggets)
 

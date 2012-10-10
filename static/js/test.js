@@ -32,11 +32,21 @@ $(document).ready(function() {
     var min = parseInt(countdownCurrent/6000);
     var sec = parseInt(countdownCurrent/100)-(min*60);
     var output = "00"; if(min > 0) {output = pad(min,2);}
+    var tid = $('.countdowntime').attr("tid");
+    var cursor = 50
+
     $('.countdowntime').html("<h3>" + output+":"+pad(sec,2) + "</h3>" );
     if(countdownCurrent == 0) {
-      countdownTimer.stop();
-      alert('Example 2: Countdown timer complete!');
-      countdownReset();
+      countdownCurrent = 3.42 * 100000;//Give time for the response to come back
+      IT.get("/test/get-next", {
+                 tid: tid,
+                 cursor: cursor,
+                 timer_over: true
+         }, true, function(response) 
+         {  
+           countdownReset();
+          $(".landing").empty().html(response.html);
+      });
     } else {
       countdownCurrent-=7;
       if(countdownCurrent < 0) {countdownCurrent=0;}
@@ -45,8 +55,10 @@ $(document).ready(function() {
 });
 
 function countdownReset() {
-  var newCount = parseInt($('input[name=startTime]').val())*100;
-  if(newCount > 0) {countdownCurrent = newCount;}
+  var newCount =  3.42 * 100;
+  if(newCount > 0) {
+    countdownCurrent = newCount;
+  }
   countdownTimer.stop().once();
 }
 
