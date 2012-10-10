@@ -42,7 +42,7 @@ class User(Document):
 
     def get_user_stats(self):
         '''
-        calculates user statts and returns a dict.
+        calculates user stats and returns a dict.
         '''
         try:
             stats = {}
@@ -67,10 +67,6 @@ class User(Document):
 
     def get_points(self):
         return self.points
-
-    def get_correct_answers(self):
-
-        return no_of_correct_answers
 
     def get_correct_answers(self):
         test_history = Test.objects(user=str(self.id))

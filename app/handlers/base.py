@@ -119,6 +119,10 @@ class BaseHandler(tornado.web.RequestHandler):
 
         if cookie:
             try: 
+                print '3'
+                print user_types[user_type].objects(access_token=cookie)
+                print cookie
+                print '----'
                 user = user_types[user_type].objects(access_token=cookie).get()
                 cu = CachedUser()
                 cu.id = user.id
