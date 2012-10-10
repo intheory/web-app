@@ -12,7 +12,12 @@
   <div class="row">
     <div class="span5"><br />
       <div class="landingdescrip">
-        {% if progress != 0 %}
+        {% if progress == 0 %}
+          <h1>Welcome {{current_user.first_name}}!</h1>
+          <p>
+            Welcome to your one and only study guide for the driving theory test. If you feel ready to start use one of the buttons below to get started.
+          </p> 
+        {% elif progress < 80 %}
           <h1>Hey {{current_user.first_name}}!</h1>
           <p>
             Good to see you back! You're <b>{{progress}}%</b> of the way through learning for the theory test and should be ready to pass really <b>soon</b>.
@@ -20,7 +25,7 @@
         {% else %}
           <h1>Welcome {{current_user.first_name}}!</h1>
           <p>
-            Welcome to your one and only study guide for the driving theory test. If you feel ready to start use one of the buttons below to get started.
+              Good to see you back! You're <b>{{progress}}%</b> of the way through learning for the theory test. You are almost <strong>ready</strong>!.
           </p> 
         {% end %}
         <p>
