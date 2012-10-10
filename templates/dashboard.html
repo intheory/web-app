@@ -49,12 +49,12 @@
             <center>
               <ul class="bigstat">
                 <li class="bigstat">
-                  <h1>{{kwargs['correct_answers']}}</h1>
+                  <h1>{{kwargs['stats']['correct_answers']}}</h1>
                   <div class="bigstatUnderline"></div>
                   <h2>Correct Answers</h2>
                 </li><br /><br /><br />
                 <li class="bigstat">
-                  <h1>{{kwargs['points']}}</h1>
+                  <h1>{{kwargs['stats']['points']}}</h1>
                   <div class="bigstatUnderline"></div>
                   <h2>Total points</h2>
                 </li>
@@ -65,13 +65,13 @@
             <center> 
               <ul class="bigstat">
                 <li class="bigstat">
-                  <h1>0</h1>
+                  <h1>{{kwargs['stats']['total_questions_answered']}}</h1>
                   <div class="bigstatUnderline"></div>
-                  <h2>Badges Awarded</h2>
+                  <h2>Questions Answered</h2>
                 </li>
                 <br/><br/><br/>
                 <li class="bigstat">
-                  <h1>{{kwargs['accuracy']}}%</h1>
+                  <h1>{{"{0:.1f}".format(kwargs['stats']['accuracy'])}}%</h1>
                   <div class="bigstatUnderline"></div>
                   <h2>Accuracy</h2>
                 </li>

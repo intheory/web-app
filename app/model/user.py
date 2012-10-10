@@ -55,11 +55,13 @@ class User(Document):
                 stats['correct_answers'] = no_of_correct_answers
                 total_questions_answered = float(len(test_history)*50)
                 stats['accuracy'] = no_of_correct_answers / total_questions_answered
+                stats['total_questions_answered'] = total_questions_answered
             else:
                 stats['correct_answers'] = 0
                 stats['accuracy'] = 0
+                stats['total_questions_answered'] = 0
 
-            stats['points'] = 0 #The user may receive points without completing a test. We're good people
+            stats['points'] = self.points #The user may receive points without completing a test. We're good people
 
             return stats
         except Exception,e:

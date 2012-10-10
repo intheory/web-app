@@ -90,7 +90,6 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
         c_user.locale = response['locale']
         c_user.fb_id = response['id']
         c_user.save()    
-        print 1
 
     def _save_user_friends(self, c_user, response):
         '''
@@ -107,8 +106,6 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
             uf.fb_id = friend['id']
             c_user.friends.append(uf)
         c_user.save()
-        print 2
-    
 
 class TwitterUserLoginHandler(base.BaseHandler, tornado.auth.TwitterMixin):
     '''

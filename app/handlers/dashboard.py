@@ -15,9 +15,7 @@ class ViewDashBoardHandler(base.BaseHandler):
         progress = u.get_overall_progress()
         self.base_render("dashboard.html", user=u, 
                                            progress = progress,
-        								   correct_answers=stats['correct_answers'], 
-        								   points=stats['points'],
-        								   accuracy="{0:.1f}".format(stats['accuracy']))
+                                           stats= stats)
 
 class RemoveDashBoardMsgHandler(base.BaseHandler):
     '''
