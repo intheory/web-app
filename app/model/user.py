@@ -1,5 +1,5 @@
 from mongoengine import Document, DictField, IntField, ObjectIdField, StringField, EmbeddedDocument, EmbeddedDocumentField, ListField, BooleanField, ReferenceField
-from app.model.content import Test, Section
+from app.model.content import MockTest, PractiseTest, Test, Section
 
 # ============================ User ================================ #
 
@@ -53,8 +53,16 @@ class User(Document):
                     no_of_correct_answers += test.score
 
                 stats['correct_answers'] = no_of_correct_answers
-                total_questions_answered = float(len(test_history)*50)
-                stats['accuracy'] = no_of_correct_answers / total_questions_answered
+                
+                #count total questions
+                total_questions_answered = 0
+                for test in test_history:
+                    if isinstance(test, MockTest):
+                        total_questions_answered += 50
+                    elif isinstance(test, PractiseTest):
+                        total_questions_answered += 20
+
+                stats['accuracy'] = 100*no_of_correct_answers / float(total_questions_answered)
                 stats['total_questions_answered'] = total_questions_answered
             else:
                 stats['correct_answers'] = 0
