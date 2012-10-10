@@ -88,7 +88,11 @@ class User(Document):
     def get_overall_progress(self):
         try:
             number_nuggets = 0
-            sections = Section.objects
+            #When the traffic signs sections is split into section delete this and 
+            #uncomment the next line:
+            #sections = Section.objects()
+            sections = Section.objects(title__ne="Traffic Signs")
+            print sections
             for section in sections:
                 number_nuggets += len(section.nuggets)
 
