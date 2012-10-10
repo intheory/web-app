@@ -34,8 +34,19 @@
 }
 
 .nugget-img-container { 
-  width: 400px;
+  width: 420px;
   height: 350px;
   background-repeat: no-repeat;
-  background-position: 50% 50%;background-size:400px 350px;
+  background-position: 50% 50%;
+  background-size:420px 350px;
+  margin-left: -15px;
+}
+
+.pull-right{
+  position: relative;
+}
+
+.statbox{
+  position: absolute;
+  right:0px;
 }

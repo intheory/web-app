@@ -34,3 +34,12 @@ a:hover {
 .pager .next-after-wrong-answer span {
   float: right;
 }
+
+.pull-right{
+  position: relative;
+}
+
+.statbox{
+  position: absolute;
+  right:0px;
+}

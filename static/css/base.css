@@ -254,12 +254,12 @@ a:hover {
 
 .statbox{
   float: left;
-  padding:7px 0px 7px 0px;
+  padding: 7px 0px 7px 0px;
   width: 80px;
   margin: 7px 0px 7px 0px;
 }
 
-.statbox h3{  
+.statbox h4{  
   margin: auto;
   background-color:#006fba;
   padding:10px;
