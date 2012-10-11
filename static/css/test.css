@@ -10,3 +10,14 @@ td {
 .buttonmock{
 	padding-top: 8px;
 }
+
+.errorborder{
+	background-color:#b70707;
+	padding-top:5px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-bottom:15px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+    background: rgba(183, 7, 7, 0.7);
+}

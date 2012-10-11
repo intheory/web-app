@@ -1,4 +1,48 @@
-<h4>Oops! Your answer was wrong.</h4>
+<div class="landing">
+	<div class="row">
+  		<div class="span3">
+  		</div>
+  		<div class="span6"><br />
+	    	<div class="errorborder">
+	      		<div class="row">
+		      		<div class="span8">
+          				<div class="questiontitle">
+			        		<h2>Oops! Your answer was wrong...</h2>
+          				</div>
+        			</div>
+      			</div>
+
+    			<div class="maincontent">
+        			<div class="alert alert alert-success">
+          				<button type="button" class="close" data-dismiss="alert"></button>
+          				<h4 style="padding-bottom:5px;">The correct answer was:</h4>
+			          	<ul>
+			          		{% for correct_answer in question.answer %}
+				            	<li style="color:black;">{{question.options[int(correct_answer)]}}</li>
+			            	{% end %}
+			          	</ul>
+        			</div>
+
+			        <div class="alert alert alert-info">
+			          <button type="button" class="close" data-dismiss="alert"></button>
+			          <h4 style="padding-bottom:5px;">Explanation:</h4>
+			          {{question.extract}}
+			        </div>
+       
+			        <ul class="pager">
+						<li class="next-after-wrong-answer" tid="{{test.id}}">
+							<a href="#">Next &rarr;</a>
+						</li>
+					</ul>
+      
+      			</div>
+ 
+    		</div>
+  		</div> 
+	</div>
+</div>
+
+<!-- <h4>Oops! Your answer was wrong.</h4>
 <h4>Correct answer</h4>
 	<table class="table table-hover">
 		<thead>
@@ -25,4 +69,4 @@
 	<li class="next-after-wrong-answer" tid="{{test.id}}">
 		<a href="#">Next &rarr;</a>
 	</li>
-</ul>
+</ul> -->

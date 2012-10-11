@@ -151,10 +151,10 @@ function pad(number, length) {
              $(".landing").empty().html(response.html);
            }
            else{
-             $(".maincontent").empty().html(response.html);
+             $(".landing").empty().html(response.html);
              //Color transition
              $(".maincontent").css({ backgroundColor: "#B94A48" });
-             $(".maincontent").animate({ backgroundColor: "#F2DEDE" }, 1500);
+             $(".maincontent").animate({ backgroundColor: "#FFFF" }, 1500);
            }
            IT.popup.close();
           });    	
