@@ -9,7 +9,7 @@ class HomePageHandler(base.BaseHandler):
     def on_get(self):
         if  not self.current_user:
             questions = MiniQuizQuestion.objects                
-            self.base_render("home.html", questions=questions, tweet="Woo hoo I passed my test. Thank you #intheory!")
+            self.base_render("home.html")
         else:
             uid = self.current_user.id
             u = User.objects(id=uid).get()

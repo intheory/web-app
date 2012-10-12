@@ -4,15 +4,15 @@
 # Acknowledgement: Alexis Michael  #
 ####################################
 
-import ConfigParser #@UnresolvedImport
-import environment #@UnusedImport
+import ConfigParser
+import environment 
 import tornado.web, os, pymongo, uimodules
 import app.deps
 from log import CustomLogger
 from urls import url_patterns
 from dependencies import css_deps, js_deps
-from mongoengine import connect #@UnresolvedImport
-from optparse import OptionParser #@UnresolvedImport
+from mongoengine import connect 
+from optparse import OptionParser
 from app.model.user import *
 
 class Intheory(tornado.web.Application):
@@ -41,6 +41,9 @@ class Intheory(tornado.web.Application):
                         'facebook_secret': facebook_secret,
                         'twitter_consumer_key': twitter_consumer_key,
                         'twitter_consumer_secret':twitter_consumer_secret,
+                        'paypal-api-username': "george_1350042703_biz_api1.intheory.co.uk",
+                        'paypal-api-password': "1350042729",
+                        'paypal-api-signature': "AQU0e5vuZCvSg-XJploSa.sGUDlpAJe3NGstI3cCC5XSh5CVK89vvFpa",
                         'ui_modules'     : uimodules
                         }
 
