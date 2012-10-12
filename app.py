@@ -41,9 +41,6 @@ class Intheory(tornado.web.Application):
                         'facebook_secret': facebook_secret,
                         'twitter_consumer_key': twitter_consumer_key,
                         'twitter_consumer_secret':twitter_consumer_secret,
-                        'paypal-api-username': "george_1350042703_biz_api1.intheory.co.uk",
-                        'paypal-api-password': "1350042729",
-                        'paypal-api-signature': "AQU0e5vuZCvSg-XJploSa.sGUDlpAJe3NGstI3cCC5XSh5CVK89vvFpa",
                         'ui_modules'     : uimodules
                         }
 

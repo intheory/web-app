@@ -1,10 +1,34 @@
 from app.handlers import base
 from paypal import PayPalInterface
 from paypal import PayPalConfig
+import os
 
 #######GLOBALS#######
-RETURN_URL = 'http://www.intheory.co.uk/payment/do'
-CANCEL_URL = "http://www.intheory.co.uk/payment"
+env = "ITENV" in os.environ and os.environ["ITENV"] or "dev"
+if env=="prod":
+	RETURN_URL = 'http://www.intheory.co.uk/payment/do'
+	CANCEL_URL = "http://www.intheory.co.uk/payment"	
+else:
+	RETURN_URL = 'http://localhost:8888/payment/do'
+	CANCEL_URL = "http://localhost:8888/payment"	
+
+#####GLOBALS############
+PAYPAL_API_USERNAME = "george_1350042703_biz_api1.intheory.co.uk"
+PAYPAL_API_PASSWORD = "1350042729"
+PAYPAL_API_SIGNATURE = "AQU0e5vuZCvSg-XJploSa.sGUDlpAJe3NGstI3cCC5XSh5CVK89vvFpa",
+
+#####UTILITIES##########
+#TODO: Create a factory?
+def get_paypal_interface():
+	'''
+	Returns a paypal interface handle
+	'''
+	CONFIG = PayPalConfig(API_USERNAME = PAYPAL_API_USERNAME,
+                        API_PASSWORD = PAYPAL_API_PASSWORD,
+                        API_SIGNATURE = PAYPAL_API_SIGNATURE,
+                        DEBUG_LEVEL=0)
+
+	return PayPalInterface(config=CONFIG)
 
 class ViewPaymentPageHandler(base.BaseHandler):
     '''
@@ -13,17 +37,11 @@ class ViewPaymentPageHandler(base.BaseHandler):
 
     def on_get(self):
     	try:
-	    	CONFIG = PayPalConfig(API_USERNAME = self.settings['paypal-api-username'],
-									API_PASSWORD = self.settings['paypal-api-password'],
-									API_SIGNATURE = self.settings['paypal-api-signature'],
-									DEBUG_LEVEL=0)
-
-	        ppi = PayPalInterface(config=CONFIG)
-	    	
-	        setexp_response = ppi.set_express_checkout(amt='10.00', 
+	        ppi = get_paypal_interface()
+	        setexp_response = ppi.set_express_checkout( PAYMENTREQUEST_0_AMT='10.00', 
 														returnurl=RETURN_URL, 
 														cancelurl=CANCEL_URL, 
-														paymentaction='Order', 
+														paymentaction='Order',
 														email="giorgosera@gmail.com",
 														landingpage="Billing")
 
@@ -33,17 +51,26 @@ class ViewPaymentPageHandler(base.BaseHandler):
 	        # Redirect client to this URL for approval.
 	        redir_url = ppi.generate_express_checkout_redirect_url(token)
 	        self.base_render("payment.html", redir_url=redir_url)
-	        do_express_checkout_payment()
         except Exception:
-	    	print e
+	    	self.log.warning("Error while rendering payment page: " + str(e))
 
 class DoPaymentHandler(base.BaseHandler):
 	'''
-	This hanlder will make us rich!
+	This hanlder will make us rich! ... not.
 	'''
 	def on_get(self):
-		print self.get_argument("token", None)
-		print self.get_argument("token", None)
+		try:
+			token = self.get_argument("token", None)
+			pid = self.get_argument("PayerID", None)
+
+			ppi = get_paypal_interface()
+			ppi.do_express_checkout_payment(token=token,
+	        								payerid=pid,
+	        								paymentaction='Sale',
+	        								PAYMENTREQUEST_0_AMT='10.00')
+			self.base_render("home.html")
+		except Exception,e:
+			self.log.warning("Error while completing payment: " + str(e))
 
 #Seller:350042585
 #Buyer: 350053375
