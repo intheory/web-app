@@ -1,17 +1,19 @@
 import tornado, tornado.escape
-from app.handlers import base
+from app.handlers import base, user
 from app.model.content import Section, Nugget, PractiseTest, MockTest, Test, Question, TestAnswer#!@UnresolvedImport
 from random import shuffle
 from mongoengine.queryset import DoesNotExist
 
 MOCK_TEST_SIZE = 50
-PRACTISE_TEST_SIZE = 20 
+PRACTISE_TEST_SIZE = 2 
+
 
 class CreateNewTestHandler(base.BaseHandler):
     '''
     Renders a test page. Note that if an argument is provided then that means that 
     this request came from a practise page. In this case we create a practise test.    
     '''
+    @user.has_paid 
     @tornado.web.authenticated
     def on_get(self):
 
@@ -55,6 +57,8 @@ class GetNewTestHandler(base.BaseHandler):
     Renders a new test page after the user decided to dismiss their last unfinished test.  
     This is only applicable for practise tests. Mock tests are deleted if left unfinished.  
     '''
+    @user.has_paid 
+    @tornado.web.authenticated
     def on_get(self):
         try:
             #Delete the old test
@@ -87,6 +91,7 @@ class GetNextQuestionHandler(base.BaseHandler):
     '''
     Fetches next question.    
     '''
+    @user.has_paid 
     @tornado.web.authenticated
     def on_get(self): 
         try:
@@ -154,6 +159,7 @@ class GetNextAfterWrongQuestionHandler(base.BaseHandler):
     '''
     Simply fetches the next question after a wrong answer dialog.
     '''
+    @user.has_paid 
     @tornado.web.authenticated
     def on_get(self):
         try:
@@ -186,6 +192,7 @@ class GetPreviousQuestionHandler(base.BaseHandler):
     '''
     Fetches the previous question along with the selected answers.
     '''
+    @user.has_paid 
     @tornado.web.authenticated
     def on_get(self):
         try:
@@ -210,6 +217,7 @@ class DeleteTestHandler(base.BaseHandler):
     Deletes a test from the db. This happens when the user exits the browser
     before finishing a test.   
     '''
+    @user.has_paid 
     @tornado.web.authenticated
     def on_post(self):  
         tid = self.get_argument("tid", None)

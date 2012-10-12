@@ -41,6 +41,8 @@ class Intheory(tornado.web.Application):
                         'facebook_secret': facebook_secret,
                         'twitter_consumer_key': twitter_consumer_key,
                         'twitter_consumer_secret':twitter_consumer_secret,
+                        'sections_limit': 1,
+                        'tests_limit': 1,
                         'ui_modules'     : uimodules
                         }
 

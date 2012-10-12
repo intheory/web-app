@@ -39,6 +39,7 @@ class ViewPaymentPageHandler(base.BaseHandler):
     	try:
 	        ppi = get_paypal_interface()
 	        setexp_response = ppi.set_express_checkout( PAYMENTREQUEST_0_AMT='10.00', 
+														PAYMENTINFO_0_CURRENCYCODE="GBP",
 														returnurl=RETURN_URL, 
 														cancelurl=CANCEL_URL, 
 														paymentaction='Order',
@@ -64,13 +65,20 @@ class DoPaymentHandler(base.BaseHandler):
 			pid = self.get_argument("PayerID", None)
 
 			ppi = get_paypal_interface()
-			ppi.do_express_checkout_payment(token=token,
+			response = ppi.do_express_checkout_payment(token=token,
 	        								payerid=pid,
 	        								paymentaction='Sale',
+	        								PAYMENTINFO_0_CURRENCYCODE="GBP",
 	        								PAYMENTREQUEST_0_AMT='10.00')
-			self.base_render("home.html")
-		except Exception,e:
+			
+			if response['ACK'] == "Success":
+				self.redirect("/") 
+			else:
+				self.log.error("Erro while completing payment: ACK != Success")
+
+		except Exception, e:
 			self.log.warning("Error while completing payment: " + str(e))
+
 
 #Seller:350042585
 #Buyer: 350053375

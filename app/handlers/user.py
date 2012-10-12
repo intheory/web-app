@@ -1,9 +1,10 @@
+import tornado.auth, tornado.web
+import functools
 from app.handlers import base
 from mongoengine.queryset import DoesNotExist
 from app.model.user import *
-import tornado.auth, tornado.web
-import functools
 from collections import defaultdict
+from app.model.content import Test
     
 def moderator(method):
     ''' 
@@ -18,6 +19,26 @@ def moderator(method):
             else:
                 raise tornado.web.HTTPError(403)
         except:
+            raise tornado.web.HTTPError(403)
+    return wrapper
+
+def has_paid(method):
+    ''' 
+    Decorator - Checks if the currently authenticated user is a paying user.
+    If the user is authenticated and paying then we provide full access on the 
+    website. If the user has not paid then we only allow them to preview a percentage
+    of the page.
+    '''
+    def wrapper(self, *args, **kwargs):
+        try:
+            if self.current_user and self.current_user['has_paid']:
+                return method(self, *args, **kwargs)
+            elif self.current_user and len(self.current_user['cursors'].keys()) < self.settings['sections_limit'] \
+                                   and  len(Test.objects(user=str(self.current_user.id))) < self.settings['tests_limit'] :
+                return method(self, *args, **kwargs)
+            else:
+                self.redirect("/payment")
+        except Exception, e:
             raise tornado.web.HTTPError(403)
     return wrapper
 

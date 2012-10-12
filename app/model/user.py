@@ -19,7 +19,9 @@ class User(Document):
     points = IntField(required=True, default=0)
     cursors = DictField()
     has_read_welcome_msg = BooleanField(required=True, default=False) 
-
+    has_paid = BooleanField(required=True, default=False)
+    
+    
     def toggle_moderator(self):
         self.moderator = not self.moderator
         self.save()

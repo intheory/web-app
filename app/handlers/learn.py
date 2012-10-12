@@ -1,5 +1,5 @@
 import tornado, tornado.escape, math
-from app.handlers import base
+from app.handlers import base, user
 from app.model.content import Section, Nugget, MiniQuizQuestion, HazardPerceptionClip, HazardPerceptionTest#!@UnresolvedImport
 from mongoengine.queryset import DoesNotExist
 import math
@@ -17,6 +17,7 @@ class ViewSectionHandler(base.BaseHandler):
     '''
     Renders a section page.    
     '''
+    @user.has_paid 
     @tornado.web.authenticated
     def on_get(self):
         try:
@@ -38,6 +39,7 @@ class GetPreviousNuggetHandler(base.BaseHandler):
     '''
     Gets the previous nugget
     '''
+    @tornado.web.authenticated
     def on_get(self):
         sid = self.get_argument("sid", None)
         cursor = self.get_argument("cursor", None)
@@ -58,6 +60,7 @@ class GetNextNuggetHandler(base.BaseHandler):
     '''
     Gets the next nugget
     '''
+    @tornado.web.authenticated
     def on_get(self):
         try:
             sid = self.get_argument("sid", None)
@@ -103,6 +106,7 @@ class GetHazardPerceptionHandler(base.BaseHandler):
     '''
     Gets the hazard perception clips 
     '''
+    @user.has_paid 
     @tornado.web.authenticated
     def on_get(self):
         try:
@@ -127,6 +131,7 @@ class EvaluateHazardPerceptionHandler(base.BaseHandler):
     '''
     Evaluates a user's answers for a hazard perception clip
     '''
+    @user.has_paid 
     @tornado.web.authenticated
     def on_post(self):
         try:
