@@ -5,7 +5,7 @@ from mongoengine.queryset import DoesNotExist
 from app.model.user import *
 from collections import defaultdict
 from app.model.content import Test
-    
+
 def moderator(method):
     ''' 
     Decorator - Checks if the currently authenticated user is a moderator.
@@ -30,11 +30,15 @@ def has_paid(method):
     of the page.
     '''
     def wrapper(self, *args, **kwargs):
+        from app.handlers.learn import ViewSectionHandler
+        from app.handlers.test import CreateNewTestHandler
+
         try:
             if self.current_user and self.current_user['has_paid']:
                 return method(self, *args, **kwargs)
-            elif self.current_user and len(self.current_user['cursors'].keys()) < self.settings['sections_limit'] \
-                                   and  len(Test.objects(user=str(self.current_user.id))) < self.settings['tests_limit'] :
+            elif isinstance(self, ViewSectionHandler) and self.current_user and len(self.current_user['cursors'].keys()) < self.settings['sections_limit']:
+                return method(self, *args, **kwargs)
+            elif isinstance(self, CreateNewTestHandler) and self.current_user and len(Test.objects(user=str(self.current_user.id))) < self.settings['tests_limit']:
                 return method(self, *args, **kwargs)
             else:
                 self.redirect("/payment")

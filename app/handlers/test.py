@@ -91,7 +91,6 @@ class GetNextQuestionHandler(base.BaseHandler):
     '''
     Fetches next question.    
     '''
-    @user.has_paid 
     @tornado.web.authenticated
     def on_get(self): 
         try:
@@ -159,7 +158,6 @@ class GetNextAfterWrongQuestionHandler(base.BaseHandler):
     '''
     Simply fetches the next question after a wrong answer dialog.
     '''
-    @user.has_paid 
     @tornado.web.authenticated
     def on_get(self):
         try:
@@ -192,7 +190,6 @@ class GetPreviousQuestionHandler(base.BaseHandler):
     '''
     Fetches the previous question along with the selected answers.
     '''
-    @user.has_paid 
     @tornado.web.authenticated
     def on_get(self):
         try:
@@ -217,7 +214,6 @@ class DeleteTestHandler(base.BaseHandler):
     Deletes a test from the db. This happens when the user exits the browser
     before finishing a test.   
     '''
-    @user.has_paid 
     @tornado.web.authenticated
     def on_post(self):  
         tid = self.get_argument("tid", None)
