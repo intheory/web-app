@@ -32,6 +32,7 @@ class User(Document):
         '''
         Records the payment
         '''
+        self.has_paid = True
         pd = UserPaymentDetails()
         pd.transaction_id = transaction_id
         pd.receipt_id = receipt_id

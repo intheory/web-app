@@ -1,4 +1,3 @@
-
 import tornado, tornado.escape
 from app.handlers import base
 from app.model.content import Section

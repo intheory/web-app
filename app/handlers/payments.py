@@ -1,8 +1,9 @@
+import os
+import tornado
 from app.handlers import base
 from paypal import PayPalInterface
 from paypal import PayPalConfig
 from app.model.user import UserPaymentDetails
-import os
 
 #######GLOBALS#######
 env = "ITENV" in os.environ and os.environ["ITENV"] or "dev"
@@ -35,17 +36,18 @@ class ViewPaymentPageHandler(base.BaseHandler):
     '''
     Renders the payment page.    
     '''
-
+    @tornado.web.authenticated
     def on_get(self):
     	try:
 	        ppi = get_paypal_interface()
 	        email = self.current_user and self.current_user.email or ""
 	        setexp_response = ppi.set_express_checkout( PAYMENTREQUEST_0_AMT='10.00', 
-														PAYMENTINFO_0_CURRENCYCODE="GBP",
+														PAYMENTINFO_0_CURRENCYCODE='GBP',
 														returnurl=RETURN_URL, 
 														cancelurl=CANCEL_URL, 
-														paymentaction='Order',
+														PAYMENTREQUEST_0_PAYMENTACTION='Order',
 														email=email,
+				        								PAYMENTREQUEST_0_DESC= 'Intheory Web App - Full Access',
 														landingpage="Billing")
 
 	        token = setexp_response.token
@@ -54,13 +56,14 @@ class ViewPaymentPageHandler(base.BaseHandler):
 	        # Redirect client to this URL for approval.
 	        redir_url = ppi.generate_express_checkout_redirect_url(token)
 	        self.base_render("payment.html", redir_url=redir_url)
-        except Exception:
+        except Exception, e:
 	    	self.log.warning("Error while rendering payment page: " + str(e))
 
 class DoPaymentHandler(base.BaseHandler):
 	'''
 	This hanlder will make us rich! ... not.
 	'''
+	@tornado.web.authenticated
 	def on_get(self):
 		try:
 			token = self.get_argument("token", None)
@@ -69,8 +72,9 @@ class DoPaymentHandler(base.BaseHandler):
 			ppi = get_paypal_interface()
 			response = ppi.do_express_checkout_payment(token=token,
 	        								payerid=pid,
-	        								paymentaction='Sale',
-	        								PAYMENTINFO_0_CURRENCYCODE="GBP",
+	        								PAYMENTREQUEST_0_PAYMENTACTION='Sale',
+	        								PAYMENTINFO_0_CURRENCYCODE='GBP',
+	        								PAYMENTREQUEST_0_DESC= 'Intheory Web App - Full Access',
 	        								PAYMENTREQUEST_0_AMT='10.00')
 			
 			if response['ACK'] == "Success":
