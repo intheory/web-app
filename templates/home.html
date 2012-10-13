@@ -3,44 +3,51 @@
 {% block content %}
 <div class="landing">
     <div class="row">
-        <div class="span5"><br />
-            <div class="landingdescrip">
-                <h1>Pass fast.</h1>
-                <h1>Pass first time.</h1>
+        <div class="span4"><br />
+            <div class="landingdescrip"><br />
+                <h2>Pass your Theory Test.</h2>
+                <h2>Guaranteed.</h2>
                 <p>
                     <ul>
-                        <li>The simplest and fastest way to pass your <strong>Driving Theory Test.</strong></li>
-                        <li>Use new learning techniques to help you remember the details.</li>
+                        <li>The simplest and fastest way to pass your test.</li>
+                        <li>Step-by-step "smart" learning content.</li>
                         <li>Don't pass first time? Get your money back.</li>
                     </ul>     
                 </p>
                 <center> 
-                    <p><a href="/login/options"><button class="btn btn-large btn-success" style="margin-top:7px;" type="button">Get Started Today - Free</button></a>&nbsp;&nbsp;&nbsp;
+                    <p>  
+                        <a href="/login/options"><button class="btn btn-large btn-success" style="margin-top:7px;" type="button">Get Started Today - Free</button></a>&nbsp;&nbsp;&nbsp;
                     </p>
-                </center>
+                </center><br />
             </div>
         </div>
         <br />
-        <div class="span7">  
-            <img src="{{static_url('imgs/usp1.png')}}" alt="some_text">
+        <div class="span8">  
+            <ul class="thumbnails">
+              <li class="span4">
+                <div class="thumbnail">
+                  <img src="{{static_url('imgs/bank.png')}}" alt="">
+                </div>
+              </li>
+               <li class="span4">
+                <div class="thumbnail">
+                  <img src="{{static_url('imgs/hazard3.png')}}" alt="">
+                </div>
+              </li>
+               <li class="span4">
+                <div class="thumbnail">
+                  <img src="{{static_url('imgs/mock.png')}}" alt="">
+                </div>
+              </li>
+               <li class="span4">
+                <div class="thumbnail">
+                  <img src="{{static_url('imgs/guarantee.png')}}" alt="">
+                </div>
+              </li>
+            </ul>
         </div>
     </div>
-
-    <div class="row">
-        <div class="span3"><br />
-            <img src="{{static_url('imgs/uspu1.png')}}" alt="some_text">
-        </div>
-        <div class="span3"><br />
-            <img src="{{static_url('imgs/uspu2.png')}}" alt="some_text">
-        </div>
-        <div class="span3"><br />
-            <img src="{{static_url('imgs/uspu3.png')}}" alt="some_text">
-        </div>
-        <div class="span3"><br />
-            <img src="{{static_url('imgs/uspu4.png')}}" alt="some_text">
-        </div>
-    </div>
-  </div>
+</div>
 {% end%}
 
 {% block footer %}
