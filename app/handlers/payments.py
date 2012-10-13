@@ -1,6 +1,7 @@
 from app.handlers import base
 from paypal import PayPalInterface
 from paypal import PayPalConfig
+from app.model.user import UserPaymentDetails
 import os
 
 #######GLOBALS#######
@@ -38,12 +39,13 @@ class ViewPaymentPageHandler(base.BaseHandler):
     def on_get(self):
     	try:
 	        ppi = get_paypal_interface()
+	        email = self.current_user and self.current_user.email or ""
 	        setexp_response = ppi.set_express_checkout( PAYMENTREQUEST_0_AMT='10.00', 
 														PAYMENTINFO_0_CURRENCYCODE="GBP",
 														returnurl=RETURN_URL, 
 														cancelurl=CANCEL_URL, 
 														paymentaction='Order',
-														email="giorgosera@gmail.com",
+														email=email,
 														landingpage="Billing")
 
 	        token = setexp_response.token
@@ -72,10 +74,14 @@ class DoPaymentHandler(base.BaseHandler):
 	        								PAYMENTREQUEST_0_AMT='10.00')
 			
 			if response['ACK'] == "Success":
+				transaction_id = response['PAYMENTINFO_0_TRANSACTIONID']
+				receipt_id = response['PAYMENTINFO_0_RECEIPTID']
+
+				self.current_user.record_payment(transaction_id, receipt_id)
+				self.log.info("User with id "+ str(self.current_user.id) + "has paid. The transaction id is " + transaction_id)
 				self.redirect("/") 
 			else:
-				self.log.error("Erro while completing payment: ACK != Success")
-
+				self.log.error("Error while completing payment: ACK != Success")
 		except Exception, e:
 			self.log.warning("Error while completing payment: " + str(e))
 

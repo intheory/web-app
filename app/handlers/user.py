@@ -37,10 +37,13 @@ def has_paid(method):
             if self.current_user and self.current_user['has_paid']:
                 return method(self, *args, **kwargs)
             elif isinstance(self, ViewSectionHandler) and self.current_user and len(self.current_user['cursors'].keys()) < self.settings['sections_limit']:
+                #if the request is to see a new section and the user has not reached the limit allow it
                 return method(self, *args, **kwargs)
             elif isinstance(self, CreateNewTestHandler) and self.current_user and len(Test.objects(user=str(self.current_user.id))) < self.settings['tests_limit']:
+                #if the request is to start a new test and the user has not reached the limit allow it
                 return method(self, *args, **kwargs)
             else:
+                #else redirect them to the payment page
                 self.redirect("/payment")
         except Exception, e:
             raise tornado.web.HTTPError(403)
