@@ -43,6 +43,22 @@ a.facebook:active {
 	text-align: center;
 }
 
+.normal-signin-container span{
+	color:#525252;
+}
+
+.no-account-container{
+	margin-top: 15px;
+	color: #525252;
+	font-size: small;
+	text-align: center;
+}
+
+.no-account-container a{
+	color: #49AFCD;
+	font-size: small;
+}
+
 .login-options-divider h3{
 	width:100%; 
 	text-align:center; 
@@ -57,3 +73,5 @@ a.facebook:active {
 	padding:0 10px;
 	color: #525252;
 }​
+
+
