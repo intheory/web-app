@@ -7,9 +7,10 @@ css_deps = ("css", "css",
             [
              ("/login/options", ["login.css"]),
              ("/landing/*", ["landing.css"]),
-            ("/practice/main", ["test.css"]),    
+             ("/practice/main", ["test.css"]),    
              ("/test", ["questions.css", "test.css"]),
-             ("/learn/*", ["learn.css", "nuggets.css"]),			
+             ("/learn/*", ["learn.css", "nuggets.css"]),	   	
+             ("/dashboard", ["home.css"]),  	
              ("/", ["home.css"]),	
             ])
 
