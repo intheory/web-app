@@ -69,9 +69,10 @@ a.facebook:active {
 
 
 .login-options-divider h3 span { 
-	background:#fff; 
+    background-repeat:repeat-x repeat-y; background-image:url('/static/imgs/back-texture.png');
 	padding:0 10px;
 	color: #525252;
 }​
+
 
 

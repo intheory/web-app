@@ -10,6 +10,7 @@ url_patterns = [
     ("/login/options", home.LoginScreenHandler),
     ("/login/twitter", user.TwitterUserLoginHandler),
     ("/login", user.UserLoginHandler),
+    ("/register", user.UserRegistrationHandler),
     ("/logout", user.UserLogoutHandler),
     ###########Dashboard hanlders##############
     ("/dashboard/remove-msg", dashboard.RemoveDashBoardMsgHandler),

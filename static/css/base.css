@@ -62,7 +62,7 @@ body {
 }
 
 .maincontent{
-  background-color:#FFF;
+  background-repeat:repeat-x repeat-y; background-image:url('/static/imgs/back-texture.png');
   padding:15px;
   -moz-border-radius: 5px;
   border-radius: 5px;

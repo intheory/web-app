@@ -2,8 +2,7 @@
 /* CSS Document */
 
 .learn {
-  background-color: #FFFFFF;
-  background-image: background.jpg
+  background-repeat:repeat-x repeat-y; background-image:url('/static/imgs/back-texture.png');
   padding:10px;
   margin-right:20px;
   margin-top:0px;  

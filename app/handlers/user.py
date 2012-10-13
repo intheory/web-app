@@ -154,3 +154,10 @@ class UserLogoutHandler(base.BaseHandler):
         self.clear_cookie("access_token")
         self.clear_cookie("user_type")
         self.redirect('/')
+
+class UserRegistrationHandler(base.BaseHandler):
+    '''
+    Renders the registraion page. 
+    '''
+    def on_get(self):
+        self.base_render("registration.html")
