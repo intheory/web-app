@@ -38,3 +38,22 @@ a.facebook:active {
 	position: absolute;
 	left: -5000px;
 	}
+
+.normal-signin-container{
+	text-align: center;
+}
+
+.login-options-divider h3{
+	width:100%; 
+	text-align:center; 
+	border-bottom: 1px solid #525252;
+	line-height:2px; 
+	margin:25px 0 20px; 
+} 
+
+
+.login-options-divider h3 span { 
+	background:#fff; 
+	padding:0 10px;
+	color: #525252;
+}​
