@@ -15,8 +15,14 @@ $('#registration-form').submit(function() {
            email:email
 	}, true, function(response) 
 	{       
-		$("#registration-error-msg").html("<strong>Oops!</strong> "+response.msg).show()
+		if (response.msg) {
+			$("#registration-error-msg").html("<strong>Oops!</strong> "+response.msg).show();
+		}
+		else{
+			window.location.href = "/dashboard"
+		}
 	});
 
   return false;
 });
+

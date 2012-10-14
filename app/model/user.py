@@ -128,6 +128,7 @@ class FacebookUser(User):
 class IntheoryUser(User):
     meta = {'allow_inheritance': True}
     password = StringField(required=True)
+    salt = StringField(required=True)
     email = StringField(required=False)
     access_token = StringField(required=True)
 
@@ -140,6 +141,10 @@ class IntheoryUser(User):
         hash = hashlib.sha1(salt.encode('utf-8') + password.encode('utf-8')).hexdigest()
         self.password = hash
         self.salt = salt
+
+    def correct_password(self, given_pass):
+        salt = self.salt
+        return hashlib.sha1(salt.encode('utf-8') + given_pass.encode('utf-8')).hexdigest() == self.password
 
     def email_exists(self, email):
         '''

@@ -9,7 +9,8 @@ url_patterns = [
     ("/", home.HomePageHandler),
     ("/login/options", home.LoginScreenHandler),
     ("/login/twitter", user.TwitterUserLoginHandler),
-    ("/login", user.UserLoginHandler),
+    ("/login/fb", user.FBUserLoginHandler),
+    ("/login/intheory", user.IntheoryUserRegistrationHandler),
     ("/register", user.UserRegistrationHandler),
     ("/logout", user.UserLogoutHandler),
     ###########Dashboard hanlders##############

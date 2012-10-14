@@ -94,7 +94,14 @@
                   <li class="divider-vertical"></li>
                   <li><a href="#" rel="tooltip" title="These are your points"> <i class="icon-star icon-white"></i> {{current_user.points}}</a></li>
                   <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="{{current_user.profile_pic}}" alt="some_text" width="20" height="20"> &nbsp; {{current_user.first_name + " " + current_user.last_name}} <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      {% if hasattr(current_user, 'profile_pic') %}
+                        <img src="{{current_user.profile_pic}}" alt="some_text" width="20" height="20"> 
+                      {% else %}
+                        <img src="{{static_url('imgs/default_prof_pic.jpg')}}" alt="some_text" width="20" height="20">
+                      {% end %}
+                      &nbsp; {{current_user.first_name + " " + current_user.last_name}} <b class="caret"></b>
+                    </a>
                     <ul class="dropdown-menu">
                         <li><a href="/dashboard">Dashboard</a></li>
                         <li><a href="/dashboard">Statistics</a></li>

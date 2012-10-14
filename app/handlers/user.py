@@ -5,6 +5,7 @@ from mongoengine.queryset import DoesNotExist
 from app.model.user import *
 from collections import defaultdict
 from app.handlers.base import AjaxMessageException    
+from tools import util
 
 def moderator(method):
     ''' 
@@ -22,7 +23,7 @@ def moderator(method):
             raise tornado.web.HTTPError(403)
     return wrapper
 
-class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
+class FBUserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
     '''
     Handles the login for the Facebook user, returning a user object.
     '''
@@ -30,9 +31,9 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
     def get(self):
         
         if self.env == "prod":
-            URI = 'http://www.intheory.co.uk/login'
+            URI = 'http://www.intheory.co.uk/login/fb'
         else:
-            URI = 'http://localhost:8888/login'
+            URI = 'http://localhost:8888/login/fb'
         
         if self.get_argument("code", False):
             self.get_authenticated_user(
@@ -42,9 +43,6 @@ class UserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
               code=self.get_argument("code"),
               callback=self.async_callback(                                                                                                 
                 self._on_login))
-            return
-        elif self.get_secure_cookie('email'):
-            self.redirect('/circles/create')
             return
         
         self.authorize_redirect(redirect_uri=URI,
@@ -169,49 +167,77 @@ class UserRegistrationHandler(base.BaseHandler):
             username = self.get_argument("username", None)
             password = self.get_argument("password", None)
             msg = None
-            
-            print email
-            print username
-            print password
 
+            #Validations
             if not password:
-                msg = "You did not supply a password"
+                msg = "You did not supply a password."
                 return (None, msg)
             if not username:
-                msg = "You did not supply a username"
+                msg = "You did not supply a username."
                 return (None, msg)
             if not email:
-                msg = "You did not supply an email"
+                msg = "You did not supply an email."
                 return (None, msg)
+            if not util.is_email(email):
+                msg = "The email address is invalid."
+                return (None, msg)
+            if not util.is_name(username):
+                msg = "The username must contain only letters."
+                return (None, msg)
+            if not util.check_length(password,"6","40"):
+                msg = "The password must have at least 6 characters."
+                return (None, msg)  
 
             new_user = IntheoryUser()
-            new_user.create_password(password)
 
+            #Some more validations
             if new_user.username_exists(username):
                 msg = "Username not available"
                 return (None, msg)
+            if new_user.email_exists(email):
+                msg = "Email already registered"
+                return (None, msg)
+
+            new_user.create_password(password)
             new_user.username = username.lower()
             #For intheory users we do not ask for first name or last name so we use username as an alias
             new_user.first_name = username
             new_user.last_name = ""
-
-            if new_user.email_exists(email):
-                msg = "Email already registered"
-                return (None, msg)
             new_user.email = email.lower()
-
+            new_user.access_token = username
             new_user.save()
             return (new_user, None)
+
         except Exception, e:
             self.log.warning("Error while registering user with username " + username + ": " + str(e))
 
     def on_success(self, new_user, msg):
         if msg: #if something went wrong
-            print msg
             self.xhr_response.update({"msg": msg})        
             self.write(self.xhr_response)
         else:
-            self.set_secure_cookie("access_token", str(new_user.id))
+            self.set_secure_cookie("access_token", new_user.access_token)
             self.set_secure_cookie("user_type", "intheory")
-            self.redirect('/dashboard')
+            self.write(self.xhr_response)
+
+class IntheoryUserRegistrationHandler(base.BaseHandler):
+    '''
+    Handles the log in process of an Intheory user
+    '''
+    def on_post(self):
+        username = self.get_argument("username", None)
+        password = self.get_argument("password", None)
+    
+        try:        
+            user = User.objects(username=username).get()
+            if user.correct_password(password):
+                self.set_secure_cookie("access_token", user.access_token)
+                self.set_secure_cookie("user_type", "intheory")
+                self.redirect('/dashboard')
+            else:
+                self.redirect("/login/options")
+        except DoesNotExist:
+            msg_username = "Username doesn't exist"
+            self.redirect("/login/options")
+             
 

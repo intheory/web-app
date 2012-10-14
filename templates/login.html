@@ -14,7 +14,7 @@
   					<a href="/login/twitter" class="twitter" title="Twitter">
   						<span class="dtwitter">Twitter</span>
   					</a>  
-  					<a href="/login" class="facebook" title="Facebook">
+  					<a href="/login/fb" class="facebook" title="Facebook">
   						<span class="dfacebook">Facebook</span>
   					</a>    
   					<div class="clear">
@@ -29,9 +29,10 @@
             <div class="normal-signin-container">
               <center><span >sign in with your <strong>InTheory</strong> account</span></center>
               <br />
-              <form class="form-inline">
-                <input type="text" class="input-medium" placeholder="Username">
-                <input type="password" class="input-medium" placeholder="Password">
+              <form class="form-inline" action="/login/intheory" method="post">
+                {% raw xsrf_form_html() %}
+                <input name="username" type="text" class="input-medium" placeholder="Username">
+                <input name="password" type="password" class="input-medium" placeholder="Password">
                 <button type="submit" class="btn btn-info">Sign in</button>
                 <br>
               </form>
