@@ -1,0 +1,7 @@
+#registration-error-msg{
+	display: none;
+}
+
+#registration-error-msg-visible{
+	display: block;
+}

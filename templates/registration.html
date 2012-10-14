@@ -8,19 +8,24 @@
   		<div class="span6"><br />
   			<div class="mainborder">
 					<h2>Get started in 30 seconds.</h2>
+          <h4>No credit card required.</h4>
   				<div class="maincontent">
 
-            <form >
-              <label><strong>Username</strong></label>
-              <input class="input-xlarge" type="text" placeholder="Type something…">
+            <form id="registration-form">
+              {% raw xsrf_form_html() %}
+              <div id="registration-error-msg" class="alert alert-error">              
+              </div>
 
-              <label><strong>Email (optional)</strong></label>
-              <input class="input-xlarge" type="text" placeholder="Type something…">
+              <label><strong>Username</strong></label>
+              <input name="username" class="input-xlarge" type="text" placeholder="Username">
+
+              <label><strong>Email</strong></label>
+              <input name="email" class="input-xlarge" type="text" placeholder="Email">
 
               <label><strong>Password<strong></label>
-              <input class="input-xlarge" type="text" placeholder="Type something…">
+              <input name="password" class="input-xlarge" type="password" placeholder="Password">
               <br><br>
-              <button type="submit" class="btn btn-large btn-info">Create my account</button>
+              <button id="submit-info-btn" type="submit" class="btn btn-large btn-info">Create my account</button>
             </form>
 
      			</div>

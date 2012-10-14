@@ -1,10 +1,11 @@
+import tornado.auth, tornado.web
+import functools
 from app.handlers import base
 from mongoengine.queryset import DoesNotExist
 from app.model.user import *
-import tornado.auth, tornado.web
-import functools
 from collections import defaultdict
-    
+from app.handlers.base import AjaxMessageException    
+
 def moderator(method):
     ''' 
     Decorator - Checks if the currently authenticated user is a moderator.
@@ -157,7 +158,60 @@ class UserLogoutHandler(base.BaseHandler):
 
 class UserRegistrationHandler(base.BaseHandler):
     '''
-    Renders the registraion page. 
+    Handles a new user registraion. 
     '''
     def on_get(self):
         self.base_render("registration.html")
+
+    def on_post(self):
+        try:
+            email = self.get_argument("email", None)
+            username = self.get_argument("username", None)
+            password = self.get_argument("password", None)
+            msg = None
+            
+            print email
+            print username
+            print password
+
+            if not password:
+                msg = "You did not supply a password"
+                return (None, msg)
+            if not username:
+                msg = "You did not supply a username"
+                return (None, msg)
+            if not email:
+                msg = "You did not supply an email"
+                return (None, msg)
+
+            new_user = IntheoryUser()
+            new_user.create_password(password)
+
+            if new_user.username_exists(username):
+                msg = "Username not available"
+                return (None, msg)
+            new_user.username = username.lower()
+            #For intheory users we do not ask for first name or last name so we use username as an alias
+            new_user.first_name = username
+            new_user.last_name = ""
+
+            if new_user.email_exists(email):
+                msg = "Email already registered"
+                return (None, msg)
+            new_user.email = email.lower()
+
+            new_user.save()
+            return (new_user, None)
+        except Exception, e:
+            self.log.warning("Error while registering user with username " + username + ": " + str(e))
+
+    def on_success(self, new_user, msg):
+        if msg: #if something went wrong
+            print msg
+            self.xhr_response.update({"msg": msg})        
+            self.write(self.xhr_response)
+        else:
+            self.set_secure_cookie("access_token", str(new_user.id))
+            self.set_secure_cookie("user_type", "intheory")
+            self.redirect('/dashboard')
+

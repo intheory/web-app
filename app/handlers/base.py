@@ -10,7 +10,7 @@ from mongoengine import ValidationError #@UnresolvedImport
 from mongoengine.queryset import OperationError, DoesNotExist #@UnresolvedImport
 from app.model.user import *
 
-user_types={"twitter": TwitterUser, "fb":FacebookUser}
+user_types={"twitter": TwitterUser, "fb":FacebookUser, "intheory": IntheoryUser}
 
 class BaseHandler(tornado.web.RequestHandler):
     '''

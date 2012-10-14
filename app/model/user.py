@@ -1,6 +1,7 @@
 from mongoengine import Document, DictField, IntField, ObjectIdField, StringField, EmbeddedDocument, EmbeddedDocumentField, ListField, BooleanField, ReferenceField
+from mongoengine.queryset import DoesNotExist
 from app.model.content import MockTest, PractiseTest, Test, Section
-
+import string, hashlib, random
 # ============================ User ================================ #
 
 class UserFriend(EmbeddedDocument):
@@ -19,6 +20,7 @@ class User(Document):
     points = IntField(required=True, default=0)
     cursors = DictField()
     has_read_welcome_msg = BooleanField(required=True, default=False) 
+
 
     def toggle_moderator(self):
         self.moderator = not self.moderator
@@ -122,6 +124,42 @@ class FacebookUser(User):
     fb_id = StringField(required=True)
     access_token = StringField(required=True)
     profile_pic = StringField()
+
+class IntheoryUser(User):
+    meta = {'allow_inheritance': True}
+    password = StringField(required=True)
+    email = StringField(required=False)
+    access_token = StringField(required=True)
+
+    def create_password(self, password):
+        '''
+        Creates a new user password by hashing it
+        '''        
+        char_set = string.ascii_uppercase + string.digits 
+        salt = ''.join(random.sample(char_set, 4))
+        hash = hashlib.sha1(salt.encode('utf-8') + password.encode('utf-8')).hexdigest()
+        self.password = hash
+        self.salt = salt
+
+    def email_exists(self, email):
+        '''
+        Checks if a user with that email has already been registered.
+        '''
+        try:    
+            IntheoryUser.objects(email=email.lower()).get() 
+            return True
+        except DoesNotExist: 
+            return False
+
+    def username_exists(self, username):
+        '''
+        Checks if a user with that username has already been registered.
+        '''
+        try:    
+            IntheoryUser.objects(username=username.lower()).get() 
+            return True
+        except DoesNotExist: 
+            return False
 
 class CachedUser(EmbeddedDocument):
     id = ObjectIdField(required=True)
