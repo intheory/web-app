@@ -44,7 +44,7 @@ class ViewPaymentPageHandler(base.BaseHandler):
     	try:
 	        # ppi = get_paypal_interface()
 	        # email = self.current_user and self.current_user.email or ""
-	        # setexp_response = ppi.set_express_checkout( PAYMENTREQUEST_0_AMT='10.00', 
+	        # setexp_response = ppi.set_express_checkout( PAYMENTREQUEST_0_AMT='9.99', 
 									# 					PAYMENTINFO_0_CURRENCYCODE='GBP',
 									# 					returnurl=RETURN_URL, 
 									# 					cancelurl=CANCEL_URL, 
@@ -79,7 +79,7 @@ class DoPaymentHandler(base.BaseHandler):
 	        								PAYMENTREQUEST_0_PAYMENTACTION='Sale',
 	        								PAYMENTINFO_0_CURRENCYCODE='GBP',
 	        								PAYMENTREQUEST_0_DESC= 'Intheory Web App - Full Access',
-	        								PAYMENTREQUEST_0_AMT='10.00')
+	        								PAYMENTREQUEST_0_AMT='9.99')
 			
 			if response['ACK'] == "Success":
 				transaction_id = response['PAYMENTINFO_0_TRANSACTIONID']
@@ -105,10 +105,12 @@ class RedeemCouponHandler(base.BaseHandler):
 	def on_get(self):
 		code = self.get_argument("code", None)
 		try:
-			c = Coupon.objects(code=code).get()
+			c = Coupon.objects(code=code, redeemed=False).get()
 			discount = PRODUCT_PRICE * float(c.discount)/100
 			new_price = PRODUCT_PRICE - discount
 			success = True
+			c.redeemed = True
+			c.save()
 			return (new_price,success)
 		except DoesNotExist:
 			success = False
