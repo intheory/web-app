@@ -51,6 +51,7 @@ url_patterns = [
     ("/landing/about", landing.ViewAboutUsHandler),
     ###########Payment hanlders##############
     ("/payment/do", payments.DoPaymentHandler),
+    ("/payment/redirect", payments.RedirectToPayPalHandler),
     ("/payment/redeem-coupon", payments.RedeemCouponHandler),
     ("/payment", payments.ViewPaymentPageHandler),
     ###########Static files handlers################

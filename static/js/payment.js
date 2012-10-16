@@ -10,7 +10,7 @@
   $("#redeem-btn").live("click", function() {
     var code = $("#coupon-code").val();
 	
-	IT.get("/payment/redeem-coupon", {
+	  IT.get("/payment/redeem-coupon", {
              code: code,
     }, true, function(response) 
     {   
@@ -22,7 +22,7 @@
         $("#price-tag").html("£"+response.new_price);
         $(".coupon-container").html("<p style='color:red'>Oops! Coupon code is either invalid or expired.</p>"); 
       }
-	});
+	  });
 
   });
 
@@ -33,7 +33,7 @@
              code: code,
     }, true, function(response) 
     {   
-
+      window.location.href = response.redirect_url;
 	  });
 
   });

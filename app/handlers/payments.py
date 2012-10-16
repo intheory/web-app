@@ -42,24 +42,7 @@ class ViewPaymentPageHandler(base.BaseHandler):
     '''
     @tornado.web.authenticated
     def on_get(self):
-    	try:
-	        # ppi = get_paypal_interface()
-	        # email = self.current_user and self.current_user.email or ""
-	        # setexp_response = ppi.set_express_checkout( PAYMENTREQUEST_0_AMT='9.99', 
-									# 					PAYMENTINFO_0_CURRENCYCODE='GBP',
-									# 					returnurl=RETURN_URL, 
-									# 					cancelurl=CANCEL_URL, 
-									# 					PAYMENTREQUEST_0_PAYMENTACTION='Order',
-									# 					email=email,
-				     #    								PAYMENTREQUEST_0_DESC= 'Intheory Web App - Full Access',
-									# 					landingpage="Billing")
-
-	        # token = setexp_response.token
-	        # getexp_response = ppi.get_express_checkout_details(token=token)
-	        
-	        # # Redirect client to this URL for approval.
-	        # redir_url = ppi.generate_express_checkout_redirect_url(token)
-	        
+    	try:	        
 	        self.base_render("payment.html")
         except Exception, e:
 	    	self.log.warning("Error while rendering payment page: " + str(e))
@@ -107,12 +90,9 @@ class RedeemCouponHandler(base.BaseHandler):
 		code = self.get_argument("code", None)
 		try:
 			c = Coupon.objects(code=code, redeemed=False, expiration_date__gte=datetime.now()).get()
-			print len(Coupon.objects(expiration_date__lte=datetime.now()))
 			discount = PRODUCT_PRICE * float(c.discount)/100
 			new_price = PRODUCT_PRICE - discount
 			success = True
-			c.redeemed = True
-			c.save()
 			return (new_price,success)
 		except DoesNotExist:
 			success = False
@@ -122,3 +102,44 @@ class RedeemCouponHandler(base.BaseHandler):
 		self.xhr_response.update({"new_price":new_price})
 		self.xhr_response.update({"success":success})
 		self.write(self.xhr_response)
+
+class RedirectToPayPalHandler(base.BaseHandler):
+    '''
+    Redirects user to the Paypal page
+    '''
+    def on_get(self):
+	    try:
+	    	#Calculate price
+			code = self.get_argument("code", None)
+			try:
+				c = Coupon.objects(code=code, redeemed=False, expiration_date__gte=datetime.now()).get()
+				discount = PRODUCT_PRICE * float(c.discount)/100
+				price = PRODUCT_PRICE - discount
+				c.redeemed = True
+				c.save()
+			except DoesNotExist:
+				price = PRODUCT_PRICE
+
+	        ppi = get_paypal_interface()
+	        email = self.current_user and self.current_user.email or ""
+	        setexp_response = ppi.set_express_checkout( PAYMENTREQUEST_0_AMT=str(price), 
+														PAYMENTINFO_0_CURRENCYCODE='GBP',
+														returnurl=RETURN_URL, 
+														cancelurl=CANCEL_URL, 
+														PAYMENTREQUEST_0_PAYMENTACTION='Order',
+														email=email,
+				        								PAYMENTREQUEST_0_DESC= 'Intheory Web App - Full Access',
+														landingpage="Billing")
+
+	        token = setexp_response.token
+	        getexp_response = ppi.get_express_checkout_details(token=token)
+	        
+	        # Redirect client to this URL for approval.
+	        redir_url = ppi.generate_express_checkout_redirect_url(token)
+	        return (redir_url,)
+	    except Exception, e:
+	    	self.log.warning("Error while redirecting user with id " + str(self.current_user.id) + " to PayPal: " + str(e))
+
+    def on_success(self, redirect_url):
+        self.xhr_response.update({"redirect_url":redirect_url})
+        self.write(self.xhr_response)
