@@ -17,6 +17,7 @@
       if (response.success){
         $("#price-tag").html("£"+response.new_price);
         $(".coupon-container").html("<p style='color:green'>Success! The new price is shown above.</p>");
+        $(".coupon-container").attr("code", code);
       }
       else{
         $("#price-tag").html("£"+response.new_price);
@@ -27,7 +28,7 @@
   });
 
   $("#pay-btn").live("click", function() {
-    var code = $("#coupon-code").val();
+    var code = $(".coupon-container").attr("code");
 	
 	  IT.get("/payment/redirect", {
              code: code,
