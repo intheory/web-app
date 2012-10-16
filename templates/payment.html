@@ -26,13 +26,13 @@
             </ul>
           </div>
           <div class="pay-btn-container">
-            <a id="pay-btn" href="{{kwargs['redir_url']}}" class="btn btn-large btn-success">Start Learning Now - £9.99</a>
+            <a id="pay-btn" href="{{kwargs['redir_url']}}" class="btn btn-large btn-success">Start Learning Now - <span id="price-tag">£9.99</span></a>
           </div>
           
           <div class="coupon-container">
             <a id="show-coupon-btn">Click here</a> if you have a coupon code.
             <div class="input-append">
-              <input class="span2" id="appendedInputButton" size="16" type="text" placeholder="Enter code"><button class="btn" type="button">Redeem!</button>
+              <input class="span2" id="coupon-code" size="16" type="text" placeholder="Enter code"><a id="redeem-btn"><button class="btn" type="button">Redeem!</button></a>
             </div>
           </div>
 

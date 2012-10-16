@@ -55,8 +55,8 @@ class ViewPaymentPageHandler(base.BaseHandler):
 	        
 	        # # Redirect client to this URL for approval.
 	        # redir_url = ppi.generate_express_checkout_redirect_url(token)
-	        redir_url = 'sadasda'
-	        self.base_render("payment.html", redir_url=redir_url)
+	        
+	        self.base_render("payment.html")
         except Exception, e:
 	    	self.log.warning("Error while rendering payment page: " + str(e))
 
@@ -93,3 +93,17 @@ class DoPaymentHandler(base.BaseHandler):
 
 #Seller:350042585
 #Buyer: 350053375
+
+class RedeemCouponHandler(base.BaseHandler):
+	'''
+	Redeems a coupon and calculates the new price 
+	'''
+	@tornado.web.authenticated
+	def on_get(self):
+		code = self.get_argument("code", None)
+		#TODO: Search for the actual coupon code
+		return ("5.00",)
+
+	def on_success(self, new_price):
+		self.xhr_response.update({"new_price":new_price})
+		self.write(self.xhr_response)

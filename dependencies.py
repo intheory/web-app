@@ -22,7 +22,7 @@ js_deps = ("js", "js",
              ("/test", ["test.js", "libs/jquery.tmpl.min.js", "libs/jquery.timer.js"]),    
              ("/learn/*", ["learn.js", "libs/jquery.tmpl.min.js"]),    
              ("/admin/*", ["admin.js"]),        
-             ("/payment", ["payment.js"]),    
+             ("/payment", ["payment.js", "libs/jquery.illuminate.0.7.min.js"]),    
              ("/", ["home.js", "libs/jquery.tmpl.min.js"]),
 	    ])
 

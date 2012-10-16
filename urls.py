@@ -51,6 +51,7 @@ url_patterns = [
     ("/landing/about", landing.ViewAboutUsHandler),
     ###########Payment hanlders##############
     ("/payment/do", payments.DoPaymentHandler),
+    ("/payment/redeem-coupon", payments.RedeemCouponHandler),
     ("/payment", payments.ViewPaymentPageHandler),
     ###########Static files handlers################
     ("/obj/img/questions/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "imgs/questions"))}),
