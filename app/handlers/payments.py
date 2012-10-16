@@ -6,6 +6,7 @@ from paypal import PayPalConfig
 from app.model.user import UserPaymentDetails
 from app.model.coupons import Coupon
 from mongoengine.queryset import DoesNotExist
+from datetime import datetime 
 
 #######GLOBALS#######
 env = "ITENV" in os.environ and os.environ["ITENV"] or "dev"
@@ -105,7 +106,8 @@ class RedeemCouponHandler(base.BaseHandler):
 	def on_get(self):
 		code = self.get_argument("code", None)
 		try:
-			c = Coupon.objects(code=code, redeemed=False).get()
+			c = Coupon.objects(code=code, redeemed=False, expiration_date__gte=datetime.now()).get()
+			print len(Coupon.objects(expiration_date__lte=datetime.now()))
 			discount = PRODUCT_PRICE * float(c.discount)/100
 			new_price = PRODUCT_PRICE - discount
 			success = True
