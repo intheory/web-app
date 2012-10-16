@@ -39,22 +39,23 @@ class ViewPaymentPageHandler(base.BaseHandler):
     @tornado.web.authenticated
     def on_get(self):
     	try:
-	        ppi = get_paypal_interface()
-	        email = self.current_user and self.current_user.email or ""
-	        setexp_response = ppi.set_express_checkout( PAYMENTREQUEST_0_AMT='10.00', 
-														PAYMENTINFO_0_CURRENCYCODE='GBP',
-														returnurl=RETURN_URL, 
-														cancelurl=CANCEL_URL, 
-														PAYMENTREQUEST_0_PAYMENTACTION='Order',
-														email=email,
-				        								PAYMENTREQUEST_0_DESC= 'Intheory Web App - Full Access',
-														landingpage="Billing")
+	        # ppi = get_paypal_interface()
+	        # email = self.current_user and self.current_user.email or ""
+	        # setexp_response = ppi.set_express_checkout( PAYMENTREQUEST_0_AMT='10.00', 
+									# 					PAYMENTINFO_0_CURRENCYCODE='GBP',
+									# 					returnurl=RETURN_URL, 
+									# 					cancelurl=CANCEL_URL, 
+									# 					PAYMENTREQUEST_0_PAYMENTACTION='Order',
+									# 					email=email,
+				     #    								PAYMENTREQUEST_0_DESC= 'Intheory Web App - Full Access',
+									# 					landingpage="Billing")
 
-	        token = setexp_response.token
-	        getexp_response = ppi.get_express_checkout_details(token=token)
+	        # token = setexp_response.token
+	        # getexp_response = ppi.get_express_checkout_details(token=token)
 	        
-	        # Redirect client to this URL for approval.
-	        redir_url = ppi.generate_express_checkout_redirect_url(token)
+	        # # Redirect client to this URL for approval.
+	        # redir_url = ppi.generate_express_checkout_redirect_url(token)
+	        redir_url = 'sadasda'
 	        self.base_render("payment.html", redir_url=redir_url)
         except Exception, e:
 	    	self.log.warning("Error while rendering payment page: " + str(e))
