@@ -1,17 +1,19 @@
 import tornado, tornado.escape
-from app.handlers import base
+from app.handlers import base, user
 from app.model.content import Section, Nugget, PractiseTest, MockTest, Test, Question, TestAnswer#!@UnresolvedImport
 from random import shuffle
 from mongoengine.queryset import DoesNotExist
 
 MOCK_TEST_SIZE = 50
-PRACTISE_TEST_SIZE = 20 
+PRACTISE_TEST_SIZE = 2 
+
 
 class CreateNewTestHandler(base.BaseHandler):
     '''
     Renders a test page. Note that if an argument is provided then that means that 
     this request came from a practise page. In this case we create a practise test.    
     '''
+    @user.has_paid 
     @tornado.web.authenticated
     def on_get(self):
 
@@ -55,6 +57,8 @@ class GetNewTestHandler(base.BaseHandler):
     Renders a new test page after the user decided to dismiss their last unfinished test.  
     This is only applicable for practise tests. Mock tests are deleted if left unfinished.  
     '''
+    @user.has_paid 
+    @tornado.web.authenticated
     def on_get(self):
         try:
             #Delete the old test

@@ -6,7 +6,9 @@ ul.bigstat > li > h1 {
   font-weight: bold;
   font-size: 60px;
   padding-bottom:5px;
+  text-shadow: 2px 2px 0px #000000, 2px 2px 0px #000000;
 }
+
 ul.bigstat > li > h2 {
   display: block;
   color: #fff;
@@ -14,6 +16,7 @@ ul.bigstat > li > h2 {
   font-size: 20px;
   line-height: 0px;
   padding-top:5px;
+  text-shadow: 2px 2px 0px #000000, 2px 2px 0px #000000;
 }
 
 ul.bigstat > li {
@@ -75,4 +78,8 @@ div.bigstatUnderline {
   position: absolute;
   left: 2px;
   bottom: -10px;
+}
+
+.funkytext{
+  text-shadow: 2px 2px 0px #000000, 2px 2px 0px #000000;
 }

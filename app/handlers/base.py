@@ -67,7 +67,7 @@ class BaseHandler(tornado.web.RequestHandler):
         '''
         user_locale = self.current_user and self.current_user.locale or "el_GR"
         return tornado.locale.get(user_locale)
-
+        
     @property 
     def db(self):
         return self.application.db

@@ -1,0 +1,104 @@
+
+.alert-success {
+  background-color: #bbebc3;
+  border-color: #b4d4b9;
+  border-width: medium;
+  width: 75%;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+
+.mainborder{
+	padding-top: 15px;
+}
+
+#usplist {
+	color:#000; 
+	font-size: 17px; 
+	line-height:25px;
+}
+
+#usplist #bullet1{
+	list-style-image:url('/static/imgs/bullet3.png');
+	margin-left:10px;
+}
+#usplist #bullet2{
+	list-style-image:url('/static/imgs/questionicon.png');
+	margin-left:10px;
+}
+#usplist #bullet3{
+	list-style-image:url('/static/imgs/bullet2.png');
+	margin-left:10px;
+}
+#usplist #bullet4{
+	list-style-image:url('/static/imgs/bullet4.png');
+	margin-left:10px;
+}
+#usplist #bullet5{
+	list-style-image:url('/static/imgs/bullet5.png');
+	margin-left:10px;
+}
+
+#usplist li {
+	line-height: 30px;
+}
+
+#usplist li span {
+  padding: 10px 0px 0px 0px; /* assumes the icons are 16px */
+  position: relative; 
+  left: 5px;
+  top: -12px;
+}
+
+#pay-btn{
+	margin-top:7px; 
+	width:80%; 
+	height: 35px; 
+	font-size: 24px;	
+}
+
+.msg-container{
+	padding: 15px 20px 15px 35px; 
+	height:55px;
+  	margin: 0 auto; 
+}
+
+#greeting-msg{
+	font-size:18px; 
+	font: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+
+#list-msg{
+	font-size:18px;	
+}
+
+.paypal-img-container{
+	margin: 10px 0px 0px 0px;
+	text-align: center;
+}
+
+.pay-btn-container{
+	text-align: center;
+	padding: 1px;
+}
+
+.pay-btn-container a{
+	padding: 5px;
+}
+
+.coupon-container{
+	margin: 5px;
+	text-align: center;
+	font-size: small;	
+}
+
+.input-append{
+	display: none;
+}
+
+.coupon-container a{
+	color: blue;
+	cursor: pointer;
+
+}

@@ -2,6 +2,8 @@ from mongoengine import Document, DictField, IntField, ObjectIdField, StringFiel
 from mongoengine.queryset import DoesNotExist
 from app.model.content import MockTest, PractiseTest, Test, Section
 import string, hashlib, random
+import datetime
+
 # ============================ User ================================ #
 
 class UserFriend(EmbeddedDocument):
@@ -9,6 +11,11 @@ class UserFriend(EmbeddedDocument):
     profile_pic = StringField()
     first_name = StringField(required=True)
     last_name = StringField(required=True)
+
+class UserPaymentDetails(EmbeddedDocument):
+    transaction_id = StringField(required=True)
+    receipt_id = StringField()
+    date = DateTimeField(required=True, default=datetime.datetime.utcnow)
 
 class User(Document):
     meta = {"collection":"Users", 'allow_inheritance': True}
@@ -20,6 +27,20 @@ class User(Document):
     points = IntField(required=True, default=0)
     cursors = DictField()
     has_read_welcome_msg = BooleanField(required=True, default=False) 
+    has_paid = BooleanField(required=True, default=False)
+    payment_details = EmbeddedDocumentField(UserPaymentDetails)
+    price = StringField(required=True, default="9.99")
+    
+    def record_payment(self, transaction_id, receipt_id):
+        '''
+        Records the payment
+        '''
+        self.has_paid = True
+        pd = UserPaymentDetails()
+        pd.transaction_id = transaction_id
+        pd.receipt_id = receipt_id
+        self.payment_details = pd
+        self.save()
 
 
     def toggle_moderator(self):

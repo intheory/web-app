@@ -2,23 +2,53 @@
 
 {% block content %}
 <div class="landing">
-	<div class="row">
-		<div class="span3">
-		</div>
-  	<div class="span6"><br />
-  			<div class="mainborder">
-  				<center>
-  					<h2>Sign In or Sign Up</h2>
-  				</center>
-  				<div class="maincontent">
-  					<a href="{{kwargs['redir_url']}}" style="color:black" title="Twitter">
-  						<span class="dtwitter">Twitter</span>
-  					</a>  
-     			</div>
-           </div>
+  <div class="row">
+    <div class="span3">
+    </div>
+    <div class="span6"><br />
+      <div class="mainborder">
+        <div class="maincontent">
+          <div class="msg-container">
+            <p id="greeting-msg">Hi! <b>Thanks for choosing InTheory</b>.</p>
+            <p id="list-msg">You'll get <b>everything</b> you need to pass:</p>
+          </div>
+
+          <div class="clear">
+          </div>
+
+          <div class="alert alert-success">
+            <ul id="usplist" >
+              <li id="bullet1"><span><b>Step-by-step</b> "smart" learning content</span></li>
+              <li id="bullet2"><span>Complete <b>900+ official DSA question</b> bank</span></li>
+              <li id="bullet4"><span>Nine <b>hazard perception tests</b> with answers</span></li>
+              <li id="bullet3"><span>Practice with <b>timed mock tests</b></span></li>
+              <li id="bullet5"><span><b>Track and analyze</b> your progress over time</span></li>
+            </ul>
+          </div>
+          <div class="pay-btn-container">
+            <a id="pay-btn" class="btn btn-large btn-success">Start Learning Now - <span id="price-tag">£9.99</span></a>
+          </div>
+          
+          <div class="coupon-container">
+            <a id="show-coupon-btn">Click here</a> if you have a coupon code.
+            <div class="input-append">
+              <input class="span2" id="coupon-code" size="16" type="text" placeholder="Enter code"><a id="redeem-btn"><button class="btn" type="button">Redeem!</button></a>
+            </div>
+          </div>
+
+          <div class="paypal-img-container">
+            <img src="{{static_url('imgs/credit.png')}}" />
+          </div>
+        
+        </div>
+      </div>             
+    </div><br /><br />
+    <div class="span3">
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <img src="{{static_url('imgs/arrow.png')}}" />
     </div>
   </div>
-</div>	
+</div>
 {% end %}
 
 {% block jquery_templates %}

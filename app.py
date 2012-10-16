@@ -4,15 +4,15 @@
 # Acknowledgement: Alexis Michael  #
 ####################################
 
-import ConfigParser #@UnresolvedImport
-import environment #@UnusedImport
+import ConfigParser
+import environment 
 import tornado.web, os, pymongo, uimodules
 import app.deps
 from log import CustomLogger
 from urls import url_patterns
 from dependencies import css_deps, js_deps
-from mongoengine import connect #@UnresolvedImport
-from optparse import OptionParser #@UnresolvedImport
+from mongoengine import connect 
+from optparse import OptionParser
 from app.model.user import *
 
 class Intheory(tornado.web.Application):
@@ -41,6 +41,8 @@ class Intheory(tornado.web.Application):
                         'facebook_secret': facebook_secret,
                         'twitter_consumer_key': twitter_consumer_key,
                         'twitter_consumer_secret':twitter_consumer_secret,
+                        'sections_limit': 1,
+                        'tests_limit': 1,
                         'ui_modules'     : uimodules
                         }
 
