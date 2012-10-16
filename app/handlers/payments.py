@@ -62,8 +62,7 @@ class DoPaymentHandler(base.BaseHandler):
 	        								payerid=pid,
 	        								PAYMENTREQUEST_0_PAYMENTACTION='Sale',
 	        								PAYMENTINFO_0_CURRENCYCODE='GBP',
-	        								PAYMENTREQUEST_0_DESC= 'Intheory Web App - Full Access',
-	        								PAYMENTREQUEST_0_AMT='9.99')
+	        								PAYMENTREQUEST_0_DESC= 'Intheory Web App - Full Access')
 			
 			if response['ACK'] == "Success":
 				transaction_id = response['PAYMENTINFO_0_TRANSACTIONID']
@@ -76,7 +75,6 @@ class DoPaymentHandler(base.BaseHandler):
 				self.log.error("Error while completing payment: ACK != Success")
 		except Exception, e:
 			self.log.warning("Error while completing payment: " + str(e))
-
 
 #Seller:350042585
 #Buyer: 350053375
@@ -122,6 +120,8 @@ class RedirectToPayPalHandler(base.BaseHandler):
 
             if  int(price) == 0:
             	redir_url = "/dashboard"
+                self.current_user.record_payment("Free voucher transaction", "Free voucher transaction")
+                self.log.info("User with id "+ str(self.current_user.id) + "has paid. The transaction id is " + "Free voucher transaction")
             else:
 	            ppi = get_paypal_interface()
 	            email = self.current_user and self.current_user.email or ""
