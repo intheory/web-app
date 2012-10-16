@@ -14,7 +14,14 @@
              code: code,
     }, true, function(response) 
     {   
-    	$("#price-tag").html("£"+response.new_price);
+      if (response.success){
+        $("#price-tag").html("£"+response.new_price);
+        $(".coupon-container").html("<p style='color:green'>Success! The new price is shown above.</p>");
+      }
+      else{
+        $("#price-tag").html("£"+response.new_price);
+        $(".coupon-container").html("<p style='color:red'>Oops! Coupon code is either invalid or expired.</p>"); 
+      }
 	});
 
   });
@@ -22,12 +29,12 @@
   $("#pay-btn").live("click", function() {
     var code = $("#coupon-code").val();
 	
-	IT.get("/payment/redirect", {
+	  IT.get("/payment/redirect", {
              code: code,
     }, true, function(response) 
     {   
-    	$("#price-tag").html("£"+response.new_price);
-	});
+
+	  });
 
   });
 

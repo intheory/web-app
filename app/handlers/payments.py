@@ -4,6 +4,8 @@ from app.handlers import base
 from paypal import PayPalInterface
 from paypal import PayPalConfig
 from app.model.user import UserPaymentDetails
+from app.model.coupons import Coupon
+from mongoengine.queryset import DoesNotExist
 
 #######GLOBALS#######
 env = "ITENV" in os.environ and os.environ["ITENV"] or "dev"
@@ -18,6 +20,7 @@ else:
 PAYPAL_API_USERNAME = "george_1350042703_biz_api1.intheory.co.uk"
 PAYPAL_API_PASSWORD = "1350042729"
 PAYPAL_API_SIGNATURE = "AQU0e5vuZCvSg-XJploSa.sGUDlpAJe3NGstI3cCC5XSh5CVK89vvFpa",
+PRODUCT_PRICE = 9.99
 
 #####UTILITIES##########
 #TODO: Create a factory?
@@ -101,9 +104,17 @@ class RedeemCouponHandler(base.BaseHandler):
 	@tornado.web.authenticated
 	def on_get(self):
 		code = self.get_argument("code", None)
-		#TODO: Search for the actual coupon code
-		return ("5.00",)
+		try:
+			c = Coupon.objects(code=code).get()
+			discount = PRODUCT_PRICE * float(c.discount)/100
+			new_price = PRODUCT_PRICE - discount
+			success = True
+			return (new_price,success)
+		except DoesNotExist:
+			success = False
+			return (PRODUCT_PRICE, success)
 
-	def on_success(self, new_price):
+	def on_success(self, new_price, success):
 		self.xhr_response.update({"new_price":new_price})
+		self.xhr_response.update({"success":success})
 		self.write(self.xhr_response)
