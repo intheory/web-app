@@ -75,5 +75,30 @@
 
 .paypal-img-container{
 	margin: 10px 0px 0px 0px;
-	text-align: center
+	text-align: center;
+}
+
+.pay-btn-container{
+	text-align: center;
+	padding: 1px;
+}
+
+.pay-btn-container a{
+	padding: 5px;
+}
+
+.coupon-container{
+	margin: 5px;
+	text-align: center;
+	font-size: small;	
+}
+
+.input-append{
+	display: none;
+}
+
+.coupon-container a{
+	color: blue;
+	cursor: pointer;
+
 }

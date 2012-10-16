@@ -25,11 +25,16 @@
               <li id="bullet5"><span><b>Track and analyze</b> your progress over time</span></li>
             </ul>
           </div>
-          
-          <center>
+          <div class="pay-btn-container">
             <a id="pay-btn" href="{{kwargs['redir_url']}}" class="btn btn-large btn-success">Start Learning Now - £9.99</a>
-            <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-          </center>
+          </div>
+          
+          <div class="coupon-container">
+            <a id="show-coupon-btn">Click here</a> if you have a coupon code.
+            <div class="input-append">
+              <input class="span2" id="appendedInputButton" size="16" type="text" placeholder="Enter code"><button class="btn" type="button">Redeem!</button>
+            </div>
+          </div>
 
           <div class="paypal-img-container">
             <img src="{{static_url('imgs/credit.png')}}" />
