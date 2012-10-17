@@ -26,3 +26,10 @@ $('#registration-form').submit(function() {
   return false;
 });
 
+$('input[name="email"]').focus(function(){
+	var spamMessage = $(".help-inline")
+	if (spamMessage.length == 0){
+		$(this).after("<span class='help-inline'><strong>We'll never spam you.</strong></span>");
+	}
+});
+
