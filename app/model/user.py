@@ -170,10 +170,9 @@ class IntheoryUser(User):
         '''
         Checks if a user with that email has already been registered.
         '''
-        try:    
-            User.objects(email=email.lower()).get() 
+        if len(IntheoryUser.objects(email=email.lower())) != 0 or len(FacebookUser.objects(email=email.lower())) != 0:
             return True
-        except DoesNotExist: 
+        else:
             return False
 
     def username_exists(self, username):
