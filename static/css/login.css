@@ -5,11 +5,14 @@ a.twitter {
 	text-decoration: none;
 	float: left;
 	background: url("/static/imgs/twitter.png");
+       pointer-events: none;
+       cursor: default;
 	}
 
 a.twitter:hover {
 	background-position: -228px 0;
 	}
+
 a.twitter:active {
 	background-position: -455px 0;
 	}
