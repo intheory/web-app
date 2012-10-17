@@ -18,10 +18,10 @@ else:
 	CANCEL_URL = "http://localhost:8888/payment"	
 
 #####GLOBALS############
-PAYPAL_API_USERNAME = "george_1350042703_biz_api1.intheory.co.uk"
-PAYPAL_API_PASSWORD = "1350042729"
-PAYPAL_API_SIGNATURE = "AQU0e5vuZCvSg-XJploSa.sGUDlpAJe3NGstI3cCC5XSh5CVK89vvFpa",
-PRODUCT_PRICE = 11111119.99
+PAYPAL_API_USERNAME = "zahid_api1.intheory.co.uk"
+PAYPAL_API_PASSWORD = "UZQZC8RD228TZEU4"
+PAYPAL_API_SIGNATURE = "AA6FKP55XSbL3HvSeGi8V-Fb.Yv8A47KsUXj1CQw531s.vd-HCMVUsrL",
+PRODUCT_PRICE = 9.99
 
 #####UTILITIES##########
 #TODO: Create a factory?
@@ -32,6 +32,7 @@ def get_paypal_interface():
 	CONFIG = PayPalConfig(API_USERNAME = PAYPAL_API_USERNAME,
                         API_PASSWORD = PAYPAL_API_PASSWORD,
                         API_SIGNATURE = PAYPAL_API_SIGNATURE,
+                        API_ENVIRONMENT="production",
                         DEBUG_LEVEL=0)
 
 	return PayPalInterface(config=CONFIG)
