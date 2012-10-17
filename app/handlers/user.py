@@ -197,11 +197,11 @@ class UserRegistrationHandler(base.BaseHandler):
             msg = None
 
             #Validations
-            if not password:
-                msg = "You did not supply a password."
-                return (None, msg)
             if not username:
                 msg = "You did not supply a username."
+                return (None, msg)
+            if not password:
+                msg = "You did not supply a password."
                 return (None, msg)
             if not email:
                 msg = "You did not supply an email."
