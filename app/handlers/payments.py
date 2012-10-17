@@ -1,6 +1,7 @@
 import os
 import tornado
 from app.handlers import base
+import paypal
 from paypal import PayPalInterface
 from paypal import PayPalConfig
 from app.model.user import UserPaymentDetails
