@@ -21,7 +21,7 @@ else:
 PAYPAL_API_USERNAME = "zahid_api1.intheory.co.uk"
 PAYPAL_API_PASSWORD = "UZQZC8RD228TZEU4"
 PAYPAL_API_SIGNATURE = "AA6FKP55XSbL3HvSeGi8V-Fb.Yv8A47KsUXj1CQw531s.vd-HCMVUsrL",
-PRODUCT_PRICE = 9.99
+PRODUCT_PRICE = 0.99
 
 #####UTILITIES##########
 #TODO: Create a factory?
@@ -124,7 +124,7 @@ class RedirectToPayPalHandler(base.BaseHandler):
             except DoesNotExist:
                 price = PRODUCT_PRICE
 
-            if  int(price) == 0:
+            if  price == 0:
             	redir_url = "/dashboard"
                 self.current_user.record_payment("Free voucher transaction", "Free voucher transaction")
                 self.log.info("User with id "+ str(self.current_user.id) + "has paid. The transaction id is " + "Free voucher transaction")
