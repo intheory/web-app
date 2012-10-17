@@ -42,7 +42,6 @@ class User(Document):
         self.payment_details = pd
         self.save()
 
-
     def toggle_moderator(self):
         self.moderator = not self.moderator
         self.save()
@@ -172,7 +171,7 @@ class IntheoryUser(User):
         Checks if a user with that email has already been registered.
         '''
         try:    
-            IntheoryUser.objects(email=email.lower()).get() 
+            User.objects(email=email.lower()).get() 
             return True
         except DoesNotExist: 
             return False
