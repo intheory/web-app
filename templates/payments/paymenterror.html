@@ -1,0 +1,30 @@
+{% extends "../base.html" %}
+
+{% block content %}
+	<div class="landing">
+		<div class="row">
+			<div class="span3"></div>
+  			<div class="span6"><br />
+  				<div class="mainborder">
+  					<div class="questiontitle">
+  						<h2> </h2>
+  					</div>
+
+  					<div class="maincontent">
+						<p style="padding-left:17px; font-size:24px; font: 'Trebuchet MS', Arial, Helvetica, sans-serif"><b>Whoops! There's a problem...</b></p>
+						<p style="padding-left:17px; padding-top:10px; padding-bottom:10px; font-size:18px;">Sorry - there was a problem processing your payment.</p>
+						<p style="padding-left:17px; padding-bottom:10px; font-size:18px;"><b>We have <u>NOT</u> charged your account.</b></p>
+						<p style="padding-left:17px; padding-bottom:10px; font-size:18px;">To try again, please click the button below.</p>
+
+						<center>
+							<a href="/payment"><button class="btn btn-large btn-success" style="width:75%; height: 50px; font-size: 18px;" type="button">Continue to Payment</button></a>
+						</center>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+   </div>    
+{% end %}
+
+{% block jquery_templates %}
+{% end %}

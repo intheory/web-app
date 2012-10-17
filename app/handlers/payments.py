@@ -21,7 +21,7 @@ else:
 PAYPAL_API_USERNAME = "george_1350042703_biz_api1.intheory.co.uk"
 PAYPAL_API_PASSWORD = "1350042729"
 PAYPAL_API_SIGNATURE = "AQU0e5vuZCvSg-XJploSa.sGUDlpAJe3NGstI3cCC5XSh5CVK89vvFpa",
-PRODUCT_PRICE = 9.99
+PRODUCT_PRICE = 11111119.99
 
 #####UTILITIES##########
 #TODO: Create a factory?
@@ -42,8 +42,11 @@ class ViewPaymentPageHandler(base.BaseHandler):
     '''
     @tornado.web.authenticated
     def on_get(self):
-    	try:	        
-	        self.base_render("payment.html")
+    	try:	   
+    		if not self.current_user.has_paid:    
+	        	self.base_render("payments/payment.html")
+	        else:
+	        	self.base_render("payments/thankyou.html")
         except Exception, e:
 	    	self.log.warning("Error while rendering payment page: " + str(e))
 
@@ -71,8 +74,9 @@ class DoPaymentHandler(base.BaseHandler):
 
 				self.current_user.record_payment(transaction_id, receipt_id)
 				self.log.info("User with id "+ str(self.current_user.id) + "has paid. The transaction id is " + transaction_id)
-				self.redirect("/") 
+				self.base_render("payments/thankyou.html")
 			else:
+				self.base_render("payments/paymenterror.html")
 				self.log.error("Error while completing payment: ACK != Success")
 		except Exception, e:
 			self.log.warning("Error while completing payment: " + str(e))
