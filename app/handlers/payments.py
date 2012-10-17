@@ -66,7 +66,7 @@ class DoPaymentHandler(base.BaseHandler):
 			response = ppi.do_express_checkout_payment(token=token,
 	        								payerid=pid,
 	        								PAYMENTREQUEST_0_PAYMENTACTION='Sale',
-	        								PAYMENTINFO_0_CURRENCYCODE='GBP',
+	        								PAYMENTREQUEST_0_CURRENCYCODE='GBP',
 	        								PAYMENTREQUEST_0_AMT=self.current_user.price,
 	        								PAYMENTREQUEST_0_DESC= 'Intheory Web App - Full Access')
 			
@@ -135,7 +135,7 @@ class RedirectToPayPalHandler(base.BaseHandler):
 	            self.current_user.price = str(price)
 	            self.current_user.save()
 	            setexp_response = ppi.set_express_checkout( PAYMENTREQUEST_0_AMT=str(price), 
-															PAYMENTINFO_0_CURRENCYCODE='GBP',
+															PAYMENTREQUEST_0_CURRENCYCODE='GBP',
 															returnurl=RETURN_URL, 
 															cancelurl=CANCEL_URL, 
 															PAYMENTREQUEST_0_PAYMENTACTION='Order',
