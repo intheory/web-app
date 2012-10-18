@@ -13,6 +13,7 @@ css_deps = ("css", "css",
              ("/test", ["questions.css", "test.css"]),
              ("/learn/*", ["learn.css", "nuggets.css"]),	   	
              ("/dashboard", ["home.css"]),  	
+             ("/hp-welcome", ["hp1.css"]),
              ("/", ["home.css"]),	
             ])
 

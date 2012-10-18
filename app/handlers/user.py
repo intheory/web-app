@@ -248,7 +248,7 @@ class UserRegistrationHandler(base.BaseHandler):
             self.set_secure_cookie("user_type", "intheory")
             self.write(self.xhr_response)
 
-class IntheoryUserRegistrationHandler(base.BaseHandler):
+class IntheoryUserLoginHandler(base.BaseHandler):
     '''
     Handles the log in process of an Intheory user
     '''

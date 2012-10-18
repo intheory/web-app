@@ -3,14 +3,14 @@
 # Author: Giorgos Eracleous #
 #############################
 import tornado, os
-from app.handlers import base, user, test, home, admin,  dashboard, learn, landing, practise, payments
+from app.handlers import base, user, test, home, admin,  dashboard, learn, landing, practise, payments, ppc
 
 url_patterns = [
     ("/", home.HomePageHandler),
     ("/login/options", home.LoginScreenHandler),
     ("/login/twitter", user.TwitterUserLoginHandler),
     ("/login/fb", user.FBUserLoginHandler),
-    ("/login/intheory", user.IntheoryUserRegistrationHandler),
+    ("/login/intheory", user.IntheoryUserLoginHandler),
     ("/register", user.UserRegistrationHandler),
     ("/logout", user.UserLogoutHandler),
     ###########Dashboard hanlders##############
@@ -57,6 +57,8 @@ url_patterns = [
     ("/payment/redirect", payments.RedirectToPayPalHandler),
     ("/payment/redeem-coupon", payments.RedeemCouponHandler),
     ("/payment", payments.ViewPaymentPageHandler),
+    ###########PPC hanlders##############
+    ("/hp-welcome", ppc.HP1Handler),
     ###########Static files handlers################
     ("/obj/img/questions/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "imgs/questions"))}),
     ("/obj/img/nuggets/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "imgs/nuggets"))}),    
