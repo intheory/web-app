@@ -2,15 +2,21 @@
 
 {% block content %}
 <div class="jumbotron masthead">
-   <div class="blackbox"> <h1>Hazard Perception</h1>
-    {% if kwargs['v'] == "f" %}
-      <p>Learn & practice for the hazard perception test for <b>free</b>.</p>
-      <a href="/learn/hazard" class="btn btn-primary btn-large">Start Practicing Free</a>&nbsp;&nbsp;&nbsp;
-    {% elif kwargs['v'] == "t"%}
-      <p>Learn & practice for the hazard perception test <b>today</b>.</p>
-      <a href="/learn/hazard" class="btn btn-primary btn-large">Start Practicing</a>&nbsp;&nbsp;&nbsp;
-    {% end %}
-    <a href="/hazard/learn" class="btn btn-success btn-large" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 2.1.1']);">Learn How It Works</a>
+  <div class="container">
+    <div class="row">
+      <div class="span12"><br />
+        <div class="blackbox"> <h1>Hazard Perception</h1>
+          {% if kwargs['v'] == "f" %}
+            <p>Learn & practice for the hazard perception test for <b>free</b>.</p>
+            <a href="/learn/hazard" class="btn btn-primary btn-large">Start Practicing Free</a>&nbsp;&nbsp;&nbsp;
+          {% elif kwargs['v'] == "t"%}
+            <p>Learn & practice for the hazard perception test <b>today</b>.</p>
+            <a href="/learn/hazard" class="btn btn-primary btn-large">Start Practicing</a>&nbsp;&nbsp;&nbsp;
+          {% end %}
+          <a href="/learn/hazard" class="btn btn-success btn-large">Learn How It Works</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
