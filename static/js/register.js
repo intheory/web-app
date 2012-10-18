@@ -19,7 +19,7 @@ $('#registration-form').submit(function() {
 			$("#registration-error-msg").html("<strong>Oops!</strong> "+response.msg).show();
 		}
 		else{
-			window.location.href = "/dashboard"
+			window.location.href = $("#next").val();
 		}
 	});
 

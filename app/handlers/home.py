@@ -22,4 +22,7 @@ class LoginScreenHandler(base.BaseHandler):
     Renders the login page.    
     '''
     def on_get(self):
-        self.base_render("login.html")
+        next = self.get_argument("next", None)
+        if not next:
+            next = "/dashboard"
+        self.base_render("login.html", next=next)

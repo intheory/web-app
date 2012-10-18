@@ -57,12 +57,11 @@ class FBUserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
     '''
     @tornado.web.asynchronous
     def get(self):
-        
         if self.env == "prod":
             URI = 'http://www.intheory.co.uk/login/fb'
         else:
             URI = 'http://localhost:8888/login/fb'
-        
+
         if self.get_argument("code", False):
             self.get_authenticated_user(
               redirect_uri=URI,
@@ -96,6 +95,7 @@ class FBUserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
         self.set_secure_cookie("access_token", c_user.access_token)
         self.set_secure_cookie("user_type", "fb")
         self.log.info("Facebook user with id " + str(c_user.id ) + " has successfully logged in.")
+
         self.redirect("/dashboard")   
 
     
@@ -187,7 +187,10 @@ class UserRegistrationHandler(base.BaseHandler):
     Handles a new user registraion. 
     '''
     def on_get(self):
-        self.base_render("registration.html")
+        next = self.get_argument("next", None)
+        if not next:
+            next = "/dashboard"
+        self.base_render("registration.html", next=next)
 
     def on_post(self):
         try:
@@ -261,7 +264,8 @@ class IntheoryUserLoginHandler(base.BaseHandler):
             if user.correct_password(password):
                 self.set_secure_cookie("access_token", user.access_token)
                 self.set_secure_cookie("user_type", "intheory")
-                self.redirect('/dashboard')
+                next = self.get_argument("next", None) or "/dashboard"
+                self.redirect(next)
             else:
                 self.redirect("/login/options")
         except DoesNotExist:

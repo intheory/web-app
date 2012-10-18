@@ -29,7 +29,7 @@
             <div class="normal-signin-container">
               <center><span >sign in with your <strong>InTheory</strong> account</span></center>
               <br />
-              <form class="form-inline" action="/login/intheory" method="post">
+              <form class="form-inline" action="/login/intheory?next={{kwargs['next']}}" method="post">
                 {% raw xsrf_form_html() %}
                 <input name="username" type="text" class="input-medium" placeholder="Username">
                 <input name="password" type="password" class="input-medium" placeholder="Password">
@@ -38,7 +38,7 @@
               </form>
             </div>
             <div class="no-account-container">
-                  <strong>Don't have an account? <a href="/register">Sign Up</a></strong>
+                  <strong>Don't have an account? <a href="/register?next={{kwargs['next']}}">Sign Up</a></strong>
             </div>
      			</div>
            </div>
