@@ -19,8 +19,8 @@
 			InTheory | Pass Your Theory Test. Guaranteed.
 		{% end %}
 	</title>
-    <link href="../static/css/bootstrap.css" rel="stylesheet">
-    <link href="../static/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="{{static_url('css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{static_url('css/bootstrap-responsive.css')}}" rel="stylesheet">
 	<link rel="stylesheet" href="{{static_url('css/base.css')}}" />
 	{% for css in kwargs['css_deps'] %}
 		<link href="{{static_url(css)}}" rel="stylesheet">

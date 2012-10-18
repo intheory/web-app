@@ -106,7 +106,6 @@ class GetHazardPerceptionHandler(base.BaseHandler):
     '''
     Gets the hazard perception clips 
     '''
-    @user.has_paid 
     @tornado.web.authenticated
     def on_get(self):
         try:
@@ -126,6 +125,20 @@ class GetHazardPerceptionHandler(base.BaseHandler):
         except Exception, e:
             self.log.info("No hazard perception clips were found")
             self.base_render("learn/learn-hazard.html", clips=None)
+
+class GetClipPageHandler(base.BaseHandler):
+    '''
+    Gets the hazard perception clip page 
+    '''
+    @user.has_paid 
+    @tornado.web.authenticated
+    def on_get(self):
+        try:
+            cid = self.get_argument("cid", None)
+            hpc = HazardPerceptionClip.objects(id=cid).get()
+            self.base_render("learn/learn-clip.html", cid=cid, path= hpc.base_dir + hpc.clip_name)
+        except Exception, e:
+            self.log.warning("Error while rendering clip page: " + str(e))
 
 class EvaluateHazardPerceptionHandler(base.BaseHandler):
     '''

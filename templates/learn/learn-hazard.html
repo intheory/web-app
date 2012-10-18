@@ -20,7 +20,7 @@
             </li>
             {% for clip in upper_clips %}
             <li>
-              <a href="#" class="thumbnail" cid="{{clip.id}}" clipPath="{{base_dir +clip.clip_name}}" >
+              <a href="/learn/hazard/clip?cid={{clip.id}}" class="thumbnail">
                 {% if str(clip.id) in has_seen %}
                   <div class="text-over-seen" id="text-over"><div class="text-over-text"> Best score: {{older_scores[str(clip.id)]}}</div></div>
                 {% else %}
@@ -32,7 +32,7 @@
             {% end %}
             {% for clip in lower_clips %} 
             <li>
-              <a href="#" class="thumbnail" cid="{{clip.id}}" clipPath="{{base_dir +clip.clip_name}}">
+              <a href="/learn/hazard/clip?cid={{clip.id}}" class="thumbnail">
               {% if str(clip.id) in has_seen %}
                 <div class="text-over-seen" id="text-over"><div class="text-over-text">Best score: {{older_scores[str(clip.id)]}}</div></div>
               {% else %}

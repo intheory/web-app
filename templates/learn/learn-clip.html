@@ -1,0 +1,26 @@
+{% extends "../base.html" %}
+
+{% block content %}
+<div class="landing">
+	<div class="row">
+		<div class="span12"><br />
+			<div class="mainborder">
+				<div class='video-wrapper'> 
+				  <video autoplay='true' cid="{{kwargs['cid']}}" id='video-container'>
+				    <source src='{{kwargs["path"]}}.mp4' type='video/mp4' />
+				        <source src='{{kwargs["path"]}}.webm' type='video/webm' />
+				        <object data='{{kwargs["path"]}}.mp4' width='320' height='240'>
+				      		<embed src='{{kwargs["path"]}}.swf' width='320' height='240' />
+				      	</object> 
+				  </video>
+				</div>
+				<div class='click-counter'>   
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% end%}
+
+{% block jquery_templates %}
+{% end %}
