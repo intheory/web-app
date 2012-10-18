@@ -18,6 +18,7 @@ from optparse import OptionParser
 
 if __name__ == "__main__":
     file_path = os.path.expanduser("~/" + os.path.join("intheorydata", "codes"))
+    print file_path
     f = open(file_path+"/codes.txt", "r")
 
     while 1:

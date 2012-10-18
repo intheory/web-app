@@ -128,7 +128,7 @@ class RedirectToPayPalHandler(base.BaseHandler):
             if  price == 0:
             	redir_url = "/dashboard"
                 self.current_user.record_payment("Free voucher transaction", "Free voucher transaction")
-                self.current_user.price = 0
+                self.current_user.price = str(price)
                 self.current_user.save()
                 self.log.info("User with id "+ str(self.current_user.id) + "has paid. The transaction id is " + "Free voucher transaction")
             else:
