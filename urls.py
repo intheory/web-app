@@ -36,6 +36,7 @@ url_patterns = [
     ###########Backend hanlders##############
     ("/admin/feedback", admin.SubmitFeedbackHandler),
     ("/admin/logs", admin.ViewLogsHandler),
+    ("/admin/users/free", admin.GiveFreeAccessHandler),
     ("/admin/users/moderator", admin.MakeModeratorHandler),
     ("/admin/users", admin.ViewUsersHandler),
     ("/admin/questions/add", admin.AddQuestionHandler),

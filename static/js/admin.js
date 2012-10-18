@@ -15,6 +15,17 @@
         });
     });
 
+    $("#free-btn").live("click", function() {
+        if ($(this).hasClass("disbaled")) return false; //if this user has paid do nothing
+        var uid = $(this).attr("uid");
+        IT.post("/admin/users/free", {
+                   uid : uid
+        }, true, function(response) 
+        {       
+                console.log("Free access!"); 
+        });
+    });
+
     $("#section-colb-select").live("click", function() {
         var sid = $(this).val();
         //It will get all the nuggets associayed with this section

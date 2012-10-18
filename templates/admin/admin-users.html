@@ -23,6 +23,11 @@
 						<td ><center><center><span class="badge badge-info">1</span></center></td>
 						<td >{{user.first_name}} {{user.last_name}}</td>
 						<td ><a class="btn btn-danger">Ban</a></td>
+						{% if not user.has_paid %}
+							<td ><a  id="free-btn" uid="{{user.id}}" class="btn btn-primary">Free Access</a></td>
+						{% else %}
+							<td ><a id="free-btn" uid="{{user.id}}" class="btn btn-primary disabled">Free Access</a></td>
+						{% end %}
 						{% if not user.moderator%}
 							<td ><a id="moderator-btn" uid="{{user.id}}" class="btn btn-success" >Moderator</a></td>
 						{% else %}	

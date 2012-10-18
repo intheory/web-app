@@ -46,6 +46,7 @@ class User(Document):
         self.moderator = not self.moderator
         self.save()
 
+
     def update_section_cursor(self, section_id, section_length, current_cursor):
         self.cursors.setdefault(section_id, 0)
 

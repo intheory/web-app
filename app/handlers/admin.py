@@ -83,6 +83,19 @@ class MakeModeratorHandler(base.BaseHandler):
         self.xhr_response.update({"moderator": user.moderator})  
         self.write(self.xhr_response)  
 
+class GiveFreeAccessHandler(base.BaseHandler):
+    @user.moderator 
+    @tornado.web.authenticated    
+    def on_post(self):
+        uid = self.get_argument("uid", None)
+        user = User.objects(id = uid).get()
+        user.record_payment("Granted free access by moderator", "Granted free access by moderator")
+        self.log.info("User with id "+ str(self.current_user.id) + "has paid. The transaction id is " + "Granted free access by moderator")
+        return (user,) 
+
+    def on_success(self, user):
+        self.write(self.xhr_response)  
+
 class ViewSectionsHandler(base.BaseHandler):
     '''
     Enables moderator to add a new section
