@@ -9,3 +9,11 @@ class HP1Handler(base.BaseHandler):
     def on_get(self):
         version = self.get_argument("v", None)
         self.base_render("ppc/hp1.html", v=version)
+
+class HP2Handler(base.BaseHandler):
+    '''
+    Renders the hp2 welcome page.    
+    '''
+    def on_get(self):
+        version = self.get_argument("v", None)
+        self.base_render("ppc/hp2.html", v=version)

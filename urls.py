@@ -59,6 +59,7 @@ url_patterns = [
     ("/payment", payments.ViewPaymentPageHandler),
     ###########PPC hanlders##############
     ("/hp-welcome", ppc.HP1Handler),
+    ("/hp-home", ppc.HP2Handler),
     ###########Static files handlers################
     ("/obj/img/questions/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "imgs/questions"))}),
     ("/obj/img/nuggets/(.*)", tornado.web.StaticFileHandler, {"path": os.path.expanduser("~/" + os.path.join("intheorydata", "imgs/nuggets"))}),    
