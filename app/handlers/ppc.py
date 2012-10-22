@@ -61,6 +61,17 @@ class GetClipPageHandler(base.BaseHandler):
         except Exception, e:
             self.log.warning("Error while rendering clip page: " + str(e))
 
+class GetIntroClipPageHandler(base.BaseHandler):
+    '''
+    Gets the hazard perception introduction clip page 
+    '''
+    @tornado.web.authenticated
+    def on_get(self):
+        try:
+            self.base_render("learn/learn-clip.html", cid="intro", path= "/obj/video/intro")
+        except Exception, e:
+            self.log.warning("Error while rendering clip page: " + str(e))
+
 class EvaluateHazardPerceptionHandler(base.BaseHandler):
     '''
     Evaluates a user's answers for a hazard perception clip

@@ -23,6 +23,7 @@ url_patterns = [
     ("/learn/get-previous-nugget", learn.GetPreviousNuggetHandler),
     ("/learn/get-next-nugget", learn.GetNextNuggetHandler),
     ("/learn/hazard/evaluate", learn.EvaluateHazardPerceptionHandler),
+    ("/learn/hazard/clip/intro", learn.GetIntroClipPageHandler),    
     ("/learn/hazard/clip", learn.GetClipPageHandler),    
     ("/learn/hazard", learn.GetHazardPerceptionHandler),    
     ###########Practice hanlders##############
@@ -62,6 +63,7 @@ url_patterns = [
     ("/hp-welcome", ppc.HP1Handler),
     ("/hp-home", ppc.HP2Handler),
     ("/learn/hazardboard", ppc.GetTwoClicksPaywallDashboardHandler),    
+    ("/learn/hazardboard/clip/intro", ppc.GetIntroClipPageHandler),    
     ("/learn/hazardboard/clip", ppc.GetClipPageHandler),    
     ("/learn/hazardboard/evaluate", ppc.EvaluateHazardPerceptionHandler),
     ###########Static files handlers################
