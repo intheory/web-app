@@ -129,13 +129,13 @@ class RedirectToPayPalHandler(base.BaseHandler):
             if  price == 0:
             	redir_url = "/dashboard"
                 self.current_user.record_payment("Free voucher transaction", "Free voucher transaction")
-                self.current_user.price = "{0:.2f}".format(str(price))
+                self.current_user.price = str("{0:.2f}".format(price))
                 self.current_user.save()
                 self.log.info("User with id "+ str(self.current_user.id) + "has paid. The transaction id is " + "Free voucher transaction")
             else:
 	            ppi = get_paypal_interface()
 	            email = self.current_user and self.current_user.email or ""
-	            self.current_user.price = "{0:.2f}".format(str(price))
+	            self.current_user.price = str("{0:.2f}".format(price))
 	            self.current_user.save()
 	            setexp_response = ppi.set_express_checkout( PAYMENTREQUEST_0_AMT=str("{0:.2f}".format(price)), 
 															PAYMENTREQUEST_0_CURRENCYCODE='GBP',
@@ -143,7 +143,7 @@ class RedirectToPayPalHandler(base.BaseHandler):
 															cancelurl=CANCEL_URL, 
 															PAYMENTREQUEST_0_PAYMENTACTION='Order',
 															email=email,
-					        								PAYMENTREQUEST_0_DESC= 'Intheory Web App - ' + '£' + "{0:.2f}".format(str(price)) + ' - Full Access',
+					        								PAYMENTREQUEST_0_DESC= 'Intheory Web App - ' + '£' + str("{0:.2f}".format(price)) + ' - Full Access',
 															landingpage="Billing")
 
 	            token = setexp_response.token
