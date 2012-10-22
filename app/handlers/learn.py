@@ -144,7 +144,6 @@ class EvaluateHazardPerceptionHandler(base.BaseHandler):
     '''
     Evaluates a user's answers for a hazard perception clip
     '''
-    @user.has_paid 
     @tornado.web.authenticated
     def on_post(self):
         try:

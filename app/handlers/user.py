@@ -6,7 +6,7 @@ from app.model.user import *
 from collections import defaultdict
 from app.handlers.base import AjaxMessageException    
 from tools import util
-from app.model.content import Test
+from app.model.content import Test, HazardPerceptionClip, HazardPerceptionTest
 
 def moderator(method):
     ''' 
@@ -43,6 +43,29 @@ def has_paid(method):
                 return method(self, *args, **kwargs)
             elif isinstance(self, CreateNewTestHandler) and self.current_user and len(Test.objects(user=str(self.current_user.id))) < self.settings['tests_limit']:
                 #if the request is to start a new test and the user has not reached the limit allow it
+                return method(self, *args, **kwargs)
+            else:
+                #else redirect them to the payment page
+                self.redirect("/payment")
+        except Exception, e:
+            raise tornado.web.HTTPError(403)
+    return wrapper
+
+def has_paid2(method):
+    ''' 
+    Decorator - Checks if the currently authenticated user is a paying user.
+    If the user is authenticated and paying then we provide full access on the 
+    website. If the user has not paid then we only allow them to preview a percentage
+    of the page. The difference between has_paid and has_paid2 is that the second one checks 
+    if the user has watched two hazard perception videos.
+    '''
+    def wrapper(self, *args, **kwargs):
+        from app.handlers.ppc import GetClipPageHandler
+        try:
+            if self.current_user and self.current_user['has_paid']:
+                return method(self, *args, **kwargs)
+            elif isinstance(self, GetClipPageHandler) and self.current_user and len(HazardPerceptionTest.objects(uid=str(self.current_user.id))) < 2:
+                #if the request is to start a new HAZARD test and the user has not reached the limit allow it
                 return method(self, *args, **kwargs)
             else:
                 #else redirect them to the payment page
@@ -249,6 +272,7 @@ class UserRegistrationHandler(base.BaseHandler):
         else:
             self.set_secure_cookie("access_token", new_user.access_token)
             self.set_secure_cookie("user_type", "intheory")
+            self.log.info("Intheory user with id " + str(new_user.id ) + " has successfully registered.")
             self.write(self.xhr_response)
 
 class IntheoryUserLoginHandler(base.BaseHandler):
@@ -265,6 +289,7 @@ class IntheoryUserLoginHandler(base.BaseHandler):
                 self.set_secure_cookie("access_token", user.access_token)
                 self.set_secure_cookie("user_type", "intheory")
                 next = self.get_argument("next", None) or "/dashboard"
+                self.log.info("Intheory user with id " + str(user.id ) + " has successfully logged in.")
                 self.redirect(next)
             else:
                 self.redirect("/login/options")

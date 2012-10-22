@@ -1,0 +1,53 @@
+{% extends "../base.html" %}
+{% block content %}
+{% if kwargs['clips'] %}
+{% set upper_clips = [c for c in kwargs['clips'][0:4]] %}
+{% set lower_clips = [c for c in kwargs['clips'][4:8]] %}
+{% set base_dir = kwargs['clips'][0].base_dir %}
+{% set has_seen = kwargs['has_seen'] %}
+{% set older_scores = kwargs['older_scores'] %}
+
+<div class="landing">
+<div class="row">
+  <div class="span12"><br /><div class="mainborder"><h1>Hazard Perception</h1><div class="maincontent">
+<p>The hazard perception section of the theory test involves 14 clips shot from the driver's perspective. <b>You must click on the video when you believe there is a hazard</b> - your score is dependant on <b>when you click</b> and how quickly you spot the hazard. The large video below will explain everything you need to understand how it works and the other clips on this page will allow you to practice.</p>
+  <ul class="thumbnails">
+            <li class="span5">
+              <a href="#" class="thumbnail" clipPath="/obj/video/intro">
+                <div class="text-over-intro" id="text-over"><div class="text-over-text"> Learn more about the test</div></div>
+                <img src="/obj/img/thumbnail_intro.png" alt="http://placehold.it/460x400">
+              </a>
+            </li>
+            {% for clip in upper_clips %}
+            <li>
+              <a href="/learn/hazardboard/clip?cid={{clip.id}}" class="thumbnail">
+                {% if str(clip.id) in has_seen %}
+                  <div class="text-over-seen" id="text-over"><div class="text-over-text"> Best score: {{older_scores[str(clip.id)]}}</div></div>
+                {% else %}
+                  <div class="text-over" id="text-over"><div class="text-over-text"> Try this!</div></div>
+                {% end %}
+                  <img src="/obj/img/thumbnail_{{clip.clip_name}}.png" alt="http://placehold.it/278x185">
+              </a>
+            </li>
+            {% end %}
+            {% for clip in lower_clips %} 
+            <li>
+              <a href="/learn/hazardboard/clip?cid={{clip.id}}" class="thumbnail">
+              {% if str(clip.id) in has_seen %}
+                <div class="text-over-seen" id="text-over"><div class="text-over-text">Best score: {{older_scores[str(clip.id)]}}</div></div>
+              {% else %}
+                <div class="text-over" id="text-over"><div class="text-over-text"> Try this!</div></div>
+              {% end %}  
+                <img src="/obj/img/thumbnail_{{clip.clip_name}}.png" alt="http://placehold.it/278x185">
+              </a>
+            </li>
+            {% end %}
+          </ul>          
+     </div>
+   </div>
+</div>
+{% else %}
+	No clips found
+{% end %}
+
+{% end%} 

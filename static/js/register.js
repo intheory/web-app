@@ -4,7 +4,6 @@
  */
 
 $('#registration-form').submit(function() {
-
 	var username = $('input[name="username"]').val();
 	var password = $('input[name="password"]').val();
 	var email = $('input[name="email"]').val();
