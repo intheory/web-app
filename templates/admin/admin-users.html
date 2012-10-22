@@ -18,9 +18,9 @@
 					</tr>
 					</thead>
 					<tbody>
-					{% for user in kwargs['users']%}
+					{% for i, user in enumerate(kwargs['users'])%}
 					<tr>
-						<td ><center><center><span class="badge badge-info">1</span></center></td>
+						<td ><center><center><span class="badge badge-info">{{i}}</span></center></td>
 						<td >{{user.first_name}} {{user.last_name}}</td>
 						<td ><a class="btn btn-danger">Ban</a></td>
 						{% if not user.has_paid %}

@@ -58,6 +58,7 @@ def has_paid2(method):
     website. If the user has not paid then we only allow them to preview a percentage
     of the page. The difference between has_paid and has_paid2 is that the second one checks 
     if the user has watched two hazard perception videos.
+    **USED FOR PPC**
     '''
     def wrapper(self, *args, **kwargs):
         from app.handlers.ppc import GetClipPageHandler
