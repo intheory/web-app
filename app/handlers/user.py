@@ -125,6 +125,7 @@ class FBUserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
 
         next = self.get_secure_cookie("next")
         self.clear_cookie("next")
+        print next
         self.redirect(next)   
 
     
