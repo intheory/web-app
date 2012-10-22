@@ -293,7 +293,7 @@ class IntheoryUserLoginHandler(base.BaseHandler):
         password = self.get_argument("password", None)
     
         try:        
-            user = User.objects(username=username).get()
+            user = User.objects(username=username.lower()).get()
             if user.correct_password(password):
                 self.set_secure_cookie("access_token", user.access_token)
                 self.set_secure_cookie("user_type", "intheory")
