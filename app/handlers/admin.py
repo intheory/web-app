@@ -216,3 +216,9 @@ class SubmitFeedbackHandler(base.BaseHandler):
 
     def on_success(self):
         self.write(self.xhr_response)  
+
+class ViewCouponsHandler(base.BaseHandler):
+    '''
+    Renders the coupon admin page
+    '''
+    pass

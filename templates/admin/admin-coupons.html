@@ -1,0 +1,69 @@
+{% extends "admin-main.html" %}
+
+{% block content %}
+    <div class="container">
+		<ul class="nav nav-tabs">
+		  <li><a href="/admin/questions">Questions</a></li>
+		  <li><a href="/admin/users">Users</a></li>
+  		  <li><a href="/admin/sections">Sections</a></li>	
+  		  <li><a href="/admin/nuggets">Nuggets</a></li>
+		  <li class="active"><a href="/admin/coupons">Coupons</a></li>
+  		  <li><a href="/admin/logs">Logs</a></li>
+		</ul>
+		{% block admin-content%}
+		<div class="columnA pull-left">
+	   		<form class="form-horizontal" action="/admin/nuggets/add" method="post" >
+	   		{% raw xsrf_form_html() %} 
+			  <div class="control-group">
+			    <label class="control-label">Title</label>
+			    <div class="controls">
+			      <input type="text" name="title-inp" placeholder="Title">
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <label class="control-label">Content</label>
+			    <div class="controls">
+			    	<textarea class="xxlarge" name="content-inp" id="textarea" rows="15"></textarea>
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <label class="control-label">Image name</label>
+			    <div class="controls">
+			      <input type="text" name="img-name-inp" placeholder="Image name">
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <label class="control-label">Section</label>
+			    <div class="controls">
+					<select id="section" name="section"> 
+						<option value="0">--Select Section--</option>
+						{% for section in kwargs['sections']%}
+							<option value="{{section.id}}">{{section.title}}</option>
+						{% end %}
+					</select>
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <div class="controls">
+			       <div class="btn-group">
+				       <button class="btn btn-primary" type="submit"><i class="icon-plus icon-white"></i> Add Nugget</button>
+				   </div>
+			    </div>
+			  </div>
+			</form>
+		</div>
+		<div class="columnB pull-right" style="background-color:white;">
+			<p>Control the ordering of nuggets</p> 
+			<select id="section-colb-select" name="section"> 
+				<option value="0">--Select Section--</option>
+				{% for section in kwargs['sections']%}
+					<option value="{{section.id}}">{{section.title}}</option>
+				{% end %}
+			</select>
+			</br>
+	       	<button class="btn btn-primary" id="save-changes-btn"><i class="icon-plus icon-white"></i> Save Changes</button>
+		</div>			
+    	{% end%}
+    </div> <!-- /container -->
+{% end%}
+

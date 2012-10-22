@@ -37,6 +37,7 @@ url_patterns = [
     ("/test/delete", test.DeleteTestHandler),
     ###########Backend hanlders##############
     ("/admin/feedback", admin.SubmitFeedbackHandler),
+    ("/admin/coupons", admin.ViewCouponsHandler),
     ("/admin/logs", admin.ViewLogsHandler),
     ("/admin/users/free", admin.GiveFreeAccessHandler),
     ("/admin/users/moderator", admin.MakeModeratorHandler),

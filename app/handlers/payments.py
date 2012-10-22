@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import tornado
 from app.handlers import base
@@ -68,7 +69,7 @@ class DoPaymentHandler(base.BaseHandler):
 	        								PAYMENTREQUEST_0_PAYMENTACTION='Sale',
 	        								PAYMENTREQUEST_0_CURRENCYCODE='GBP',
 	        								PAYMENTREQUEST_0_AMT=self.current_user.price,
-	        								PAYMENTREQUEST_0_DESC= 'Intheory Web App - Full Access')
+	        								PAYMENTREQUEST_0_DESC= 'Intheory Web App - ' + '£' + str(price) + ' - Full Access')
 			
 			if response['ACK'] == "Success":
 				transaction_id = response['PAYMENTINFO_0_TRANSACTIONID']
@@ -96,7 +97,7 @@ class RedeemCouponHandler(base.BaseHandler):
 		try:
 			c = Coupon.objects(code=code, redeemed=False, expiration_date__gte=datetime.now()).get()
 			discount = PRODUCT_PRICE * float(c.discount)/100
-			new_price = PRODUCT_PRICE - discount
+			new_price = "{0:.2f}".format(PRODUCT_PRICE - discount)
 			success = True
 			return (new_price,success)
 		except DoesNotExist:
@@ -119,7 +120,7 @@ class RedirectToPayPalHandler(base.BaseHandler):
             try:
                 c = Coupon.objects(code=code, redeemed=False, expiration_date__gte=datetime.now()).get()
                 discount = PRODUCT_PRICE * float(c.discount)/100
-                price = PRODUCT_PRICE - discount
+                price = "{0:.2f}".format(PRODUCT_PRICE - discount)
                 c.redeemed = True
                 c.save()
             except DoesNotExist:
@@ -142,7 +143,7 @@ class RedirectToPayPalHandler(base.BaseHandler):
 															cancelurl=CANCEL_URL, 
 															PAYMENTREQUEST_0_PAYMENTACTION='Order',
 															email=email,
-					        								PAYMENTREQUEST_0_DESC= 'Intheory Web App - Full Access',
+					        								PAYMENTREQUEST_0_DESC= 'Intheory Web App - ' + '£' + str(price) + ' - Full Access',
 															landingpage="Billing")
 
 	            token = setexp_response.token
