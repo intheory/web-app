@@ -67,7 +67,7 @@ class ViewUsersHandler(base.BaseHandler):
     @user.moderator 
     @tornado.web.authenticated
     def on_get(self):
-        users = User.objectsorder_by('id')
+        users = User.objects.order_by('id')
         self.base_render("admin/admin-users.html", users=users)
 
 class MakeModeratorHandler(base.BaseHandler):
