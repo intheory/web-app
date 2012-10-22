@@ -86,6 +86,10 @@ class FBUserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
         else:
             URI = 'http://localhost:8888/login/fb'
 
+        next = self.get_argument("next", None)
+        if next:
+            self.set_secure_cookie("next", next)    
+
         if self.get_argument("code", False):
             self.get_authenticated_user(
               redirect_uri=URI,
@@ -95,7 +99,6 @@ class FBUserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
               callback=self.async_callback(                                                                                                 
                 self._on_login))
             return
-        
         self.authorize_redirect(redirect_uri=URI,
                                 client_id=self.settings["facebook_api_key"],
                                 extra_params={"scope": "email"})
@@ -120,7 +123,9 @@ class FBUserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
         self.set_secure_cookie("user_type", "fb")
         self.log.info("Facebook user with id " + str(c_user.id ) + " has successfully logged in.")
 
-        self.redirect("/dashboard")   
+        next = self.get_secure_cookie("next")
+        self.clear_cookie("next")
+        self.redirect(next)   
 
     
     def _save_user_profile(self, c_user, response):
