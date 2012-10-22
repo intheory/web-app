@@ -25,27 +25,28 @@ class GetTwoClicksPaywallDashboardHandler(base.BaseHandler):
     Renders a 'fake' hazard perception dashboard which essentially redirects the users 
     to the payment page when they watch two videos.
     '''
-
-    @tornado.web.authenticated
     def on_get(self):
         try:
             hpc = HazardPerceptionClip.objects
-            hpt = HazardPerceptionTest.objects(uid=str(self.current_user.id))
+            if self.current_user:
+                hpt = HazardPerceptionTest.objects(uid=str(self.current_user.id))
 
-            scores = {}
-            for test in hpt:
-                if str(test.id) not in scores: 
-                    scores[str(test.id)] = test.score
-                else:
-                    if scores[str(test.id)] < test.score:
+                scores = {}
+                for test in hpt:
+                    if str(test.id) not in scores: 
                         scores[str(test.id)] = test.score
-                scores[str(test.cid)] = test.score
+                    else:
+                        if scores[str(test.id)] < test.score:
+                            scores[str(test.id)] = test.score
+                    scores[str(test.cid)] = test.score
+            else:
+                scores={}
             
             self.base_render("ppc/learn-hazard-two-clicks.html", clips=hpc, has_seen=scores.keys(), older_scores=scores)
         except Exception, e:
+            print e
             self.log.info("No hazard perception clips were found")
             self.base_render("ppc/learn-hazard-two-clicks.html", clips=None)
-
 
 class GetClipPageHandler(base.BaseHandler):
     '''

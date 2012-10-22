@@ -106,20 +106,23 @@ class GetHazardPerceptionHandler(base.BaseHandler):
     '''
     Gets the hazard perception clips 
     '''
-    @tornado.web.authenticated
     def on_get(self):
         try:
             hpc = HazardPerceptionClip.objects
-            hpt = HazardPerceptionTest.objects(uid=str(self.current_user.id))
 
-            scores = {}
-            for test in hpt:
-                if str(test.id) not in scores: 
-                    scores[str(test.id)] = test.score
-                else:
-                    if scores[str(test.id)] < test.score:
+            if self.current_user:
+                hpt = HazardPerceptionTest.objects(uid=str(self.current_user.id))
+
+                scores = {}
+                for test in hpt:
+                    if str(test.id) not in scores: 
                         scores[str(test.id)] = test.score
-                scores[str(test.cid)] = test.score
+                    else:
+                        if scores[str(test.id)] < test.score:
+                            scores[str(test.id)] = test.score
+                    scores[str(test.cid)] = test.score
+            else:
+                scores = {}
             
             self.base_render("learn/learn-hazard.html", clips=hpc, has_seen=scores.keys(), older_scores=scores)
         except Exception, e:

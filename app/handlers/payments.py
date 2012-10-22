@@ -69,7 +69,7 @@ class DoPaymentHandler(base.BaseHandler):
 	        								PAYMENTREQUEST_0_PAYMENTACTION='Sale',
 	        								PAYMENTREQUEST_0_CURRENCYCODE='GBP',
 	        								PAYMENTREQUEST_0_AMT=self.current_user.price,
-	        								PAYMENTREQUEST_0_DESC= 'Intheory Web App - ' + '£' + str(price) + ' - Full Access')
+	        								PAYMENTREQUEST_0_DESC= 'Intheory Web App - ' + '£' + str(self.current_user.price) + ' - Full Access')
 			
 			if response['ACK'] == "Success":
 				transaction_id = response['PAYMENTINFO_0_TRANSACTIONID']
