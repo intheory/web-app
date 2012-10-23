@@ -9,6 +9,11 @@ function onEnd(){
         click_times = [],
         cid = $("video#video-container").attr("cid");
 
+    if (cid === "intro") {
+      window.location.href = "/learn/hazard";
+      return
+    }
+
     clicks.each(function(index) {
         click_times.push($(clicks[index]).attr("time"));
     });   
