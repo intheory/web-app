@@ -115,6 +115,14 @@ class FBUserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
             c_user.access_token = user["access_token"]    
             c_user.profile_pic = str(user['picture']['data']['url'])   
 
+            #Empty placeholders. The will be filled in when callback is called.
+            c_user.username = ""
+            c_user.first_name = ""
+            c_user.last_name = ""
+            c_user.fb_id = ""
+            c_user.email = ""
+            c_user.save()
+
             cb = functools.partial(self._save_user_profile, c_user)
             self.facebook_request("/me", access_token=c_user.access_token, callback=cb)
             
@@ -122,6 +130,7 @@ class FBUserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
             self.facebook_request("/me/friends", access_token=c_user.access_token, callback=cb, fields='first_name,last_name,id,picture')
         except Exception, e:
             self.log.warning("Error while logging in user " + str(e))
+
         self.set_secure_cookie("access_token", c_user.access_token)
         self.set_secure_cookie("user_type", "fb")
         self.log.info("Facebook user with id " + str(c_user.id ) + " has successfully logged in.")
