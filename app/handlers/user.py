@@ -291,8 +291,9 @@ class IntheoryUserLoginHandler(base.BaseHandler):
     def on_post(self):
         username = self.get_argument("username", None)
         password = self.get_argument("password", None)
-    
         try:        
+            if not username:
+                raise DoesNotExist
             user = User.objects(username=username.lower()).get()
             if user.correct_password(password):
                 self.set_secure_cookie("access_token", user.access_token)
