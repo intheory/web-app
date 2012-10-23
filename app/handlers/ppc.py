@@ -1,8 +1,10 @@
+import math
 from app.handlers import base, user
 import tornado.web
 from app.model.content import MockTest, MiniQuizQuestion#!@UnresolvedImport
 from app.model.user import User
 from app.model.content import HazardPerceptionClip, HazardPerceptionTest
+
 
 class HP1Handler(base.BaseHandler):
     '''
