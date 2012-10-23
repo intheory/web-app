@@ -65,6 +65,8 @@ def has_paid2(method):
         try:
             if self.current_user and self.current_user['has_paid']:
                 return method(self, *args, **kwargs)
+            elif isinstance(self, GetClipPageHandler):
+                return method(self, *args, **kwargs)
             elif isinstance(self, GetClipPageHandler) and self.current_user and len(HazardPerceptionTest.objects(uid=str(self.current_user.id))) < 2:
                 #if the request is to start a new HAZARD test and the user has not reached the limit allow it
                 return method(self, *args, **kwargs)
