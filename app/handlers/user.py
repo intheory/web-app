@@ -66,6 +66,7 @@ def has_paid2(method):
             if self.current_user and self.current_user['has_paid']:
                 return method(self, *args, **kwargs)
             elif isinstance(self, GetClipPageHandler):
+                #if this is the first time a user requests a new HAZARD test and the user has not reached the limit allow it
                 return method(self, *args, **kwargs)
             elif isinstance(self, GetClipPageHandler) and self.current_user and len(HazardPerceptionTest.objects(uid=str(self.current_user.id))) < 2:
                 #if the request is to start a new HAZARD test and the user has not reached the limit allow it
@@ -129,8 +130,8 @@ class FBUserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
         if next:
             self.clear_cookie("next")
             self.redirect(next)   
-
-        self.redirect("/dashboard")        
+        else:
+            self.redirect("/dashboard")        
 
     
     def _save_user_profile(self, c_user, response):
