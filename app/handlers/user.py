@@ -32,7 +32,7 @@ def has_paid(method):
     of the page.
     '''
     def wrapper(self, *args, **kwargs):
-        from app.handlers.learn import ViewSectionHandler
+        from app.handlers.learn import ViewSectionHandler, GetClipPageHandler
         from app.handlers.test import CreateNewTestHandler
 
         try:
@@ -43,6 +43,12 @@ def has_paid(method):
                 return method(self, *args, **kwargs)
             elif isinstance(self, CreateNewTestHandler) and self.current_user and len(Test.objects(user=str(self.current_user.id))) < self.settings['tests_limit']:
                 #if the request is to start a new test and the user has not reached the limit allow it
+                return method(self, *args, **kwargs)
+            elif isinstance(self, GetClipPageHandler):
+                #if this is the first time a user requests a new HAZARD test and the user has not reached the limit allow it
+                return method(self, *args, **kwargs)
+            elif isinstance(self, GetClipPageHandler) and self.current_user and len(HazardPerceptionTest.objects(uid=str(self.current_user.id))) < self.settings['clips_limit']:
+                #if the request is to start a new HAZARD test and the user has not reached the limit allow it
                 return method(self, *args, **kwargs)
             else:
                 #else redirect them to the payment page
