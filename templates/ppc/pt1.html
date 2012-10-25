@@ -11,7 +11,6 @@
         {% elif kwargs['v'] == "t"%}
           <a href="/login/options?next=/practice/main&access=0" style="width: 30%" class="btn btn-success btn-large" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 2.1.1']);"><b>Get Started for FREE</b></a>&nbsp;&nbsp;&nbsp;
         {% end %}   
-<!--         <a href="assets/bootstrap.zip" style="width: 30%" class="btn btn-success btn-large" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 2.1.1']);"><b>Get Started for FREE</b></a>&nbsp;&nbsp;&nbsp; -->
       </div>
       <br /><br /><br /><br /> 
       <div class="navbar">
@@ -35,6 +34,7 @@
           </div>
         </div>
       </div>
+    
       <div class="marketing">
         <div class="row-fluid">
           <div class="span12">    
@@ -83,86 +83,6 @@
     </div>
   </div>
 </div>
-
-<!-- <div class="jumbotron masthead">
-  <div class="container">
-    <div class="row">
-      <div class="span12"><br />
-        <div class="blackbox"> <h1>Practice Tests</h1>
-          {% if kwargs['v'] == "f" %}
-            <p>Learn & practice for the hazard perception test for <b>free</b>.</p>
-            <a href="/login/options?next=/practice/main&access=1" class="btn btn-primary btn-large">Start Practicing Free</a>&nbsp;&nbsp;&nbsp;
-          {% elif kwargs['v'] == "t"%}
-            <p>Learn & practice for the hazard perception test <b>today</b>.</p>
-            <a href="/login/options?next=/practice/main&access=0" class="btn btn-primary btn-large">Start Practicing</a>&nbsp;&nbsp;&nbsp;
-          {% end %}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="marketing">
-  <div class="row-fluid">
-    <div class="span12">
-      <div class="span4">
-        <img src="{{static_url('imgs/clip.png')}}">
-        <h2>Official Clips</h2>
-        <p>Practice with <b>official</b> hazard perception clips from the Driving Standards Agency.</p>
-      </div>
-      <div class="span4">
-        <img src="{{static_url('imgs/time.png')}}">
-        <h2>Mock Tests</h2>
-        <p>Take <b>timed mock tests</b> with real test clips to practice just like the real thing.</p>
-      </div>
-      <div class="span4">
-        <img src="{{static_url('imgs/step.png')}}">
-        <h2>Step-By-Step</h2>
-        <p>We'll walk you through exactly what you need to do to pass <b>quickly</b>.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row-fluid">
-  <div class="span12">
-    <center><br /><h2>What Is Hazard Perception?</h2></center>
-    <p>The theory test is made up of a multiple-choice part and a hazard perception part. You need to pass both parts to pass the theory test.</p>
-
-    <p>If you pass one part and fail the other you’ll fail the whole test, and you’ll need to take both parts again.</p>
-
-    <p>The questions in the multiple-choice test will depend on the category of vehicle you are hoping to get a licence for. For example, a motorcycle theory test will contain questions that don’t appear in any other test.</p>
-
-    <p>For the hazard perception test there are no separate versions for different vehicles, but the pass mark is different for them.</p>
-
-    <p>Before you start the hazard perception part, you’ll be shown a short video clip about how it works.</p>
-
-    <p>You’ll then be shown a series of 14 video clips on a computer screen. The clips:</p>
-
-    <ul><li>feature everyday road scenes</li>
-    <li>contain at least one ‘developing hazard’ - but one of the clips will feature 2 ‘developing hazards’</li></ul>
-
-    <p><strong>A developing hazard is something that may result in you having to take some action, such as changing speed or direction.</strong></p>
-
-    <p><b>Hazard perception test scoring</b></p>
-
-    <p>The earlier you notice a developing hazard and make a response, the higher you will score.</p>
-
-    <p>The most you can score for each developing hazard is 5 points.</p>
-
-    <p>To get a high score you need to respond to the developing hazard as soon as you see it starting.</p>
-
-    <p>If you click continuously or in a pattern during a clip a message will appear at the end. It will tell you that you have scored zero for that particular clip.</p>
-
-    <p>You won’t be able to review your answers.</p>
-
-    <p>The pass mark for cars and motorcycles is 44 out of 75.</p>
-    
-    <center> <h2>How We Help...</h2></center>
-    <p>We want to help you pass the quickest way possible. We'll begin by explaining how the hazard perception test works and what you can expect when you turn up for the real thing. Then, you'll have access to all our hazard perception clips which you can use to practice with. While many sites simply explain how the hazard perception test works and give you a few tips, we think it is also crucial that you practice. Furthermore, InTheory can help you pass the theory part of the driving theory test with our unique content (don't just learn the highway code!) and our smart system that learns from you and figures out where you are weak. With InTheory you get everything in one place and we'll make sure you pass as quickly as possible. Learning the Highway Code is boring. We add clever phrases, mnemonics, rhymes and even quirky cartoons to make it more interesting. We also mix content with questions, a proven technique that helps people learn better. Our product learns from your mistakes, and adapts. This means that you won't just be going over the same random questions-we'll know where you need work, and give you those questions specifically. We'll also track your progress, letting you know when you reach key milestones on your way to passing. Learning for the theory test doesn't have to be so boring! - get started today.</p>
-    <br /><br />
-  </div>
-</div> -->
 {% end %}
 
 {% block jquery_templates %}
