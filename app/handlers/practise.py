@@ -6,6 +6,7 @@ class ViewPracticeMainHandler(base.BaseHandler):
     '''
     Renders the main practise page.    
     '''
+    @tornado.web.authenticated
     def on_get(self):
         sections = Section.objects
         self.base_render("practice/practice-main.html", sections=sections)

@@ -5,7 +5,7 @@ from app.model.content import MockTest, MiniQuizQuestion#!@UnresolvedImport
 from app.model.user import User
 from app.model.content import HazardPerceptionClip, HazardPerceptionTest
 
-
+########################## Hazard Perception PPC ##########################
 class HP1Handler(base.BaseHandler):
     '''
     Renders the hp1 welcome page.    
@@ -122,3 +122,14 @@ class EvaluateHazardPerceptionHandler(base.BaseHandler):
             html = self.render_string("ppc/complete-video-ppc.html", clip=solution_clip_name, score=score, accuracy=float(hits)/clicks)
             self.xhr_response.update({"html": html})
             self.write(self.xhr_response) 
+
+########################## Practice Tests PPC ##########################
+########################## Hazard Perception PPC ##########################
+class PT1Handler(base.BaseHandler):
+    '''
+    Renders the PT welcome page.    
+    '''
+    def on_get(self):
+        version = self.get_argument("v", None)
+        self.base_render("ppc/pt.html", v=version)
+

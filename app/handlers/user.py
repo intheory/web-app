@@ -99,6 +99,10 @@ class FBUserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
         if next:
             self.set_secure_cookie("next", next)    
 
+        access = self.get_argument("access", None)
+        if access:
+            self.set_secure_cookie("access", access)
+
         if self.get_argument("code", False):
             self.get_authenticated_user(
               redirect_uri=URI,
@@ -140,6 +144,11 @@ class FBUserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
         self.set_secure_cookie("access_token", c_user.access_token)
         self.set_secure_cookie("user_type", "fb")
         self.log.info("Facebook user with id " + str(c_user.id ) + " has successfully logged in.")
+
+        access = self.get_secure_cookie("access")
+        if access and access=="1":
+            self.clear_cookie("access")
+            c_user.has_paid = True   
 
         next = self.get_secure_cookie("next")
         if next:

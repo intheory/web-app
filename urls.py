@@ -61,6 +61,7 @@ url_patterns = [
     ("/payment/redeem-coupon", payments.RedeemCouponHandler),
     ("/payment", payments.ViewPaymentPageHandler),
     ###########PPC hanlders##############
+    ("/pt-welcome", ppc.PT1Handler),
     ("/hp-welcome", ppc.HP1Handler),
     ("/hp-home", ppc.HP2Handler),
     ("/learn/hazardboard", ppc.GetTwoClicksPaywallDashboardHandler),    
