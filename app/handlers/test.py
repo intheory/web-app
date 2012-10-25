@@ -4,8 +4,8 @@ from app.model.content import Section, Nugget, PractiseTest, MockTest, Test, Que
 from random import shuffle
 from mongoengine.queryset import DoesNotExist
 
-MOCK_TEST_SIZE = 1
-PRACTISE_TEST_SIZE = 1 
+MOCK_TEST_SIZE = 50
+PRACTISE_TEST_SIZE = 20 
 
 
 class CreateNewTestHandler(base.BaseHandler):
