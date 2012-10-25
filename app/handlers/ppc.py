@@ -124,12 +124,11 @@ class EvaluateHazardPerceptionHandler(base.BaseHandler):
             self.write(self.xhr_response) 
 
 ########################## Practice Tests PPC ##########################
-########################## Hazard Perception PPC ##########################
 class PT1Handler(base.BaseHandler):
     '''
     Renders the PT welcome page.    
     '''
     def on_get(self):
         version = self.get_argument("v", None)
-        self.base_render("ppc/pt.html", v=version)
+        self.base_render("ppc/pt1.html", v=version)
 

@@ -29,7 +29,7 @@ class User(Document):
     has_read_welcome_msg = BooleanField(required=True, default=False) 
     has_paid = BooleanField(required=True, default=False)
     payment_details = EmbeddedDocumentField(UserPaymentDetails)
-    price = StringField(required=True, default="9.99")
+    price = StringField(required=True, default="4.99")
     
     def record_payment(self, transaction_id, receipt_id):
         '''

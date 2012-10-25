@@ -6,7 +6,7 @@ from app.model.user import *
 from collections import defaultdict
 from app.handlers.base import AjaxMessageException    
 from tools import util
-from app.model.content import Test, HazardPerceptionClip, HazardPerceptionTest
+from app.model.content import Test, HazardPerceptionClip, HazardPerceptionTest, MockTest, PractiseTest
 
 def moderator(method):
     ''' 
@@ -41,9 +41,19 @@ def has_paid(method):
             elif isinstance(self, ViewSectionHandler) and self.current_user and len(self.current_user['cursors'].keys()) < self.settings['sections_limit']:
                 #if the request is to see a new section and the user has not reached the limit allow it
                 return method(self, *args, **kwargs)
-            elif isinstance(self, CreateNewTestHandler) and self.current_user and len(Test.objects(user=str(self.current_user.id))) < self.settings['tests_limit']:
-                #if the request is to start a new test and the user has not reached the limit allow it
-                return method(self, *args, **kwargs)
+            elif isinstance(self, CreateNewTestHandler) and self.current_user:
+                practice_limit = False
+                mock_limit = False
+                #if the request is to start a new practice test and the user has not reached the limit allow it
+                if len(PractiseTest.objects(user=str(self.current_user.id))) >= self.settings['practice_tests_limit']:
+                    practice_limit = True
+                if len(MockTest.objects(user=str(self.current_user.id))) >= self.settings['mock_tests_limit']:
+                    mock_limit = True
+
+                if mock_limit or practice_limit:
+                    self.redirect("/payment")                    
+                else:
+                    return method(self, *args, **kwargs)
             elif isinstance(self, GetClipPageHandler):
                 #if this is the first time a user requests a new HAZARD test and the user has not reached the limit allow it
                 return method(self, *args, **kwargs)
