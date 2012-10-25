@@ -1,0 +1,69 @@
+{% extends "../base.html" %}
+
+{% block content %}
+<div class="landing">
+    <div class="row">
+        <div class="span4"><br />
+            <div class="landingdescrip"><br />
+                <h2>Pass your Theory Test.</h2>
+                <p>
+                    <ul>
+                        <li>The simplest and fastest way to pass your test.</li>
+                        <li>Step-by-step "smart" learning content.</li>
+                    </ul>     
+                </p>
+                <center> 
+                    <p>  
+                        <a href="/login/options"><button class="btn btn-large btn-success" style="margin-top:7px;" type="button">Get Started Today - Free</button></a>&nbsp;&nbsp;&nbsp;
+                    </p>
+                </center><br />
+            </div>
+        </div>
+        <br />
+        <div class="span8">  
+            <ul class="thumbnails">
+              <li class="span4">
+                <div class="thumbnail">
+                  <img src="{{static_url('imgs/bank.png')}}" alt="">
+                </div>
+              </li>
+               <li class="span4">
+                <div class="thumbnail">
+                  <img src="{{static_url('imgs/hazard3.png')}}" alt="">
+                </div>
+              </li>
+               <li class="span4">
+                <div class="thumbnail">
+                  <img src="{{static_url('imgs/mock.png')}}" alt="">
+                </div>
+              </li>
+               <li class="span4">
+                <div class="thumbnail">
+                  <img src="{{static_url('imgs/guarantee.png')}}" alt="">
+                </div>
+              </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% end%}
+
+{% block footer %}
+  <div class="footer fixed">
+    <font color="#FFFFFF" size="2px">  
+      <div class="span6">
+        <p>InTheory Media Limited © 2012</p>
+      </div>
+      <div class="span6">
+        <p class="alignright"><a href="/landing/about">About Us</a> | <a  href="/landing/terms">Terms & Conditions</a> | <a href="/landing/privacy">Privacy Policy</a> | Support </p>
+      </div> 
+    </font>      
+    <div style="clear:both"></div>
+    <br/>
+    Crown copyright material reproduced under licence from the Driving Standards Agency, which does not accept any responsibility for the accuracy of the reproduction
+  </div>
+{% end %}
+
+{% block jquery_templates %}
+{% end %}
+

@@ -62,6 +62,7 @@ url_patterns = [
     ("/payment", payments.ViewPaymentPageHandler),
     ###########PPC hanlders##############
     ("/pt-welcome", ppc.PT1Handler),
+    ("/pt-home", ppc.PT2Handler),
     ("/hp-welcome", ppc.HP1Handler),
     ("/hp-home", ppc.HP2Handler),
     ("/learn/hazardboard", ppc.GetTwoClicksPaywallDashboardHandler),    

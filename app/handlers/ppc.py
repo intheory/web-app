@@ -132,3 +132,11 @@ class PT1Handler(base.BaseHandler):
         version = self.get_argument("v", None)
         self.base_render("ppc/pt1.html", v=version)
 
+class PT2Handler(base.BaseHandler):
+    '''
+    Renders the PT welcome page.    
+    '''
+    def on_get(self):
+        version = self.get_argument("v", None)
+        self.base_render("ppc/pt2.html", v=version)
+

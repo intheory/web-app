@@ -3,6 +3,89 @@
 {% block content %}
 <div class="jumbotron masthead">
   <div class="container">
+      <div class="blackbox"> 
+        <h1>Pass Your Theory Test</h1>
+        <p>The only <b>100% FREE</b> site. Learn & practice for <b>FREE</b>.</p>
+        {% if kwargs['v'] == "f" %}
+          <a href="/login/options?next=/practice/main&access=1" style="width: 30%" class="btn btn-success btn-large" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 2.1.1']);"><b>Get Started for FREE</b></a>&nbsp;&nbsp;&nbsp;
+        {% elif kwargs['v'] == "t"%}
+          <a href="/login/options?next=/practice/main&access=0" style="width: 30%" class="btn btn-success btn-large" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 2.1.1']);"><b>Get Started for FREE</b></a>&nbsp;&nbsp;&nbsp;
+        {% end %}   
+<!--         <a href="assets/bootstrap.zip" style="width: 30%" class="btn btn-success btn-large" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 2.1.1']);"><b>Get Started for FREE</b></a>&nbsp;&nbsp;&nbsp; -->
+      </div>
+      <br /><br /><br /><br /> 
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+          </div>
+          <div class="brand1">"Thanks InTheory! I passed in just 2 days." - Katie B, Cheltenham</div>
+          <div class="nav-collapse collapse pull-right">
+            <ul class="nav">
+                <li class="learn"><a href="#">Call Us: +44(0)1865 522 808</a></li>              
+                <li class="divider-vertical"></li>
+                <li class="learn">
+                  <div class="share_buttons"><a class="facebook" href="#" onclick="window.open('http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwrapbootstrap.com%2F&amp;t=WrapBootstrap:%20Themes%20for%20Twitter%20Bootstrap','','scrollbars=yes,width=660,height=328'); return false;" title="Share this"></a><a class="twitter" href="#" onclick="window.open('https://twitter.com/intent/tweet?url=https%3A%2F%2Fwrapbootstrap.com%2F&amp;text=WrapBootstrap:%20Themes%20for%20Twitter%20Bootstrap','','scrollbars=yes,width=730,height=252'); return false;" title="Tweet this"></a><a class="google" href="#" onclick="window.open('https://plusone.google.com/_/+1/confirm?hl=en&amp;url=https%3A%2F%2Fwrapbootstrap.com%2F','','scrollbars=yes,width=530,height=360'); return false;" title="Share this"></a></div>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="marketing">
+        <div class="row-fluid">
+          <div class="span12">    
+            <div class="span3">
+              <img src="{{static_url('imgs/questions.png')}}">
+              <h2>Official Questions</h2>
+              <p>Practice with 900+ <b>official</b> questions from the Driving Standards Agency.</p>
+            </div>
+            <div class="span3">
+              <img src= "{{static_url('imgs/time.png')}}">
+              <h2>Mock Tests</h2>
+              <p><b>Timed mock tests</b> with official questions to practice like the real thing.</p>
+            </div>
+            <div class="span3">
+              <img src="{{static_url('imgs/step.png')}}">
+              <h2>Step-By-Step</h2>
+              <p>We'll walk you through exactly what you need to do to pass <b>quickly</b>.</p>
+            </div>
+            <div class="span3">
+              <img src="{{static_url('imgs/clip.png')}}">
+              <h2>Hazard Perception</h2>
+              <p>Learn & practice with <b>official hazard perception clips</b> from the DSA.</p>
+            </div>
+            <div class="span12">
+              <center><br />
+                <h2>Everything You Need To Pass In One Place... <b>FREE</b></h2></center>
+                <p>
+                InTheory is the new and easy way to learn for your Theory Test. Find the Highway Code boring? We did too. 
+                </p>
+                <p>
+                That's why InTheory contains completely new and rewritten material based on the principles of the Highway Code, so you get the most important information, but in an interesting and easy-to-learn way.
+                </p>
+                <p>
+                We combine this with over 900 Official Theory Test Bank Questions, licensed from the DSA, as well as nine official Hazard Perception clips, so you know what the real thing looks like. So, we offer everything in one place. What else? Aside from our completely original content, we'll give you mock tests (that are like the actual test), step-by-step learning (in small sections, shown to directly improve learning) and a way to track your progress.
+                So you can be sure you're learning the right stuff, haven't missed anything important, and just as important, know when you're ready to pass.
+                </p>
+                <p>
+                Finally, trying out InTheory is absolutely FREE! You can try our product out, let us know what you think, and decide on everything else later. So what's stopping you? Sign up now.
+                </p>
+                <a href="assets/bootstrap.zip" class="btn btn-primary btn-large" style="width: 70%">Get Started Today for <b>FREE</b></a>&nbsp;&nbsp;&nbsp;
+                <br /><br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="jumbotron masthead">
+  <div class="container">
     <div class="row">
       <div class="span12"><br />
         <div class="blackbox"> <h1>Practice Tests</h1>
@@ -79,7 +162,7 @@
     <p>We want to help you pass the quickest way possible. We'll begin by explaining how the hazard perception test works and what you can expect when you turn up for the real thing. Then, you'll have access to all our hazard perception clips which you can use to practice with. While many sites simply explain how the hazard perception test works and give you a few tips, we think it is also crucial that you practice. Furthermore, InTheory can help you pass the theory part of the driving theory test with our unique content (don't just learn the highway code!) and our smart system that learns from you and figures out where you are weak. With InTheory you get everything in one place and we'll make sure you pass as quickly as possible. Learning the Highway Code is boring. We add clever phrases, mnemonics, rhymes and even quirky cartoons to make it more interesting. We also mix content with questions, a proven technique that helps people learn better. Our product learns from your mistakes, and adapts. This means that you won't just be going over the same random questions-we'll know where you need work, and give you those questions specifically. We'll also track your progress, letting you know when you reach key milestones on your way to passing. Learning for the theory test doesn't have to be so boring! - get started today.</p>
     <br /><br />
   </div>
-</div>
+</div> -->
 {% end %}
 
 {% block jquery_templates %}
