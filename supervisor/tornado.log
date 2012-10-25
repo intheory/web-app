@@ -42393,3 +42393,9 @@ Facebook user with id 506f11498e4c856632c26f44 has successfully logged in.
 INFO:intheory-8000:Facebook user with id 506f11498e4c856632c26f44 has successfully logged in.
 Facebook user with id 506f07f98e4c856632c26f3f has successfully logged in.
 INFO:intheory-8003:Facebook user with id 506f07f98e4c856632c26f3f has successfully logged in.
+None is not a valid ObjectId
+ERROR:intheory-8003:None is not a valid ObjectId
+Ajax request failed.
+ERROR:intheory-8003:Ajax request failed.
+Intheory user with id 508980db8e4c856f0a0ccc90 has successfully registered.
+INFO:intheory-8002:Intheory user with id 508980db8e4c856f0a0ccc90 has successfully registered.

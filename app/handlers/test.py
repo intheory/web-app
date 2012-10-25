@@ -14,7 +14,6 @@ class CreateNewTestHandler(base.BaseHandler):
     this request came from a practise page. In this case we create a practise test.    
     '''
     @user.has_paid 
-    @tornado.web.authenticated
     def on_get(self):
 
         #if an argument is passed then the test should be comprised of questions of a specific section
@@ -57,8 +56,6 @@ class GetNewTestHandler(base.BaseHandler):
     Renders a new test page after the user decided to dismiss their last unfinished test.  
     This is only applicable for practise tests. Mock tests are deleted if left unfinished.  
     '''
-    @user.has_paid 
-    @tornado.web.authenticated
     def on_get(self):
         try:
             #Delete the old test

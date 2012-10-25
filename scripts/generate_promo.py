@@ -45,6 +45,7 @@ if __name__ == "__main__":
         c.save()
         
     f = open('/home/george/codes100.txt', 'w')
+
     for code in codes:
         f.write(code)
         f.write("\n")

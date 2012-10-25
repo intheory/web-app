@@ -6,7 +6,7 @@ from app.model.user import *
 from collections import defaultdict
 from app.handlers.base import AjaxMessageException    
 from tools import util
-from app.model.content import Test, HazardPerceptionClip, HazardPerceptionTest
+from app.model.content import Test, HazardPerceptionClip, HazardPerceptionTest, MockTest, PractiseTest
 
 def moderator(method):
     ''' 
@@ -32,7 +32,7 @@ def has_paid(method):
     of the page.
     '''
     def wrapper(self, *args, **kwargs):
-        from app.handlers.learn import ViewSectionHandler
+        from app.handlers.learn import ViewSectionHandler, GetClipPageHandler
         from app.handlers.test import CreateNewTestHandler
 
         try:
@@ -41,8 +41,24 @@ def has_paid(method):
             elif isinstance(self, ViewSectionHandler) and self.current_user and len(self.current_user['cursors'].keys()) < self.settings['sections_limit']:
                 #if the request is to see a new section and the user has not reached the limit allow it
                 return method(self, *args, **kwargs)
-            elif isinstance(self, CreateNewTestHandler) and self.current_user and len(Test.objects(user=str(self.current_user.id))) < self.settings['tests_limit']:
-                #if the request is to start a new test and the user has not reached the limit allow it
+            elif isinstance(self, CreateNewTestHandler) and self.current_user:
+                practice_limit = False
+                mock_limit = False
+                #if the request is to start a new practice test and the user has not reached the limit allow it
+                if len(PractiseTest.objects(user=str(self.current_user.id))) >= self.settings['practice_tests_limit']:
+                    practice_limit = True
+                if len(MockTest.objects(user=str(self.current_user.id))) >= self.settings['mock_tests_limit']:
+                    mock_limit = True
+
+                if mock_limit or practice_limit:
+                    self.redirect("/payment")                    
+                else:
+                    return method(self, *args, **kwargs)
+            elif isinstance(self, GetClipPageHandler):
+                #if this is the first time a user requests a new HAZARD test and the user has not reached the limit allow it
+                return method(self, *args, **kwargs)
+            elif isinstance(self, GetClipPageHandler) and self.current_user and len(HazardPerceptionTest.objects(uid=str(self.current_user.id))) < self.settings['clips_limit']:
+                #if the request is to start a new HAZARD test and the user has not reached the limit allow it
                 return method(self, *args, **kwargs)
             else:
                 #else redirect them to the payment page
@@ -93,6 +109,10 @@ class FBUserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
         if next:
             self.set_secure_cookie("next", next)    
 
+        access = self.get_argument("access", None)
+        if access:
+            self.set_secure_cookie("access", access)
+
         if self.get_argument("code", False):
             self.get_authenticated_user(
               redirect_uri=URI,
@@ -134,6 +154,11 @@ class FBUserLoginHandler(base.BaseHandler, tornado.auth.FacebookGraphMixin):
         self.set_secure_cookie("access_token", c_user.access_token)
         self.set_secure_cookie("user_type", "fb")
         self.log.info("Facebook user with id " + str(c_user.id ) + " has successfully logged in.")
+
+        access = self.get_secure_cookie("access")
+        if access and access=="1":
+            self.clear_cookie("access")
+            c_user.has_paid = True   
 
         next = self.get_secure_cookie("next")
         if next:

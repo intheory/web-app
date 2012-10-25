@@ -8,7 +8,6 @@ class HomePageHandler(base.BaseHandler):
     '''
     def on_get(self):
         if  not self.current_user:
-            questions = MiniQuizQuestion.objects                
             self.base_render("home.html")
         else:
             uid = self.current_user.id
@@ -23,6 +22,7 @@ class LoginScreenHandler(base.BaseHandler):
     '''
     def on_get(self):
         next = self.get_argument("next", None)
+        access = self.get_argument("access", 0)#if access = 0: do not give free access 1: give free access
         if not next:
             next = "/dashboard"
-        self.base_render("login.html", next=next)
+        self.base_render("login.html", next=next, access=access)
