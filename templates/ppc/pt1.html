@@ -5,11 +5,13 @@
   <div class="container">
       <div class="blackbox"> 
         <h1>Pass Your Theory Test</h1>
-        <p>The only <b>100% FREE</b> site. Learn & practice for <b>FREE</b>.</p>
+
         {% if kwargs['v'] == "f" %}
+          <p>The only <b>100% FREE</b> site. Learn & practice for <b>FREE</b>.</p>
           <a href="/login/options?next=/practice/main&access=1" style="width: 30%" class="btn btn-success btn-large" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 2.1.1']);"><b>Get Started for FREE</b></a>&nbsp;&nbsp;&nbsp;
         {% elif kwargs['v'] == "t"%}
-          <a href="/login/options?next=/practice/main&access=0" style="width: 30%" class="btn btn-success btn-large" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 2.1.1']);"><b>Get Started for FREE</b></a>&nbsp;&nbsp;&nbsp;
+          <p>The only site that guarantees you will pass. Start learning & practicing today.</p>
+          <a href="/login/options?next=/practice/main&access=0" style="width: 30%" class="btn btn-success btn-large" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 2.1.1']);"><b>Get Started Today</b></a>&nbsp;&nbsp;&nbsp;
         {% end %}   
       </div>
       <br /><br /><br /><br /> 

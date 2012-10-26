@@ -3,11 +3,11 @@ a.twitter {
 	width: 223px;
 	height: 52px;
 	text-decoration: none;
-	float: left;
+	float:right;
 	background: url("/static/imgs/twitter.png");
-       pointer-events: none;
-       cursor: default;
-	}
+    pointer-events: none;
+    cursor: default;
+}
 
 a.twitter:hover {
 	background-position: -228px 0;
@@ -16,31 +16,33 @@ a.twitter:hover {
 a.twitter:active {
 	background-position: -455px 0;
 	}
+
 .dtwitter {
 	position: absolute;
 	left: -5000px;
-	}
+}
 	
-	a.facebook {
+a.facebook {
 	display: block;
 	width: 255px;
 	height: 52px;
 	text-decoration: none;
 	background: url("/static/imgs/facebook.png");
-	float:right;
-	
-	}
+	float:left;	
+}
 
 a.facebook:hover {
 	background-position: -264px 0;
-	}
+}
+
 a.facebook:active {
 	background-position: -527px 0;
-	}
+}
+
 .dfacebook {
 	position: absolute;
 	left: -5000px;
-	}
+}
 
 .normal-signin-container{
 	text-align: center;
