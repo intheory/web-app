@@ -253,10 +253,9 @@ class UserRegistrationHandler(base.BaseHandler):
     Handles a new user registraion. 
     '''
     def on_get(self):
-        next = self.get_argument("next", None)
-        if not next:
-            next = "/dashboard"
-        self.base_render("registration.html", next=next)
+        next = self.get_argument("next", "/dashboard")
+        access = self.get_argument("access", 0)#if access = 0: do not give free access 1: give free access
+        self.base_render("registration.html", next=next, access=access)
 
     def on_post(self):
         try:
@@ -264,7 +263,7 @@ class UserRegistrationHandler(base.BaseHandler):
             username = self.get_argument("username", None)
             password = self.get_argument("password", None)
             msg = None
-
+            access = self.get_argument("access", 0)#if access = 0: do not give free access 1: give free access
             #Validations
             if not username:
                 msg = "You did not supply a username."
@@ -302,6 +301,9 @@ class UserRegistrationHandler(base.BaseHandler):
             new_user.last_name = ""
             new_user.email = email.lower()
             new_user.access_token = username
+
+            if access == "1":
+                new_user.has_paid = True
             new_user.save()
             return (new_user, None)
 

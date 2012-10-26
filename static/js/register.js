@@ -7,11 +7,13 @@ $('#registration-form').submit(function() {
 	var username = $('input[name="username"]').val();
 	var password = $('input[name="password"]').val();
 	var email = $('input[name="email"]').val();
+	var access = $('input[name="access"]').val();
 
 	IT.post("/register", {
            username : username,
            password: password,
-           email:email
+           email:email,
+           access: access
 	}, true, function(response) 
 	{       
 		if (response.msg) {

@@ -14,6 +14,7 @@
             <form id="registration-form">
               {% raw xsrf_form_html() %}
               <input type="hidden" id="next" value="{{kwargs['next']}}"></input>
+              <input type="hidden" name="access" value="{{kwargs['access']}}"></input>
               <div id="registration-error-msg" class="alert alert-error">              
               </div>
 
