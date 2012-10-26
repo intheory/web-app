@@ -76,7 +76,11 @@
                 <p align="left">
                 Finally, trying out InTheory is absolutely FREE! You can try our product out, let us know what you think, and decide on everything else later. So what's stopping you? Sign up now.
                 </p>
-                <a href="assets/bootstrap.zip" class="btn btn-primary btn-large" style="width: 70%">Get Started Today for <b>FREE</b></a>&nbsp;&nbsp;&nbsp;
+                {% if kwargs['v'] == "f" %}
+                  <a href="assets/bootstrap.zip" class="btn btn-primary btn-large" style="width: 70%">Get Started Today for <b>FREE</b></a>&nbsp;&nbsp;&nbsp;
+                {% elif kwargs['v'] == "t"%}
+                  <a href="assets/bootstrap.zip" class="btn btn-primary btn-large" style="width: 70%">Get Started Today</a>&nbsp;&nbsp;&nbsp;
+                {% end %}
                 <br /><br />
             </div>
           </div>
