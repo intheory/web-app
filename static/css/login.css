@@ -21,11 +21,11 @@ a.twitter {
 
 a.twitter:hover {
 	background-position: -228px 0;
-	}
+}
 
 a.twitter:active {
 	background-position: -455px 0;
-	}
+}
 
 .dtwitter {
 	position: absolute;
@@ -55,6 +55,7 @@ a.facebook:active {
 }
 
 #intheory-register-btn{
+	display: block;
 	height: 49px;
 	width: 252px;
 	margin: 0;
@@ -64,7 +65,8 @@ a.facebook:active {
 
 .dintheory{
 	font-size: 16px;
-	position: absolute;
+	position: relative;
+	top:15px;
 	padding:15px 0px 10px 0px;
 }
 
