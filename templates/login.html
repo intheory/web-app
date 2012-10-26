@@ -14,8 +14,11 @@
   					<a href="/login/fb?next={{kwargs['next']}}&access={{kwargs['access']}}" class="facebook" title="Facebook">
   						<span class="dfacebook">Facebook</span>
   					</a>    
-            <a href="/login/twitter" class="twitter" title="Twitter">
+<!--             <a href="/login/twitter" class="twitter" title="Twitter">
               <span class="dtwitter">Twitter</span>
+            </a>  -->
+            <a href="/register?next={{kwargs['next']}}&access={{kwargs['access']}}" class="btn btn-large btn-info" id="intheory-register-btn" title="Intheory">
+              <span class="dintheory"><strong>Create an Intheory account</strong></span>
             </a> 
   					<div class="clear">
             </div>
@@ -25,21 +28,21 @@
                 <span>or</span>
               </h3>
             </div>
-            
-            <div class="normal-signin-container">
-              <center><span >sign in with your <strong>InTheory</strong> account</span></center>
-              <br />
-              <form class="form-inline" action="/login/intheory?next={{kwargs['next']}}&access={{kwargs['access']}}" method="post">
-                {% raw xsrf_form_html() %}
-                <input name="username" type="text" class="input-medium" placeholder="Username">
-                <input name="password" type="password" class="input-medium" placeholder="Password">
-                <button type="submit" class="btn btn-info">Sign in</button>
-                <br>
-              </form>
+
+            <center><a id="toggle-signin">sign in with your <strong>InTheory</strong> account</a></center>
+            <br />
+            <div class="signin-container">            
+              <div class="normal-signin-container">
+                <form class="form-inline" action="/login/intheory?next={{kwargs['next']}}&access={{kwargs['access']}}" method="post">
+                  {% raw xsrf_form_html() %}
+                  <input name="username" type="text" class="input-medium" placeholder="Username">
+                  <input name="password" type="password" class="input-medium" placeholder="Password">
+                  <button type="submit" class="btn btn-info">Sign in</button>
+                  <br>
+                </form>
+              </div>
             </div>
-            <div class="no-account-container">
-                  <strong>Don't have an account? <a href="/register?next={{kwargs['next']}}&access={{kwargs['access']}}">Sign Up</a></strong>
-            </div>
+
      			</div>
            </div>
        </div>

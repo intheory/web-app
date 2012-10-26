@@ -1,3 +1,13 @@
+a {
+  color: #00E;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00E;
+  text-decoration: underline;
+}
+
 a.twitter {
 	display: block;
 	width: 223px;
@@ -5,8 +15,8 @@ a.twitter {
 	text-decoration: none;
 	float:right;
 	background: url("/static/imgs/twitter.png");
-    pointer-events: none;
-    cursor: default;
+/*    pointer-events: none;
+    cursor: default;*/
 }
 
 a.twitter:hover {
@@ -44,6 +54,28 @@ a.facebook:active {
 	left: -5000px;
 }
 
+#intheory-register-btn{
+	height: 49px;
+	width: 252px;
+	margin: 0;
+	padding: 0;
+	float:right;
+}
+
+.dintheory{
+	font-size: 16px;
+	position: absolute;
+	padding:15px 0px 10px 0px;
+}
+
+.signin-container{
+	display: none;
+}
+
+.signin-container-visible{
+	display: block;
+}
+
 .normal-signin-container{
 	text-align: center;
 }
@@ -78,6 +110,4 @@ a.facebook:active {
 	padding:0 10px;
 	color: #525252;
 }​
-
-
 
