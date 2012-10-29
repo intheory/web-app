@@ -44,6 +44,8 @@ average_questions_answered = 0
 average_accuracy = 0
 average_progress = 0
 
+total_people_with_zero_pageviews = 0
+
 detailed = PrettyTable(["User", "Sections", "Practice Tests", "Mock Tests", "Hazard Tests", "Points", "Accuracy", "Questions Answered", "Progress", "Pageviews"])
 for user in User.objects.order_by("-points"):
 	if user.username not in blacklist: 
@@ -59,30 +61,31 @@ for user in User.objects.order_by("-points"):
 		for item in user.cursors.items():
 			nuggets += int(item[1]) 
 		pageviews = practice*20 + mock*50 + nuggets 
+		if pageviews == 0:
+			total_people_with_zero_pageviews += 1
+			detailed.add_row([str(user.username), 
+					   sections, 
+					   practice, 
+					   mock, 
+					   hazard, 
+					   stats['points'],
+					   stats['accuracy'],
+					   stats['total_questions_answered'],
+					   progress,
+					   pageviews
+					    ])
 
-		detailed.add_row([str(user.username), 
-				   sections, 
-				   practice, 
-				   mock, 
-				   hazard, 
-				   stats['points'],
-				   stats['accuracy'],
-				   stats['total_questions_answered'],
-				   progress,
-				   pageviews
-				    ])
+			total_sections += sections
+			total_practice += practice
+			total_mock += mock
+			total_hazard += hazard
+			total_points += stats['points']
+			total_questions_answered += stats['total_questions_answered']
+			total_accuracy += stats['accuracy']
+			total_progress += progress
+			total_pageviews += pageviews
 
-		total_sections += sections
-		total_practice += practice
-		total_mock += mock
-		total_hazard += hazard
-		total_points += stats['points']
-		total_questions_answered += stats['total_questions_answered']
-		total_accuracy += stats['accuracy']
-		total_progress += progress
-		total_pageviews += pageviews
-
-total_users = len(User.objects) - len(blacklist)
+total_users = len(User.objects) - len(blacklist) - total_people_with_zero_pageviews
 
 average = PrettyTable(["Sections", "Practice Tests", "Mock Tests", "Hazard Tests", "Points", "Accuracy", "Questions Answered", "Progress", "Pageviews"])
 average.add_row([ total_sections/float(total_users), 
