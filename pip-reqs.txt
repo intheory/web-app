@@ -4,6 +4,7 @@ httplib2==0.7.4
 mongoengine==0.6.20
 oauth2==1.5.211
 paypal==1.2.0
+prettytable==0.6.1
 pycrypto==2.6
 pymongo==2.2.1
 python-twitter==0.8.2
