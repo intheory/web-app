@@ -45,6 +45,9 @@ for user in User.objects:
 	mock = len(MockTest.objects(user=user.id))
 	hazard = len(HazardPerceptionTest.objects(uid=user.id))
 	stats = user.get_user_stats()
+	print '------------'
+	print user
+	print stats
 	progress = user.get_overall_progress()
 	detailed.add_row([str(user.id), 
 			   sections, 
