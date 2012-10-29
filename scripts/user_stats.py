@@ -5,7 +5,7 @@ Created on 12 Sep 2012
 
 This module generates stats for our users. 
 '''
-import os
+import os, datetime
 from prettytable import PrettyTable
 from mongoengine import connect
 from mongoengine.queryset import DoesNotExist
@@ -46,7 +46,7 @@ average_progress = 0
 
 total_people_with_zero_pageviews = 0
 
-detailed = PrettyTable(["User", "Sections", "Practice Tests", "Mock Tests", "Hazard Tests", "Points", "Accuracy", "Questions Answered", "Progress", "Pageviews"])
+detailed = PrettyTable(["User", "Registered on", "Sections", "Practice Tests", "Mock Tests", "Hazard Tests", "Points", "Accuracy", "Questions Answered", "Progress", "Pageviews"])
 for user in User.objects.order_by("-points"):
 	if user.username not in blacklist: 
 		sections = len(user.cursors.items())
@@ -56,12 +56,16 @@ for user in User.objects.order_by("-points"):
 		stats = user.get_user_stats()
 		progress = user.get_overall_progress()
 
+		timestamp = str(user.id)[0:8]
+		registered_on = datetime.datetime.fromtimestamp(int(timestamp,16)).strftime('%Y-%m-%d %H:%M:%S')
+		
 		#pageviews are an estimate of ghow many pages they've seen based on the number of completed tests and nuggets
 		nuggets = 0
 		for item in user.cursors.items():
 			nuggets += int(item[1]) 
 		pageviews = practice*20 + mock*50 + nuggets 
-		detailed.add_row([str(user.username), 
+		detailed.add_row([str(user.username),
+				   registered_on,
 				   sections, 
 				   practice, 
 				   mock, 
