@@ -3,8 +3,7 @@ Created on 12 Sep 2012
 
 @author: george
 
-This module generates stats for our users. It does so in an aggregate manner.
-User's identity is secure.
+This module generates stats for our users. 
 '''
 import os
 from prettytable import PrettyTable
@@ -41,15 +40,12 @@ average_progress = 0
 detailed = PrettyTable(["User", "Sections", "Practice Tests", "Mock Tests", "Hazard Tests", "Points", "Accuracy", "Questions Answered", "Progress"])
 for user in User.objects:
 	sections = len(user.cursors.items())
-	practice= len(PractiseTest.objects(user=user.id))
-	mock = len(MockTest.objects(user=user.id))
-	hazard = len(HazardPerceptionTest.objects(uid=user.id))
-	print '------------'
+	practice= len(PractiseTest.objects(user=str(user.id)))
+	mock = len(MockTest.objects(user=str(user.id)))
+	hazard = len(HazardPerceptionTest.objects(uid=str(user.id)))
 	stats = user.get_user_stats()
-	print user
-	print stats
 	progress = user.get_overall_progress()
-	detailed.add_row([str(user.id), 
+	detailed.add_row([str(user.username), 
 			   sections, 
 			   practice, 
 			   mock, 
