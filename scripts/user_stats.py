@@ -19,6 +19,7 @@ from model.user import User
 from model.content import Section, MockTest, PractiseTest, HazardPerceptionTest
 connect("intheory_dev")
 
+total_pageviews = 0
 total_sections = 0
 total_practice = 0
 total_mock = 0
@@ -37,7 +38,7 @@ average_questions_answered = 0
 average_accuracy = 0
 average_progress = 0
 
-detailed = PrettyTable(["User", "Sections", "Practice Tests", "Mock Tests", "Hazard Tests", "Points", "Accuracy", "Questions Answered", "Progress"])
+detailed = PrettyTable(["User", "Sections", "Practice Tests", "Mock Tests", "Hazard Tests", "Points", "Accuracy", "Questions Answered", "Progress", "Pageviews"])
 for user in User.objects.order_by("-points"):
 	sections = len(user.cursors.items())
 	practice= len(PractiseTest.objects(user=str(user.id)))
@@ -45,6 +46,12 @@ for user in User.objects.order_by("-points"):
 	hazard = len(HazardPerceptionTest.objects(uid=str(user.id)))
 	stats = user.get_user_stats()
 	progress = user.get_overall_progress()
+
+	#pageviews are an estimate of ghow many pages they've seen based on the number of completed tests and nuggets
+	nuggets = 0
+	for item in user.cursors.items():
+		nuggets += int(item[1]) 
+	pageviews = practice*20 + mock*50 + nuggets 
 	detailed.add_row([str(user.username), 
 			   sections, 
 			   practice, 
@@ -53,7 +60,9 @@ for user in User.objects.order_by("-points"):
 			   stats['points'],
 			   stats['accuracy'],
 			   stats['total_questions_answered'],
-			   progress ])
+			   progress,
+			   pageviews
+			    ])
 
 	total_sections += sections
 	total_practice += practice
@@ -63,10 +72,11 @@ for user in User.objects.order_by("-points"):
 	total_questions_answered += stats['total_questions_answered']
 	total_accuracy += stats['accuracy']
 	total_progress += progress
+	total_pageviews += pageviews
 
 total_users = len(User.objects)
 
-average = PrettyTable(["Sections", "Practice Tests", "Mock Tests", "Hazard Tests", "Points", "Accuracy", "Questions Answered", "Progress"])
+average = PrettyTable(["Sections", "Practice Tests", "Mock Tests", "Hazard Tests", "Points", "Accuracy", "Questions Answered", "Progress", "Pageviews"])
 average.add_row([ total_sections/float(total_users), 
 				   total_practice/float(total_users), 
 				   total_mock/float(total_users), 
@@ -74,7 +84,8 @@ average.add_row([ total_sections/float(total_users),
 				   total_points/float(total_users),
 				   total_accuracy/float(total_users),
 				   total_questions_answered/float(total_users),
-				   total_progress/float(total_users) ])
+				   total_progress/float(total_users),
+				   total_pageviews/float(total_users) ])
 
 file_path = os.path.expanduser("~/")
 f = open(file_path+"/stats.txt", "w")	
