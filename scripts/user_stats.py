@@ -46,41 +46,40 @@ average_progress = 0
 
 detailed = PrettyTable(["User", "Sections", "Practice Tests", "Mock Tests", "Hazard Tests", "Points", "Accuracy", "Questions Answered", "Progress", "Pageviews"])
 for user in User.objects.order_by("-points"):
-	if user.username in blacklist: 
-		break
-	sections = len(user.cursors.items())
-	practice= len(PractiseTest.objects(user=str(user.id)))
-	mock = len(MockTest.objects(user=str(user.id)))
-	hazard = len(HazardPerceptionTest.objects(uid=str(user.id)))
-	stats = user.get_user_stats()
-	progress = user.get_overall_progress()
+	if user.username not in blacklist: 
+		sections = len(user.cursors.items())
+		practice= len(PractiseTest.objects(user=str(user.id)))
+		mock = len(MockTest.objects(user=str(user.id)))
+		hazard = len(HazardPerceptionTest.objects(uid=str(user.id)))
+		stats = user.get_user_stats()
+		progress = user.get_overall_progress()
 
-	#pageviews are an estimate of ghow many pages they've seen based on the number of completed tests and nuggets
-	nuggets = 0
-	for item in user.cursors.items():
-		nuggets += int(item[1]) 
-	pageviews = practice*20 + mock*50 + nuggets 
-	detailed.add_row([str(user.username), 
-			   sections, 
-			   practice, 
-			   mock, 
-			   hazard, 
-			   stats['points'],
-			   stats['accuracy'],
-			   stats['total_questions_answered'],
-			   progress,
-			   pageviews
-			    ])
+		#pageviews are an estimate of ghow many pages they've seen based on the number of completed tests and nuggets
+		nuggets = 0
+		for item in user.cursors.items():
+			nuggets += int(item[1]) 
+		pageviews = practice*20 + mock*50 + nuggets 
+		detailed.add_row([str(user.username), 
+				   sections, 
+				   practice, 
+				   mock, 
+				   hazard, 
+				   stats['points'],
+				   stats['accuracy'],
+				   stats['total_questions_answered'],
+				   progress,
+				   pageviews
+				    ])
 
-	total_sections += sections
-	total_practice += practice
-	total_mock += mock
-	total_hazard += hazard
-	total_points += stats['points']
-	total_questions_answered += stats['total_questions_answered']
-	total_accuracy += stats['accuracy']
-	total_progress += progress
-	total_pageviews += pageviews
+		total_sections += sections
+		total_practice += practice
+		total_mock += mock
+		total_hazard += hazard
+		total_points += stats['points']
+		total_questions_answered += stats['total_questions_answered']
+		total_accuracy += stats['accuracy']
+		total_progress += progress
+		total_pageviews += pageviews
 
 total_users = len(User.objects)
 
