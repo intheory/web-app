@@ -85,7 +85,10 @@ class User(Document):
                     elif isinstance(test, PractiseTest):
                         total_questions_answered += 20
 
-                stats['accuracy'] = 100*no_of_correct_answers / float(total_questions_answered)
+                stats['accuracy'] = 0
+                if total_questions_answered != 0:
+                    stats['accuracy'] = 100*no_of_correct_answers / float(total_questions_answered)
+
                 stats['total_questions_answered'] = total_questions_answered
             else:
                 stats['correct_answers'] = 0
