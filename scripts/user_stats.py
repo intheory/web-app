@@ -59,6 +59,7 @@ for user in User.objects.order_by("-points"):
 		for item in user.cursors.items():
 			nuggets += int(item[1]) 
 		pageviews = practice*20 + mock*50 + nuggets 
+
 		detailed.add_row([str(user.username), 
 				   sections, 
 				   practice, 
@@ -81,7 +82,7 @@ for user in User.objects.order_by("-points"):
 		total_progress += progress
 		total_pageviews += pageviews
 
-total_users = len(User.objects)
+total_users = len(User.objects) - len(blacklist)
 
 average = PrettyTable(["Sections", "Practice Tests", "Mock Tests", "Hazard Tests", "Points", "Accuracy", "Questions Answered", "Progress", "Pageviews"])
 average.add_row([ total_sections/float(total_users), 
