@@ -19,6 +19,12 @@ from model.user import User
 from model.content import Section, MockTest, PractiseTest, HazardPerceptionTest
 connect("intheory_dev")
 
+blacklist = ["guypengelley", "matt.simmonds.376", "tomwoolway", "zahid.mitha", "kitbrennan90","lbeischer", "dan.edge.39", "johnking7", "james.hennessey.7", "jon.wright.3367", "simon.worthington", "yasmin",
+"zefi.hh", "shoaib.noor1", "alicebentinck", "davekmason", "pambose", "ewan.marshall", "giorgos.eracleous", "i.k.lewis", "nilu.satharasinghe", "nik.adhia", "gmakkoulis", "humphrey.flowerdew", "shoaib.noor1",
+ "andrew.jervis", "geracleous", "divomas", "kronosmes", "jerry", "ppapageorgiou", "jerrydelmissier", "matt.p.clifford", "rashid.mansoor", "The0s", "davidmason", "jerrya", "paymentstest", "zahida", "kit", 
+ "elia.videtta", "isabel.be.58", "emilysophiebrooke", "varun.kapur.9", "don.nightingale.92", "levng", "vivian.chan.9480111", "al.frankl", "aditya.kasliwal", "henri.cammiade", "derrick.crentsil", "john smith", "codetest"
+ "masonova", "wicksy", "zahid", "billy.sowden", "petesmithy0", "tomwoolway", "emilios.nicolaou", "henri.cammiade"]
+
 total_pageviews = 0
 total_sections = 0
 total_practice = 0
@@ -40,6 +46,8 @@ average_progress = 0
 
 detailed = PrettyTable(["User", "Sections", "Practice Tests", "Mock Tests", "Hazard Tests", "Points", "Accuracy", "Questions Answered", "Progress", "Pageviews"])
 for user in User.objects.order_by("-points"):
+	if user.username in blacklist: 
+		break
 	sections = len(user.cursors.items())
 	practice= len(PractiseTest.objects(user=str(user.id)))
 	mock = len(MockTest.objects(user=str(user.id)))
