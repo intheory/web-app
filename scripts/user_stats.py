@@ -44,8 +44,8 @@ for user in User.objects:
 	practice= len(PractiseTest.objects(user=user.id))
 	mock = len(MockTest.objects(user=user.id))
 	hazard = len(HazardPerceptionTest.objects(uid=user.id))
-	stats = user.get_user_stats()
 	print '------------'
+	stats = user.get_user_stats()
 	print user
 	print stats
 	progress = user.get_overall_progress()
