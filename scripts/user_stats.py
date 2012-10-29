@@ -38,7 +38,7 @@ average_accuracy = 0
 average_progress = 0
 
 detailed = PrettyTable(["User", "Sections", "Practice Tests", "Mock Tests", "Hazard Tests", "Points", "Accuracy", "Questions Answered", "Progress"])
-for user in User.objects.order_by("points"):
+for user in User.objects.order_by("-points"):
 	sections = len(user.cursors.items())
 	practice= len(PractiseTest.objects(user=str(user.id)))
 	mock = len(MockTest.objects(user=str(user.id)))
